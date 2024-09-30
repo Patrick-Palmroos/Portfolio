@@ -12,7 +12,7 @@ const darkTheme = createTheme({
       white: "#ffffff",
     },
     background: {
-      default: "27242E",
+      default: "#27242E",
     },
   },
 });
