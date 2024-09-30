@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <ThemeContext.Provider value="dark">
-        <Box component={"section"} sx={{ backgroundColor: "common.black" }}>
+        <Box component={"section"}>
           <div>
             <Header />
           </div>
