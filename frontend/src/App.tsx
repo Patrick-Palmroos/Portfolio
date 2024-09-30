@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button, Container, Stack, Typography, Box } from "@mui/material";
-import "./App.css";
 import Header from "./components/Header.tsx";
 
 function App() {
