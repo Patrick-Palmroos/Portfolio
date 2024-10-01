@@ -20,6 +20,11 @@ const darkTheme = createTheme({
     background: {
       default: "#27242E",
     },
+    primary: {
+      main: "#E8CDE5",
+      light: "#B985FC",
+      dark: "#A880D2",
+    },
   },
 });
 
