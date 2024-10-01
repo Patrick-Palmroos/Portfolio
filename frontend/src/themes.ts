@@ -1,7 +1,13 @@
 import { createTheme } from "@mui/material/styles";
 import "./index.css";
 
-const typography = {};
+const typography = {
+  fontFamily: "Lilita One, Roboto Flex",
+  h1: {
+    fontFamily: "Lilita One",
+    fontSize: "2rem",
+  },
+};
 
 const darkTheme = createTheme({
   typography: typography,

@@ -13,13 +13,13 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <ThemeContext.Provider value="dark">
-        <Box
-          sx={{ backgroundColor: "background.default", minHeight: "100rem" }}
-        >
-          <div>
+        <div style={{ marginTop: "0px" }}>
+          <Box
+            sx={{ minHeight: "100rem", backgroundColor: "background.default" }}
+          >
             <Header />
-          </div>
-        </Box>
+          </Box>
+        </div>
       </ThemeContext.Provider>
     </ThemeProvider>
   );

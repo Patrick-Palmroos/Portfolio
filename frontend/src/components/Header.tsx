@@ -1,14 +1,16 @@
-import { test } from "./HeaderStyle";
-import { Container, Stack, Typography, Box } from "@mui/material";
+import { test, backgroundBox } from "./HeaderStyle";
+import { Stack, Typography, Box } from "@mui/material";
 
 export default function Header() {
   return (
-    <div style={{ margin: "0px" }}>
-      <Container component={"section"}>
-        <Box alignItems={"center"}>
-          <Typography sx={test}>Helloooo</Typography>
+    <div>
+      <Stack component={"section"} paddingTop={"20px"}>
+        <Box alignItems={"center"} sx={backgroundBox}>
+          <Typography variant={"h1"} sx={test}>
+            Helloooo
+          </Typography>
         </Box>
-      </Container>
+      </Stack>
     </div>
   );
 }
