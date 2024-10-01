@@ -4,7 +4,7 @@ import { Stack, Typography, Box } from "@mui/material";
 export default function Header() {
   return (
     <div>
-      <Stack component={"section"} paddingTop={"20px"}>
+      <Stack component={"section"} paddingTop={"3rem"}>
         <Box alignItems={"center"} sx={backgroundBox}>
           <Typography variant={"h1"} sx={test}>
             Helloooo
