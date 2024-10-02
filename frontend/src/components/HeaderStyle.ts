@@ -37,3 +37,5 @@ export const pfpStyle: CSS.Properties = {
   height: "auto",
   zIndex: 2,
 };
+
+export const logoStyle: CSS.Properties = {};
