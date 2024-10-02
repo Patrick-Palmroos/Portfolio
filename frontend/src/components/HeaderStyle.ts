@@ -8,7 +8,7 @@ export const test: CSS.Properties = {
 export const backgroundBox: CSS.Properties = {
   backgroundColor: "red",
   height: "33rem",
-  width: "88rem",
+  width: "87rem",
   margin: "0px 2rem 0px 3rem",
   position: "relative",
   boxShadow: "-1.3rem -1rem 0px #A880D2",

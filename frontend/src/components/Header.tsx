@@ -1,6 +1,7 @@
 import { test, backgroundBox, circle, pfpStyle } from "./HeaderStyle";
 import { Stack, Typography, Box } from "@mui/material";
-import Pfp from "../assets/me.png";
+import pfp from "../assets/me.png";
+import logos from "../assets/logos.png";
 
 export default function Header() {
   return (
@@ -10,8 +11,9 @@ export default function Header() {
           <Typography variant={"h1"} sx={test}>
             Helloooo
           </Typography>
+          <img src={logos} alt="Logos" />
           <Box sx={circle} />
-          <img src={Pfp} alt="Picture of Patrick Palmroos" style={pfpStyle} />
+          <img src={pfp} alt="Picture of Patrick Palmroos" style={pfpStyle} />
         </Box>
       </Stack>
     </div>
