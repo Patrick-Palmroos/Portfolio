@@ -6,7 +6,7 @@ export default function TopBar() {
     <div>
       <Stack
         component={"section"}
-        paddingTop={"3rem"}
+        paddingTop={"1.6rem"}
         justifyContent={"center"}
         direction={"row"}
       >
