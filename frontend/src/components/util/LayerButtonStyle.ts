@@ -2,12 +2,13 @@ import CSS from "csstype";
 
 export const buttonStyle: CSS.Properties = {
   position: "relative",
-  backgroundColor: "red",
+  backgroundColor: "color(srgb 0.73 0.52 0.99 / 0)",
   padding: "0.8rem",
   width: "10rem",
   height: "2.5rem",
   borderRadius: "4px",
   textDecoration: "none",
   alignContent: "center",
+  transition: "0.5s ease",
   zIndex: 0,
 };
