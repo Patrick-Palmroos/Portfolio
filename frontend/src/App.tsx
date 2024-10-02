@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Container, Stack, Typography, Box } from "@mui/material";
 import Header from "./components/Header/Header.tsx";
+import TopBar from "./components/TopBar/TopBar.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
@@ -15,8 +16,12 @@ function App() {
       <ThemeContext.Provider value="dark">
         <div>
           <Box
-            sx={{ minHeight: "100rem", backgroundColor: "background.default" }}
+            sx={{
+              minHeight: "100rem",
+              backgroundColor: "background.default",
+            }}
           >
+            <TopBar />
             <Header />
           </Box>
         </div>
