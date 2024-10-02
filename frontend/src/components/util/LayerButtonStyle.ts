@@ -1,6 +1,7 @@
 import CSS from "csstype";
 
 export const buttonStyle: CSS.Properties = {
+  position: "relative",
   backgroundColor: "red",
   padding: "0.8rem",
   width: "10rem",
@@ -8,4 +9,5 @@ export const buttonStyle: CSS.Properties = {
   borderRadius: "4px",
   textDecoration: "none",
   alignContent: "center",
+  zIndex: 0,
 };
