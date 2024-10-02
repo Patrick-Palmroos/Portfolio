@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Container, Stack, Typography, Box } from "@mui/material";
-import Header from "./components/Header.tsx";
+import Header from "./components/Header/Header.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <ThemeContext.Provider value="dark">
-        <div style={{ marginTop: "0px" }}>
+        <div>
           <Box
             sx={{ minHeight: "100rem", backgroundColor: "background.default" }}
           >

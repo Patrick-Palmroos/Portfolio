@@ -6,8 +6,8 @@ import {
   titleBox,
 } from "./HeaderStyle";
 import { Stack, Typography, Box } from "@mui/material";
-import pfp from "../assets/me.png";
-import logos from "../assets/logos.png";
+import pfp from "../../assets/me.png";
+import logos from "../../assets/logos.png";
 
 export default function Header() {
   return (
