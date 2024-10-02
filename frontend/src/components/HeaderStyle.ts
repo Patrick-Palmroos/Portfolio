@@ -38,4 +38,9 @@ export const pfpStyle: CSS.Properties = {
   zIndex: 2,
 };
 
-export const logoStyle: CSS.Properties = {};
+export const logoStyle: CSS.Properties = {
+  position: "absolute",
+  width: "39.8rem",
+  left: "0.5rem",
+  bottom: "0rem",
+};
