@@ -1,12 +1,24 @@
 import { Stack, Typography, Box } from "@mui/material";
 import { buttonStyle } from "./LayerButtonStyle";
 
-export default function LayerButton({ title }: { title: string }) {
+export default function LayerButton({
+  title,
+  link,
+}: {
+  title: string;
+  link: string;
+}) {
   return (
     <div>
-      <Stack sx={buttonStyle}>
-        <a href="#">
-          <Typography>{title}</Typography>
+      <Stack>
+        <a href={link} style={buttonStyle}>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: "30px" }}
+            textAlign={"center"}
+          >
+            {title}
+          </Typography>
         </a>
       </Stack>
     </div>
