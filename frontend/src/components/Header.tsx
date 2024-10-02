@@ -1,5 +1,6 @@
-import { test, backgroundBox, circle } from "./HeaderStyle";
+import { test, backgroundBox, circle, pfpStyle } from "./HeaderStyle";
 import { Stack, Typography, Box } from "@mui/material";
+import Pfp from "../assets/me.png";
 
 export default function Header() {
   return (
@@ -10,6 +11,7 @@ export default function Header() {
             Helloooo
           </Typography>
           <Box sx={circle} />
+          <img src={Pfp} alt="Picture of Patrick Palmroos" style={pfpStyle} />
         </Box>
       </Stack>
     </div>
