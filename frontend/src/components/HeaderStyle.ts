@@ -1,13 +1,6 @@
 import CSS from "csstype";
 
-export const test: CSS.Properties = {
-  color: "white",
-  textAlign: "center",
-  zIndex: 5,
-};
-
 export const backgroundBox: CSS.Properties = {
-  backgroundColor: "red",
   height: "33rem",
   width: "87rem",
   margin: "0px 2rem 0px 3rem",
@@ -15,7 +8,7 @@ export const backgroundBox: CSS.Properties = {
   boxShadow: "-1.3rem -1rem 0px #A880D2",
   overflow: "hidden",
   borderRadius: "8px",
-  backgroundImage: "linear-gradient(-110deg, #E8CDE5 17%, #B985FC)",
+  backgroundColor: "primary.main",
   zIndex: 0,
 };
 
@@ -46,4 +39,13 @@ export const logoStyle: CSS.Properties = {
   left: "0.5rem",
   bottom: "0rem",
   zIndex: -3,
+};
+
+export const titleBox: CSS.Properties = {
+  position: "absolute",
+  backgroundColor: "color(srgb 0 0 0 / 0.6)",
+  padding: "1rem",
+  left: "6.2rem",
+  top: "10rem",
+  zIndex: 1,
 };

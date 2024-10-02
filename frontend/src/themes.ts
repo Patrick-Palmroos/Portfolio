@@ -1,10 +1,12 @@
 import { createTheme } from "@mui/material/styles";
 import "./index.css";
+import { colors } from "@mui/material";
 
 const typography = {
   fontFamily: "Lilita One, Roboto Flex",
   h1: {
     fontFamily: "Lilita One",
+    color: "white",
     fontSize: "2rem",
   },
 };
