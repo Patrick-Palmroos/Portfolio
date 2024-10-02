@@ -24,22 +24,28 @@ export default function Header() {
               width: "100%",
               height: "100%",
               backgroundImage:
-                "linear-gradient(-110deg, #e8cde500 17%, #B985FC)",
+                "linear-gradient(-110deg, #e8cde500 36%, #B985FC)",
               zIndex: -1,
             },
           }}
         >
-          <Box sx={titleBox}>
-            <Typography variant={"h1"} sx={{}}>
-              Helloooo
+          <Stack sx={titleBox} spacing={-1}>
+            <Typography
+              variant={"h1"}
+              sx={{ fontSize: "36px", color: "primary.main" }}
+            >
+              Hi! My name is
             </Typography>
-            <Typography variant={"h1"} sx={{}}>
+            <Typography
+              variant={"h1"}
+              sx={{ fontSize: "75px", color: "primary.contrastText" }}
+            >
               Patrick Palmroos
             </Typography>
-            <Typography variant={"h1"} sx={{}}>
-              Helloooo
+            <Typography variant={"h1"} sx={{ fontSize: "60px" }}>
+              Software Developer
             </Typography>
-          </Box>
+          </Stack>
 
           {/*logos */}
           <img src={logos} alt="Logos" style={logoStyle} />

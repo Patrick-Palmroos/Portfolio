@@ -2,7 +2,7 @@ import CSS from "csstype";
 
 export const backgroundBox: CSS.Properties = {
   height: "33rem",
-  width: "87rem",
+  width: "80rem",
   margin: "0px 2rem 0px 3rem",
   position: "relative",
   boxShadow: "-1.3rem -1rem 0px #A880D2",
@@ -20,7 +20,7 @@ export const circle: CSS.Properties = {
   borderRadius: "50%",
   right: "-5rem",
   top: "2.5rem",
-  boxShadow: "-0.2rem 1.3rem 0.7rem rgb(0 0 0 / 7%)",
+  boxShadow: "-0.45rem 0.5rem 0.9rem rgb(0 0 0 / 7%)",
   zIndex: 1,
 };
 
@@ -45,6 +45,7 @@ export const titleBox: CSS.Properties = {
   position: "absolute",
   backgroundColor: "color(srgb 0 0 0 / 0.6)",
   padding: "1rem",
+  paddingRight: "2rem",
   left: "6.2rem",
   top: "10rem",
   zIndex: 1,
