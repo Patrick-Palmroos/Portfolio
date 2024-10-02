@@ -3,6 +3,7 @@ import CSS from "csstype";
 export const test: CSS.Properties = {
   color: "white",
   textAlign: "center",
+  zIndex: 5,
 };
 
 export const backgroundBox: CSS.Properties = {
@@ -15,6 +16,7 @@ export const backgroundBox: CSS.Properties = {
   overflow: "hidden",
   borderRadius: "8px",
   backgroundImage: "linear-gradient(-110deg, #E8CDE5 17%, #B985FC)",
+  zIndex: 0,
 };
 
 export const circle: CSS.Properties = {
@@ -43,4 +45,5 @@ export const logoStyle: CSS.Properties = {
   width: "39.8rem",
   left: "0.5rem",
   bottom: "0rem",
+  zIndex: -3,
 };

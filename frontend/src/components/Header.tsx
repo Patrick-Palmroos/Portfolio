@@ -13,7 +13,21 @@ export default function Header() {
   return (
     <div>
       <Stack component={"section"} paddingTop={"3rem"} alignItems={"center"}>
-        <Box alignItems={"center"} sx={backgroundBox}>
+        <Box
+          alignItems={"center"}
+          sx={{
+            ...backgroundBox,
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              backgroundImage:
+                "linear-gradient(-110deg, #e8cde500 17%, #B985FC)",
+              zIndex: -1,
+            },
+          }}
+        >
           <Typography variant={"h1"} sx={test}>
             Helloooo
           </Typography>
