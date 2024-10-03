@@ -1,6 +1,7 @@
 import { Stack, Typography, Box } from "@mui/material";
 import ProjectJson from "../util/projects.json";
 import Project from "../util/ProjectInterface";
+import ProjectBox from "../util/ProjectBox/ProjectBox";
 
 export default function Projects() {
   return (
@@ -9,7 +10,7 @@ export default function Projects() {
         <Stack direction={"row"}>
           {ProjectJson.projects.map((project: Project) => (
             <Box key={project.id}>
-              <Typography>{project.name}</Typography>
+              <ProjectBox project={project} />
             </Box>
           ))}
         </Stack>
