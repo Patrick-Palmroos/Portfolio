@@ -1,7 +1,12 @@
+import { Stack, Typography, Box } from "@mui/material";
+
 export const Title = () => {
   return (
     <div>
-      <h1>Hello!</h1>
+      <Stack direction={"row"} paddingTop={5}>
+        <Typography variant="h1">Hello!</Typography>
+        <Box />
+      </Stack>
     </div>
   );
 };
