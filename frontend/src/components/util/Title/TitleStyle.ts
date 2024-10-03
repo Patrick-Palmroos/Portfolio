@@ -3,6 +3,11 @@ import CSS from "csstype";
 export const titleStyle: CSS.Properties = {
   fontSize: "60px",
   marginLeft: "11rem",
+  backgroundImage:
+    "linear-gradient(65deg, #DFAAFF 0%, #FF74D0 50%, #ADACFF 100%)",
+  backgroundClip: "text",
+  WebkitBackgroundClip: "text",
+  color: "transparent",
 };
 
 export const lineStyle: CSS.Properties = {
