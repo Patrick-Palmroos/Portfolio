@@ -33,6 +33,7 @@ export default function Header() {
             <Typography
               variant={"h1"}
               sx={{ fontSize: "36px", color: "primary.main" }}
+              flexDirection={"row"}
             >
               Hi! My name is
             </Typography>
