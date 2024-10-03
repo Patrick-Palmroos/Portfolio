@@ -24,7 +24,7 @@ function App() {
           >
             <TopBar />
             <Header />
-            <Title />
+            <Title title="My Previous Work" />
           </Box>
         </div>
       </ThemeContext.Provider>
