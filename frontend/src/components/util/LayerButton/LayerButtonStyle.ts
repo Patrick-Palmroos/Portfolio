@@ -2,7 +2,7 @@ import CSS from "csstype";
 
 export const buttonStyle: CSS.Properties = {
   position: "relative",
-  backgroundColor: "color(srgb 0.73 0.52 0.99 / 0)",
+  backgroundColor: "color rgba (0.73 0.52 0.99 / 0)",
   padding: "0.8rem",
   width: "10rem",
   height: "2.5rem",

@@ -1,5 +1,5 @@
-import { Stack, Typography, Box } from "@mui/material";
-import LayerButton from "../util/LayerButton";
+import { Stack } from "@mui/material";
+import LayerButton from "../util/LayerButton/LayerButton";
 
 export default function TopBar() {
   return (

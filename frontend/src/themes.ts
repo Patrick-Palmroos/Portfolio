@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material/styles";
 import "./index.css";
-import { colors } from "@mui/material";
 
 const typography = {
   fontFamily: "Lilita One, Roboto Flex",
@@ -29,8 +28,8 @@ const darkTheme = createTheme({
       contrastText: "#BDFFA6",
     },
     secondary: {
-      main: "",
-      light: "",
+      main: "#000000",
+      light: "#000000",
       dark: "#978EFF",
       contrastText: "#C96BC5",
     },
