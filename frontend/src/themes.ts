@@ -8,6 +8,11 @@ const typography = {
     color: "white",
     fontSize: "2rem",
   },
+  h2: {
+    fontFamily: "Roboto Flex",
+    color: "white",
+    fontSize: "20px",
+  },
 };
 
 const darkTheme = createTheme({
