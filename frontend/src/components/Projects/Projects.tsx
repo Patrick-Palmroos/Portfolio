@@ -2,6 +2,7 @@ import { Stack, Typography, Box } from "@mui/material";
 import ProjectJson from "../util/projects.json";
 import Project from "../util/ProjectInterface";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
+import { carouselContainer } from "./ProjectsStyle";
 import { useState } from "react";
 
 export default function Projects() {
@@ -30,16 +31,18 @@ export default function Projects() {
 
   return (
     <div>
-      <Stack direction={"column"}>
-        <Stack className="carousel-container">
+      <Stack alignItems={"center"}>
+        <Stack direction={"row"} alignItems={"center"}>
           <button onClick={handleBackClick} disabled={page === 1}>
             Back
           </button>
-          {visibleList.map((project: Project) => (
-            <Box key={project.id}>
-              <ProjectBox project={project} />
-            </Box>
-          ))}
+          <Stack sx={carouselContainer}>
+            {visibleList.map((project: Project) => (
+              <Box key={project.id}>
+                <ProjectBox project={project} />
+              </Box>
+            ))}
+          </Stack>
           <button onClick={handleNextClick} disabled={page === pageCount}>
             Next
           </button>
