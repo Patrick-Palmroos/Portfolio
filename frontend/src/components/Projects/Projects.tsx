@@ -8,6 +8,7 @@ export default function Projects() {
   const [page, setPage] = useState(1);
 
   const projectCount: number = ProjectJson.projects.length;
+  const pageCount: number = Math.ceil(projectCount / 4);
 
   //start index counted as in page 2 would be (2-1)*4=4
   const startIndex: number = (page - 1) * 4;
@@ -19,16 +20,31 @@ export default function Projects() {
     endIndex
   );
 
+  const handleBackClick = () => {
+    if (page > 1) setPage(page - 1);
+  };
+
+  const handleNextClick = () => {
+    if (page < pageCount) setPage(page + 1);
+  };
+
   return (
     <div>
       <Stack direction={"column"}>
-        <Stack direction={"row"}>
+        <Stack className="carousel-container">
+          <button onClick={handleBackClick} disabled={page === 1}>
+            Back
+          </button>
           {visibleList.map((project: Project) => (
             <Box key={project.id}>
               <ProjectBox project={project} />
             </Box>
           ))}
+          <button onClick={handleNextClick} disabled={page === pageCount}>
+            Next
+          </button>
         </Stack>
+        <Typography variant="h1">{page}</Typography>
       </Stack>
     </div>
   );
