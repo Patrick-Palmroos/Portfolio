@@ -2,7 +2,12 @@ import { Stack, Typography, Box } from "@mui/material";
 import ProjectJson from "../util/projects.json";
 import Project from "../util/ProjectInterface";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
-import { carouselContainer } from "./ProjectsStyle";
+import {
+  carouselContainer,
+  container,
+  buttonStyle,
+  emptyBoxStyle,
+} from "./ProjectsStyle";
 import { useState } from "react";
 
 export default function Projects() {
@@ -20,6 +25,7 @@ export default function Projects() {
     startIndex,
     endIndex
   );
+  const emptySlots: number = 4 - visibleList.length;
 
   const handleBackClick = () => {
     if (page > 1) setPage(page - 1);
@@ -32,8 +38,12 @@ export default function Projects() {
   return (
     <div>
       <Stack alignItems={"center"}>
-        <Stack direction={"row"} alignItems={"center"}>
-          <button onClick={handleBackClick} disabled={page === 1}>
+        <Stack direction={"row"} alignItems={"center"} sx={container}>
+          <button
+            onClick={handleBackClick}
+            disabled={page === 1}
+            style={buttonStyle}
+          >
             Back
           </button>
           <Stack sx={carouselContainer}>
@@ -42,8 +52,15 @@ export default function Projects() {
                 <ProjectBox project={project} />
               </Box>
             ))}
+            {Array.from({ length: emptySlots }).map((x, index) => (
+              <Box key={`empty-${index}`} sx={emptyBoxStyle} />
+            ))}
           </Stack>
-          <button onClick={handleNextClick} disabled={page === pageCount}>
+          <button
+            onClick={handleNextClick}
+            disabled={page === pageCount}
+            style={buttonStyle}
+          >
             Next
           </button>
         </Stack>
