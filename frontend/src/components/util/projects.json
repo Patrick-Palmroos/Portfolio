@@ -3,7 +3,11 @@
     {
       "id": 0,
       "name": "StaffApp",
-      "logos": [],
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
       "image": "images/StaffApp/StaffApp.png",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
     },

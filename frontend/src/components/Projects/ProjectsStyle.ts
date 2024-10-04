@@ -11,6 +11,9 @@ export const carouselContainer: CSS.Properties = {
   gridTemplateRows: "auto auto",
   rowGap: "3.5rem",
   columnGap: "2.5rem",
+  padding: "1.5rem 1.5rem 1.5rem 1.5rem",
+  borderRadius: "20px",
+  boxShadow: "inset 0 0 10px 2px rgba(0, 0, 0, 0.4)",
 };
 
 export const buttonStyle: CSS.Properties = {
