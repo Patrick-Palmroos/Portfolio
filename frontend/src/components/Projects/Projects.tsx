@@ -37,7 +37,7 @@ export default function Projects() {
 
   return (
     <div>
-      <Stack alignItems={"center"}>
+      <Stack alignItems={"center"} paddingTop={18}>
         <Stack direction={"row"} alignItems={"center"} sx={container}>
           <button
             onClick={handleBackClick}
@@ -64,7 +64,9 @@ export default function Projects() {
             Next
           </button>
         </Stack>
-        <Typography variant="h1">{page}</Typography>
+        <Typography variant="h1" paddingTop={18}>
+          {page}
+        </Typography>
       </Stack>
     </div>
   );
