@@ -38,6 +38,61 @@
       "logos": [],
       "image": "images/StaffApp/StaffApp.png",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+    },
+    {
+      "id": 5,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "image": "images/StaffApp/StaffApp.png",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+    },
+    {
+      "id": 6,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "image": "images/StaffApp/StaffApp.png",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+    },
+    {
+      "id": 7,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "image": "images/StaffApp/StaffApp.png",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+    },
+    {
+      "id": 8,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "image": "images/StaffApp/StaffApp.png",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+    },
+    {
+      "id": 9,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "image": "images/StaffApp/StaffApp.png",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
     }
   ]
 }

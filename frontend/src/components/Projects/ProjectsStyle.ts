@@ -14,6 +14,7 @@ export const carouselContainer: CSS.Properties = {
   padding: "1.5rem 1.5rem 1.5rem 1.5rem",
   borderRadius: "20px",
   boxShadow: "inset 0 0 10px 2px rgba(0, 0, 0, 0.4)",
+  overflow: "hidden",
 };
 
 export const buttonStyle: CSS.Properties = {
