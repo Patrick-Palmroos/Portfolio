@@ -9,6 +9,7 @@ import {
   emptyBoxStyle,
 } from "./ProjectsStyle";
 import { useState } from "react";
+import ArrowButton from "../util/ArrowButton/ArrowButton";
 
 export default function Projects() {
   const [page, setPage] = useState(1);
@@ -44,24 +45,29 @@ export default function Projects() {
   //handle page change and animations.
   const handlePageChange = (direction: "next" | "back") => {
     if (!animating) {
-      //animating true so that these wont be called mid animation.
-      setAnimating(true);
-      //sets the animation direction.
-      setDirection(direction === "next" ? "right" : "left");
-      //sets the slide animaiton.
-      setSlide(false);
-      setTimeout(() => {
-        // After slide-out animation completes, change the page
-        if (direction === "next") {
-          handleNextClick();
-        } else {
-          handleBackClick();
-        }
-        // Reset slide and grow animations after transition
-        setGrow(true);
-        setSlide(true);
-        setAnimating(false);
-      }, 470);
+      if (
+        (direction === "back" && page! > 1) ||
+        (direction === "next" && page! < pageCount)
+      ) {
+        //animating true so that these wont be called mid animation.
+        setAnimating(true);
+        //sets the animation direction.
+        setDirection(direction === "next" ? "right" : "left");
+        //sets the slide animaiton.
+        setSlide(false);
+        setTimeout(() => {
+          // After slide-out animation completes, change the page
+          if (direction === "next") {
+            handleNextClick();
+          } else {
+            handleBackClick();
+          }
+          // Reset slide and grow animations after transition
+          setGrow(true);
+          setSlide(true);
+          setAnimating(false);
+        }, 470);
+      }
     }
   };
 
@@ -69,15 +75,18 @@ export default function Projects() {
     <div id="projects">
       <Stack alignItems={"center"} paddingTop={18}>
         <Stack direction={"row"} alignItems={"center"} sx={container}>
-          <button
-            onClick={() => {
-              handlePageChange("back");
+          <Box
+            sx={{
+              rotate: "180deg",
             }}
-            disabled={page === 1}
-            style={buttonStyle}
           >
-            Back
-          </button>
+            <ArrowButton
+              callback={() => {
+                handlePageChange("back");
+              }}
+              left={true}
+            />
+          </Box>
           <Stack sx={carouselContainer}>
             {visibleList.map((project: Project, index) => (
               <Slide
@@ -101,15 +110,12 @@ export default function Projects() {
               <Box key={`empty-${index}`} sx={emptyBoxStyle} />
             ))}
           </Stack>
-          <button
-            onClick={() => {
+          <ArrowButton
+            callback={() => {
               handlePageChange("next");
             }}
-            disabled={page === pageCount}
-            style={buttonStyle}
-          >
-            Next
-          </button>
+            left={false}
+          />
         </Stack>
         <Typography variant="h1" paddingTop={18}>
           {page}
