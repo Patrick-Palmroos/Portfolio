@@ -10,7 +10,7 @@ export default function TopBar() {
         justifyContent={"center"}
         direction={"row"}
       >
-        <LayerButton title="Projects" link="#" />
+        <LayerButton title="Projects" link="#projects" />
         <LayerButton title="About me" link="#" />
         <LayerButton title="Skills" link="#" />
         <LayerButton title="Work" link="#" />

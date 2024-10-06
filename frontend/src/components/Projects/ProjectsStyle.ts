@@ -13,7 +13,6 @@ export const carouselContainer: CSS.Properties = {
   columnGap: "2.5rem",
   padding: "1.5rem 1.5rem 1.5rem 1.5rem",
   borderRadius: "20px",
-  boxShadow: "inset 0 0 10px 2px rgba(0, 0, 0, 0.4)",
   overflow: "hidden",
 };
 

@@ -39,10 +39,16 @@ export default function Projects() {
     if (page < pageCount) setPage(page + 1);
   };
 
+  const baseAnimSpeed: number = 200;
+
+  //handle page change and animations.
   const handlePageChange = (direction: "next" | "back") => {
     if (!animating) {
+      //animating true so that these wont be called mid animation.
       setAnimating(true);
+      //sets the animation direction.
       setDirection(direction === "next" ? "right" : "left");
+      //sets the slide animaiton.
       setSlide(false);
       setTimeout(() => {
         // After slide-out animation completes, change the page
@@ -55,12 +61,12 @@ export default function Projects() {
         setGrow(true);
         setSlide(true);
         setAnimating(false);
-      }, 500);
+      }, 470);
     }
   };
 
   return (
-    <div>
+    <div id="projects">
       <Stack alignItems={"center"} paddingTop={18}>
         <Stack direction={"row"} alignItems={"center"} sx={container}>
           <button
@@ -80,8 +86,8 @@ export default function Projects() {
                 direction={direction}
                 timeout={
                   direction === "left"
-                    ? 200 + (visibleList.length - 1 - index) * 150
-                    : 200 + index * 150
+                    ? baseAnimSpeed + (visibleList.length - 1 - index) * 150
+                    : baseAnimSpeed + index * 150
                 }
               >
                 <Zoom in={grow} timeout={300 + index * 100}>
