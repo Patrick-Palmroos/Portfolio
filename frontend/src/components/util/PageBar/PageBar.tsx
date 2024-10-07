@@ -1,4 +1,4 @@
-import { Stack, Box, Typography } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 import { pageDisplayBox, selectedDisplayBox, lineStyle } from "./PageBarStyle";
 
 export default function PageBar({

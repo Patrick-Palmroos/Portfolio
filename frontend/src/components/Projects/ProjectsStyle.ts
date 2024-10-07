@@ -16,10 +16,6 @@ export const carouselContainer: CSS.Properties = {
   overflow: "hidden",
 };
 
-export const buttonStyle: CSS.Properties = {
-  margin: "15px",
-};
-
 export const emptyBoxStyle: CSS.Properties = {
   width: "30.25rem",
   height: "14.4rem",

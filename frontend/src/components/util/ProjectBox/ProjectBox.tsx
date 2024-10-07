@@ -1,5 +1,5 @@
 import Project from "../ProjectInterface";
-import { Stack, Typography, Box } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import {
   projectBoxStyle,
   imageStyle,
@@ -9,7 +9,6 @@ import {
 } from "./ProjectBoxStyle";
 
 export default function ProjectBox({ project }: { project: Project }) {
-  const test: number = 50;
   return (
     <div>
       <Stack

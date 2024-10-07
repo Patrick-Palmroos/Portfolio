@@ -1,13 +1,8 @@
-import { Stack, Typography, Box, Zoom, Slide } from "@mui/material";
+import { Stack, Box, Zoom, Slide } from "@mui/material";
 import ProjectJson from "../util/projects.json";
 import Project from "../util/ProjectInterface";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
-import {
-  carouselContainer,
-  container,
-  buttonStyle,
-  emptyBoxStyle,
-} from "./ProjectsStyle";
+import { carouselContainer, container, emptyBoxStyle } from "./ProjectsStyle";
 import { useState } from "react";
 import ArrowButton from "../util/ArrowButton/ArrowButton";
 import PageBar from "../util/PageBar/PageBar";
