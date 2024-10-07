@@ -43,6 +43,23 @@ export default function Projects() {
 
   const baseAnimSpeed: number = 200;
 
+  const calcAnimLength = (number: number): number => {
+    const baseNumber = 470;
+
+    switch (number) {
+      case 4:
+        return baseNumber;
+      case 3:
+        return (3 / 4) * baseNumber;
+      case 2:
+        return (1 / 2) * baseNumber;
+      case 1:
+        return (1 / 4) * baseNumber;
+      default:
+        throw new Error("Invalid input number.");
+    }
+  };
+
   //handle page change and animations.
   const handlePageChange = (direction: "next" | "back") => {
     if (!animating) {
@@ -67,7 +84,7 @@ export default function Projects() {
           setGrow(true);
           setSlide(true);
           setAnimating(false);
-        }, 470);
+        }, calcAnimLength(visibleList.length));
       }
     }
   };
