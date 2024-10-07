@@ -14,6 +14,6 @@ export const selectedDisplayBox: CSS.Properties = {
   height: "1rem",
   borderRadius: "1rem",
   backgroundColor: "white",
-  transition: "0.4s ease",
+  transition: "0.2s ease",
   margin: "0.3rem 0.3rem 0.3rem 0.3rem",
 };
