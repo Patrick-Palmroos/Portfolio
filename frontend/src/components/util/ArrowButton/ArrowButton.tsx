@@ -49,19 +49,21 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
 
           "&:hover::after": {
             rotate: "45deg",
-            transform: "translateX(0rem) translateY(0rem)",
+            height: "3rem",
+            transform: "translateX(0rem) translateY(0.2rem)",
             transition: "0.2s ease",
           },
           "&:hover::before": {
             rotate: "45deg",
-            transform: "translateX(0rem) translateY(0rem)",
+            width: "3rem",
+            transform: "translateX(0.5rem) translateY(-0.1rem)",
             transition: "0.2s ease",
           },
 
           "&:hover .anim": {
-            width: "3rem",
-            right: "2.5rem",
-            top: "2.5rem",
+            width: "2rem",
+            right: "3rem",
+            top: "2.45rem",
             background: "#BB85FA",
             transition: "0.2s ease",
           },
@@ -89,10 +91,10 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           sx={{
             position: "absolute",
             background: "#BB85FA",
-            height: "0.5rem",
+            height: "0.6rem",
             width: "0.1rem",
             right: "1.5rem",
-            top: "2.5rem",
+            top: "2.45rem",
             borderRadius: "0.6rem",
             transition: "0.2s ease",
             zIndex: 2,
