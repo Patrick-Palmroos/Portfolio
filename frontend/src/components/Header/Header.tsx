@@ -12,7 +12,7 @@ import logos from "../../assets/logos.png";
 export default function Header() {
   return (
     <div>
-      <Stack component={"section"} paddingTop={"3rem"} alignItems={"center"}>
+      <Stack component={"section"} paddingTop={"2rem"} alignItems={"center"}>
         {/*The box component. */}
         <Box
           alignItems={"center"}
@@ -33,6 +33,7 @@ export default function Header() {
             <Typography
               variant={"h1"}
               sx={{ fontSize: "36px", color: "primary.main" }}
+              flexDirection={"row"}
             >
               Hi! My name is
             </Typography>

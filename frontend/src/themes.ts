@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material/styles";
 import "./index.css";
-import { colors } from "@mui/material";
 
 const typography = {
   fontFamily: "Lilita One, Roboto Flex",
@@ -8,6 +7,11 @@ const typography = {
     fontFamily: "Lilita One",
     color: "white",
     fontSize: "2rem",
+  },
+  h2: {
+    fontFamily: "Roboto Flex",
+    color: "white",
+    fontSize: "20px",
   },
 };
 
@@ -27,6 +31,18 @@ const darkTheme = createTheme({
       light: "#B985FC",
       dark: "#A880D2",
       contrastText: "#BDFFA6",
+    },
+    secondary: {
+      main: "#000000",
+      light: "#000000",
+      dark: "#978EFF",
+      contrastText: "#C96BC5",
+    },
+    info: {
+      main: "#DFAAFF",
+      light: "#000000",
+      dark: "#ADACFF",
+      contrastText: "#FF74D0",
     },
   },
 });
