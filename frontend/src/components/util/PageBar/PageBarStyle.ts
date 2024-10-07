@@ -17,3 +17,14 @@ export const selectedDisplayBox: CSS.Properties = {
   transition: "0.2s ease",
   margin: "0.3rem 0.3rem 0.3rem 0.3rem",
 };
+
+export const lineStyle: CSS.Properties = {
+  position: "relative",
+  marginLeft: "1rem",
+  marginRight: "1rem",
+  minWidth: "20rem",
+  height: "0.3rem",
+  borderRadius: "1rem",
+  backgroundImage:
+    "linear-gradient(to right, #B985FC 27%, rgba(0 0 0 / 0%) 100%)",
+};
