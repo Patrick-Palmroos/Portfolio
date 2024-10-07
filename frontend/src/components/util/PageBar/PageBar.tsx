@@ -1,4 +1,5 @@
 import { Stack, Box, Typography } from "@mui/material";
+import { pageDisplayBox, selectedDisplayBox } from "./PageBarStyle";
 
 export default function PageBar({
   page,
@@ -10,9 +11,14 @@ export default function PageBar({
   return (
     <div>
       <Stack direction={"row"}>
-        <Typography variant="h1">
-          {page}/{pageCount}
-        </Typography>
+        {Array.from({ length: pageCount }).map((x, index) => (
+          <Box
+            key={index}
+            sx={{
+              pageDisplayBox,
+            }}
+          ></Box>
+        ))}
       </Stack>
     </div>
   );
