@@ -1,4 +1,4 @@
-import { Stack, Box } from "@mui/material";
+import { Stack, Box, Typography } from "@mui/material";
 
 export default function PageBar({
   page,
@@ -10,7 +10,9 @@ export default function PageBar({
   return (
     <div>
       <Stack direction={"row"}>
-        {page}/{pageCount}
+        <Typography variant="h1">
+          {page}/{pageCount}
+        </Typography>
       </Stack>
     </div>
   );

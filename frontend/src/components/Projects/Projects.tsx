@@ -10,6 +10,7 @@ import {
 } from "./ProjectsStyle";
 import { useState } from "react";
 import ArrowButton from "../util/ArrowButton/ArrowButton";
+import PageBar from "../util/PageBar/PageBar";
 
 export default function Projects() {
   const [page, setPage] = useState(1);
@@ -115,9 +116,9 @@ export default function Projects() {
             }}
           />
         </Stack>
-        <Typography variant="h1" paddingTop={18}>
-          {page}
-        </Typography>
+        <Box paddingTop={18}>
+          <PageBar page={page} pageCount={pageCount} />
+        </Box>
       </Stack>
     </div>
   );
