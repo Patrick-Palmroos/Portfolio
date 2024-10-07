@@ -10,13 +10,11 @@ export default function PageBar({
 }) {
   return (
     <div>
-      <Stack direction={"row"}>
+      <Stack direction={"row"} alignItems={"center"}>
         {Array.from({ length: pageCount }).map((x, index) => (
           <Box
             key={index}
-            sx={{
-              pageDisplayBox,
-            }}
+            sx={index === page - 1 ? selectedDisplayBox : pageDisplayBox}
           ></Box>
         ))}
       </Stack>
