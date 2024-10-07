@@ -84,7 +84,6 @@ export default function Projects() {
               callback={() => {
                 handlePageChange("back");
               }}
-              left={true}
             />
           </Box>
           <Stack sx={carouselContainer}>
@@ -114,7 +113,6 @@ export default function Projects() {
             callback={() => {
               handlePageChange("next");
             }}
-            left={false}
           />
         </Stack>
         <Typography variant="h1" paddingTop={18}>
