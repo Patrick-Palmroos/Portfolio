@@ -22,7 +22,7 @@ export const lineStyle: CSS.Properties = {
   position: "relative",
   marginLeft: "1rem",
   marginRight: "1rem",
-  minWidth: "20rem",
+  minWidth: "28rem",
   height: "0.3rem",
   borderRadius: "1rem",
   backgroundImage:

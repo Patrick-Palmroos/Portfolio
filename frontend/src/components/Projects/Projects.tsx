@@ -116,7 +116,7 @@ export default function Projects() {
             }}
           />
         </Stack>
-        <Box paddingTop={18}>
+        <Box paddingTop={17}>
           <PageBar page={page} pageCount={pageCount} />
         </Box>
       </Stack>
