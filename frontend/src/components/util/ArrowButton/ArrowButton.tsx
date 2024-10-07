@@ -63,7 +63,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           "&:hover .anim": {
             width: "2rem",
             right: "3rem",
-            top: "2.45rem",
+            top: "2.4rem",
             background: "#BB85FA",
             transition: "0.2s ease",
           },
@@ -94,7 +94,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
             height: "0.6rem",
             width: "0.1rem",
             right: "1.5rem",
-            top: "2.45rem",
+            top: "2.4rem",
             borderRadius: "0.6rem",
             transition: "0.2s ease",
             zIndex: 2,
