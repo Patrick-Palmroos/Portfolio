@@ -18,13 +18,13 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           "&::before, &::after": {
             content: '""',
             position: "absolute",
-            background: "red",
             borderRadius: "0.6rem",
             left: "-5%",
             display: "block",
           },
 
           "&::before": {
+            background: "linear-gradient(90deg, #998CFC 10%, #BB85FA)",
             top: "1.25rem",
             left: "0.3rem",
             height: "0.6rem",
@@ -36,6 +36,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           },
 
           "&::after": {
+            background: "linear-gradient(0deg, #998CFC 10%, #BB85FA)",
             top: "1.95rem",
             left: "2rem",
             height: "4rem",
@@ -43,7 +44,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
             rotate: "35deg",
             transform: "translateX(-0rem) translateY(0.25rem)",
             transition: "0.2s ease",
-            zIndex: 2,
+            zIndex: 3,
           },
 
           "&:hover::after": {
@@ -61,23 +62,40 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
             width: "3rem",
             right: "2.5rem",
             top: "2.5rem",
-            background: "red",
+            background: "#BB85FA",
+            transition: "0.2s ease",
+          },
+          "&:hover .circle": {
+            backgroundColor: "color(srgb 0 0 0 / 0.20)",
             transition: "0.2s ease",
           },
         }}
       >
         <Box
+          className={"circle"}
+          sx={{
+            position: "absolute",
+            backgroundColor: "none",
+            width: "6rem",
+            height: "6rem",
+            top: "-0.3em",
+            borderRadius: "50%",
+            left: "-1.5rem",
+            zIndex: 1,
+          }}
+        />
+        <Box
           className={"anim"}
           sx={{
             position: "absolute",
-            background: "red",
+            background: "#BB85FA",
             height: "0.5rem",
             width: "0.1rem",
             right: "1.5rem",
             top: "2.5rem",
             borderRadius: "0.6rem",
             transition: "0.2s ease",
-            zIndex: 5,
+            zIndex: 2,
           }}
         />
       </Box>
