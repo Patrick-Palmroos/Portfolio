@@ -17,7 +17,7 @@ export default function PageBar({
             rotate: "180deg",
           }}
         />
-        {Array.from({ length: pageCount }).map((x, index) => (
+        {Array.from({ length: pageCount }).map((_, index) => (
           <Box
             key={index}
             sx={index === page - 1 ? selectedDisplayBox : pageDisplayBox}
