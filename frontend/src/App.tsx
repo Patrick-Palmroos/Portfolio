@@ -42,7 +42,7 @@ function App() {
               </Stack>
               <Line maxHeight={"1rem"} />
               <Stack>
-                <Title title="About me" line={false} />
+                <Title title="Skills" line={false} />
               </Stack>
             </Stack>
           </Box>
