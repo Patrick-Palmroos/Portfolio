@@ -2,7 +2,7 @@ import CSS from "csstype";
 
 export const titleStyle: CSS.Properties = {
   fontSize: "60px",
-  marginLeft: "11rem",
+  marginLeft: "0rem",
   whiteSpace: "nowrap",
   backgroundImage:
     "linear-gradient(65deg, #DFAAFF 0%, #FF74D0 50%, #ADACFF 100%)",
