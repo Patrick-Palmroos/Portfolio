@@ -118,7 +118,7 @@ export default function Projects() {
                 </Zoom>
               </Slide>
             ))}
-            {Array.from({ length: emptySlots }).map((x, index) => (
+            {Array.from({ length: emptySlots }).map((_, index) => (
               <Box key={`empty-${index}`} sx={emptyBoxStyle} />
             ))}
           </Stack>
