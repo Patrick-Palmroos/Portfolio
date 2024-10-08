@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Header from "./components/Header/Header.tsx";
 import TopBar from "./components/TopBar/TopBar.tsx";
 import Projects from "./components/Projects/Projects.tsx";
@@ -24,6 +24,11 @@ function App() {
             <Header />
             <Title title="My Previous Work" />
             <Projects />
+            <Stack direction="row">
+              <Stack>
+                <Title title="About me" line={false} />
+              </Stack>
+            </Stack>
           </Box>
         </div>
       </ThemeContext.Provider>
