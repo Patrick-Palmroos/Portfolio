@@ -30,6 +30,10 @@ function App() {
                 <Title title="About me" line={false} />
                 <AboutMe />
               </Stack>
+              <Stack>
+                <Title title="About me" line={false} />
+                <AboutMe />
+              </Stack>
             </Stack>
           </Box>
         </div>
