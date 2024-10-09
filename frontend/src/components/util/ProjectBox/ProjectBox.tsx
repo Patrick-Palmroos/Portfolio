@@ -1,4 +1,4 @@
-import Project from "../Interfaces";
+import { Project } from "../Interfaces";
 import { Stack, Typography } from "@mui/material";
 import {
   projectBoxStyle,
