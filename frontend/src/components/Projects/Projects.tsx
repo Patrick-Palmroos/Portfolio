@@ -122,11 +122,13 @@ export default function Projects() {
               <Box key={`empty-${index}`} sx={emptyBoxStyle} />
             ))}
           </Stack>
-          <ArrowButton
-            callback={() => {
-              handlePageChange("next");
-            }}
-          />
+          <Box>
+            <ArrowButton
+              callback={() => {
+                handlePageChange("next");
+              }}
+            />
+          </Box>
         </Stack>
         <Box paddingTop={17}>
           <PageBar page={page} pageCount={pageCount} />
