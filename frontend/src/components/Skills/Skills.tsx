@@ -13,7 +13,7 @@ export default function Skills() {
   return (
     <div>
       <Box
-        sx={{ height: "44.5rem", width: "31rem", marginBottom: "5rem" }}
+        sx={{ height: "44.5rem", width: "35rem", marginBottom: "5rem" }}
         alignContent={"center"}
       >
         {/*TopRow*/}

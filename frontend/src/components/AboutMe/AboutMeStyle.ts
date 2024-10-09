@@ -3,6 +3,7 @@ import CSS from "csstype";
 export const boxStyle: CSS.Properties = {
   position: "relative",
   maxWidth: "31rem",
+  minWidth: "28rem",
   marginTop: "2rem",
   marginBottom: "10rem",
   borderRadius: "20px",

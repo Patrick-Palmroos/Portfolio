@@ -32,17 +32,19 @@ function App() {
             <Stack
               direction="row"
               spacing={2}
-              alignItems={"center"}
-              justifyContent={"space-evenly"}
+              alignItems={"flex-start"}
+              justifyContent={"center"}
             >
-              <Stack>
+              <Stack paddingRight={"1rem"} paddingLeft={"1rem"}>
                 <Box marginLeft={"2rem"}>
                   <Title title="About me" line={false} />
                 </Box>
                 <AboutMe />
               </Stack>
-              <Line maxHeight={"1rem"} />
-              <Stack>
+              <Box paddingTop={"6rem"}>
+                <Line maxHeight={"1rem"} />
+              </Box>
+              <Stack paddingLeft={"2rem"}>
                 <Title title="Skills" line={false} />
                 <Skills />
               </Stack>
