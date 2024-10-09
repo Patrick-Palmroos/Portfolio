@@ -34,8 +34,9 @@ function App() {
               spacing={2}
               alignItems={"flex-start"}
               justifyContent={"center"}
+              paddingLeft={"0rem"}
             >
-              <Stack paddingRight={"1rem"} paddingLeft={"1rem"}>
+              <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
                 <Box marginLeft={"2rem"}>
                   <Title title="About me" line={false} />
                 </Box>
@@ -46,6 +47,7 @@ function App() {
               </Box>
               <Stack paddingLeft={"2rem"}>
                 <Title title="Skills" line={false} />
+
                 <Skills />
               </Stack>
             </Stack>
