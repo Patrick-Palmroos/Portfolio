@@ -1,6 +1,6 @@
 import { Stack, Box, Zoom, Slide } from "@mui/material";
 import ProjectJson from "../util/projects.json";
-import Project from "../util/ProjectInterface";
+import Project from "../util/Interfaces";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
 import { carouselContainer, container, emptyBoxStyle } from "./ProjectsStyle";
 import { useState } from "react";
