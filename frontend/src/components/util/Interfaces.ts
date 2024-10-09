@@ -1,4 +1,4 @@
-export default interface Project {
+export interface Project {
   id: number;
   name: string;
   logos: string[];
@@ -6,7 +6,7 @@ export default interface Project {
   subtitle: string;
 }
 
-export default interface Skill {
+export interface Skill {
   id: number;
   image: string;
   width: number;
