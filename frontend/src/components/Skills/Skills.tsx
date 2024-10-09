@@ -13,11 +13,11 @@ export default function Skills() {
   return (
     <div id="skills">
       <Box
-        sx={{ height: "44.5rem", width: "35rem", marginBottom: "5rem" }}
+        sx={{ height: "44.5rem", width: "38rem", marginBottom: "5rem" }}
         alignContent={"center"}
       >
         {/*TopRow*/}
-        <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(4, 5rem)" }}>
+        <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(4, 6rem)" }}>
           <Box />
           {topRow.map((skill: Skill) => (
             <SkillBox skill={skill} />
@@ -25,13 +25,13 @@ export default function Skills() {
           <Box />
         </Box>
         {/*The middle parts*/}
-        <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(5, 5rem)" }}>
+        <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(5, 6rem)" }}>
           {theMiddle.map((skill: Skill) => (
             <SkillBox skill={skill} />
           ))}
         </Box>
         {/*Bottom Row*/}
-        <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(4, 5rem)" }}>
+        <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(4, 6rem)" }}>
           <Box />
           {bottomRow.map((skill: Skill) => (
             <SkillBox skill={skill} key={skill.id} />
