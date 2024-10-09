@@ -5,12 +5,12 @@ import { imageStyle } from "./SkillBoxStyle";
 export default function SkillBox({ skill }: { skill: Skill }) {
   return (
     <Box
-      key={skill.id}
+      component={"a"}
+      href={skill.link}
       sx={{
         gridColumn: `span ${skill.width}`,
         gridRow: `span ${skill.height}`,
-        backgroundColor: "white",
-        boxShadow: "inset 0 0 10px 2px rgba(0, 0, 0, 0.75)",
+        boxShadow: "inset 0 0 5px 0px rgba(0, 0, 0, 0.75)",
         textAlign: "center",
         alignContent: "center",
       }}

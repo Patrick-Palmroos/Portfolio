@@ -30,7 +30,7 @@ export default function Skills() {
       <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(4, 5rem)" }}>
         <Box />
         {bottomRow.map((skill: Skill) => (
-          <SkillBox skill={skill} />
+          <SkillBox skill={skill} key={skill.id} />
         ))}
       </Box>
     </div>

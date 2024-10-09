@@ -13,4 +13,5 @@ export interface Skill {
   height: number;
   color1: string;
   color2: string;
+  link: string;
 }
