@@ -12,6 +12,8 @@ export default function Line({
       <Box
         sx={{
           maxHeight: "5rem",
+          marginRight: "1rem",
+          marginLeft: "1rem",
           height: "100vw",
           width: "1rem",
           backgroundColor: "red",
