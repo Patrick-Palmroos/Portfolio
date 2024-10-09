@@ -1,0 +1,92 @@
+{
+  "skills": [
+    {
+      "id": 0,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 1,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 2,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 3,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 4,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 5,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 6,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 7,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 8,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 9,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    },
+    {
+      "id": 10,
+      "image": "images/Logos/react.png",
+      "width": 1,
+      "height": 1,
+      "color1": "",
+      "color2": ""
+    }
+  ]
+}
