@@ -11,7 +11,7 @@ export default function Skills() {
   const bottomRow = skillsList.slice(skillsList.length - 3, skillsList.length);
 
   return (
-    <div>
+    <div id="skills">
       <Box
         sx={{ height: "44.5rem", width: "35rem", marginBottom: "5rem" }}
         alignContent={"center"}
