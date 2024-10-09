@@ -3,7 +3,7 @@ import { boxStyle } from "./AboutMeStyle";
 
 export default function AboutMe() {
   return (
-    <div>
+    <div id="aboutMe">
       <Box sx={boxStyle}>
         <Typography variant="h2" sx={{ fontSize: "25px" }}>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
