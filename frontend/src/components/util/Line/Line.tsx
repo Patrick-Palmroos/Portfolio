@@ -11,12 +11,12 @@ export default function Line({
     <div>
       <Box
         sx={{
-          maxHeight: "5rem",
+          maxHeight: "48rem",
           marginRight: "1rem",
           marginLeft: "1rem",
           height: "100vw",
-          width: "1rem",
-          backgroundColor: "red",
+          width: "0.3rem",
+          background: "linear-gradient(transparent, #B985FC, transparent)",
         }}
       />
     </div>
