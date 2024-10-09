@@ -14,4 +14,5 @@ export interface Skill {
   color1: string;
   color2: string;
   link: string;
+  glow: string;
 }

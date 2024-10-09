@@ -5,8 +5,9 @@
       "image": "images/Logos/react.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -14,8 +15,9 @@
       "image": "images/Logos/react.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -23,8 +25,9 @@
       "image": "images/Logos/react.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -32,8 +35,9 @@
       "image": "images/Logos/js.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -41,8 +45,9 @@
       "image": "images/Logos/react.png",
       "width": 2,
       "height": 2,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -50,8 +55,9 @@
       "image": "images/Logos/node.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -59,8 +65,9 @@
       "image": "images/Logos/react.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -68,8 +75,9 @@
       "image": "images/Logos/react.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -77,8 +85,9 @@
       "image": "images/Logos/react.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -86,8 +95,9 @@
       "image": "images/Logos/react.png",
       "width": 1,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
     {
@@ -95,8 +105,9 @@
       "image": "images/Logos/react.png",
       "width": 2,
       "height": 1,
-      "color1": "",
-      "color2": "",
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
       "link": "#"
     }
   ]
