@@ -2,7 +2,7 @@
   "skills": [
     {
       "id": 0,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/rest-api.png",
       "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
@@ -12,7 +12,7 @@
     },
     {
       "id": 1,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/vscode.png",
       "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
@@ -22,7 +22,7 @@
     },
     {
       "id": 2,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/swift.png",
       "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
@@ -53,7 +53,7 @@
     {
       "id": 5,
       "image": "images/Logos/node.png",
-      "width": 1,
+      "width": 2,
       "height": 1,
       "color1": "27, 109, 71",
       "color2": "33, 186, 47",
@@ -62,7 +62,7 @@
     },
     {
       "id": 6,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/html.png",
       "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
@@ -72,7 +72,7 @@
     },
     {
       "id": 7,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/css.png",
       "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
@@ -82,7 +82,7 @@
     },
     {
       "id": 8,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/git.png",
       "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
@@ -92,7 +92,7 @@
     },
     {
       "id": 9,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/csharp.png",
       "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
@@ -102,8 +102,78 @@
     },
     {
       "id": 10,
-      "image": "images/Logos/react.png",
+      "image": "images/Logos/mysql.png",
       "width": 2,
+      "height": 1,
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 11,
+      "image": "images/Logos/express.png",
+      "width": 1,
+      "height": 1,
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 12,
+      "image": "images/Logos/java.png",
+      "width": 2,
+      "height": 1,
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 13,
+      "image": "images/Logos/unity.png",
+      "width": 1,
+      "height": 1,
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 14,
+      "image": "images/Logos/kotlin.png",
+      "width": 1,
+      "height": 1,
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 15,
+      "image": "images/Logos/androidstudio.png",
+      "width": 1,
+      "height": 1,
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 16,
+      "image": "images/Logos/jetpackcompose.png",
+      "width": 1,
+      "height": 1,
+      "color1": "0, 126, 217",
+      "color2": "0, 171, 217",
+      "glow": "143, 231, 255, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 17,
+      "image": "images/Logos/sass.png",
+      "width": 1,
       "height": 1,
       "color1": "0, 126, 217",
       "color2": "0, 171, 217",
