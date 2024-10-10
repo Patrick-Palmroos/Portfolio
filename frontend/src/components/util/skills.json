@@ -5,8 +5,8 @@
       "image": "images/Logos/rest-api.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
+      "color1": "0, 46, 154",
+      "color2": "0, 184, 216",
       "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
@@ -15,9 +15,9 @@
       "image": "images/Logos/vscode.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "255, 155, 255",
+      "color2": "100, 198, 255",
+      "glow": "139, 246, 255, 0.8",
       "link": "#"
     },
     {
@@ -25,9 +25,9 @@
       "image": "images/Logos/swift.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "255, 62, 62",
+      "color2": "217, 170, 0",
+      "glow": "246, 255, 45, 0.8",
       "link": "#"
     },
     {
@@ -37,7 +37,7 @@
       "height": 1,
       "color1": "223, 147, 0",
       "color2": "223, 194, 0",
-      "glow": "248, 230, 110, 1",
+      "glow": "153, 217, 123, 1",
       "link": "#"
     },
     {
@@ -45,8 +45,8 @@
       "image": "images/Logos/react.png",
       "width": 2,
       "height": 2,
-      "color1": "0, 100, 217",
-      "color2": "0, 171, 217",
+      "color1": "152, 58, 255",
+      "color2": "0, 217, 217",
       "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
@@ -55,9 +55,9 @@
       "image": "images/Logos/node.png",
       "width": 2,
       "height": 1,
-      "color1": "27, 109, 71",
-      "color2": "33, 186, 47",
-      "glow": "52, 86, 0, 1",
+      "color1": "44, 132, 168",
+      "color2": "140, 186, 33",
+      "glow": "50, 85, 38, 1",
       "link": "#"
     },
     {
@@ -65,9 +65,9 @@
       "image": "images/Logos/html.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "139, 0, 94",
+      "color2": "217, 0, 98",
+      "glow": "255, 78, 204, 0.8",
       "link": "#"
     },
     {
@@ -75,9 +75,9 @@
       "image": "images/Logos/css.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "6, 226, 218",
+      "color2": "45, 131, 255",
+      "glow": "82, 255, 198, 0.7",
       "link": "#"
     },
     {
@@ -85,9 +85,9 @@
       "image": "images/Logos/git.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "175, 0, 105",
+      "color2": "217, 42, 0",
+      "glow": "88, 26, 86, 0.8",
       "link": "#"
     },
     {
