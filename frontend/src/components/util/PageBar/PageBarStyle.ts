@@ -11,11 +11,12 @@ export const pageDisplayBox: CSS.Properties = {
 
 export const selectedDisplayBox: CSS.Properties = {
   width: "2.1rem",
-  height: "1rem",
+  height: "0.8rem",
   borderRadius: "1rem",
   backgroundColor: "white",
   transition: "0.2s ease",
   margin: "0.3rem 0.3rem 0.3rem 0.3rem",
+  transform: "scaleY(1.2) scaleX(1.1)",
 };
 
 export const lineStyle: CSS.Properties = {

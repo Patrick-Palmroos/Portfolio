@@ -1,13 +1,8 @@
-import { Stack, Typography, Box, Zoom, Slide } from "@mui/material";
+import { Stack, Box, Zoom, Slide } from "@mui/material";
 import ProjectJson from "../util/projects.json";
-import Project from "../util/ProjectInterface";
+import { Project } from "../util/Interfaces.ts";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
-import {
-  carouselContainer,
-  container,
-  buttonStyle,
-  emptyBoxStyle,
-} from "./ProjectsStyle";
+import { carouselContainer, container, emptyBoxStyle } from "./ProjectsStyle";
 import { useState } from "react";
 import ArrowButton from "../util/ArrowButton/ArrowButton";
 import PageBar from "../util/PageBar/PageBar";
@@ -123,15 +118,17 @@ export default function Projects() {
                 </Zoom>
               </Slide>
             ))}
-            {Array.from({ length: emptySlots }).map((x, index) => (
+            {Array.from({ length: emptySlots }).map((_, index) => (
               <Box key={`empty-${index}`} sx={emptyBoxStyle} />
             ))}
           </Stack>
-          <ArrowButton
-            callback={() => {
-              handlePageChange("next");
-            }}
-          />
+          <Box>
+            <ArrowButton
+              callback={() => {
+                handlePageChange("next");
+              }}
+            />
+          </Box>
         </Stack>
         <Box paddingTop={17}>
           <PageBar page={page} pageCount={pageCount} />

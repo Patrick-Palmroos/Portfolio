@@ -11,10 +11,10 @@ export default function TopBar() {
         direction={"row"}
       >
         <LayerButton title="Projects" link="#projects" />
-        <LayerButton title="About me" link="#" />
-        <LayerButton title="Skills" link="#" />
-        <LayerButton title="Work" link="#" />
-        <LayerButton title="Education" link="#" />
+        <LayerButton title="About me" link="#aboutMe" />
+        <LayerButton title="Skills" link="#skills" />
+        <LayerButton title="Work" link="#work" />
+        <LayerButton title="Education" link="#education" />
       </Stack>
     </div>
   );

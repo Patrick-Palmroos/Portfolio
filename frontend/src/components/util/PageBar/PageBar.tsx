@@ -1,4 +1,4 @@
-import { Stack, Box, Typography } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 import { pageDisplayBox, selectedDisplayBox, lineStyle } from "./PageBarStyle";
 
 export default function PageBar({
@@ -17,7 +17,7 @@ export default function PageBar({
             rotate: "180deg",
           }}
         />
-        {Array.from({ length: pageCount }).map((x, index) => (
+        {Array.from({ length: pageCount }).map((_, index) => (
           <Box
             key={index}
             sx={index === page - 1 ? selectedDisplayBox : pageDisplayBox}
