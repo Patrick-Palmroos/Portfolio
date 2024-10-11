@@ -31,16 +31,6 @@
       "link": "#"
     },
     {
-      "id": 3,
-      "image": "images/Logos/js.png",
-      "width": 1,
-      "height": 1,
-      "color1": "223, 147, 0",
-      "color2": "223, 194, 0",
-      "glow": "153, 217, 123, 1",
-      "link": "#"
-    },
-    {
       "id": 4,
       "image": "images/Logos/react.png",
       "width": 2,
@@ -48,6 +38,16 @@
       "color1": "4, 186, 186",
       "color2": "183, 117, 255",
       "glow": "0, 133, 133, 0.5",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "image": "images/Logos/js.png",
+      "width": 1,
+      "height": 1,
+      "color1": "223, 147, 0",
+      "color2": "223, 194, 0",
+      "glow": "153, 217, 123, 1",
       "link": "#"
     },
     {
