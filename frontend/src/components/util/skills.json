@@ -5,8 +5,8 @@
       "image": "images/Logos/rest-api.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 46, 154",
-      "color2": "0, 184, 216",
+      "color1": "255, 62, 213",
+      "color2": "0, 246, 255",
       "glow": "143, 231, 255, 0.5",
       "link": "#"
     },
@@ -45,9 +45,9 @@
       "image": "images/Logos/react.png",
       "width": 2,
       "height": 2,
-      "color1": "152, 58, 255",
-      "color2": "0, 217, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "4, 186, 186",
+      "color2": "183, 117, 255",
+      "glow": "0, 133, 133, 0.5",
       "link": "#"
     },
     {
@@ -67,7 +67,7 @@
       "height": 1,
       "color1": "139, 0, 94",
       "color2": "217, 0, 98",
-      "glow": "255, 78, 204, 0.8",
+      "glow": "234, 77, 255, 1",
       "link": "#"
     },
     {
@@ -95,9 +95,9 @@
       "image": "images/Logos/csharp.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "82, 185, 255",
+      "color2": "189, 0, 113",
+      "glow": "255, 186, 245, 1",
       "link": "#"
     },
     {
@@ -105,9 +105,9 @@
       "image": "images/Logos/mysql.png",
       "width": 2,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "255, 187, 86",
+      "color2": "70, 216, 255",
+      "glow": "253, 245, 128, 0.5",
       "link": "#"
     },
     {
@@ -115,9 +115,9 @@
       "image": "images/Logos/express.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "152, 126, 79",
+      "color2": "225, 225, 87",
+      "glow": "255, 255, 157, 0.5",
       "link": "#"
     },
     {
@@ -125,9 +125,9 @@
       "image": "images/Logos/java.png",
       "width": 2,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "94, 172, 255",
+      "color2": "255, 83, 83",
+      "glow": "254, 94, 255, 1",
       "link": "#"
     },
     {
@@ -135,9 +135,9 @@
       "image": "images/Logos/unity.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "151, 119, 149",
+      "color2": "255, 225, 253",
+      "glow": "255, 217, 253, 0.7",
       "link": "#"
     },
     {
@@ -145,9 +145,9 @@
       "image": "images/Logos/kotlin.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "181, 122, 255",
+      "color2": "255, 196, 52",
+      "glow": "181, 252, 255, 0.5",
       "link": "#"
     },
     {
@@ -155,9 +155,9 @@
       "image": "images/Logos/androidstudio.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "144, 140, 255",
+      "color2": "105, 255, 55",
+      "glow": "173, 255, 255, 0.5",
       "link": "#"
     },
     {
@@ -165,9 +165,9 @@
       "image": "images/Logos/jetpackcompose.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "139, 255, 103",
+      "color2": "175, 172, 255",
+      "glow": "173, 255, 255, 0.7",
       "link": "#"
     },
     {
@@ -175,9 +175,9 @@
       "image": "images/Logos/sass.png",
       "width": 1,
       "height": 1,
-      "color1": "0, 126, 217",
-      "color2": "0, 171, 217",
-      "glow": "143, 231, 255, 0.5",
+      "color1": "203, 140, 255",
+      "color2": "255, 194, 235",
+      "glow": "255, 194, 235, 1",
       "link": "#"
     }
   ]
