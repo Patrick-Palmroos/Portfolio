@@ -5,14 +5,16 @@ export default function WorkButton({
   width,
   height,
   work,
+  callback,
 }: {
   width: number;
   height: number;
   work: Work;
+  callback: () => void;
 }) {
   return (
     <div>
-      <Box>
+      <Box component={"button"} onClick={callback}>
         <h2>{work.name}</h2>
       </Box>
     </div>
