@@ -1,5 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import workJson from "../util/work.json";
+import WorkButton from "../util/WorkButton/WorkButton";
 
 export default function WorkExperience() {
   const work = workJson.work;
@@ -10,7 +11,7 @@ export default function WorkExperience() {
         <Stack direction="row">
           <Stack>
             {work.map((work) => (
-              <h1>{work.name}</h1>
+              <WorkButton width={5} height={5} work={work} key={work.id} />
             ))}
           </Stack>
         </Stack>
