@@ -37,7 +37,7 @@ function App() {
             >
               <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
                 <Box marginLeft={"2rem"}>
-                  <Title title="About me" line={false} />
+                  <Title title="About Me" line={false} />
                 </Box>
                 <AboutMe />
               </Stack>
@@ -50,6 +50,9 @@ function App() {
                 <Skills />
               </Stack>
             </Stack>
+            <Box marginLeft={"11rem"}>
+              <Title title="Work Experience" />
+            </Box>
           </Box>
         </div>
       </ThemeContext.Provider>
