@@ -13,7 +13,7 @@ export default function WorkButton({
   return (
     <div>
       <Box>
-        <h2>HALUUUU</h2>
+        <h2>{work.name}</h2>
       </Box>
     </div>
   );
