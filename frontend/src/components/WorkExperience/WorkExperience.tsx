@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import workJson from "../util/work.json";
 import WorkButton from "../util/WorkButton/WorkButton";
 
@@ -24,6 +24,9 @@ export default function WorkExperience() {
               />
             ))}
           </Stack>
+          <Box sx={{ backgroundColor: "black" }}>
+            <Typography variant="h2">{workList[work].description}</Typography>
+          </Box>
         </Stack>
       </Box>
     </div>
