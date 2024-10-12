@@ -7,7 +7,9 @@ export default function WorkExperience() {
   const [work, setWork] = useState<number>(0);
   const workList = workJson.work;
 
-  const activeWork = () => {};
+  const activeWork = (workId: number) => {
+    setWork(workId);
+  };
 
   return (
     <div>
@@ -20,7 +22,7 @@ export default function WorkExperience() {
                 height={5}
                 work={work}
                 key={work.id}
-                callback={activeWork}
+                callback={() => activeWork(work.id)}
               />
             ))}
           </Stack>
