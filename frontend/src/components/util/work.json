@@ -1,0 +1,31 @@
+{
+  "work": [
+    {
+      "id": 0,
+      "logo": "images/Logos/lol.png",
+      "name": "Securitas Oy",
+      "title": "Security Guard",
+      "startDate": "6.2023",
+      "endDate": "current",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 1,
+      "logo": "images/Logos/lol.png",
+      "name": "Securitas Oy",
+      "title": "Security Guard",
+      "startDate": "6.2023",
+      "endDate": "current",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 2,
+      "logo": "images/Logos/lol.png",
+      "name": "Securitas Oy",
+      "title": "Security Guard",
+      "startDate": "6.2023",
+      "endDate": "current",
+      "description": "Lorem ipsum"
+    }
+  ]
+}
