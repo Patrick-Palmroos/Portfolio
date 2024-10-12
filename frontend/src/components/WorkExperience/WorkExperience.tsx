@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import workJson from "../util/work.json";
 
 export default function WorkExperience() {
   return (
