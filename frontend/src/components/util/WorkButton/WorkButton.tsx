@@ -1,11 +1,14 @@
 import { Box } from "@mui/material";
+import { Work } from "../Interfaces";
 
 export default function WorkButton({
   width,
   height,
+  work,
 }: {
   width: number;
   height: number;
+  work: Work;
 }) {
   return (
     <div>
