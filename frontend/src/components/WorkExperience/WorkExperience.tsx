@@ -18,14 +18,28 @@ export default function WorkExperience() {
         <Stack sx={container}>
           <Stack spacing={6}>
             {workList.map((work) => (
-              <WorkButton
-                width={20}
-                height={7}
-                work={work}
-                key={work.id}
-                callback={() => HandleActiveWork(work.id)}
-                active={work.id == activeWork ? true : false}
-              />
+              <Stack>
+                <WorkButton
+                  width={20}
+                  height={7}
+                  work={work}
+                  key={work.id}
+                  callback={() => HandleActiveWork(work.id)}
+                  active={work.id == activeWork ? true : false}
+                />
+                <Box
+                  alignSelf={"center"}
+                  sx={
+                    work.id !== workList.length - 1
+                      ? {
+                          backgroundColor: "red",
+                          width: "0.5rem",
+                          height: "2rem",
+                        }
+                      : null
+                  }
+                />
+              </Stack>
             ))}
           </Stack>
           <Box
