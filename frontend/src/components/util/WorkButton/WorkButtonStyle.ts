@@ -5,6 +5,7 @@ export const buttonStyle: CSS.Properties = {
   position: "relative",
   cursor: "pointer",
   backgroundColor: "#914180",
+  borderRadius: "20px",
   zIndex: 1,
 };
 
@@ -14,6 +15,7 @@ export const psuedoElemet: CSS.Properties = {
   top: "-0.6rem",
   left: "0px",
   backgroundColor: "info.contrastText",
+  borderRadius: "20px",
   zIndex: 2,
 };
 
