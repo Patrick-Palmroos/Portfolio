@@ -7,18 +7,39 @@ export default function WorkButton({
   height,
   work,
   callback,
+  active = false,
 }: {
   width: number;
   height: number;
   work: Work;
   callback: () => void;
+  active: boolean;
 }) {
   return (
     <div>
       <Box
         component={"button"}
         onClick={callback}
-        sx={{ ...buttonStyle, width: `${19}rem`, height: `${6}rem` }}
+        sx={
+          active
+            ? {
+                ...buttonStyle,
+                width: `${19}rem`,
+                height: `${6}rem`,
+                background: "purple",
+                "&:hover": {
+                  background: "red",
+                },
+              }
+            : {
+                ...buttonStyle,
+                width: `${19}rem`,
+                height: `${6}rem`,
+                "&:hover": {
+                  background: "red",
+                },
+              }
+        }
       >
         <h2>{work.name}</h2>
       </Box>
