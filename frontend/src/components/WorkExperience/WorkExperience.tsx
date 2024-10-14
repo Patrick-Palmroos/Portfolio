@@ -27,6 +27,14 @@ export default function WorkExperience() {
               />
             ))}
           </Stack>
+          <Box
+            sx={{
+              height: "20rem",
+              width: "0.5rem",
+              backgroundColor: "green",
+              margin: "1rem",
+            }}
+          />
           <Box sx={detailBox}>
             <Typography variant="h2">{workList[work].description}</Typography>
           </Box>

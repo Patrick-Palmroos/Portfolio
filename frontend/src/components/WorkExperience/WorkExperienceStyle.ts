@@ -4,6 +4,7 @@ export const container: CSS.Properties = {
   display: "flex",
   justifyContent: "center",
   flexDirection: "row",
+  alignItems: "center",
 };
 
 export const detailBox: CSS.Properties = {
