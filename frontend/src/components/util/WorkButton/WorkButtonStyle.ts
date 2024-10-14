@@ -6,3 +6,10 @@ export const buttonStyle: CSS.Properties = {
   cursor: "pointer",
   zIndex: 1,
 };
+
+export const childStyle: CSS.Properties = {
+  zIndex: 3,
+  position: "absolute",
+  top: "0rem",
+  left: "1rem",
+};

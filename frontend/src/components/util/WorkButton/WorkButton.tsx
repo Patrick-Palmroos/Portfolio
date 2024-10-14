@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { Work } from "../Interfaces";
-import { buttonStyle } from "./WorkButtonStyle";
+import { buttonStyle, childStyle } from "./WorkButtonStyle";
 
 export default function WorkButton({
   width,
@@ -39,13 +39,17 @@ export default function WorkButton({
                   position: "absolute",
                   width: `${width}rem`,
                   height: `${height}rem`,
-                  top: "0px",
+                  top: "-1rem",
                   left: "0px",
-                  background: "blue",
                   zIndex: 2,
                 },
 
+                "&::before": {
+                  background: "#FF74D0",
+                },
+
                 "&::after": {
+                  opacity: 0,
                   background:
                     "linear-gradient(65deg, #978EFF 0%, #C96BC5 50%, #B985FC 100%)",
                 },
@@ -56,7 +60,7 @@ export default function WorkButton({
               }
         }
       >
-        <Typography variant={"h1"} sx={{ zIndex: 3, position: "relative" }}>
+        <Typography variant={"h1"} sx={childStyle}>
           {work.name}
         </Typography>
       </Box>
