@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import workJson from "../util/work.json";
 import WorkButton from "../util/WorkButton/WorkButton";
-import { detailBox } from "./WorkExperienceStyle";
+import { detailBox, container } from "./WorkExperienceStyle";
 
 export default function WorkExperience() {
   const [work, setWork] = useState<number>(0);
@@ -15,7 +15,7 @@ export default function WorkExperience() {
   return (
     <div>
       <Box>
-        <Stack direction="row">
+        <Stack sx={container}>
           <Stack>
             {workList.map((work) => (
               <WorkButton

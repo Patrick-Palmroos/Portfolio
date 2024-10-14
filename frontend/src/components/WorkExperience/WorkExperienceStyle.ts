@@ -1,7 +1,12 @@
 import CSS from "csstype";
 
+export const container: CSS.Properties = {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "row",
+};
+
 export const detailBox: CSS.Properties = {
-  position: "absolute",
   height: "30rem",
   width: "29rem",
   right: "12rem",
