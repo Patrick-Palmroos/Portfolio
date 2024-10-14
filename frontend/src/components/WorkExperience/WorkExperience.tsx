@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import workJson from "../util/work.json";
 import WorkButton from "../util/WorkButton/WorkButton";
+import { detailBox } from "./WorkExperienceStyle";
 
 export default function WorkExperience() {
   const [work, setWork] = useState<number>(0);
@@ -26,7 +27,7 @@ export default function WorkExperience() {
               />
             ))}
           </Stack>
-          <Box sx={{ backgroundColor: "black" }}>
+          <Box sx={detailBox}>
             <Typography variant="h2">{workList[work].description}</Typography>
           </Box>
         </Stack>
