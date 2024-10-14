@@ -14,7 +14,11 @@ export default function WorkButton({
 }) {
   return (
     <div>
-      <Box component={"button"} onClick={callback}>
+      <Box
+        component={"button"}
+        onClick={callback}
+        sx={{ width: `${19}rem`, height: `${6}rem` }}
+      >
         <h2>{work.name}</h2>
       </Box>
     </div>
