@@ -13,9 +13,12 @@ export const detailBox: CSS.Properties = {
   width: "29rem",
   right: "12rem",
   borderRadius: "20px",
+  boxShadow: "inset 0 0 10px 3px rgba(0, 0, 0, 0.75)",
+  borderStyle: "solid",
+  borderWidth: "3px 4px",
+  borderColor: "primary.light",
   marginTop: "1rem",
   padding: "1.5rem",
-  backgroundColor: "red",
 };
 
 export const lineStyle: CSS.Properties = {
