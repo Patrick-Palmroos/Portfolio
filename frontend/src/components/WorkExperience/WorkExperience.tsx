@@ -13,7 +13,7 @@ export default function WorkExperience() {
   };
 
   return (
-    <div>
+    <div id="work">
       <Box>
         <Stack sx={container}>
           <Stack spacing={2}>

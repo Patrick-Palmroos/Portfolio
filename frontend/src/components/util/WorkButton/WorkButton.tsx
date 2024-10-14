@@ -27,9 +27,6 @@ export default function WorkButton({
                 width: `${width}rem`,
                 height: `${height}rem`,
                 background: "purple",
-                "&:hover": {
-                  background: "red",
-                },
               }
             : {
                 ...buttonStyle,
