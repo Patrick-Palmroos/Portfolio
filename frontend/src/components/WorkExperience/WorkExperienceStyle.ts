@@ -5,6 +5,7 @@ export const container: CSS.Properties = {
   justifyContent: "center",
   flexDirection: "row",
   alignItems: "center",
+  marginTop: "3rem",
 };
 
 export const detailBox: CSS.Properties = {
@@ -15,4 +16,13 @@ export const detailBox: CSS.Properties = {
   marginTop: "1rem",
   padding: "1.5rem",
   backgroundColor: "red",
+};
+
+export const lineStyle: CSS.Properties = {
+  backgroundColor: "info.contrastText",
+  width: "0.25rem",
+  marginTop: "0.5rem",
+  marginBottom: "1rem",
+  height: "3rem",
+  borderRadius: "2rem",
 };

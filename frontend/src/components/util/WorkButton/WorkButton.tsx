@@ -38,7 +38,7 @@ export default function WorkButton({
                   ...psuedoElemet,
                   width: `${width}rem`,
                   height: `${height}rem`,
-                  transform: "translateY(0.6rem)",
+                  transform: "translateY(0.4rem)",
                   transition: "0.2s ease",
                 },
 
@@ -48,7 +48,7 @@ export default function WorkButton({
                 },
 
                 ".child": {
-                  transform: "translateY(0.6rem)",
+                  transform: "translateY(0.4rem)",
                   transition: "0.2s ease",
                 },
 
@@ -57,7 +57,7 @@ export default function WorkButton({
                 },
 
                 ".image": {
-                  transform: "translateY(0.6rem)",
+                  transform: "translateY(0.4rem)",
                   filter: "drop-shadow(0 0px 5px rgba(0, 0, 0, 0.3))",
                   transition: "0.2s ease",
                 },

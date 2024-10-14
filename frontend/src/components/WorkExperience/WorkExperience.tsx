@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import workJson from "../util/work.json";
 import WorkButton from "../util/WorkButton/WorkButton";
-import { detailBox, container } from "./WorkExperienceStyle";
+import { detailBox, container, lineStyle } from "./WorkExperienceStyle";
 
 export default function WorkExperience() {
   const [activeWork, setActiveWork] = useState<number>(0);
@@ -16,7 +16,7 @@ export default function WorkExperience() {
     <div id="work">
       <Box>
         <Stack sx={container}>
-          <Stack spacing={6}>
+          <Stack spacing={1}>
             {workList.map((work) => (
               <Stack>
                 <WorkButton
@@ -29,15 +29,7 @@ export default function WorkExperience() {
                 />
                 <Box
                   alignSelf={"center"}
-                  sx={
-                    work.id !== workList.length - 1
-                      ? {
-                          backgroundColor: "red",
-                          width: "0.5rem",
-                          height: "2rem",
-                        }
-                      : null
-                  }
+                  sx={work.id !== workList.length - 1 ? lineStyle : null}
                 />
               </Stack>
             ))}
