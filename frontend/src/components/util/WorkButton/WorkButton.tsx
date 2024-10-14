@@ -13,7 +13,7 @@ export default function WorkButton({
   height: number;
   work: Work;
   callback: () => void;
-  active: boolean;
+  active?: boolean;
 }) {
   return (
     <div>
