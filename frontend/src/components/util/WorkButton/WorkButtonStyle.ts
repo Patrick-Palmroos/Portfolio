@@ -2,5 +2,7 @@ import CSS from "csstype";
 
 export const buttonStyle: CSS.Properties = {
   border: "none",
-  background: "green",
+  position: "relative",
+  cursor: "pointer",
+  zIndex: 1,
 };
