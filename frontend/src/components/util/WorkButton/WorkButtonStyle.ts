@@ -26,7 +26,15 @@ export const childStyle: CSS.Properties = {
   width: "11rem",
   top: "0rem",
   left: "1rem",
-  fontSize: "30px",
+  fontSize: "28px",
   color: "white",
   transition: "0.3s ease",
+};
+
+export const imageStyle: CSS.Properties = {
+  position: "absolute",
+  width: "6rem",
+  right: "1rem",
+  top: "1rem",
+  zIndex: 3,
 };

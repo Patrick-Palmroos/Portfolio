@@ -1,6 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import { Work } from "../Interfaces";
-import { buttonStyle, childStyle, psuedoElemet } from "./WorkButtonStyle";
+import {
+  buttonStyle,
+  childStyle,
+  psuedoElemet,
+  imageStyle,
+} from "./WorkButtonStyle";
 
 export default function WorkButton({
   width,
@@ -105,6 +110,11 @@ export default function WorkButton({
         >
           {work.startDate}-{work.endDate}
         </Typography>
+        <img
+          src="images/Logos/securitas.png"
+          alt="work logo"
+          style={imageStyle}
+        />
       </Box>
     </div>
   );
