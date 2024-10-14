@@ -27,9 +27,24 @@ export default function WorkButton({
                 width: `${width}rem`,
                 height: `${height}rem`,
                 background: "purple",
+                transition: "0.2s ease",
+
+                "&::before, &::after": {
+                  ...psuedoElemet,
+                  width: `${width}rem`,
+                  height: `${height}rem`,
+                  transform: "translateY(0.6rem)",
+                  transition: "0.2s ease",
+                },
+
+                "&::after": {
+                  background:
+                    "linear-gradient(65deg, #978EFF 0%, #C96BC5 50%, #B985FC 100%)",
+                },
 
                 ".child": {
                   transform: "translateY(0.6rem)",
+                  transition: "0.2s ease",
                 },
               }
             : {
@@ -43,16 +58,14 @@ export default function WorkButton({
                   height: `${height}rem`,
                 },
 
-                "&::before": {},
-
                 "&::after": {
                   opacity: 0,
                   background:
                     "linear-gradient(65deg, #978EFF 0%, #C96BC5 50%, #B985FC 100%)",
+                  transition: "0.3s ease",
                 },
 
                 "&:hover::after": {
-                  opacity: 1,
                   transform: "translateY(-0.4rem)",
                 },
                 "&:hover::before": {

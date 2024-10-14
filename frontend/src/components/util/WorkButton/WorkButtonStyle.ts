@@ -17,6 +17,7 @@ export const psuedoElemet: CSS.Properties = {
   backgroundColor: "info.contrastText",
   borderRadius: "20px",
   zIndex: 2,
+  transition: "0.3s ease",
 };
 
 export const childStyle: CSS.Properties = {
@@ -24,4 +25,5 @@ export const childStyle: CSS.Properties = {
   position: "absolute",
   top: "0rem",
   left: "1rem",
+  transition: "0.3s ease",
 };
