@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { Work } from "../Interfaces";
-import { buttonStyle, childStyle } from "./WorkButtonStyle";
+import { buttonStyle, childStyle, psuedoElemet } from "./WorkButtonStyle";
 
 export default function WorkButton({
   width,
@@ -27,26 +27,23 @@ export default function WorkButton({
                 width: `${width}rem`,
                 height: `${height}rem`,
                 background: "purple",
+
+                ".child": {
+                  transform: "translateY(0.6rem)",
+                },
               }
             : {
                 ...buttonStyle,
                 width: `${width}rem`,
                 height: `${height}rem`,
-                background: "green",
 
                 "&::before, &::after": {
-                  content: '""',
-                  position: "absolute",
+                  ...psuedoElemet,
                   width: `${width}rem`,
                   height: `${height}rem`,
-                  top: "-1rem",
-                  left: "0px",
-                  zIndex: 2,
                 },
 
-                "&::before": {
-                  background: "#FF74D0",
-                },
+                "&::before": {},
 
                 "&::after": {
                   opacity: 0,
@@ -54,13 +51,22 @@ export default function WorkButton({
                     "linear-gradient(65deg, #978EFF 0%, #C96BC5 50%, #B985FC 100%)",
                 },
 
-                "&:hover": {
-                  background: "red",
+                "&:hover::after": {
+                  opacity: 1,
+                  transform: "translateY(-0.4rem)",
+                },
+                "&:hover::before": {
+                  opacity: 1,
+                  transform: "translateY(-0.4rem)",
+                },
+
+                "&:hover .child": {
+                  transform: "translateY(-0.4rem)",
                 },
               }
         }
       >
-        <Typography variant={"h1"} sx={childStyle}>
+        <Typography className={"child"} variant={"h1"} sx={childStyle}>
           {work.name}
         </Typography>
       </Box>
