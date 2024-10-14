@@ -46,6 +46,10 @@ export default function WorkButton({
                   transform: "translateY(0.6rem)",
                   transition: "0.2s ease",
                 },
+
+                "#title": {
+                  color: "#E2FFA6",
+                },
               }
             : {
                 ...buttonStyle,
@@ -79,8 +83,27 @@ export default function WorkButton({
               }
         }
       >
-        <Typography className={"child"} variant={"h1"} sx={childStyle}>
+        <Typography
+          className={"child"}
+          id={"title"}
+          variant={"h1"}
+          sx={childStyle}
+        >
           {work.name}
+        </Typography>
+        <Typography
+          className={"child"}
+          variant={"h1"}
+          sx={{ ...childStyle, top: "2.4rem", fontSize: "20px" }}
+        >
+          {work.title}
+        </Typography>
+        <Typography
+          className={"child"}
+          variant={"h1"}
+          sx={{ ...childStyle, top: "4rem", fontSize: "20px" }}
+        >
+          {work.startDate}-{work.endDate}
         </Typography>
       </Box>
     </div>

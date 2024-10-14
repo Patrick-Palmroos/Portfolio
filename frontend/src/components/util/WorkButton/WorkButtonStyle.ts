@@ -23,7 +23,10 @@ export const psuedoElemet: CSS.Properties = {
 export const childStyle: CSS.Properties = {
   zIndex: 3,
   position: "absolute",
+  width: "11rem",
   top: "0rem",
   left: "1rem",
+  fontSize: "30px",
+  color: "white",
   transition: "0.3s ease",
 };

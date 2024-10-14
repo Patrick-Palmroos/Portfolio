@@ -19,8 +19,8 @@ export default function WorkExperience() {
           <Stack spacing={6}>
             {workList.map((work) => (
               <WorkButton
-                width={19}
-                height={6}
+                width={20}
+                height={7}
                 work={work}
                 key={work.id}
                 callback={() => HandleActiveWork(work.id)}
