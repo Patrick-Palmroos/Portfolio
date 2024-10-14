@@ -24,8 +24,8 @@ export default function WorkButton({
           active
             ? {
                 ...buttonStyle,
-                width: `${19}rem`,
-                height: `${6}rem`,
+                width: `${width}rem`,
+                height: `${height}rem`,
                 background: "purple",
                 "&:hover": {
                   background: "red",
@@ -33,8 +33,8 @@ export default function WorkButton({
               }
             : {
                 ...buttonStyle,
-                width: `${19}rem`,
-                height: `${6}rem`,
+                width: `${width}rem`,
+                height: `${height}rem`,
                 "&:hover": {
                   background: "red",
                 },
