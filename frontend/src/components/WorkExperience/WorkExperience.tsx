@@ -16,7 +16,7 @@ export default function WorkExperience() {
     <div id="work">
       <Box>
         <Stack sx={container}>
-          <Stack spacing={2}>
+          <Stack spacing={6}>
             {workList.map((work) => (
               <WorkButton
                 width={19}
