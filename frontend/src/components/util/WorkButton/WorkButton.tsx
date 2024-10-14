@@ -55,6 +55,12 @@ export default function WorkButton({
                 "#title": {
                   color: "#E2FFA6",
                 },
+
+                ".image": {
+                  transform: "translateY(0.6rem)",
+                  filter: "drop-shadow(0 0px 5px rgba(0, 0, 0, 0.3))",
+                  transition: "0.2s ease",
+                },
               }
             : {
                 ...buttonStyle,
@@ -85,6 +91,13 @@ export default function WorkButton({
                 "&:hover .child": {
                   transform: "translateY(-0.4rem)",
                 },
+                ".image": {
+                  transition: "0.3s ease",
+                },
+                "&:hover .image": {
+                  transform: "translateY(-0.4rem)",
+                  transition: "0.3s ease",
+                },
               }
         }
       >
@@ -111,6 +124,7 @@ export default function WorkButton({
           {work.startDate}-{work.endDate}
         </Typography>
         <img
+          className="image"
           src="images/Logos/securitas.png"
           alt="work logo"
           style={imageStyle}
