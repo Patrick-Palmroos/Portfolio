@@ -5,11 +5,11 @@ import WorkButton from "../util/WorkButton/WorkButton";
 import { detailBox, container } from "./WorkExperienceStyle";
 
 export default function WorkExperience() {
-  const [work, setWork] = useState<number>(0);
+  const [activeWork, setActiveWork] = useState<number>(0);
   const workList = workJson.work;
 
-  const activeWork = (workId: number) => {
-    setWork(workId);
+  const HandleActiveWork = (workId: number) => {
+    setActiveWork(workId);
   };
 
   return (
@@ -23,7 +23,8 @@ export default function WorkExperience() {
                 height={6}
                 work={work}
                 key={work.id}
-                callback={() => activeWork(work.id)}
+                callback={() => HandleActiveWork(work.id)}
+                active={work.id == activeWork ? true : false}
               />
             ))}
           </Stack>
@@ -36,7 +37,9 @@ export default function WorkExperience() {
             }}
           />
           <Box sx={detailBox}>
-            <Typography variant="h2">{workList[work].description}</Typography>
+            <Typography variant="h2">
+              {workList[activeWork].description}
+            </Typography>
           </Box>
         </Stack>
       </Box>
