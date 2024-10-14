@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { Work } from "../Interfaces";
+import { buttonStyle } from "./WorkButtonStyle";
 
 export default function WorkButton({
   width,
@@ -17,7 +18,7 @@ export default function WorkButton({
       <Box
         component={"button"}
         onClick={callback}
-        sx={{ width: `${19}rem`, height: `${6}rem` }}
+        sx={{ ...buttonStyle, width: `${19}rem`, height: `${6}rem` }}
       >
         <h2>{work.name}</h2>
       </Box>
