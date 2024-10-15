@@ -5,7 +5,7 @@ export const container: CSS.Properties = {
   justifyContent: "center",
   flexDirection: "row",
   alignItems: "center",
-  marginTop: "3rem",
+  marginTop: "5rem",
 };
 
 export const detailBox: CSS.Properties = {
@@ -17,7 +17,7 @@ export const detailBox: CSS.Properties = {
   borderStyle: "solid",
   borderWidth: "3px 4px",
   borderColor: "primary.light",
-  marginTop: "1rem",
+  marginTop: "-5.5rem",
   padding: "1.5rem",
 };
 
@@ -28,4 +28,19 @@ export const lineStyle: CSS.Properties = {
   marginBottom: "1rem",
   height: "3rem",
   borderRadius: "2rem",
+};
+
+export const pointerLine: CSS.Properties = {
+  position: "absolute",
+  width: "0.3rem",
+  bottom: "8rem",
+  backgroundColor: "green",
+};
+
+export const subLineStyle: CSS.Properties = {
+  position: "absolute",
+  content: '""',
+  width: "0.3rem",
+  height: "0.3rem",
+  backgroundColor: "red",
 };
