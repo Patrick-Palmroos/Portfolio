@@ -34,7 +34,7 @@ export const pointerLine: CSS.Properties = {
   position: "absolute",
   width: "0.3rem",
   bottom: "8rem",
-  backgroundColor: "green",
+  backgroundColor: "primary.light",
 };
 
 export const subLineStyle: CSS.Properties = {
@@ -42,5 +42,5 @@ export const subLineStyle: CSS.Properties = {
   content: '""',
   width: "0.3rem",
   height: "0.3rem",
-  backgroundColor: "red",
+  backgroundColor: "primary.light",
 };

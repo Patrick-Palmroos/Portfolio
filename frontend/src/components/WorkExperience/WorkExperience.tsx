@@ -76,7 +76,6 @@ export default function WorkExperience() {
                                 "&::after": {
                                   ...subLineStyle,
                                   borderRadius: "10px",
-                                  backgroundColor: "blue",
                                   transition:
                                     "right 0.3s 0.6s ease, top 0.4s 0.2s ease, width 0.3s 0.6s ease",
                                   right: "-1.7rem",
@@ -101,7 +100,6 @@ export default function WorkExperience() {
 
                                 "&::after": {
                                   ...subLineStyle,
-                                  backgroundColor: "blue",
                                   transition:
                                     "right 0.2s ease, top 0.4s 0.2s ease, width 0.2s ease",
                                   right: "0rem",
@@ -156,7 +154,6 @@ export default function WorkExperience() {
                                   borderRadius: "10px",
                                   transition:
                                     "bottom 0.4s 0.2s ease, right 0.3s 0.6s ease, width 0.3s 0.6s ease",
-                                  backgroundColor: "blue",
                                   right: "-1.7rem",
                                   bottom: "12.2rem",
                                   width: "2rem",
@@ -184,7 +181,6 @@ export default function WorkExperience() {
                                   transition:
                                     "bottom 0.4s 0.2s ease, right 0.2s ease, width 0.2s ease",
                                   borderRadius: "10px",
-                                  backgroundColor: "blue",
                                   right: "0rem",
                                   bottom: "0rem",
                                   width: "0.3rem",
