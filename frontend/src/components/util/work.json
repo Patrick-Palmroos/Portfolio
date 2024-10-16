@@ -5,8 +5,8 @@
       "logo": "images/Logos/securitas.png",
       "name": "Securitas Oy",
       "title": "Security Guard",
-      "startDate": "6.2023",
-      "endDate": "current",
+      "startDate": "06.2023",
+      "endDate": "Current",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \nNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
     },
     {
@@ -15,7 +15,7 @@
       "name": "K-Citymarket",
       "title": "Cashier",
       "startDate": "10.2022",
-      "endDate": "6.2023",
+      "endDate": "06.2023",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
     },
     {
@@ -24,7 +24,7 @@
       "name": "Prisma",
       "title": "Cashier",
       "startDate": "11.2021",
-      "endDate": "7.2022",
+      "endDate": "06.2022",
       "description": "Lorem ipsum"
     }
   ]

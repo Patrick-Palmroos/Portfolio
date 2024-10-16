@@ -7,6 +7,30 @@ import {
   imageStyle,
 } from "./WorkButtonStyle";
 
+const calcMonths = (startDate: string, endDate: string) => {
+  const parseDate = (date: string) => {
+    const [month, year] = date.split(".");
+    return month + ".1." + year;
+  };
+  const start: Date = new Date(parseDate(startDate));
+  const end: Date =
+    endDate === "Current" ? new Date() : new Date(parseDate(endDate));
+
+  const startYear = start.getFullYear();
+  const startMonth = start.getMonth();
+
+  const endYear = end.getFullYear();
+  const endMonth = end.getMonth();
+
+  // Calculate total months difference
+  const totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
+
+  // Return the result as years and months
+  //const years = Math.floor(totalMonths / 12);
+  //const months = totalMonths % 12;
+  return `${totalMonths} months`;
+};
+
 export default function WorkButton({
   width,
   height,
@@ -119,9 +143,9 @@ export default function WorkButton({
         <Typography
           className={"child"}
           variant={"h1"}
-          sx={{ ...childStyle, top: "4rem", fontSize: "20px" }}
+          sx={{ ...childStyle, top: "4.2rem", fontSize: "18px" }}
         >
-          {work.startDate}-{work.endDate}
+          {calcMonths(work.startDate, work.endDate)}
         </Typography>
         <img
           className="image"
