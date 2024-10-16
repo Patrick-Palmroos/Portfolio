@@ -51,9 +51,10 @@ export default function Header() {
           {/*logos */}
           <img src={logos} alt="Logos" style={logoStyle} />
           {/*circle behind profile picture */}
-          <Box sx={circle} />
-          {/*Profile Picture */}
-          <img src={pfp} alt="Picture of Patrick Palmroos" style={pfpStyle} />
+          <Box sx={circle}>
+            {/*Profile Picture */}
+            <img src={pfp} alt="Picture of Patrick Palmroos" style={pfpStyle} />
+          </Box>
         </Box>
       </Stack>
     </div>

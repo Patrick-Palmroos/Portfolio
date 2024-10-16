@@ -2,7 +2,8 @@ import CSS from "csstype";
 
 export const backgroundBox: CSS.Properties = {
   height: "33rem",
-  width: "80rem",
+  maxWidth: "90rem",
+  width: "95%",
   margin: "0px 2rem 0px 3rem",
   position: "relative",
   boxShadow: "-1.3rem -1rem 0px #A880D2",
@@ -21,14 +22,15 @@ export const circle: CSS.Properties = {
   right: "-5rem",
   top: "2.5rem",
   boxShadow: "-0.45rem 0.5rem 0.9rem rgb(0 0 0 / 7%)",
+  overflow: "hidden",
   zIndex: 1,
 };
 
 export const pfpStyle: CSS.Properties = {
   position: "absolute",
-  right: "-0rem",
-  top: "0rem",
-  width: "29rem",
+  right: "2rem",
+  bottom: "1rem",
+  width: "32rem",
   height: "auto",
   zIndex: 2,
 };
