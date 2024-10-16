@@ -2,7 +2,7 @@
   "work": [
     {
       "id": 0,
-      "logo": "images/Logos/lol.png",
+      "logo": "images/Logos/securitas.png",
       "name": "Securitas Oy",
       "title": "Security Guard",
       "startDate": "6.2023",
@@ -11,7 +11,7 @@
     },
     {
       "id": 1,
-      "logo": "images/Logos/lol.png",
+      "logo": "images/Logos/kesko.png",
       "name": "K-Citymarket",
       "title": "Security Guard",
       "startDate": "6.2023",
@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "logo": "images/Logos/lol.png",
+      "logo": "images/Logos/prisma.png",
       "name": "Prisma",
       "title": "Security Guard",
       "startDate": "6.2023",

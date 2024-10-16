@@ -125,7 +125,7 @@ export default function WorkButton({
         </Typography>
         <img
           className="image"
-          src="images/Logos/securitas.png"
+          src={work.logo}
           alt="work logo"
           style={imageStyle}
         />
