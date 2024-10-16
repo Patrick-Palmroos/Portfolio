@@ -20,7 +20,7 @@ function App() {
         <div>
           <Box
             sx={{
-              minHeight: "200rem",
+              minHeight: "300rem",
               backgroundColor: "background.default",
             }}
           >
