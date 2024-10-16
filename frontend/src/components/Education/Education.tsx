@@ -1,10 +1,12 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
+import { container } from "./EducationStyle";
 
 export default function Education() {
   return (
     <div>
-      <Stack>
-        <Box>HELLOOOOOOOOO</Box>
+      <Stack direction={"row"} sx={container} spacing={4}>
+        <Box>HELLLOOOOOO</Box>
+        <Box>POOOKIIIIIEE</Box>
       </Stack>
     </div>
   );
