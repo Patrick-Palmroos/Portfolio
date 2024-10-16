@@ -68,7 +68,7 @@ export default function WorkExperience() {
                                 "&::before": {
                                   ...subLineStyle,
                                   background:
-                                    "linear-gradient(to bottom, #B985FC 20%, #FF74D0 80%)",
+                                    "linear-gradient(to bottom, #B985FC 20%, #C96BC5 80%)",
                                   borderRadius: "10px",
                                   transition: "0.2s 0.2s ease",
                                   right: "0rem",
@@ -77,7 +77,7 @@ export default function WorkExperience() {
 
                                 "&::after": {
                                   ...subLineStyle,
-                                  background: "#FF74D0",
+                                  background: "#C96BC5",
                                   borderRadius: "10px",
                                   transition:
                                     "right 0.2s 0.4s ease, top 0.2s 0.2s ease, width 0.2s 0.4s ease",
@@ -97,7 +97,7 @@ export default function WorkExperience() {
                                 "&::before": {
                                   ...subLineStyle,
                                   background:
-                                    "linear-gradient(to bottom, #B985FC 20%, #FF74D0 80%)",
+                                    "linear-gradient(to bottom, #B985FC 20%, #C96BC5 80%)",
                                   transition: "0.2s 0.2s ease",
                                   right: "0rem",
                                   paddingTop: "0rem",
@@ -121,7 +121,7 @@ export default function WorkExperience() {
                                 //active 1
                                 ...pointerLine,
                                 background:
-                                  "linear-gradient(to right, #B985FC 20%, #FF74D0 80%)",
+                                  "linear-gradient(to right, #B985FC 20%, #C96BC5 80%)",
                                 borderRadius: "10px",
                                 height: "0.3rem",
                                 width: "4rem",
@@ -132,7 +132,7 @@ export default function WorkExperience() {
                                 //not active 1
                                 ...pointerLine,
                                 background:
-                                  "linear-gradient(to right, #B985FC 0%, #FF74D0 100%)",
+                                  "linear-gradient(to right, #B985FC 0%, #C96BC5 100%)",
                                 borderRadius: "10px",
                                 height: "0.3rem",
                                 paddingRight: "0rem",
@@ -154,7 +154,7 @@ export default function WorkExperience() {
                                 "&::before": {
                                   ...subLineStyle,
                                   background:
-                                    "linear-gradient(to top, #B985FC 20%, #FF74D0 80%)",
+                                    "linear-gradient(to top, #B985FC 20%, #C96BC5 80%)",
                                   borderRadius: "10px",
                                   transition: "0.2s 0.2s ease",
                                   right: "0rem",
@@ -164,7 +164,7 @@ export default function WorkExperience() {
                                 "&::after": {
                                   ...subLineStyle,
                                   borderRadius: "10px",
-                                  background: "#FF74D0",
+                                  background: "#C96BC5",
                                   transition:
                                     "bottom 0.2s 0.2s ease, right 0.2s 0.4s ease, width 0.2s 0.4s ease",
                                   right: "-1.7rem",
@@ -184,7 +184,7 @@ export default function WorkExperience() {
                                 "&::before": {
                                   ...subLineStyle,
                                   background:
-                                    "linear-gradient(to top, #B985FC 20%, #FF74D0 80%)",
+                                    "linear-gradient(to top, #B985FC 20%, #C96BC5 80%)",
                                   borderRadius: "10px",
                                   transition: "0.2s 0.2s ease",
                                   right: "0rem",
