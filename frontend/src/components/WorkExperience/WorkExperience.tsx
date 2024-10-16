@@ -68,7 +68,7 @@ export default function WorkExperience() {
                                 "&::before": {
                                   ...subLineStyle,
                                   borderRadius: "10px",
-                                  transition: "0.4s 0.2s ease",
+                                  transition: "0.2s 0.2s ease",
                                   right: "0rem",
                                   paddingTop: "12.2rem",
                                 },
@@ -77,7 +77,7 @@ export default function WorkExperience() {
                                   ...subLineStyle,
                                   borderRadius: "10px",
                                   transition:
-                                    "right 0.3s 0.6s ease, top 0.4s 0.2s ease, width 0.3s 0.6s ease",
+                                    "right 0.2s 0.4s ease, top 0.2s 0.2s ease, width 0.2s 0.4s ease",
                                   right: "-1.7rem",
                                   top: "12.2rem",
                                   width: "2rem",
@@ -89,11 +89,11 @@ export default function WorkExperience() {
                                 height: "0.3rem",
                                 paddingRight: "0rem",
                                 right: "-3rem",
-                                transition: "0.3s 0.6s ease",
+                                transition: "0.2s 0.4s ease",
 
                                 "&::before": {
                                   ...subLineStyle,
-                                  transition: "0.4s 0.2s ease",
+                                  transition: "0.2s 0.2s ease",
                                   right: "0rem",
                                   paddingTop: "0rem",
                                 },
@@ -101,7 +101,7 @@ export default function WorkExperience() {
                                 "&::after": {
                                   ...subLineStyle,
                                   transition:
-                                    "right 0.2s ease, top 0.4s 0.2s ease, width 0.2s ease",
+                                    "right 0.2s ease, top 0.2s 0.2s ease, width 0.2s ease",
                                   right: "0rem",
                                   top: "0rem",
                                   paddingTop: "0rem",
@@ -139,12 +139,12 @@ export default function WorkExperience() {
                                 height: "0.3rem",
                                 paddingRight: "2rem",
                                 right: "-6rem",
-                                transition: "0.2s ease",
+                                transition: "0.2s ease-in",
 
                                 "&::before": {
                                   ...subLineStyle,
                                   borderRadius: "10px",
-                                  transition: "0.4s 0.2s ease",
+                                  transition: "0.2s 0.2s ease",
                                   right: "0rem",
                                   paddingTop: "12.2rem",
                                   bottom: "0",
@@ -153,7 +153,7 @@ export default function WorkExperience() {
                                   ...subLineStyle,
                                   borderRadius: "10px",
                                   transition:
-                                    "bottom 0.4s 0.2s ease, right 0.3s 0.6s ease, width 0.3s 0.6s ease",
+                                    "bottom 0.2s 0.2s ease, right 0.2s 0.4s ease, width 0.2s 0.4s ease",
                                   right: "-1.7rem",
                                   bottom: "12.2rem",
                                   width: "2rem",
@@ -166,12 +166,12 @@ export default function WorkExperience() {
                                 height: "0.3rem",
                                 paddingRight: "0rem",
                                 right: "-3rem",
-                                transition: "0.3s 0.6s ease",
+                                transition: "0.2s 0.4s ease",
 
                                 "&::before": {
                                   ...subLineStyle,
                                   borderRadius: "10px",
-                                  transition: "0.4s 0.2s ease",
+                                  transition: "0.2s 0.2s ease",
                                   right: "0rem",
                                   paddingTop: "0rem",
                                   bottom: "0",
@@ -179,7 +179,7 @@ export default function WorkExperience() {
                                 "&::after": {
                                   ...subLineStyle,
                                   transition:
-                                    "bottom 0.4s 0.2s ease, right 0.2s ease, width 0.2s ease",
+                                    "bottom 0.2s 0.2s ease, right 0.2s ease, width 0.2s ease",
                                   borderRadius: "10px",
                                   right: "0rem",
                                   bottom: "0rem",
