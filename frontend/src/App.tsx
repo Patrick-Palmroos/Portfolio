@@ -51,7 +51,7 @@ function App() {
                 <Skills />
               </Stack>
             </Stack>
-            <Box marginLeft={"11rem"}>
+            <Box marginLeft={"11rem"} marginTop={"-3rem"}>
               <Title title="Work Experience" />
             </Box>
             <WorkExperience />
