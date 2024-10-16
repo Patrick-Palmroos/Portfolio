@@ -27,7 +27,7 @@ function App() {
             <TopBar />
             <Header />
             <Box marginLeft={"11rem"}>
-              <Title title="My Previous Work" />
+              <Title title="My Previous Projects" />
             </Box>
             <Projects />
             <Stack
