@@ -211,7 +211,37 @@ export default function WorkExperience() {
           </Stack>
 
           <Box sx={detailBox}>
-            <Typography variant="h2">
+            <Stack
+              display={"flex"}
+              flexDirection={"row"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+            >
+              {/*title and name */}
+              <Stack>
+                <Typography
+                  variant="h1"
+                  sx={{ fontSize: "35px", color: "primary.contrastText" }}
+                >
+                  {workList[activeWork].name}
+                </Typography>
+                <Typography variant="h1" sx={{ fontSize: "25px" }}>
+                  {workList[activeWork].title}
+                </Typography>
+              </Stack>
+              {/*work duration */}
+              <Stack>
+                <Typography variant="h1" sx={{ fontSize: "25px" }}>
+                  {workList[activeWork].startDate} -{" "}
+                  {workList[activeWork].endDate}
+                </Typography>
+              </Stack>
+            </Stack>
+            <Typography
+              variant="h2"
+              sx={{ fontSize: "20px" }}
+              paddingTop={"1.5rem"}
+            >
               {workList[activeWork].description}
             </Typography>
           </Box>
