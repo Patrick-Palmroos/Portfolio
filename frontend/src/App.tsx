@@ -6,6 +6,7 @@ import Title from "./components/util/Title/Title.tsx";
 import AboutMe from "./components/AboutMe/AboutMe.tsx";
 import Line from "./components/util/Line/Line.tsx";
 import Skills from "./components/Skills/Skills.tsx";
+import WorkExperience from "./components/WorkExperience/WorkExperience.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
@@ -19,7 +20,7 @@ function App() {
         <div>
           <Box
             sx={{
-              minHeight: "200rem",
+              minHeight: "300rem",
               backgroundColor: "background.default",
             }}
           >
@@ -37,7 +38,7 @@ function App() {
             >
               <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
                 <Box marginLeft={"2rem"}>
-                  <Title title="About me" line={false} />
+                  <Title title="About Me" line={false} />
                 </Box>
                 <AboutMe />
               </Stack>
@@ -50,6 +51,10 @@ function App() {
                 <Skills />
               </Stack>
             </Stack>
+            <Box marginLeft={"11rem"}>
+              <Title title="Work Experience" />
+            </Box>
+            <WorkExperience />
           </Box>
         </div>
       </ThemeContext.Provider>

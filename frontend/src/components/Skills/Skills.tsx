@@ -27,7 +27,7 @@ export default function Skills() {
             <Box />
             <Box />
             {topRow.map((skill: Skill) => (
-              <SkillBox skill={skill} />
+              <SkillBox skill={skill} key={skill.id} />
             ))}
             <Box />
           </Box>
@@ -35,7 +35,7 @@ export default function Skills() {
           <Box sx={{ ...gridStyle, gridTemplateColumns: "repeat(5, 6rem)" }}>
             <Box />
             {theMiddle.map((skill: Skill) => (
-              <SkillBox skill={skill} />
+              <SkillBox skill={skill} key={skill.id} />
             ))}
           </Box>
           {/*Bottom Row*/}

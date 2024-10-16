@@ -16,3 +16,13 @@ export interface Skill {
   link: string;
   glow: string;
 }
+
+export interface Work {
+  id: number;
+  logo: string;
+  name: string;
+  title: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+}

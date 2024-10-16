@@ -30,7 +30,7 @@ const darkTheme = createTheme({
       main: "#E8CDE5",
       light: "#B985FC",
       dark: "#A880D2",
-      contrastText: "#BDFFA6",
+      contrastText: "#BDFFA6", //Green
     },
     secondary: {
       main: "#000000",
@@ -42,7 +42,7 @@ const darkTheme = createTheme({
       main: "#DFAAFF",
       light: "#000000",
       dark: "#ADACFF",
-      contrastText: "#FF74D0",
+      contrastText: "#FF74D0", //red
     },
   },
 });
