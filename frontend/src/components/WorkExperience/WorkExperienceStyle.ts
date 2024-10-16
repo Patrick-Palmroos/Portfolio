@@ -15,7 +15,7 @@ export const detailBox: CSS.Properties = {
   borderRadius: "20px",
   boxShadow: "inset 0 0 10px 3px rgba(0, 0, 0, 0.75)",
   border: "solid transparent",
-  borderWidth: "3px 4px",
+  borderWidth: "4px 5px",
   background:
     "linear-gradient(#27242E, #27242E) padding-box, linear-gradient(to right, #FF74D0, #B985FC) border-box",
   marginTop: "-5.5rem",
