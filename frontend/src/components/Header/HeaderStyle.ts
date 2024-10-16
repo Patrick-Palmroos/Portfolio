@@ -6,7 +6,7 @@ export const backgroundBox: CSS.Properties = {
   width: "95%",
   margin: "0px 2rem 0px 3rem",
   position: "relative",
-  boxShadow: "-1.3rem -1rem 0px #A880D2",
+  boxShadow: "-1.3rem -0.5rem 0px 0px #A880D2",
   overflow: "hidden",
   borderRadius: "8px",
   backgroundColor: "primary.main",
@@ -50,5 +50,5 @@ export const titleBox: CSS.Properties = {
   paddingRight: "2rem",
   left: "6.2rem",
   top: "10rem",
-  zIndex: 1,
+  zIndex: 4,
 };
