@@ -9,6 +9,7 @@ import {
   pointerLine,
   subLineStyle,
 } from "./WorkExperienceStyle";
+import React from "react";
 
 export default function WorkExperience() {
   const [activeWork, setActiveWork] = useState<number>(0);
@@ -24,12 +25,11 @@ export default function WorkExperience() {
         <Stack sx={container}>
           <Stack spacing={1}>
             {workList.map((work) => (
-              <Stack paddingRight={"5rem"}>
+              <Stack paddingRight={"5rem"} key={work.id}>
                 <WorkButton
                   width={20}
                   height={7}
                   work={work}
-                  key={work.id}
                   callback={() => HandleActiveWork(work.id)}
                   active={work.id == activeWork ? true : false}
                 />
@@ -237,13 +237,16 @@ export default function WorkExperience() {
                 </Typography>
               </Stack>
             </Stack>
-            <Typography
-              variant="h2"
-              sx={{ fontSize: "20px" }}
-              paddingTop={"1.5rem"}
-            >
-              {workList[activeWork].description}
-            </Typography>
+            {workList[activeWork].description.split("\n").map((line, index) => (
+              <Typography
+                key={index}
+                variant="h2"
+                sx={{ fontSize: "20px" }}
+                paddingTop={"1.5rem"}
+              >
+                {line}
+              </Typography>
+            ))}
           </Box>
         </Stack>
       </Box>
