@@ -7,6 +7,7 @@ import AboutMe from "./components/AboutMe/AboutMe.tsx";
 import Line from "./components/util/Line/Line.tsx";
 import Skills from "./components/Skills/Skills.tsx";
 import WorkExperience from "./components/WorkExperience/WorkExperience.tsx";
+import Education from "./components/Education/Education.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
@@ -58,6 +59,7 @@ function App() {
             <Box marginLeft={"11rem"} marginTop={"-1rem"}>
               <Title title="Education" />
             </Box>
+            <Education />
           </Box>
         </div>
       </ThemeContext.Provider>
