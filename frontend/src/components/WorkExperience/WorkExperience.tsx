@@ -9,7 +9,6 @@ import {
   pointerLine,
   subLineStyle,
 } from "./WorkExperienceStyle";
-import React from "react";
 
 export default function WorkExperience() {
   const [activeWork, setActiveWork] = useState<number>(0);
