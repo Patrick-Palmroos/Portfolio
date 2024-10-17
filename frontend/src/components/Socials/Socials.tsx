@@ -1,9 +1,10 @@
 import { Box } from "@mui/material";
+import SocialBox from "../util/SocialBox/SocialBox";
 
 export default function Socials() {
   return (
     <div>
-      <Box>Hello</Box>
+      <SocialBox icon="" color1="" color2="" link="" />
     </div>
   );
 }

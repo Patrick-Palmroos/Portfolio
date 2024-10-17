@@ -1,11 +1,16 @@
 import { Box } from "@mui/material";
 
-export default function SocialBox(
-  icon: string,
-  color1: string,
-  color2: string,
-  link: string
-) {
+export default function SocialBox({
+  icon,
+  color1,
+  color2,
+  link,
+}: {
+  icon: string;
+  color1: string;
+  color2: string;
+  link: string;
+}) {
   return (
     <div>
       <Box
