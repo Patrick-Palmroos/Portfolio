@@ -14,7 +14,7 @@ export const titleStyle: CSS.Properties = {
 export const lineStyle: CSS.Properties = {
   height: "0.4rem",
   marginLeft: "1rem",
-  marginRight: "9rem",
+  marginRight: "0rem",
   width: "100vw",
   borderRadius: "5px",
   backgroundImage:

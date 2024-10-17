@@ -46,16 +46,16 @@ export default function LayerButton({
             },
             "&:hover::before": {
               opacity: 1,
-              transform: "translateY(-0.5rem)",
+              transform: "translateY(-0.25rem)",
               transition: "opacity 0.6s ease, transform 0.05s ease",
             },
             "&:hover::after": {
               opacity: 1,
-              transform: "translateY(-1rem)",
+              transform: "translateY(-0.5rem)",
               transition: "opacity 0.2s ease, transform 0.25s ease",
             },
             "&:hover .text": {
-              transform: "translateY(-1rem)",
+              transform: "translateY(-0.5rem)",
               transition: "transform 0.25s ease, color 0.1s ease",
             },
           }}

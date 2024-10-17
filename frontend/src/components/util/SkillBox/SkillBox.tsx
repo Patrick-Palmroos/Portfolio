@@ -15,6 +15,7 @@ export default function SkillBox({ skill }: { skill: Skill }) {
         textAlign: "center",
         alignContent: "center",
         transition: "0.5s ease",
+        WebkitTapHighlightColor: "transparent",
 
         "&:hover": {
           background: `rgba(${skill.color1}, 0.25)`,

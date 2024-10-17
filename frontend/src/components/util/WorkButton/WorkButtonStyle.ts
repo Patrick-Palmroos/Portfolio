@@ -7,6 +7,7 @@ export const buttonStyle: CSS.Properties = {
   backgroundColor: "#914180",
   borderRadius: "20px",
   zIndex: 1,
+  WebkitTapHighlightColor: "transparent",
 };
 
 export const psuedoElemet: CSS.Properties = {

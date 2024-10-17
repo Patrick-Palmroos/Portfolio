@@ -7,6 +7,8 @@ import AboutMe from "./components/AboutMe/AboutMe.tsx";
 import Line from "./components/util/Line/Line.tsx";
 import Skills from "./components/Skills/Skills.tsx";
 import WorkExperience from "./components/WorkExperience/WorkExperience.tsx";
+import Education from "./components/Education/Education.tsx";
+import Socials from "./components/Socials/Socials.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
@@ -20,23 +22,26 @@ function App() {
         <div>
           <Box
             sx={{
-              minHeight: "300rem",
+              minHeight: "100%",
               backgroundColor: "background.default",
             }}
           >
             <TopBar />
             <Header />
-            <Box marginLeft={"11rem"}>
-              <Title title="My Previous Work" />
+            <div id="projects" />
+            <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
+              <Title title="My Previous Projects" />
             </Box>
             <Projects />
             <Stack
               direction="row"
+              paddingTop={"8rem"}
               spacing={2}
               alignItems={"flex-start"}
               justifyContent={"center"}
             >
               <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
+                <div id="aboutMe" />
                 <Box marginLeft={"2rem"}>
                   <Title title="About Me" line={false} />
                 </Box>
@@ -46,15 +51,46 @@ function App() {
                 <Line maxHeight={"1rem"} />
               </Box>
               <Stack paddingLeft={"1rem"}>
+                <div id="skills" />
                 <Title title="Skills" line={false} />
 
                 <Skills />
               </Stack>
             </Stack>
-            <Box marginLeft={"11rem"}>
-              <Title title="Work Experience" />
-            </Box>
-            <WorkExperience />
+            <div id="work">
+              <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
+                <Title title="Work Experience" />
+              </Box>
+              <WorkExperience />
+            </div>
+            <div id="education">
+              <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"8rem"}>
+                <Title title="Education" />
+              </Box>
+              <Education />
+            </div>
+            <div
+              id="socials"
+              style={{
+                marginTop: "30rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "row",
+                height: "20rem",
+                backgroundColor: "#19121c",
+              }}
+            >
+              <Box
+                marginLeft={"0rem"}
+                marginBottom={"5rem"}
+                marginRight={"2rem"}
+                width={"30rem"}
+              >
+                <Title title="Contact Me!" />
+              </Box>
+              <Socials />
+            </div>
           </Box>
         </div>
       </ThemeContext.Provider>

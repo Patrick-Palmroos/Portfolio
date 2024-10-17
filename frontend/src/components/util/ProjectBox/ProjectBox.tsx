@@ -39,7 +39,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           },
           "&::before": {
             backgroundColor: "#8E5AB7",
-            boxShadow: "inset 0 0 20px 2px rgba(0, 0, 0, 0.25)",
+            //boxShadow: "inset 0 0 20px 2px rgba(0, 0, 0, 0.25)",
             zIndex: 1,
             transition: "transform 0.4s ease",
           },

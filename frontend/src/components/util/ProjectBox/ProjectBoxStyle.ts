@@ -9,6 +9,7 @@ export const projectBoxStyle: CSS.Properties = {
   cursor: "pointer",
   border: "none",
   transition: "0.2s ease",
+  WebkitTapHighlightColor: "transparent",
 };
 
 export const imageStyle: CSS.Properties = {

@@ -12,7 +12,7 @@ import logos from "../../assets/logos.png";
 export default function Header() {
   return (
     <div>
-      <Stack component={"section"} paddingTop={"2rem"} alignItems={"center"}>
+      <Stack component={"section"} paddingTop={"8rem"} alignItems={"center"}>
         {/*The box component. */}
         <Box
           alignItems={"center"}
@@ -51,9 +51,10 @@ export default function Header() {
           {/*logos */}
           <img src={logos} alt="Logos" style={logoStyle} />
           {/*circle behind profile picture */}
-          <Box sx={circle} />
-          {/*Profile Picture */}
-          <img src={pfp} alt="Picture of Patrick Palmroos" style={pfpStyle} />
+          <Box sx={circle}>
+            {/*Profile Picture */}
+            <img src={pfp} alt="Picture of Patrick Palmroos" style={pfpStyle} />
+          </Box>
         </Box>
       </Stack>
     </div>
