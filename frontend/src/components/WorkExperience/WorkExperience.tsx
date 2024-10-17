@@ -19,7 +19,7 @@ export default function WorkExperience() {
   };
 
   return (
-    <div id="work">
+    <div>
       <Box>
         <Stack sx={container}>
           <Stack spacing={1}>

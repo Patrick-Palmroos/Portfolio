@@ -52,10 +52,12 @@ function App() {
                 <Skills />
               </Stack>
             </Stack>
-            <Box marginLeft={"11rem"} marginTop={"-3rem"}>
-              <Title title="Work Experience" />
-            </Box>
-            <WorkExperience />
+            <div id="work">
+              <Box marginLeft={"11rem"} marginTop={"-4rem"}>
+                <Title title="Work Experience" />
+              </Box>
+              <WorkExperience />
+            </div>
             <div id="education">
               <Box marginLeft={"11rem"} marginTop={"-1rem"}>
                 <Title title="Education" />
