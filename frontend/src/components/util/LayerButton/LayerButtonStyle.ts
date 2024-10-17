@@ -11,4 +11,5 @@ export const buttonStyle: CSS.Properties = {
   alignContent: "center",
   transition: "0.5s ease",
   zIndex: 0,
+  WebkitTapHighlightColor: "transparent",
 };

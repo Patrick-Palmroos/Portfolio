@@ -14,6 +14,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           border: "none",
           background: "none",
           cursor: "pointer",
+          WebkitTapHighlightColor: "transparent",
 
           "&::before, &::after": {
             content: '""',
