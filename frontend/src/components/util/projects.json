@@ -9,90 +9,11 @@
         "images/Logos/react.png"
       ],
       "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 1,
-      "name": "StaffApp",
-      "logos": [],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 2,
-      "name": "StaffApp",
-      "logos": [],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 3,
-      "name": "StaffApp",
-      "logos": [],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 4,
-      "name": "StaffApp",
-      "logos": [],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 5,
-      "name": "StaffApp",
-      "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
-      ],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 6,
-      "name": "StaffApp",
-      "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
-      ],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 7,
-      "name": "StaffApp",
-      "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
-      ],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 8,
-      "name": "StaffApp",
-      "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
-      ],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-    },
-    {
-      "id": 9,
-      "name": "StaffApp",
-      "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
-      ],
-      "image": "images/StaffApp/StaffApp.png",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+      "image2": "images/StaffApp/StaffApp.png",
+      "image3": "images/StaffApp/StaffApp.png",
+      "time": "April 2023 - July 2023",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
     }
   ]
 }
