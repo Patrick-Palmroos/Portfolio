@@ -7,10 +7,15 @@ import {
   subtitleStyle,
   logoStyle,
 } from "./ProjectBoxStyle";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.compat.css";
 
 export default function ProjectBox({ project }: { project: Project }) {
   return (
     <div>
+      <ScrollAnimation animateIn="fadeIn">
+        <Typography variant="h1">Hello</Typography>
+      </ScrollAnimation>
       <Stack
         sx={{
           ...projectBoxStyle,
