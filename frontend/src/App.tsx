@@ -68,6 +68,11 @@ function App() {
               </Box>
               <Education />
             </div>
+            <div id="socials">
+              <Box marginLeft={"11rem"} marginTop={"8rem"}>
+                <Title title="Contact Me!" />
+              </Box>
+            </div>
           </Box>
         </div>
       </ThemeContext.Provider>
