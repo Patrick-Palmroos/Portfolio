@@ -4,14 +4,15 @@ export const container: CSS.Properties = {
   display: "flex",
   flexDirection: "row",
   width: "100vw",
-  justifyContent: "space-evenly",
+  paddingTop: "4rem",
+  justifyContent: "center",
 };
 
 export const educationBox: CSS.Properties = {
   content: '""',
   position: "absolute",
-  left: "1rem",
-  top: "1rem",
+  left: "0.7rem",
+  top: "0.5rem",
   width: "25rem",
   height: "9rem",
   borderRadius: "20px",
@@ -35,4 +36,22 @@ export const imageStyle: CSS.Properties = {
   height: "9rem",
   right: "0rem",
   top: "2rem",
+  filter: "drop-shadow(0 4px 4px rgba(153, 140, 251, 1))",
+};
+
+export const titleStyle: CSS.Properties = {
+  position: "absolute",
+  fontSize: "27px",
+  color: "#E2FFA6",
+  width: "18rem",
+  top: "1.7rem",
+  left: "2rem",
+  zIndex: 3,
+};
+
+export const subtitleStyle: CSS.Properties = {
+  position: "absolute",
+  left: "2rem",
+  fontSize: "22px",
+  zIndex: 3,
 };
