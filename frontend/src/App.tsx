@@ -28,12 +28,13 @@ function App() {
             <TopBar />
             <Header />
             <div id="projects" />
-            <Box marginLeft={"11rem"}>
+            <Box marginLeft={"11rem"} marginTop={"4rem"}>
               <Title title="My Previous Projects" />
             </Box>
             <Projects />
             <Stack
               direction="row"
+              paddingTop={"8rem"}
               spacing={2}
               alignItems={"flex-start"}
               justifyContent={"center"}
@@ -56,13 +57,13 @@ function App() {
               </Stack>
             </Stack>
             <div id="work">
-              <Box marginLeft={"11rem"} marginTop={"-4rem"}>
+              <Box marginLeft={"11rem"} marginTop={"4rem"}>
                 <Title title="Work Experience" />
               </Box>
               <WorkExperience />
             </div>
             <div id="education">
-              <Box marginLeft={"11rem"} marginTop={"-1rem"}>
+              <Box marginLeft={"11rem"} marginTop={"8rem"}>
                 <Title title="Education" />
               </Box>
               <Education />
