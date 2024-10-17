@@ -8,6 +8,7 @@ import Line from "./components/util/Line/Line.tsx";
 import Skills from "./components/Skills/Skills.tsx";
 import WorkExperience from "./components/WorkExperience/WorkExperience.tsx";
 import Education from "./components/Education/Education.tsx";
+import Socials from "./components/Socials/Socials.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
@@ -72,6 +73,7 @@ function App() {
               <Box marginLeft={"11rem"} marginTop={"8rem"}>
                 <Title title="Contact Me!" />
               </Box>
+              <Socials />
             </div>
           </Box>
         </div>
