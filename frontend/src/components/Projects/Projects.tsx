@@ -6,6 +6,7 @@ import { carouselContainer, container, emptyBoxStyle } from "./ProjectsStyle";
 import { useState } from "react";
 import ArrowButton from "../util/ArrowButton/ArrowButton";
 import PageBar from "../util/PageBar/PageBar";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Projects() {
   const [page, setPage] = useState(1);
@@ -93,47 +94,68 @@ export default function Projects() {
               rotate: "180deg",
             }}
           >
-            <ArrowButton
-              callback={() => {
-                handlePageChange("back");
-              }}
-            />
+            <ScrollAnimation
+              animateIn="slideInRight"
+              duration={0.5}
+              animateOnce={true}
+            >
+              <ArrowButton
+                callback={() => {
+                  handlePageChange("back");
+                }}
+              />
+            </ScrollAnimation>
           </Box>
-          <Stack sx={carouselContainer}>
-            {visibleList.map((project: Project, index) => (
-              <Slide
-                in={slide}
-                key={project.id}
-                direction={direction}
-                timeout={
-                  direction === "left"
-                    ? baseAnimSpeed + (visibleList.length - 1 - index) * 150
-                    : baseAnimSpeed + index * 150
-                }
-              >
-                <Zoom in={grow} timeout={300 + index * 100}>
-                  <Box>
-                    <ProjectBox project={project} />
-                  </Box>
-                </Zoom>
-              </Slide>
-            ))}
-            {Array.from({ length: emptySlots }).map((_, index) => (
-              <Box key={`empty-${index}`} sx={emptyBoxStyle} />
-            ))}
-          </Stack>
+          <ScrollAnimation
+            animateIn="fadeIn"
+            duration={0.3}
+            delay={0.3}
+            offset={400}
+            animateOnce={true}
+          >
+            <Stack sx={carouselContainer}>
+              {visibleList.map((project: Project, index) => (
+                <Slide
+                  in={slide}
+                  key={project.id}
+                  direction={direction}
+                  timeout={
+                    direction === "left"
+                      ? baseAnimSpeed + (visibleList.length - 1 - index) * 150
+                      : baseAnimSpeed + index * 150
+                  }
+                >
+                  <Zoom in={grow} timeout={300 + index * 100}>
+                    <Box>
+                      <ProjectBox project={project} />
+                    </Box>
+                  </Zoom>
+                </Slide>
+              ))}
+              {Array.from({ length: emptySlots }).map((_, index) => (
+                <Box key={`empty-${index}`} sx={emptyBoxStyle} />
+              ))}
+            </Stack>
+          </ScrollAnimation>
           <Box>
-            <ArrowButton
-              callback={() => {
-                handlePageChange("next");
-              }}
-            />
+            <ScrollAnimation
+              animateIn="fadeInRight"
+              duration={0.5}
+              animateOnce={true}
+            >
+              <ArrowButton
+                callback={() => {
+                  handlePageChange("next");
+                }}
+              />
+            </ScrollAnimation>
           </Box>
         </Stack>
         <Box paddingTop={17}>
           <PageBar page={page} pageCount={pageCount} />
         </Box>
       </Stack>
+      ;
     </div>
   );
 }
