@@ -56,10 +56,12 @@ function App() {
               <Title title="Work Experience" />
             </Box>
             <WorkExperience />
-            <Box marginLeft={"11rem"} marginTop={"-1rem"}>
-              <Title title="Education" />
-            </Box>
-            <Education />
+            <div id="education">
+              <Box marginLeft={"11rem"} marginTop={"-1rem"}>
+                <Title title="Education" />
+              </Box>
+              <Education />
+            </div>
           </Box>
         </div>
       </ThemeContext.Provider>
