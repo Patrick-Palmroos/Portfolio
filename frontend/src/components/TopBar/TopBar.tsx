@@ -20,6 +20,8 @@ export default function TopBar() {
         }}
       >
         <Box
+          component={"a"}
+          href="#"
           sx={{
             width: "5rem",
             height: "5rem",
