@@ -12,7 +12,7 @@ import logos from "../../assets/logos.png";
 export default function Header() {
   return (
     <div>
-      <Stack component={"section"} paddingTop={"2rem"} alignItems={"center"}>
+      <Stack component={"section"} paddingTop={"8rem"} alignItems={"center"}>
         {/*The box component. */}
         <Box
           alignItems={"center"}
