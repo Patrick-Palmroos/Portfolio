@@ -1,5 +1,5 @@
 import { Project } from "../Interfaces";
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import {
   projectBoxStyle,
   imageStyle,
@@ -7,10 +7,81 @@ import {
   subtitleStyle,
   logoStyle,
 } from "./ProjectBoxStyle";
+import ProjectTab from "../ProjectTab/ProjectTab";
+import { useState, useRef, useEffect } from "react";
+import ReactDOM from "react-dom";
 
 export default function ProjectBox({ project }: { project: Project }) {
+  const [open, setOpen] = useState(false);
+  const boxRef = useRef<HTMLDivElement>(null);
+  const scrollPosition = useRef(0);
+
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (boxRef.current && !boxRef.current.contains(event.target as Node)) {
+      setOpen(false); // Close the ProjectTab if the click happens outside the ProjectBox
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => window.scrollTo(0, scrollPosition.current);
+
+    if (open) {
+      // Save the current scroll position
+      scrollPosition.current = window.scrollY;
+
+      // Lock the scroll but keep the scrollbar
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "15px"; // Prevent layout shift from hiding scrollbar
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      // Restore scrolling when the modal is closed
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+      window.removeEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
+    // Add event listener for clicks
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      // Cleanup the event listener on unmount
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div>
+    <div ref={boxRef}>
+      {open
+        ? ReactDOM.createPortal(
+            <Box
+              sx={{
+                position: "fixed",
+                left: "0rem",
+                top: "0rem",
+                zIndex: 50,
+                background: "rgba(0, 0, 0, 0.2)",
+                width: "100vw",
+                height: "100vw",
+              }}
+              onClick={handleToggle}
+            >
+              <ProjectTab />
+            </Box>,
+            document.body
+          )
+        : null}
       <Stack
         sx={{
           ...projectBoxStyle,
@@ -68,7 +139,8 @@ export default function ProjectBox({ project }: { project: Project }) {
           },
         }}
         component={"button"}
-        onClick={() => alert(`Project: ${project.name}`)}
+        disabled={open}
+        onClick={handleToggle}
       >
         <Typography sx={titleStyle} className="child">
           {project.name}
