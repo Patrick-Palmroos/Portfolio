@@ -1,7 +1,14 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { projectTabStyle, exitButtonStyle } from "./ProjectTabStyle";
+import { Project } from "../Interfaces";
 
-export default function ProjectTab({ callback }: { callback: () => void }) {
+export default function ProjectTab({
+  callback,
+  project,
+}: {
+  callback: () => void;
+  project: Project;
+}) {
   return (
     <div>
       <Box
@@ -36,6 +43,7 @@ export default function ProjectTab({ callback }: { callback: () => void }) {
             },
           }}
         />
+        <Typography variant="h1">{project.name}</Typography>
       </Box>
     </div>
   );

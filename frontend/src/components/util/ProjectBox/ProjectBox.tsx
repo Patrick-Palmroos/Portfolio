@@ -61,7 +61,7 @@ export default function ProjectBox({ project }: { project: Project }) {
                 }}
                 onClick={handleToggle}
               ></Box>
-              <ProjectTab callback={handleToggle} />
+              <ProjectTab callback={handleToggle} project={project} />
             </Box>,
             document.body
           )
