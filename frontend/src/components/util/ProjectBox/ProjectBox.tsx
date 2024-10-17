@@ -144,7 +144,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           {project.subtitle}
         </Typography>
         <img
-          src={project.image}
+          src={project.image1}
           alt="picture of software"
           style={imageStyle}
           className="image"

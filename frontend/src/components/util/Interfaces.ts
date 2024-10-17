@@ -2,8 +2,12 @@ export interface Project {
   id: number;
   name: string;
   logos: string[];
-  image: string;
   subtitle: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  time: string;
+  details: string;
 }
 
 export interface Skill {
