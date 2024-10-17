@@ -1,5 +1,10 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { container, educationBox, educationBackdrop } from "./EducationStyle";
+import {
+  container,
+  educationBox,
+  educationBackdrop,
+  imageStyle,
+} from "./EducationStyle";
 
 export default function Education() {
   return (
@@ -14,9 +19,14 @@ export default function Education() {
               },
             }}
           >
-            <Typography zIndex={3} position={"relative"}>
+            <Typography zIndex={3} position={"absolute"}>
               HELLO
             </Typography>
+            <img
+              src="images/Logos/tamk.png"
+              alt="tamk-logo"
+              style={imageStyle}
+            />
           </Box>
         </Box>
         <Box position={"relative"}>
@@ -28,7 +38,14 @@ export default function Education() {
               },
             }}
           >
-            HELLLOOOOOO
+            <Typography zIndex={3} position={"absolute"}>
+              HELLO
+            </Typography>
+            <img
+              src="images/Logos/ylioppilas.png"
+              alt="tamk-logo"
+              style={imageStyle}
+            />
           </Box>
         </Box>
       </Stack>
