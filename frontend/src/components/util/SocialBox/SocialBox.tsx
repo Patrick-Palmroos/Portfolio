@@ -17,10 +17,21 @@ export default function SocialBox({
         component={"a"}
         href={link}
         sx={{
-          background: `linear-gradient(${color1}, ${color2})`,
+          textDecoration: "none",
+          WebkitTapHighlightColor: "transparent",
         }}
       >
-        <img src={icon} alt="icon" style={{ width: "50%" }} />
+        <img
+          src={icon}
+          alt="icon"
+          style={{
+            position: "relative",
+            background: `linear-gradient(to top right, ${color1}, ${color2})`,
+            padding: "1rem",
+            width: "5rem",
+            height: "5rem",
+          }}
+        />
       </Box>
     </div>
   );
