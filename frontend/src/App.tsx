@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, duration, Stack } from "@mui/material";
 import Header from "./components/Header/Header.tsx";
 import TopBar from "./components/TopBar/TopBar.tsx";
 import Projects from "./components/Projects/Projects.tsx";
@@ -12,14 +12,24 @@ import Socials from "./components/Socials/Socials.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
+import ScrollAnimation from "react-animate-on-scroll";
+import { useEffect } from "react";
 
 const ThemeContext = createContext("dark");
 
 function App() {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+      // Remove the hash from the URL
+      window.history.replaceState("null", "", window.location.pathname);
+    }
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <ThemeProvider theme={darkTheme}>
       <ThemeContext.Provider value="dark">
-        <div>
+        <div id="#">
           <Box
             sx={{
               minHeight: "100%",
@@ -30,7 +40,13 @@ function App() {
             <Header />
             <div id="projects" />
             <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
-              <Title title="My Previous Projects" />
+              <ScrollAnimation
+                animateIn={"fadeInDown"}
+                duration={0.5}
+                animateOnce={true}
+              >
+                <Title title="My Previous Projects" />
+              </ScrollAnimation>
             </Box>
             <Projects />
             <Stack
@@ -43,7 +59,13 @@ function App() {
               <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
                 <div id="aboutMe" />
                 <Box marginLeft={"2rem"}>
-                  <Title title="About Me" line={false} />
+                  <ScrollAnimation
+                    animateIn={"fadeInLeft"}
+                    duration={0.5}
+                    animateOnce={true}
+                  >
+                    <Title title="About Me" line={false} />
+                  </ScrollAnimation>
                 </Box>
                 <AboutMe />
               </Stack>
@@ -52,20 +74,47 @@ function App() {
               </Box>
               <Stack paddingLeft={"1rem"}>
                 <div id="skills" />
-                <Title title="Skills" line={false} />
+                <ScrollAnimation
+                  animateIn={"fadeInRight"}
+                  delay={200}
+                  duration={0.5}
+                  animateOnce={true}
+                >
+                  <Title title="Skills" line={false} />
+                </ScrollAnimation>
 
                 <Skills />
               </Stack>
             </Stack>
             <div id="work">
               <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
-                <Title title="Work Experience" />
+                <ScrollAnimation
+                  animateIn={"fadeInLeft"}
+                  duration={0.5}
+                  animateOnce={true}
+                >
+                  <Title title="Work Experience" />
+                </ScrollAnimation>
               </Box>
-              <WorkExperience />
+              <ScrollAnimation
+                animateIn={"fadeInRight"}
+                duration={0.5}
+                delay={100}
+                animateOnce={true}
+              >
+                <WorkExperience />
+              </ScrollAnimation>
             </div>
             <div id="education">
               <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"8rem"}>
-                <Title title="Education" />
+                <ScrollAnimation
+                  animateIn={"fadeInRight"}
+                  duration={0.5}
+                  delay={0}
+                  animateOnce={true}
+                >
+                  <Title title="Education" />
+                </ScrollAnimation>
               </Box>
               <Education />
             </div>

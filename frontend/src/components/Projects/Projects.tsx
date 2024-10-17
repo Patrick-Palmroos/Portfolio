@@ -108,7 +108,7 @@ export default function Projects() {
           </Box>
           <ScrollAnimation
             animateIn="fadeIn"
-            duration={0.3}
+            duration={0.8}
             delay={0.3}
             offset={400}
             animateOnce={true}

@@ -7,82 +7,103 @@ import {
   titleStyle,
   subtitleStyle,
 } from "./EducationStyle";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Education() {
   return (
     <div>
       <Stack direction={"row"} sx={container} spacing={10}>
-        <Box position={"relative"}>
-          <Box
-            sx={{
-              ...educationBackdrop,
-              "&::before": {
-                ...educationBox,
-              },
-            }}
-          >
-            <Typography variant={"h1"} sx={titleStyle}>
-              Tampere University of Applied Sciences
-            </Typography>
-            <Typography variant={"h1"} sx={{ ...subtitleStyle, top: "6.5rem" }}>
-              Software Development
-            </Typography>
-            <Typography variant={"h1"} sx={{ ...subtitleStyle, top: "9rem" }}>
-              2022-2025
-            </Typography>
-            <Typography
-              variant={"h1"}
+        <ScrollAnimation
+          animateIn={"fadeInLeft"}
+          duration={0.5}
+          delay={100}
+          animateOnce={true}
+        >
+          <Box position={"relative"}>
+            <Box
               sx={{
-                ...subtitleStyle,
-                top: "9rem",
-                left: "11rem",
-                color: "#E2FFA6",
+                ...educationBackdrop,
+                "&::before": {
+                  ...educationBox,
+                },
               }}
             >
-              Ongoing
-            </Typography>
-            <img
-              src="images/Logos/tamk.png"
-              alt="tamk-logo"
-              style={imageStyle}
-            />
+              <Typography variant={"h1"} sx={titleStyle}>
+                Tampere University of Applied Sciences
+              </Typography>
+              <Typography
+                variant={"h1"}
+                sx={{ ...subtitleStyle, top: "6.5rem" }}
+              >
+                Software Development
+              </Typography>
+              <Typography variant={"h1"} sx={{ ...subtitleStyle, top: "9rem" }}>
+                2022-2025
+              </Typography>
+              <Typography
+                variant={"h1"}
+                sx={{
+                  ...subtitleStyle,
+                  top: "9rem",
+                  left: "11rem",
+                  color: "#E2FFA6",
+                }}
+              >
+                Ongoing
+              </Typography>
+              <img
+                src="images/Logos/tamk.png"
+                alt="tamk-logo"
+                style={imageStyle}
+              />
+            </Box>
           </Box>
-        </Box>
-        <Box position={"relative"}>
-          <Box
-            sx={{
-              ...educationBackdrop,
-              "&::before": {
-                ...educationBox,
-              },
-            }}
-          >
-            <Typography variant={"h1"} sx={titleStyle}>
-              Finnish Matriculation Examination
-            </Typography>
-            <Typography variant={"h1"} sx={{ ...subtitleStyle, top: "6.5rem" }}>
-              College Degree
-            </Typography>
-            <Typography variant={"h1"} sx={{ ...subtitleStyle, top: "9rem" }}>
-              2019-2022
-            </Typography>
-            <Typography
-              variant={"h1"}
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn={"fadeInRight"}
+          duration={0.5}
+          delay={200}
+          animateOnce={true}
+        >
+          <Box position={"relative"}>
+            <Box
               sx={{
-                ...subtitleStyle,
-                top: "9rem",
-                left: "11rem",
+                ...educationBackdrop,
+                "&::before": {
+                  ...educationBox,
+                },
               }}
             >
-              Completed
-            </Typography>
-            <img
-              src="images/Logos/ylioppilas.png"
-              alt="tamk-logo"
-              style={imageStyle}
-            />
+              <Typography variant={"h1"} sx={titleStyle}>
+                Finnish Matriculation Examination
+              </Typography>
+              <Typography
+                variant={"h1"}
+                sx={{ ...subtitleStyle, top: "6.5rem" }}
+              >
+                College Degree
+              </Typography>
+              <Typography variant={"h1"} sx={{ ...subtitleStyle, top: "9rem" }}>
+                2019-2022
+              </Typography>
+              <Typography
+                variant={"h1"}
+                sx={{
+                  ...subtitleStyle,
+                  top: "9rem",
+                  left: "11rem",
+                }}
+              >
+                Completed
+              </Typography>
+              <img
+                src="images/Logos/ylioppilas.png"
+                alt="tamk-logo"
+                style={imageStyle}
+              />
+            </Box>
           </Box>
-        </Box>
+        </ScrollAnimation>
       </Stack>
     </div>
   );
