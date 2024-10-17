@@ -43,6 +43,7 @@ export default function TopBar() {
         <LayerButton title="Skills" link="#skills" />
         <LayerButton title="Work" link="#work" />
         <LayerButton title="Education" link="#education" />
+        <LayerButton title="Socials" link="#socials" />
       </Stack>
     </div>
   );

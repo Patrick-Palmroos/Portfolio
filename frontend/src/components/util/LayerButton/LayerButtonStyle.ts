@@ -4,7 +4,7 @@ export const buttonStyle: CSS.Properties = {
   position: "relative",
   backgroundColor: "color rgba (0.73 0.52 0.99 / 0)",
   padding: "0.8rem",
-  width: "10rem",
+  width: "8rem",
   height: "2.5rem",
   borderRadius: "4px",
   textDecoration: "none",
