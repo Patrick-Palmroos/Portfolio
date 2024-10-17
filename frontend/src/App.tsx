@@ -22,14 +22,14 @@ function App() {
         <div>
           <Box
             sx={{
-              minHeight: "300rem",
+              minHeight: "100%",
               backgroundColor: "background.default",
             }}
           >
             <TopBar />
             <Header />
             <div id="projects" />
-            <Box marginLeft={"11rem"} marginTop={"4rem"}>
+            <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
               <Title title="My Previous Projects" />
             </Box>
             <Projects />
@@ -58,19 +58,35 @@ function App() {
               </Stack>
             </Stack>
             <div id="work">
-              <Box marginLeft={"11rem"} marginTop={"4rem"}>
+              <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
                 <Title title="Work Experience" />
               </Box>
               <WorkExperience />
             </div>
             <div id="education">
-              <Box marginLeft={"11rem"} marginTop={"8rem"}>
+              <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"8rem"}>
                 <Title title="Education" />
               </Box>
               <Education />
             </div>
-            <div id="socials">
-              <Box marginLeft={"11rem"} marginTop={"8rem"}>
+            <div
+              id="socials"
+              style={{
+                marginTop: "30rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "row",
+                height: "20rem",
+                backgroundColor: "#19121c",
+              }}
+            >
+              <Box
+                marginLeft={"0rem"}
+                marginBottom={"5rem"}
+                marginRight={"2rem"}
+                width={"30rem"}
+              >
                 <Title title="Contact Me!" />
               </Box>
               <Socials />

@@ -5,9 +5,9 @@ export default function Socials() {
   return (
     <div>
       <Box
-        paddingTop={"3rem"}
+        paddingTop={"2rem"}
         display={"grid"}
-        gridTemplateColumns={"auto auto"}
+        gridTemplateColumns={"auto auto auto auto"}
         gridTemplateRows={"auto auto"}
         justifyContent={"center"}
         gap={"2rem"}

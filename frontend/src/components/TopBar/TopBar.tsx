@@ -11,7 +11,7 @@ export default function TopBar() {
         justifyContent={"center"}
         direction={"row"}
         sx={{
-          background: "#1F1E2C",
+          background: "#19121c",
           position: "fixed",
           width: "100vw",
           paddingBottom: "0.5rem",
@@ -21,7 +21,6 @@ export default function TopBar() {
       >
         <Box
           sx={{
-            //background: "black",
             width: "5rem",
             height: "5rem",
             position: "absolute",

@@ -27,8 +27,8 @@ export default function SocialBox({
             borderRadius: "20px",
             background: `rgba(${color2}, 0.25)`,
             padding: "1rem",
-            width: "5rem",
-            height: "5rem",
+            width: "3rem",
+            height: "3rem",
 
             "&::before, &::after": {
               content: '""',
@@ -71,8 +71,8 @@ export default function SocialBox({
             style={{
               transition: "0.3s ease",
               position: "absolute",
-              width: "5rem",
-              height: "5rem",
+              width: "3rem",
+              height: "3rem",
               filter: "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5))",
               zIndex: 4,
             }}
