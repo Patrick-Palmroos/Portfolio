@@ -27,6 +27,7 @@ function App() {
           >
             <TopBar />
             <Header />
+            <div id="projects" />
             <Box marginLeft={"11rem"}>
               <Title title="My Previous Projects" />
             </Box>
@@ -38,6 +39,7 @@ function App() {
               justifyContent={"center"}
             >
               <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
+                <div id="aboutMe" />
                 <Box marginLeft={"2rem"}>
                   <Title title="About Me" line={false} />
                 </Box>
@@ -47,6 +49,7 @@ function App() {
                 <Line maxHeight={"1rem"} />
               </Box>
               <Stack paddingLeft={"1rem"}>
+                <div id="skills" />
                 <Title title="Skills" line={false} />
 
                 <Skills />

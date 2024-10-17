@@ -85,7 +85,7 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects">
+    <div>
       <Stack alignItems={"center"} paddingTop={18}>
         <Stack direction={"row"} alignItems={"center"} sx={container}>
           <Box

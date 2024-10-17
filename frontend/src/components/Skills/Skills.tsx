@@ -11,7 +11,7 @@ export default function Skills() {
   const bottomRow = skillsList.slice(skillsList.length - 3, skillsList.length);
 
   return (
-    <div id="skills">
+    <div>
       <Box
         sx={{
           height: "40.5rem",
