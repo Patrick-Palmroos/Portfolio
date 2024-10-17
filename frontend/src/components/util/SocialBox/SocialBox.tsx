@@ -16,6 +16,8 @@ export default function SocialBox({
       <Box
         component={"a"}
         href={link}
+        target="_blank"
+        rel="noopener noreferrer"
         sx={{
           textDecoration: "none",
           WebkitTapHighlightColor: "transparent",
