@@ -71,7 +71,6 @@ export default function SocialBox({
             style={{
               transition: "0.3s ease",
               position: "absolute",
-              top: "1rem",
               width: "5rem",
               height: "5rem",
               filter: "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5))",

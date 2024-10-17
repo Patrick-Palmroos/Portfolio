@@ -19,19 +19,19 @@ export default function Socials() {
           link="#socials"
         />
         <SocialBox
-          icon="/images/Logos/linkedin.png"
-          color1="181, 102, 255"
-          color2="255, 60, 135"
+          icon="/images/Logos/gmail.png"
+          color1="116, 0, 198"
+          color2="255, 0, 55"
           link="#socials"
         />
         <SocialBox
-          icon="/images/Logos/linkedin.png"
+          icon="/images/Logos/ig.webp"
           color1="255, 174, 52"
           color2="208, 0, 125"
           link="#socials"
         />
         <SocialBox
-          icon="/images/Logos/linkedin.png"
+          icon="/images/Logos/github.png"
           color1="180, 0, 204"
           color2="139, 166, 255"
           link="#socials"
