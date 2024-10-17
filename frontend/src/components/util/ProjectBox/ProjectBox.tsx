@@ -13,17 +13,10 @@ import ReactDOM from "react-dom";
 
 export default function ProjectBox({ project }: { project: Project }) {
   const [open, setOpen] = useState(false);
-  const boxRef = useRef<HTMLDivElement>(null);
   const scrollPosition = useRef(0);
 
   const handleToggle = () => {
     setOpen(!open);
-  };
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (boxRef.current && !boxRef.current.contains(event.target as Node)) {
-      setOpen(false); // Close the ProjectTab if the click happens outside the ProjectBox
-    }
   };
 
   useEffect(() => {
@@ -51,32 +44,23 @@ export default function ProjectBox({ project }: { project: Project }) {
     };
   }, [open]);
 
-  useEffect(() => {
-    // Add event listener for clicks
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      // Cleanup the event listener on unmount
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
-    <div ref={boxRef}>
+    <div>
       {open
         ? ReactDOM.createPortal(
-            <Box
-              sx={{
-                position: "fixed",
-                left: "0rem",
-                top: "0rem",
-                zIndex: 50,
-                background: "rgba(0, 0, 0, 0.2)",
-                width: "100vw",
-                height: "100vw",
-              }}
-              onClick={handleToggle}
-            >
+            <Box>
+              <Box
+                sx={{
+                  position: "fixed",
+                  left: "0rem",
+                  top: "0rem",
+                  zIndex: 50,
+                  background: "rgba(0, 0, 0, 0.5)",
+                  width: "100vw",
+                  height: "100vh",
+                }}
+                onClick={handleToggle}
+              ></Box>
               <ProjectTab />
             </Box>,
             document.body
