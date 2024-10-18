@@ -29,7 +29,7 @@ function App() {
     }
     setTimeout(() => {
       setDisplay(true);
-    }, 500);
+    }, 100);
   }, []);
   return (
     <ThemeProvider theme={darkTheme}>
@@ -43,118 +43,126 @@ function App() {
           >
             <TopBar />
             <Header />
-            <Box sx={{ opacity: display ? 1 : 0 }}>
-              <div id="projects" />
-              <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
-                <ScrollAnimation
-                  animateIn={"fadeInDown"}
-                  duration={0.5}
-                  animateOnce={true}
-                >
-                  <Title title="My Previous Projects" />
-                </ScrollAnimation>
-              </Box>
-              <Projects />
-              <Stack
-                direction="row"
-                paddingTop={"8rem"}
-                spacing={2}
-                alignItems={"flex-start"}
-                justifyContent={"center"}
-              >
-                <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
-                  <div id="aboutMe" />
-                  <Box marginLeft={"2rem"}>
-                    <ScrollAnimation
-                      animateIn={"fadeInLeft"}
-                      duration={0.5}
-                      animateOnce={true}
-                    >
-                      <Title title="About Me" line={false} />
-                    </ScrollAnimation>
-                  </Box>
-                  <AboutMe />
-                </Stack>
-                <Box paddingTop={"6rem"}>
-                  <Line maxHeight={"1rem"} />
-                </Box>
-                <Stack paddingLeft={"1rem"}>
-                  <div id="skills" />
-                  <ScrollAnimation
-                    animateIn={"fadeInRight"}
-                    delay={200}
-                    duration={0.5}
-                    animateOnce={true}
-                  >
-                    <Title title="Skills" line={false} />
-                  </ScrollAnimation>
-
-                  <Skills />
-                </Stack>
-              </Stack>
-              <div id="work">
+            {display ? (
+              <Box>
+                <div id="projects" />
                 <Box
                   marginLeft={"11rem"}
                   marginRight={"9rem"}
                   marginTop={"4rem"}
                 >
                   <ScrollAnimation
-                    animateIn={"fadeInLeft"}
+                    animateIn={"fadeInDown"}
                     duration={0.5}
                     animateOnce={true}
                   >
-                    <Title title="Work Experience" />
+                    <Title title="My Previous Projects" />
                   </ScrollAnimation>
                 </Box>
-                <ScrollAnimation
-                  animateIn={"fadeInRight"}
-                  duration={0.5}
-                  delay={100}
-                  animateOnce={true}
+                <Projects />
+                <Stack
+                  direction="row"
+                  paddingTop={"8rem"}
+                  spacing={2}
+                  alignItems={"flex-start"}
+                  justifyContent={"center"}
                 >
-                  <WorkExperience />
-                </ScrollAnimation>
-              </div>
-              <div id="education">
-                <Box
-                  marginLeft={"11rem"}
-                  marginRight={"9rem"}
-                  marginTop={"8rem"}
-                >
+                  <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
+                    <div id="aboutMe" />
+                    <Box marginLeft={"2rem"}>
+                      <ScrollAnimation
+                        animateIn={"fadeInLeft"}
+                        duration={0.5}
+                        animateOnce={true}
+                      >
+                        <Title title="About Me" line={false} />
+                      </ScrollAnimation>
+                    </Box>
+                    <AboutMe />
+                  </Stack>
+                  <Box paddingTop={"6rem"}>
+                    <Line maxHeight={"1rem"} />
+                  </Box>
+                  <Stack paddingLeft={"1rem"}>
+                    <div id="skills" />
+                    <ScrollAnimation
+                      animateIn={"fadeInRight"}
+                      delay={200}
+                      duration={0.5}
+                      animateOnce={true}
+                    >
+                      <Title title="Skills" line={false} />
+                    </ScrollAnimation>
+
+                    <Skills />
+                  </Stack>
+                </Stack>
+                <div id="work">
+                  <Box
+                    marginLeft={"11rem"}
+                    marginRight={"9rem"}
+                    marginTop={"4rem"}
+                  >
+                    <ScrollAnimation
+                      animateIn={"fadeInLeft"}
+                      duration={0.5}
+                      animateOnce={true}
+                    >
+                      <Title title="Work Experience" />
+                    </ScrollAnimation>
+                  </Box>
                   <ScrollAnimation
                     animateIn={"fadeInRight"}
                     duration={0.5}
-                    delay={0}
+                    delay={100}
                     animateOnce={true}
                   >
-                    <Title title="Education" />
+                    <WorkExperience />
                   </ScrollAnimation>
-                </Box>
-                <Education />
-              </div>
-              <div
-                id="socials"
-                style={{
-                  marginTop: "30rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "row",
-                  height: "20rem",
-                  backgroundColor: "#19121c",
-                }}
-              >
-                <Box
-                  marginLeft={"0rem"}
-                  marginBottom={"5rem"}
-                  marginRight={"2rem"}
-                  width={"30rem"}
+                </div>
+                <div id="education">
+                  <Box
+                    marginLeft={"11rem"}
+                    marginRight={"9rem"}
+                    marginTop={"8rem"}
+                  >
+                    <ScrollAnimation
+                      animateIn={"fadeInRight"}
+                      duration={0.5}
+                      delay={0}
+                      animateOnce={true}
+                    >
+                      <Title title="Education" />
+                    </ScrollAnimation>
+                  </Box>
+                  <Education />
+                </div>
+                <div
+                  id="socials"
+                  style={{
+                    marginTop: "30rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "row",
+                    height: "20rem",
+                    backgroundColor: "#19121c",
+                  }}
                 >
-                  <Title title="Contact Me!" />
-                </Box>
-                <Socials />
-              </div>
-            </Box>
+                  <Box
+                    marginLeft={"0rem"}
+                    marginBottom={"5rem"}
+                    marginRight={"2rem"}
+                    width={"30rem"}
+                  >
+                    <Title title="Contact Me!" />
+                  </Box>
+                  <Socials />
+                </div>
+              </Box>
+            ) : (
+              <Box sx={{ height: "300rem" }} />
+            )}
           </Box>
         </div>
       </ThemeContext.Provider>
