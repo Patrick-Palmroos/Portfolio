@@ -6,7 +6,8 @@ export interface Project {
   image1: string;
   image2: string;
   image3: string;
-  time: string;
+  start: string;
+  end: string;
   details: string;
 }
 
