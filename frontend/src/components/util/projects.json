@@ -37,6 +37,63 @@
       "employer": "Entail",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
+    },
+    {
+      "id": 2,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "images": [
+        "images/StaffApp/StaffApp.png",
+        "images/StaffApp/StaffApp.png",
+        "images/StaffApp/StaffApp.png"
+      ],
+      "backDrop": "images/StaffApp/backDrop.png",
+      "duration": "April 2024 - July 2024",
+      "employer": "Entail",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
+    },
+    {
+      "id": 3,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "images": [
+        "images/StaffApp/StaffApp.png",
+        "images/StaffApp/StaffApp.png",
+        "images/StaffApp/StaffApp.png"
+      ],
+      "backDrop": "images/StaffApp/backDrop.png",
+      "duration": "April 2024 - July 2024",
+      "employer": "Entail",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
+    },
+    {
+      "id": 4,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "images": [
+        "images/StaffApp/StaffApp.png",
+        "images/StaffApp/StaffApp.png",
+        "images/StaffApp/StaffApp.png"
+      ],
+      "backDrop": "images/StaffApp/backDrop.png",
+      "duration": "April 2024 - July 2024",
+      "employer": "Entail",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
     }
   ]
 }
