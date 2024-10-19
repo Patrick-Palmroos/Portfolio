@@ -13,6 +13,7 @@ import ReactDOM from "react-dom";
 
 export default function ProjectBox({ project }: { project: Project }) {
   const [open, setOpen] = useState(false);
+  const [animate, setAnimate] = useState(false);
   const scrollPosition = useRef(0);
 
   const handleToggle = () => {
@@ -23,6 +24,7 @@ export default function ProjectBox({ project }: { project: Project }) {
     const handleScroll = () => window.scrollTo(0, scrollPosition.current);
 
     if (open) {
+      setAnimate(true);
       // Save the current scroll position
       scrollPosition.current = window.scrollY;
 
@@ -32,6 +34,7 @@ export default function ProjectBox({ project }: { project: Project }) {
 
       window.addEventListener("scroll", handleScroll);
     } else {
+      setAnimate(false);
       // Restore scrolling when the modal is closed
       document.body.style.overflow = "";
       document.body.style.paddingRight = "";
@@ -59,6 +62,8 @@ export default function ProjectBox({ project }: { project: Project }) {
                   background: "rgba(0, 0, 0, 0.5)",
                   width: "100vw",
                   height: "100vh",
+                  opacity: animate ? 1 : 0,
+                  transition: "opacity 0.5s ease-out",
                 }}
                 onClick={handleToggle}
               ></Box>
