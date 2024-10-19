@@ -3,12 +3,11 @@ export interface Project {
   name: string;
   logos: string[];
   subtitle: string;
-  image1: string;
-  image2: string;
-  image3: string;
-  start: string;
-  end: string;
+  images: string[];
+  duration: string;
   details: string;
+  employer: string;
+  backDrop: string;
 }
 
 export interface Skill {

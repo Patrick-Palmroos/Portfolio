@@ -28,7 +28,8 @@ export default function ProjectBox({ project }: { project: Project }) {
 
       // Lock the scroll but keep the scrollbar
       document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = "15px"; // Prevent layout shift from hiding scrollbar
+      document.body.style.paddingRight = "1.05rem"; // Prevent layout shift from hiding scrollbar
+
       window.addEventListener("scroll", handleScroll);
     } else {
       // Restore scrolling when the modal is closed
@@ -94,7 +95,6 @@ export default function ProjectBox({ project }: { project: Project }) {
           },
           "&::before": {
             backgroundColor: "#8E5AB7",
-            //boxShadow: "inset 0 0 20px 2px rgba(0, 0, 0, 0.25)",
             zIndex: 1,
             transition: "transform 0.4s ease",
           },
@@ -144,7 +144,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           {project.subtitle}
         </Typography>
         <img
-          src={project.image1}
+          src={project.images[0]}
           alt="picture of software"
           style={imageStyle}
           className="image"
