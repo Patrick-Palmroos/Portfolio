@@ -14,10 +14,13 @@ import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const ThemeContext = createContext("dark");
 
 function App() {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const [display, setDisplay] = useState<boolean>(false);
   useEffect(() => {
     // Check if there's a hash in the URL
@@ -47,11 +50,17 @@ function App() {
               <Box>
                 <div id="projects" />
                 <Box
+                  sx={
+                    isDesktop
+                      ? { marginLeft: "11rem", marginRight: "9rem" }
+                      : { marginLeft: "3rem", marginRight: "3rem" }
+                  }
                   marginLeft={"11rem"}
                   marginRight={"9rem"}
                   marginTop={"4rem"}
                 >
                   <ScrollAnimation
+                    initiallyVisible={isTabletOrMobile}
                     animateIn={"fadeInDown"}
                     duration={0.5}
                     animateOnce={true}

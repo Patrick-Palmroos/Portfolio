@@ -1,5 +1,6 @@
 import { Stack, Typography, Box } from "@mui/material";
 import { titleStyle, lineStyle } from "./TitleStyle";
+import { useMediaQuery } from "react-responsive";
 
 export default function Title({
   title,
@@ -8,13 +9,37 @@ export default function Title({
   title: string;
   line?: boolean;
 }) {
+  const isDesktop = useMediaQuery({ query: "(min-width: 780px)" });
   return (
     <div>
-      <Stack direction={"row"} paddingTop={10} alignItems={"center"}>
-        <Typography variant="h1" sx={titleStyle}>
+      <Stack
+        direction={isDesktop ? "row" : "column"}
+        paddingTop={10}
+        alignItems={"center"}
+      >
+        <Typography
+          variant="h1"
+          sx={
+            isDesktop ? { ...titleStyle } : { ...titleStyle, fontSize: "9vw" }
+          }
+        >
           {title}
         </Typography>
-        {line ? <Box sx={lineStyle} /> : null}
+        {line ? (
+          <Box
+            sx={
+              isDesktop
+                ? { ...lineStyle }
+                : {
+                    ...lineStyle,
+                    width: "80vw",
+                    marginTop: "0.3rem",
+                    backgroundImage:
+                      "linear-gradient(to right, transparent 0%, #B985FC 50%, transparent 100%)",
+                  }
+            }
+          />
+        ) : null}
       </Stack>
     </div>
   );
