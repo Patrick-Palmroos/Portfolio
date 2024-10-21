@@ -39,6 +39,7 @@ export default function TopBar() {
             position: "absolute",
             left: "1rem",
             top: "1rem",
+            WebkitTapHighlightColor: "transparent",
           }}
         >
           <img
