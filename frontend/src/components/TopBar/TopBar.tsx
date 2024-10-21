@@ -1,7 +1,17 @@
 import { Stack, Box } from "@mui/material";
 import LayerButton from "../util/LayerButton/LayerButton";
+import { useMediaQuery } from "react-responsive";
+import { useState } from "react";
+import HamburgerMenu from "../util/HamburgerMenu/HamburgerMenu";
 
 export default function TopBar() {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1080px)" });
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
   return (
     <div>
       <Stack
@@ -16,6 +26,7 @@ export default function TopBar() {
           width: "100vw",
           paddingBottom: "0.5rem",
           paddingTop: "1rem",
+          height: "4rem",
           zIndex: 10,
         }}
       >
@@ -26,7 +37,7 @@ export default function TopBar() {
             width: "5rem",
             height: "5rem",
             position: "absolute",
-            left: "2rem",
+            left: "1rem",
             top: "1rem",
           }}
         >
@@ -39,12 +50,20 @@ export default function TopBar() {
             }}
           ></img>
         </Box>
-        <LayerButton title="Projects" link="#projects" />
-        <LayerButton title="About me" link="#aboutMe" />
-        <LayerButton title="Skills" link="#skills" />
-        <LayerButton title="Work" link="#work" />
-        <LayerButton title="Education" link="#education" />
-        <LayerButton title="Socials" link="#socials" />
+        {isDesktop ? (
+          <Box flexDirection={"row"} display={"flex"}>
+            <LayerButton title="Projects" link="#projects" />
+            <LayerButton title="About me" link="#aboutMe" />
+            <LayerButton title="Skills" link="#skills" />
+            <LayerButton title="Work" link="#work" />
+            <LayerButton title="Education" link="#education" />
+            <LayerButton title="Socials" link="#socials" />
+          </Box>
+        ) : (
+          <Box>
+            <HamburgerMenu callback={handleClick} />
+          </Box>
+        )}
       </Stack>
     </div>
   );
