@@ -119,24 +119,24 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
         "input[type='checkbox']:checked + .custom-box": {
           backgroundColor: "info.contrastText",
           transform: "translate(0rem, 1rem) rotate(45deg)",
-          animation: "xAnimation 0.6s ease",
+          animation: "xAnimation 0.5s ease",
         },
 
         "input[type='checkbox']:checked + .custom-box::before": {
           transform: "translate(0rem, 0rem) rotate(90deg)",
-          animation: "xAnimationBefore 0.6s ease",
+          animation: "xAnimationBefore 0.5s ease",
         },
 
         "input[type='checkbox']:checked + .custom-box::after": {
           transform: "translate(0rem, 0rem) rotate(0deg)",
-          animation: "xAnimationAfter 0.6s ease",
+          animation: "xAnimationAfter 0.5s ease",
         },
 
         // animation when unchecked
         "input[type='checkbox']:not(:checked) + .custom-box": clicked
           ? {
               transform: "translate(0rem, 0rem) rotate(0deg)",
-              animation: "animation 0.6s ease",
+              animation: "animation 0.5s ease",
               transition: "0.2s ease",
             }
           : { transform: "translate(0rem, 0rem) rotate(0deg)" },
@@ -144,7 +144,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
         "input[type='checkbox']:not(:checked) + .custom-box::before": clicked
           ? {
               transform: "translate(0rem, 1rem) rotate(0deg)",
-              animation: "animationBefore 0.6s ease",
+              animation: "animationBefore 0.5s ease",
               transition: "0.2s ease",
             }
           : { transform: "translate(0rem, 1rem) rotate(0deg)" },
@@ -152,7 +152,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
         "input[type='checkbox']:not(:checked) + .custom-box::after": clicked
           ? {
               transform: "translate(0rem, 2rem)",
-              animation: "animationAfter 0.6s ease",
+              animation: "animationAfter 0.5s ease",
               transition: "0.2s ease",
             }
           : { transform: "translate(0rem, 2rem)" },
@@ -193,7 +193,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
         sx={{
           position: "absolute",
           width: "100%",
-          height: "0.4rem",
+          height: "0.3rem",
           borderRadius: "20px",
           left: "0.25rem",
           top: "0.45rem",
@@ -204,7 +204,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
             content: '""',
             position: "absolute",
             width: "100%",
-            height: "0.4rem",
+            height: "0.3rem",
             backgroundColor: "info.contrastText",
             borderRadius: "20px",
             transition: "0.2s ease",

@@ -1,12 +1,16 @@
 import { Stack, Box } from "@mui/material";
 import LayerButton from "../util/LayerButton/LayerButton";
 import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HamburgerMenu from "../util/HamburgerMenu/HamburgerMenu";
 
 export default function TopBar() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1080px)" });
   const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [isDesktop]);
 
   const handleClick = () => {
     setOpen(!open);
@@ -61,10 +65,48 @@ export default function TopBar() {
             <LayerButton title="Socials" link="#socials" />
           </Box>
         ) : (
-          <Box sx={{ position: "absolute", right: "2rem" }}>
-            <HamburgerMenu callback={handleClick} />
+          <Box>
+            <Box sx={{ position: "absolute", right: "2rem", top: "1.2rem" }}>
+              <HamburgerMenu callback={handleClick} />
+            </Box>
           </Box>
         )}
+        <Box
+          sx={{
+            zIndex: 11,
+            top: "5.5rem",
+            right: open ? "0rem" : "-20rem",
+            height: "100%",
+            width: "20rem",
+            position: "fixed",
+            backgroundColor: "#19121c",
+            transition: "0.5s ease",
+
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              background:
+                "linear-gradient(to bottom, rgba(255, 0, 137, 0.4), transparent 80%)",
+            },
+          }}
+        >
+          <Stack
+            flexDirection={"column"}
+            display={"flex"}
+            alignItems={"center"}
+            marginTop={"1rem"}
+            spacing={1}
+          >
+            <LayerButton title="Projects" link="#projects" />
+            <LayerButton title="About me" link="#aboutMe" />
+            <LayerButton title="Skills" link="#skills" />
+            <LayerButton title="Work" link="#work" />
+            <LayerButton title="Education" link="#education" />
+            <LayerButton title="Socials" link="#socials" />
+          </Stack>
+        </Box>
       </Stack>
     </div>
   );
