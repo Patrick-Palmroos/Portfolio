@@ -41,6 +41,7 @@ function App() {
           <Box
             sx={{
               minHeight: "100%",
+              overflowX: "hidden",
               backgroundColor: "background.default",
             }}
           >

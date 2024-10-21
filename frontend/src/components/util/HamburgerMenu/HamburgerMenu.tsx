@@ -89,6 +89,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
         height: "3rem",
         cursor: "pointer",
         zIndex: 5,
+        WebkitTapHighlightColor: "transparent",
 
         //anims
         "@keyframes xAnimationAfter": animations.xAnimationAfter,
@@ -192,7 +193,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
         sx={{
           position: "absolute",
           width: "100%",
-          height: "0.5rem",
+          height: "0.4rem",
           borderRadius: "20px",
           left: "0.25rem",
           top: "0.45rem",
@@ -203,7 +204,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
             content: '""',
             position: "absolute",
             width: "100%",
-            height: "0.5rem",
+            height: "0.4rem",
             backgroundColor: "info.contrastText",
             borderRadius: "20px",
             transition: "0.2s ease",

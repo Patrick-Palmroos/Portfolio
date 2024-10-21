@@ -60,7 +60,7 @@ export default function TopBar() {
             <LayerButton title="Socials" link="#socials" />
           </Box>
         ) : (
-          <Box>
+          <Box sx={{ position: "absolute", right: "2rem" }}>
             <HamburgerMenu callback={handleClick} />
           </Box>
         )}
