@@ -10,8 +10,12 @@ import {
 import ProjectTab from "../ProjectTab/ProjectTab";
 import { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { useMediaQuery } from "react-responsive";
 
 export default function ProjectBox({ project }: { project: Project }) {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1215px)" });
+  const isMobile = useMediaQuery({ query: "(min-width: 940px)" });
+  const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
   const [open, setOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
   const scrollPosition = useRef(0);
@@ -78,12 +82,28 @@ export default function ProjectBox({ project }: { project: Project }) {
           position: "absolute",
           pointerEvents: "none",
           backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.25)",
+          width: isDesktop
+            ? "30.25rem"
+            : isMobile
+            ? "22rem"
+            : isVeryTiny
+            ? "50vw"
+            : "70vw",
+          height: isMobile ? "14.4rem" : "18rem",
         }}
       />
       <Stack
         direction={"column"}
         sx={{
           ...projectBoxStyle,
+          width: isDesktop
+            ? "30.25rem"
+            : isMobile
+            ? "22rem"
+            : isVeryTiny
+            ? "50vw"
+            : "70vw",
+          height: isMobile ? "14.4rem" : "18rem",
           "&:hover": {
             backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.5)",
             transform: "translateY(-0.5rem)",
@@ -131,27 +151,68 @@ export default function ProjectBox({ project }: { project: Project }) {
         disabled={open}
         onClick={handleToggle}
       >
-        <Typography sx={titleStyle} className="child">
-          {project.name}
-        </Typography>
-        <Stack direction={"row"} paddingLeft={"1rem"} paddingBottom={"0.3rem"}>
-          {project.logos.map((value, index) => (
-            <img
-              key={index}
-              src={value}
-              alt={`logo ${index}`}
-              style={logoStyle}
-              className="image"
-            />
-          ))}
-        </Stack>
-        <Typography variant="h2" sx={subtitleStyle} className="child">
+        <Box
+          zIndex={3}
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={"flex-start"}
+        >
+          <Typography
+            sx={
+              isMobile
+                ? { ...titleStyle }
+                : {
+                    ...titleStyle,
+                    fontSize: "calc(5vw + 1rem)",
+                  }
+            }
+            className="child"
+          >
+            {project.name}
+          </Typography>
+          <Stack
+            direction={"row"}
+            paddingLeft={"1rem"}
+            paddingBottom={"0.3rem"}
+          >
+            {project.logos.map((value, index) => (
+              <img
+                key={index}
+                src={value}
+                alt={`logo ${index}`}
+                style={logoStyle}
+                className="image"
+              />
+            ))}
+          </Stack>
+        </Box>
+        <Typography
+          variant="h2"
+          sx={
+            isMobile
+              ? { ...subtitleStyle }
+              : isVeryTiny
+              ? {
+                  ...subtitleStyle,
+                  fontSize: "calc(0.2vw + 1.1rem)",
+                  width: "45vw",
+                  height: "14rem",
+                }
+              : {
+                  ...subtitleStyle,
+                  fontSize: "calc(0.3vw + 1rem)",
+                  width: "60vw",
+                  height: "14rem",
+                }
+          }
+          className="child"
+        >
           {project.subtitle}
         </Typography>
         <img
           src={project.images[0]}
           alt="picture of software"
-          style={imageStyle}
+          style={isDesktop ? { ...imageStyle } : { display: "none" }}
           className="image"
         />
       </Stack>
