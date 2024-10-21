@@ -1,24 +1,48 @@
 import { Typography, Box } from "@mui/material";
 import { boxStyle } from "./AboutMeStyle";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useMediaQuery } from "react-responsive";
 
 export default function AboutMe() {
+  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
+
   return (
-    <div id="aboutMse">
+    <div>
       <Box>
         <ScrollAnimation
           animateIn={"fadeInLeft"}
           duration={0.5}
           animateOnce={true}
         >
-          <Box sx={boxStyle}>
+          <Box
+            sx={
+              isTabletOrMobile
+                ? { ...boxStyle }
+                : {
+                    ...boxStyle,
+                    width: "60vw",
+                    maxHeight: "25rem",
+                    left: "-1rem",
+                  }
+            }
+          >
             <ScrollAnimation
               animateIn={"fadeIn"}
               delay={300}
               duration={0.5}
               animateOnce={true}
             >
-              <Typography variant="h2" sx={{ fontSize: "25px" }}>
+              <Typography
+                variant="h2"
+                sx={
+                  isTabletOrMobile
+                    ? { fontSize: "25px" }
+                    : isVeryTiny
+                    ? { fontSize: "calc(2vw + 2px)" }
+                    : { fontSize: "13px" }
+                }
+              >
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae

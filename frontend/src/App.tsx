@@ -20,7 +20,7 @@ const ThemeContext = createContext("dark");
 
 function App() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
   const [display, setDisplay] = useState<boolean>(false);
   useEffect(() => {
     // Check if there's a hash in the URL
@@ -71,27 +71,34 @@ function App() {
                 </Box>
                 <Projects />
                 <Stack
-                  direction="row"
-                  paddingTop={"8rem"}
+                  direction={isTabletOrMobile ? "row" : "column"}
+                  paddingTop={isTabletOrMobile ? "8rem" : "2rem"}
                   spacing={2}
-                  alignItems={"flex-start"}
+                  alignItems={isTabletOrMobile ? "flex-start" : "center"}
                   justifyContent={"center"}
                 >
-                  <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
+                  <Stack
+                    paddingRight={"1rem"}
+                    paddingLeft={"3rem"}
+                    alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                  >
                     <div id="aboutMe" />
-                    <Box marginLeft={"2rem"}>
+                    <Box
+                      marginLeft={isTabletOrMobile ? "2rem" : "-2rem"}
+                      sx={isTabletOrMobile ? null : { width: "80vw" }}
+                    >
                       <ScrollAnimation
                         animateIn={"fadeInLeft"}
                         duration={0.5}
                         animateOnce={true}
                       >
-                        <Title title="About Me" line={false} />
+                        <Title title="About Me" line={!isTabletOrMobile} />
                       </ScrollAnimation>
                     </Box>
                     <AboutMe />
                   </Stack>
                   <Box paddingTop={"6rem"}>
-                    <Line maxHeight={"1rem"} />
+                    {isTabletOrMobile ? <Line maxHeight={"1rem"} /> : null}
                   </Box>
                   <Stack paddingLeft={"1rem"}>
                     <div id="skills" />
