@@ -81,10 +81,11 @@ function App() {
                     paddingRight={"1rem"}
                     paddingLeft={"3rem"}
                     alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                    height={isTabletOrMobile ? "40rem" : "40rem"}
                   >
                     <div id="aboutMe" />
                     <Box
-                      marginLeft={isTabletOrMobile ? "2rem" : "-2rem"}
+                      marginLeft={isTabletOrMobile ? "2rem" : "-3rem"}
                       sx={isTabletOrMobile ? null : { width: "80vw" }}
                     >
                       <ScrollAnimation
@@ -97,19 +98,28 @@ function App() {
                     </Box>
                     <AboutMe />
                   </Stack>
-                  <Box paddingTop={"6rem"}>
+                  <Box paddingTop={isTabletOrMobile ? "6rem" : "0rem"}>
                     {isTabletOrMobile ? <Line maxHeight={"1rem"} /> : null}
                   </Box>
-                  <Stack paddingLeft={"1rem"}>
+                  <Stack
+                    paddingLeft={isTabletOrMobile ? "1rem" : "0rem"}
+                    alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                  >
                     <div id="skills" />
-                    <ScrollAnimation
-                      animateIn={"fadeInRight"}
-                      delay={200}
-                      duration={0.5}
-                      animateOnce={true}
+                    <Box
+                      marginLeft={isTabletOrMobile ? "2rem" : "-2rem"}
+                      sx={isTabletOrMobile ? null : { width: "80vw" }}
+                      marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
                     >
-                      <Title title="Skills" line={false} />
-                    </ScrollAnimation>
+                      <ScrollAnimation
+                        animateIn={"fadeInRight"}
+                        delay={200}
+                        duration={0.5}
+                        animateOnce={true}
+                      >
+                        <Title title="Skills" line={!isTabletOrMobile} />
+                      </ScrollAnimation>
+                    </Box>
 
                     <Skills />
                   </Stack>

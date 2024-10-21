@@ -19,6 +19,7 @@ export interface Skill {
   color2: string;
   link: string;
   glow: string;
+  tag: string;
 }
 
 export interface Work {

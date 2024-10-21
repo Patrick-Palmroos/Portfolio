@@ -28,6 +28,7 @@ export default function TopBar() {
           background: "#19121c",
           position: "fixed",
           width: "100vw",
+          paddingRight: "0.1rem",
           paddingBottom: "0.5rem",
           paddingTop: "1rem",
           height: "4rem",
