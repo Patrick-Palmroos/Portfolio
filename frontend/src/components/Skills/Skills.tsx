@@ -93,7 +93,7 @@ export default function Skills() {
               />
             </Box>
           )}
-          <Box marginLeft={"1rem"}>
+          <Box marginLeft={isDesktop ? "1rem" : "0rem"}>
             {/*TopRow*/}
             <Box
               sx={{

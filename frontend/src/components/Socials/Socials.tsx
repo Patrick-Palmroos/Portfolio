@@ -1,16 +1,18 @@
 import { Box } from "@mui/material";
 import SocialBox from "../util/SocialBox/SocialBox";
+import { useMediaQuery } from "react-responsive";
 
 export default function Socials() {
+  const isMobile = useMediaQuery({ query: "(min-width: 480px)" });
   return (
     <div>
       <Box
         paddingTop={"2rem"}
         display={"grid"}
-        gridTemplateColumns={"auto auto auto auto"}
+        gridTemplateColumns={isMobile ? "auto auto auto auto" : "auto auto"}
         gridTemplateRows={"auto auto"}
         justifyContent={"center"}
-        gap={"2rem"}
+        gap={isMobile ? "2rem" : "1rem"}
       >
         <SocialBox
           icon="/images/Logos/linkedin.png"

@@ -21,6 +21,7 @@ const ThemeContext = createContext("dark");
 function App() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
+  const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
   const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
   const [display, setDisplay] = useState<boolean>(false);
   useEffect(() => {
@@ -167,9 +168,9 @@ function App() {
                 </div>
                 <div id="education">
                   <Box
-                    marginLeft={"11rem"}
-                    marginRight={"9rem"}
-                    marginTop={"8rem"}
+                    marginLeft={smallTitle ? "11rem" : "0rem"}
+                    marginRight={smallTitle ? "9rem" : "1.5rem"}
+                    marginTop={smallTitle ? "4rem" : "4rem"}
                   >
                     <ScrollAnimation
                       animateIn={"fadeInRight"}
@@ -185,24 +186,26 @@ function App() {
                 <div
                   id="socials"
                   style={{
-                    marginTop: "30rem",
+                    marginTop: mobileFooter ? "30rem" : "20rem",
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    flexDirection: "row",
+                    justifyContent: mobileFooter ? "center" : "flex-end",
+                    flexDirection: mobileFooter ? "row" : "column",
                     height: "20rem",
                     backgroundColor: "#19121c",
                   }}
                 >
                   <Box
                     marginLeft={"0rem"}
-                    marginBottom={"5rem"}
+                    marginBottom={mobileFooter ? "5rem" : "0rem"}
                     marginRight={"2rem"}
                     width={"30rem"}
                   >
                     <Title title="Contact Me!" />
                   </Box>
-                  <Socials />
+                  <Box sx={mobileFooter ? null : { marginBottom: "2rem" }}>
+                    <Socials />
+                  </Box>
                 </div>
               </Box>
             ) : (
