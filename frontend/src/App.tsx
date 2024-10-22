@@ -110,7 +110,7 @@ function App() {
                     <AboutMe />
                   </Stack>
                   <Box paddingTop={isTabletOrMobile ? "6rem" : "0rem"}>
-                    {isTabletOrMobile ? <Line maxHeight={"1rem"} /> : null}
+                    {isTabletOrMobile ? <Line /> : null}
                   </Box>
                   <Stack
                     paddingLeft={isTabletOrMobile ? "1rem" : "0rem"}

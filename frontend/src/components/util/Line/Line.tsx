@@ -1,12 +1,6 @@
 import { Box } from "@mui/material";
 
-export default function Line({
-  maxHeight,
-  horizontal = false,
-}: {
-  maxHeight: string;
-  horizontal?: boolean;
-}) {
+export default function Line() {
   return (
     <div>
       <Box
