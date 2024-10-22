@@ -12,85 +12,205 @@ import Socials from "./components/Socials/Socials.tsx";
 import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { darkTheme } from "./themes.ts";
+import ScrollAnimation from "react-animate-on-scroll";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const ThemeContext = createContext("dark");
 
 function App() {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
+  const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
+  const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
+  const [display, setDisplay] = useState<boolean>(false);
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    setDisplay(false);
+    window.scrollTo(0, 0);
+    if (window.location.hash) {
+      // Remove the hash from the URL
+      window.history.replaceState("null", "", window.location.pathname);
+    }
+    setTimeout(() => {
+      setDisplay(true);
+    }, 100);
+  }, []);
   return (
     <ThemeProvider theme={darkTheme}>
       <ThemeContext.Provider value="dark">
-        <div>
+        <div id="#">
           <Box
             sx={{
               minHeight: "100%",
+              overflowX: "hidden",
               backgroundColor: "background.default",
             }}
           >
             <TopBar />
             <Header />
-            <div id="projects" />
-            <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
-              <Title title="My Previous Projects" />
-            </Box>
-            <Projects />
-            <Stack
-              direction="row"
-              paddingTop={"8rem"}
-              spacing={2}
-              alignItems={"flex-start"}
-              justifyContent={"center"}
-            >
-              <Stack paddingRight={"1rem"} paddingLeft={"3rem"}>
-                <div id="aboutMe" />
-                <Box marginLeft={"2rem"}>
-                  <Title title="About Me" line={false} />
+            {display ? (
+              <Box>
+                <div id="projects" />
+                <Box
+                  sx={
+                    isDesktop
+                      ? { marginLeft: "11rem", marginRight: "9rem" }
+                      : { marginLeft: "3rem", marginRight: "3rem" }
+                  }
+                  marginLeft={"11rem"}
+                  marginRight={"9rem"}
+                  marginTop={"4rem"}
+                >
+                  <ScrollAnimation
+                    initiallyVisible={!isTabletOrMobile}
+                    animateIn={"fadeInDown"}
+                    duration={0.5}
+                    animateOnce={true}
+                  >
+                    <Title title="My Previous Projects" />
+                  </ScrollAnimation>
                 </Box>
-                <AboutMe />
-              </Stack>
-              <Box paddingTop={"6rem"}>
-                <Line maxHeight={"1rem"} />
-              </Box>
-              <Stack paddingLeft={"1rem"}>
-                <div id="skills" />
-                <Title title="Skills" line={false} />
+                <Projects />
+                <Stack
+                  direction={isTabletOrMobile ? "row" : "column"}
+                  paddingTop={isTabletOrMobile ? "8rem" : "2rem"}
+                  spacing={2}
+                  alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                  justifyContent={"center"}
+                >
+                  <Stack
+                    paddingRight={"1rem"}
+                    paddingLeft={"3rem"}
+                    alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                    height={isTabletOrMobile ? "40rem" : "40rem"}
+                  >
+                    <div id="aboutMe" />
+                    <Box
+                      marginTop={isTabletOrMobile ? "0rem" : "8rem"}
+                      marginLeft={
+                        isTabletOrMobile
+                          ? "0rem"
+                          : smallTitle
+                          ? "5rem"
+                          : "-2.5rem"
+                      }
+                      marginRight={smallTitle ? "9rem" : "1.5rem"}
+                      sx={isTabletOrMobile ? null : { width: "40rem" }}
+                      marginBottom={isTabletOrMobile ? "0rem" : "2rem"}
+                    >
+                      <ScrollAnimation
+                        animateIn={"fadeInLeft"}
+                        duration={0.5}
+                        animateOnce={true}
+                      >
+                        <Title title="About Me" line={!isTabletOrMobile} />
+                      </ScrollAnimation>
+                    </Box>
+                    <AboutMe />
+                  </Stack>
+                  <Box paddingTop={isTabletOrMobile ? "6rem" : "0rem"}>
+                    {isTabletOrMobile ? <Line maxHeight={"1rem"} /> : null}
+                  </Box>
+                  <Stack
+                    paddingLeft={isTabletOrMobile ? "1rem" : "0rem"}
+                    alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                  >
+                    <div id="skills" />
+                    <Box
+                      marginLeft={
+                        isTabletOrMobile
+                          ? "0rem"
+                          : smallTitle
+                          ? "11rem"
+                          : "0rem"
+                      }
+                      marginTop={isTabletOrMobile ? "0rem" : "8rem"}
+                      marginRight={smallTitle ? "9rem" : "1.5rem"}
+                      sx={isTabletOrMobile ? null : { width: "45rem" }}
+                      marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
+                    >
+                      <ScrollAnimation
+                        animateIn={"fadeInRight"}
+                        delay={200}
+                        duration={0.5}
+                        animateOnce={true}
+                      >
+                        <Title title="Skills" line={!isTabletOrMobile} />
+                      </ScrollAnimation>
+                    </Box>
 
-                <Skills />
-              </Stack>
-            </Stack>
-            <div id="work">
-              <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"4rem"}>
-                <Title title="Work Experience" />
+                    <Skills />
+                  </Stack>
+                </Stack>
+                <div id="work">
+                  <Box
+                    marginLeft={smallTitle ? "11rem" : "0rem"}
+                    marginRight={smallTitle ? "9rem" : "1.5rem"}
+                    marginTop={smallTitle ? "4rem" : "4rem"}
+                  >
+                    <ScrollAnimation
+                      animateIn={"fadeInLeft"}
+                      duration={0.5}
+                      animateOnce={true}
+                    >
+                      <Title title="Work Experience" />
+                    </ScrollAnimation>
+                  </Box>
+                  <ScrollAnimation
+                    animateIn={"fadeInRight"}
+                    duration={0.5}
+                    delay={100}
+                    animateOnce={true}
+                  >
+                    <WorkExperience />
+                  </ScrollAnimation>
+                </div>
+                <div id="education">
+                  <Box
+                    marginLeft={smallTitle ? "11rem" : "0rem"}
+                    marginRight={smallTitle ? "9rem" : "1.5rem"}
+                    marginTop={smallTitle ? "4rem" : "4rem"}
+                  >
+                    <ScrollAnimation
+                      animateIn={"fadeInRight"}
+                      duration={0.5}
+                      delay={0}
+                      animateOnce={true}
+                    >
+                      <Title title="Education" />
+                    </ScrollAnimation>
+                  </Box>
+                  <Education />
+                </div>
+                <div
+                  id="socials"
+                  style={{
+                    marginTop: mobileFooter ? "30rem" : "20rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: mobileFooter ? "center" : "flex-end",
+                    flexDirection: mobileFooter ? "row" : "column",
+                    height: "20rem",
+                    backgroundColor: "#19121c",
+                  }}
+                >
+                  <Box
+                    marginLeft={"0rem"}
+                    marginBottom={mobileFooter ? "5rem" : "0rem"}
+                    marginRight={"2rem"}
+                    width={"30rem"}
+                  >
+                    <Title title="Contact Me!" />
+                  </Box>
+                  <Box sx={mobileFooter ? null : { marginBottom: "2rem" }}>
+                    <Socials />
+                  </Box>
+                </div>
               </Box>
-              <WorkExperience />
-            </div>
-            <div id="education">
-              <Box marginLeft={"11rem"} marginRight={"9rem"} marginTop={"8rem"}>
-                <Title title="Education" />
-              </Box>
-              <Education />
-            </div>
-            <div
-              id="socials"
-              style={{
-                marginTop: "30rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "row",
-                height: "20rem",
-                backgroundColor: "#19121c",
-              }}
-            >
-              <Box
-                marginLeft={"0rem"}
-                marginBottom={"5rem"}
-                marginRight={"2rem"}
-                width={"30rem"}
-              >
-                <Title title="Contact Me!" />
-              </Box>
-              <Socials />
-            </div>
+            ) : (
+              <Box sx={{ height: "300rem" }} />
+            )}
           </Box>
         </div>
       </ThemeContext.Provider>

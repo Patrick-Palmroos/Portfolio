@@ -1,7 +1,21 @@
 import { Stack, Box } from "@mui/material";
 import LayerButton from "../util/LayerButton/LayerButton";
+import { useMediaQuery } from "react-responsive";
+import { useState, useEffect } from "react";
+import HamburgerMenu from "../util/HamburgerMenu/HamburgerMenu";
 
 export default function TopBar() {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1080px)" });
+  const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [isDesktop]);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
   return (
     <div>
       <Stack
@@ -14,18 +28,23 @@ export default function TopBar() {
           background: "#19121c",
           position: "fixed",
           width: "100vw",
+          paddingRight: "0.1rem",
           paddingBottom: "0.5rem",
           paddingTop: "1rem",
+          height: "4rem",
           zIndex: 10,
         }}
       >
         <Box
+          component={"a"}
+          href="#"
           sx={{
             width: "5rem",
             height: "5rem",
             position: "absolute",
-            left: "2rem",
+            left: "1rem",
             top: "1rem",
+            WebkitTapHighlightColor: "transparent",
           }}
         >
           <img
@@ -37,12 +56,58 @@ export default function TopBar() {
             }}
           ></img>
         </Box>
-        <LayerButton title="Projects" link="#projects" />
-        <LayerButton title="About me" link="#aboutMe" />
-        <LayerButton title="Skills" link="#skills" />
-        <LayerButton title="Work" link="#work" />
-        <LayerButton title="Education" link="#education" />
-        <LayerButton title="Socials" link="#socials" />
+        {isDesktop ? (
+          <Box flexDirection={"row"} display={"flex"}>
+            <LayerButton title="Projects" link="#projects" />
+            <LayerButton title="About me" link="#aboutMe" />
+            <LayerButton title="Skills" link="#skills" />
+            <LayerButton title="Work" link="#work" />
+            <LayerButton title="Education" link="#education" />
+            <LayerButton title="Socials" link="#socials" />
+          </Box>
+        ) : (
+          <Box>
+            <Box sx={{ position: "absolute", right: "2rem", top: "1.2rem" }}>
+              <HamburgerMenu callback={handleClick} />
+            </Box>
+          </Box>
+        )}
+        <Box
+          sx={{
+            zIndex: 11,
+            top: "5.5rem",
+            right: open ? "0rem" : "-20rem",
+            height: "100%",
+            width: "20rem",
+            position: "fixed",
+            backgroundColor: "#19121c",
+            transition: "0.5s ease",
+
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              background:
+                "linear-gradient(to bottom, rgba(255, 0, 137, 0.4), transparent 80%)",
+            },
+          }}
+        >
+          <Stack
+            flexDirection={"column"}
+            display={"flex"}
+            alignItems={"center"}
+            marginTop={"1rem"}
+            spacing={1}
+          >
+            <LayerButton title="Projects" link="#projects" />
+            <LayerButton title="About me" link="#aboutMe" />
+            <LayerButton title="Skills" link="#skills" />
+            <LayerButton title="Work" link="#work" />
+            <LayerButton title="Education" link="#education" />
+            <LayerButton title="Socials" link="#socials" />
+          </Stack>
+        </Box>
       </Stack>
     </div>
   );

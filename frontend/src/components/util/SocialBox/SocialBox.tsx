@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import { useMediaQuery } from "react-responsive";
 
 export default function SocialBox({
   icon,
@@ -11,6 +12,7 @@ export default function SocialBox({
   color2: string;
   link: string;
 }) {
+  const isMobile = useMediaQuery({ query: "(min-width: 480px)" });
   return (
     <div>
       <Box
@@ -29,8 +31,8 @@ export default function SocialBox({
             borderRadius: "20px",
             background: `rgba(${color2}, 0.25)`,
             padding: "1rem",
-            width: "3rem",
-            height: "3rem",
+            width: isMobile ? "3rem" : "2rem",
+            height: isMobile ? "3rem" : "2rem",
 
             "&::before, &::after": {
               content: '""',
@@ -54,15 +56,15 @@ export default function SocialBox({
             },
 
             "&:hover::before": {
-              top: "-0.5rem",
+              top: "-0.35rem",
             },
 
             "&:hover::after": {
-              top: "-1rem",
+              top: "-0.7rem",
             },
 
             "&:hover #icon": {
-              transform: "translateY(-1rem)",
+              transform: "translateY(-0.7rem)",
             },
           }}
         >
@@ -73,8 +75,8 @@ export default function SocialBox({
             style={{
               transition: "0.3s ease",
               position: "absolute",
-              width: "3rem",
-              height: "3rem",
+              width: isMobile ? "3rem" : "2rem",
+              height: isMobile ? "3rem" : "2rem",
               filter: "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5))",
               zIndex: 4,
             }}

@@ -9,7 +9,7 @@ export const carouselContainer: CSS.Properties = {
   display: "grid",
   gridTemplateColumns: "30rem 30rem",
   gridTemplateRows: "auto auto",
-  rowGap: "3.5rem",
+  rowGap: "2.5rem",
   columnGap: "2.5rem",
   padding: "1.5rem 1.5rem 1.5rem 1.5rem",
   borderRadius: "20px",

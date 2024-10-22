@@ -2,8 +2,12 @@ export interface Project {
   id: number;
   name: string;
   logos: string[];
-  image: string;
   subtitle: string;
+  images: string[];
+  duration: string;
+  details: string;
+  employer: string;
+  backDrop: string;
 }
 
 export interface Skill {
@@ -15,6 +19,7 @@ export interface Skill {
   color2: string;
   link: string;
   glow: string;
+  tag: string;
 }
 
 export interface Work {

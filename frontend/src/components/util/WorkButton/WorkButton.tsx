@@ -6,6 +6,7 @@ import {
   psuedoElemet,
   imageStyle,
 } from "./WorkButtonStyle";
+import { useMediaQuery } from "react-responsive";
 
 const calcMonths = (startDate: string, endDate: string) => {
   const parseDate = (date: string) => {
@@ -44,6 +45,9 @@ export default function WorkButton({
   callback: () => void;
   active?: boolean;
 }) {
+  const isDesktop = useMediaQuery({ query: "(min-width: 950px)" });
+  const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
+  const isVeryTiny = useMediaQuery({ query: "(min-width: 650px)" });
   return (
     <div>
       <Box
@@ -129,30 +133,81 @@ export default function WorkButton({
           className={"child"}
           id={"title"}
           variant={"h1"}
-          sx={childStyle}
+          sx={
+            isMobile
+              ? { ...childStyle }
+              : isVeryTiny
+              ? {
+                  ...childStyle,
+                  fontSize: "3.6vw",
+                  left: "0.5rem",
+                }
+              : {
+                  ...childStyle,
+                  fontSize: "19px",
+                  width: "8rem",
+                  left: "0.5rem",
+                }
+          }
         >
           {work.name}
         </Typography>
         <Typography
           className={"child"}
           variant={"h1"}
-          sx={{ ...childStyle, top: "2.4rem", fontSize: "20px" }}
+          sx={
+            isMobile
+              ? { ...childStyle, top: "2.4rem", fontSize: "20px" }
+              : isVeryTiny
+              ? {
+                  ...childStyle,
+                  top: "calc(1vw + 1.7rem)",
+                  fontSize: "2.5vw",
+                  left: "0.5rem",
+                }
+              : {
+                  ...childStyle,
+                  top: "1.5rem",
+                  width: "8rem",
+                  fontSize: "17px",
+                  left: "0.5rem",
+                }
+          }
         >
           {work.title}
         </Typography>
         <Typography
           className={"child"}
           variant={"h1"}
-          sx={{ ...childStyle, top: "4.2rem", fontSize: "18px" }}
+          sx={
+            isMobile
+              ? { ...childStyle, top: "4.2rem", fontSize: "18px" }
+              : isVeryTiny
+              ? {
+                  ...childStyle,
+                  top: "calc(1vw + 3.2rem)",
+                  fontSize: "2.5vw",
+                  left: "0.5rem",
+                }
+              : {
+                  ...childStyle,
+                  top: "2.7rem",
+                  width: "8rem",
+                  fontSize: "17px",
+                  left: "0.5rem",
+                }
+          }
         >
           {calcMonths(work.startDate, work.endDate)}
         </Typography>
-        <img
-          className="image"
-          src={work.logo}
-          alt="work logo"
-          style={imageStyle}
-        />
+        {isDesktop && (
+          <img
+            className="image"
+            src={work.logo}
+            alt="work logo"
+            style={imageStyle}
+          />
+        )}
       </Box>
     </div>
   );
