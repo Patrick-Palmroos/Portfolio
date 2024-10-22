@@ -61,7 +61,7 @@ export default function TopBar() {
         >
           <img
             className="img"
-            src="/pp.png"
+            src="pp.png"
             alt="logo"
             style={{
               position: "absolute",
