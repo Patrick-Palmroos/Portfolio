@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, Slide, styled } from "@mui/material";
+import { Box, Typography, Stack, Slide } from "@mui/material";
 import {
   projectTabStyle,
   exitButtonStyle,
@@ -20,7 +20,6 @@ export default function ProjectTab({
 }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 1050px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
-  const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
   return (
     <div>
       <Slide direction="up" in={true} mountOnEnter unmountOnExit>

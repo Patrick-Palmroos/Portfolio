@@ -115,6 +115,7 @@ export default function Projects() {
                 animateIn="slideInRight"
                 duration={0.5}
                 offset={isVeryTiny ? 150 : 400}
+                initiallyVisible={!isDesktop}
                 animateOnce={true}
               >
                 <ArrowButton
@@ -130,6 +131,7 @@ export default function Projects() {
             duration={0.8}
             delay={0.3}
             offset={isMobile ? 400 : 150}
+            initiallyVisible={!isDesktop}
             animateOnce={true}
           >
             <Stack
@@ -199,6 +201,7 @@ export default function Projects() {
               animateIn="fadeInRight"
               duration={0.5}
               offset={isVeryTiny ? 150 : 0}
+              initiallyVisible={!isDesktop}
               animateOnce={true}
             >
               <ArrowButton
