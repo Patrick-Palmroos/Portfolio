@@ -25,6 +25,7 @@ export const exitButtonStyle: CSS.Properties = {
   right: "-2rem",
   top: "-2rem",
   zIndex: 4,
+  WebkitTapHighlightColor: "transparent",
 };
 
 export const imageStyle: CSS.Properties = {
