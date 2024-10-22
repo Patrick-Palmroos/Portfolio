@@ -119,25 +119,31 @@ export default function ProjectBox({ project }: { project: Project }) {
             borderRadius: "20px",
           },
           "&::before": {
-            backgroundColor: "#8E5AB7",
+            backgroundImage: `url(${project.backDrop})`,
+            backgroundSize: "100% 100%",
+            opacity: 0.5,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            // backgroundColor: "#8E5AB7",
             zIndex: 1,
-            transition: "transform 0.4s ease",
+            transition: "transform 0.4s ease, opacity 0.4s ease",
           },
           "&::after": {
             opacity: 0,
             background:
               "linear-gradient(65deg, #978EFF 0%, #C96BC5 50%, #B985FC 100%)",
             zIndex: 2,
-            transition: "opacity 0.4s ease, transform 0.4s ease",
+            transition: "opacity 1s ease, transform 0.4s ease",
           },
           "&:hover::after": {
             opacity: 1,
             transform: "translateY(-0.7rem)",
-            transition: "opacity 0.4s ease, transform 0.4s ease",
+            transition: "opacity 0.2s ease, transform 0.4s ease",
           },
           ":hover::before": {
+            opacity: 1,
             transform: "translateY(-0.7rem)",
-            transition: "transform 0.4s ease",
+            transition: "transform 0.4s ease, opacity 0.4s ease",
           },
           ":hover .child": {
             transform: "translateY(-0.7rem)",
