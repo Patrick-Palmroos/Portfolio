@@ -4,13 +4,13 @@ export const projectTabStyle: CSS.Properties = {
   content: '""',
   borderRadius: "20px",
   width: "60%",
-  height: "70%",
+  height: "30rem",
   position: "fixed",
   border: "0.5rem solid transparent",
   background:
     "linear-gradient(#27242E, #27242E) padding-box, linear-gradient(to right, #FF74D0, #5a51ff) border-box",
   left: "20%",
-  top: "15%",
+  top: "20%",
   zIndex: 9999,
 };
 
@@ -31,7 +31,7 @@ export const imageStyle: CSS.Properties = {
   position: "relative",
   width: "9rem",
   height: "auto",
-  padding: "0rem 1rem 0rem 2rem",
+  padding: "1rem 1rem 0rem 2rem",
   margin: "0rem 1rem 0rem 1rem",
   zIndex: 3,
 };
@@ -62,8 +62,8 @@ export const iconStyle: CSS.Properties = {
 export const textStyle: CSS.Properties = {
   display: "flex",
   alignItems: "center",
-  fontSize: "25px",
-  margin: "0rem 3rem 0rem 3rem",
+  fontSize: "22px",
+  margin: "1rem 3rem 0rem 3rem",
   width: "70%",
   zIndex: 3,
 };

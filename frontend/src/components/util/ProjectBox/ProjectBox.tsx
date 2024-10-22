@@ -120,7 +120,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           },
           "&::before": {
             backgroundImage: `url(${project.backDrop})`,
-            backgroundSize: "100% 100%",
+            backgroundSize: "100% auto",
             opacity: 0.5,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -138,7 +138,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           "&:hover::after": {
             opacity: 1,
             transform: "translateY(-0.7rem)",
-            transition: "opacity 0.2s ease, transform 0.4s ease",
+            transition: "opacity 0.4s ease, transform 0.4s ease",
           },
           ":hover::before": {
             opacity: 1,
