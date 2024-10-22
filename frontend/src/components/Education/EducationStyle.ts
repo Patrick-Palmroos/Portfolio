@@ -2,8 +2,7 @@ import CSS from "csstype";
 
 export const container: CSS.Properties = {
   display: "flex",
-  flexDirection: "row",
-  width: "100vw",
+  width: "100%",
   paddingTop: "4rem",
   justifyContent: "center",
 };
