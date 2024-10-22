@@ -12,13 +12,14 @@ import { useMediaQuery } from "react-responsive";
 
 export default function Header() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1000px)" });
+  const isMobile = useMediaQuery({ query: "(min-width: 650px)" });
   return (
     <div>
       <Stack component={"section"} paddingTop={"8rem"} alignItems={"center"}>
         {/*The box component. */}
         <Box
           display={"flex"}
-          justifyContent={isDesktop ? "space-around" : "center"}
+          justifyContent={isDesktop ? "space-around" : "space-around"}
           alignItems={"center"}
           sx={
             isDesktop
@@ -55,13 +56,20 @@ export default function Header() {
             sx={
               isDesktop
                 ? { ...titleBox }
+                : isMobile
+                ? {
+                    ...titleBox,
+                    // left: "-2rem",
+                    //marginTop: "-15rem",
+                    //paddingRight: "0rem",
+                    width: "30vw",
+                    //height: "12rem",
+                  }
                 : {
                     ...titleBox,
-                    left: "0rem",
-                    marginTop: "-15rem",
-                    paddingRight: "0rem",
-                    width: "70%",
-                    height: "18vw",
+                    left: "-1rem",
+                    width: "12rem",
+                    height: "13rem",
                   }
             }
           >
@@ -78,8 +86,13 @@ export default function Header() {
                         fontSize: "3vw",
                         color: "primary.main",
                       }
-                    : {
+                    : isMobile
+                    ? {
                         fontSize: "4.5vw",
+                        color: "primary.main",
+                      }
+                    : {
+                        fontSize: "1.5rem",
                         color: "primary.main",
                       }
                 }
@@ -95,8 +108,14 @@ export default function Header() {
                         fontSize: "5vw",
                         color: "primary.contrastText",
                       }
-                    : {
+                    : isMobile
+                    ? {
                         fontSize: "6.5vw",
+                        color: "primary.contrastText",
+                      }
+                    : {
+                        fontSize: "3rem",
+                        lineHeight: "2.8rem",
                         color: "primary.contrastText",
                       }
                 }
@@ -110,8 +129,14 @@ export default function Header() {
                     ? {
                         fontSize: "4vw",
                       }
-                    : {
+                    : isMobile
+                    ? {
                         fontSize: "5.5vw",
+                      }
+                    : {
+                        paddingTop: "0.3rem",
+                        fontSize: "2rem",
+                        width: "13rem",
                       }
                 }
               >
@@ -144,7 +169,7 @@ export default function Header() {
                       ...circle,
                       background: "rgba(232, 205, 229, 0.5)",
                       bottom: "-22rem",
-                      left: "-21rem",
+                      left: "-17rem",
                       width: "33rem",
                       height: "33rem",
                     }
