@@ -114,6 +114,7 @@ export default function Projects() {
               <ScrollAnimation
                 animateIn="slideInRight"
                 duration={0.5}
+                offset={isVeryTiny ? 150 : 400}
                 animateOnce={true}
               >
                 <ArrowButton
@@ -128,7 +129,7 @@ export default function Projects() {
             animateIn="fadeIn"
             duration={0.8}
             delay={0.3}
-            offset={400}
+            offset={isMobile ? 400 : 150}
             animateOnce={true}
           >
             <Stack
@@ -197,6 +198,7 @@ export default function Projects() {
             <ScrollAnimation
               animateIn="fadeInRight"
               duration={0.5}
+              offset={isVeryTiny ? 150 : 0}
               animateOnce={true}
             >
               <ArrowButton

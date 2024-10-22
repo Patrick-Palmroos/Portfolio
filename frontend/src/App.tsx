@@ -61,7 +61,7 @@ function App() {
                   marginTop={"4rem"}
                 >
                   <ScrollAnimation
-                    initiallyVisible={isTabletOrMobile}
+                    initiallyVisible={!isTabletOrMobile}
                     animateIn={"fadeInDown"}
                     duration={0.5}
                     animateOnce={true}
