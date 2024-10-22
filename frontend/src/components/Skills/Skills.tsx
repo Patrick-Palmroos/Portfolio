@@ -6,7 +6,7 @@ import SkillBox from "../util/SkillBox/SkillBox";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useMediaQuery } from "react-responsive";
 import FilterButton from "../util/FilterButton/FilterButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Skills() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" });
@@ -19,6 +19,12 @@ export default function Skills() {
   const bottomRow = skillsList.slice(skillsList.length - 3, skillsList.length);
 
   const boxSize = isDesktop ? "6rem" : isVeryTiny ? "5rem" : "4rem";
+
+  useEffect(() => {
+    if (isDesktop) {
+      setActiveTag("");
+    }
+  }, [isDesktop]);
 
   const handleClick = (tag: string) => {
     if (activeTag === tag) {
