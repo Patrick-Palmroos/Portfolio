@@ -42,15 +42,32 @@ export default function TopBar() {
             width: "5rem",
             height: "5rem",
             position: "absolute",
-            left: "1rem",
-            top: "1rem",
+            left: "0.2rem",
+            top: "0.2rem",
             WebkitTapHighlightColor: "transparent",
+            borderRadius: "50%",
+            background: "rgba(0, 0, 0, 0)",
+            transition: "0.4s ease",
+
+            ":hover": {
+              background: "rgba(0, 0, 0, 1)",
+            },
+
+            ":hover .img": {
+              transform: "scale(1.1)",
+              transition: "0.2s ease",
+            },
           }}
         >
           <img
+            className="img"
             src="/pp.png"
             alt="logo"
             style={{
+              position: "absolute",
+              transition: "0.4s ease",
+              left: "0.5rem",
+              top: "0.5rem",
               width: "4rem",
               height: "4rem",
             }}
