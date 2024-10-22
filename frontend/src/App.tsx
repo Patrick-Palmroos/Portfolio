@@ -21,6 +21,7 @@ const ThemeContext = createContext("dark");
 function App() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
+  const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
   const [display, setDisplay] = useState<boolean>(false);
   useEffect(() => {
     // Check if there's a hash in the URL
@@ -85,8 +86,17 @@ function App() {
                   >
                     <div id="aboutMe" />
                     <Box
-                      marginLeft={isTabletOrMobile ? "2rem" : "-3rem"}
-                      sx={isTabletOrMobile ? null : { width: "80vw" }}
+                      marginTop={isTabletOrMobile ? "0rem" : "8rem"}
+                      marginLeft={
+                        isTabletOrMobile
+                          ? "0rem"
+                          : smallTitle
+                          ? "5rem"
+                          : "-2.5rem"
+                      }
+                      marginRight={smallTitle ? "9rem" : "1.5rem"}
+                      sx={isTabletOrMobile ? null : { width: "40rem" }}
+                      marginBottom={isTabletOrMobile ? "0rem" : "2rem"}
                     >
                       <ScrollAnimation
                         animateIn={"fadeInLeft"}
@@ -107,8 +117,16 @@ function App() {
                   >
                     <div id="skills" />
                     <Box
-                      marginLeft={isTabletOrMobile ? "2rem" : "-2rem"}
-                      sx={isTabletOrMobile ? null : { width: "80vw" }}
+                      marginLeft={
+                        isTabletOrMobile
+                          ? "0rem"
+                          : smallTitle
+                          ? "11rem"
+                          : "0rem"
+                      }
+                      marginTop={isTabletOrMobile ? "0rem" : "8rem"}
+                      marginRight={smallTitle ? "9rem" : "1.5rem"}
+                      sx={isTabletOrMobile ? null : { width: "45rem" }}
                       marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
                     >
                       <ScrollAnimation
@@ -126,9 +144,9 @@ function App() {
                 </Stack>
                 <div id="work">
                   <Box
-                    marginLeft={"11rem"}
-                    marginRight={"9rem"}
-                    marginTop={"4rem"}
+                    marginLeft={smallTitle ? "11rem" : "0rem"}
+                    marginRight={smallTitle ? "9rem" : "1.5rem"}
+                    marginTop={smallTitle ? "4rem" : "4rem"}
                   >
                     <ScrollAnimation
                       animateIn={"fadeInLeft"}
