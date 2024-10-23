@@ -198,8 +198,8 @@ function App() {
                   }}
                 >
                   <Box
-                    marginLeft={"0rem"}
-                    marginBottom={mobileFooter ? "5rem" : "0rem"}
+                    marginLeft={"1rem"}
+                    marginBottom={mobileFooter ? "5rem" : "0.5rem"}
                     marginRight={"2rem"}
                     width={"30rem"}
                   >
