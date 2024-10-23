@@ -152,12 +152,12 @@ export default function ProjectTab({
                         ? {
                             ...titleStyle,
                             paddingLeft: "1rem",
-                            fontSize: "40px",
+                            fontSize: "33px",
                           }
                         : {
                             ...titleStyle,
                             paddingLeft: "0.7rem",
-                            fontSize: "35px",
+                            fontSize: "30px",
                           }
                     }
                   >

@@ -17,60 +17,60 @@
       "duration": "April 2024 - July 2024",
       "employer": "Entail",
       "subtitle": "StaffApp is an application for posting and taking shifts for rental workers. This app was made so that managers can easily post and follow open shifts at units within their organisation",
-      "details": "I worked on StaffApp within a team of 5 developers. We we're tasked to develop an application to replace paper call lists. The project began as a school project for the company Entail. We also got the chance to work on the project through the summer.\nI worked in the backend and frontend as well as the person in charge of information security. This project was a great opportunity for me to learn about working in a team and on a larger project.\nf"
+      "details": "I worked on StaffApp within a team of 5 developers. We we're tasked to develop an application to replace paper call lists. The project began as a school project for the company Entail. We also got the chance to work on the project through the summer.\nI worked in the backend and frontend as well as the person in charge of information security. This project was a great opportunity for me to learn about working in a team and on a larger project.\nAt the end we developed a functioning and visually pleasing prototype. The customer was pleased with our work and we we're happy with the result we arrived at. Overall this project was a great learning experience"
     },
     {
       "id": 1,
-      "name": "StaffApp",
+      "name": "Weather App",
       "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
+        "images/Logos/kotlin.png",
+        "images/Logos/jetpackcompose.png",
+        "images/Logos/androidstudio.png"
       ],
       "images": [
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png"
+        "images/WeatherApp/weather1.png",
+        "images/WeatherApp/weather2.png",
+        "images/WeatherApp/weather3.png"
       ],
-      "backDrop": "images/StaffApp/backDrop.png",
-      "duration": "April 2024 - July 2024",
-      "employer": "Entail",
+      "backDrop": "images/WeatherApp/backDrop.jpg",
+      "duration": "May 1st 2024 - 20th 2024",
+      "employer": "Tamk",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
     },
     {
       "id": 2,
-      "name": "StaffApp",
+      "name": "Language App",
       "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
+        "images/Logos/react.png",
+        "images/Logos/mysql.png",
+        "images/Logos/js.png"
       ],
       "images": [
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png"
+        "images/LanguageApp/language1.png",
+        "images/LanguageApp/language2.png",
+        "images/LanguageApp/language3.png"
       ],
-      "backDrop": "images/StaffApp/backDrop.png",
+      "backDrop": "images/LanguageApp/classroom.webp",
       "duration": "April 2024 - July 2024",
-      "employer": "Entail",
+      "employer": "Tamk",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
     },
     {
       "id": 3,
-      "name": "StaffApp",
+      "name": "WorkItOut!",
       "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
+        "images/Logos/unity.png",
+        "images/Logos/csharp.png",
+        "images/Logos/github.png"
       ],
       "images": [
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png"
+        "images/WorkItOut/workitout1.png",
+        "images/WorkItOut/workitout2.png",
+        "images/WorkItOut/workitout3.png"
       ],
-      "backDrop": "images/StaffApp/backDrop.png",
+      "backDrop": "images/WorkItOut/workitout.png",
       "duration": "April 2024 - July 2024",
       "employer": "Entail",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -78,18 +78,18 @@
     },
     {
       "id": 4,
-      "name": "StaffApp",
+      "name": "Game Jams",
       "logos": [
-        "images/Logos/js.png",
-        "images/Logos/node.png",
-        "images/Logos/react.png"
+        "images/Logos/unity.png",
+        "images/Logos/csharp.png",
+        "images/Logos/vscode.png"
       ],
       "images": [
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png",
-        "images/StaffApp/StaffApp.png"
+        "images/GameJams/voidheart.png",
+        "images/GameJams/sugarhigh.png",
+        "images/GameJams/escapethedungeon.png"
       ],
-      "backDrop": "images/StaffApp/backDrop.png",
+      "backDrop": "images/GameJams/itchio.webp",
       "duration": "April 2024 - July 2024",
       "employer": "Entail",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
