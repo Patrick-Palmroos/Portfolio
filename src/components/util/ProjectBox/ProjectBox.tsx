@@ -120,7 +120,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           },
           "&::before": {
             backgroundImage: `url(${project.backDrop})`,
-            backgroundSize: "100% 100%",
+            backgroundSize: "cover",
             opacity: 0.35,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

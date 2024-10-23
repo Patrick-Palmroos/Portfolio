@@ -5,7 +5,7 @@ const animations = {
   //animations for unchecked to checked state
   xAnimationAfter: {
     "0%": {
-      transform: "translate(0rem, 2rem) rotate(0deg)",
+      transform: "translate(0rem, 1.6rem) rotate(0deg)",
     },
     "50%": {
       transform: "translate(0rem, 0rem) rotate(0deg)",
@@ -27,7 +27,7 @@ const animations = {
   },
   xAnimationBefore: {
     "0%": {
-      transform: "translate(0rem, 1rem) rotate(0deg)",
+      transform: "translate(0rem, 0.8rem) rotate(0deg)",
     },
     "50%": {
       transform: "translate(0rem, 0rem) rotate(0deg)",
@@ -45,7 +45,7 @@ const animations = {
       transform: "translate(0rem, 0rem) rotate(0deg)",
     },
     "100%": {
-      transform: "translate(0rem, 2rem)",
+      transform: "translate(0rem, 1.6rem)",
     },
   },
   animation: {
@@ -67,7 +67,7 @@ const animations = {
       transform: "translate(0rem, 0rem) rotate(0deg)",
     },
     "100%": {
-      transform: "translate(0rem, 1rem) rotate(0deg)",
+      transform: "translate(0rem, 0.8rem) rotate(0deg)",
     },
   },
 };
@@ -85,7 +85,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
       sx={{
         display: "inline-block",
         position: "relative",
-        width: "3rem",
+        width: "2.5rem",
         height: "3rem",
         cursor: "pointer",
         zIndex: 5,
@@ -143,19 +143,19 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
 
         "input[type='checkbox']:not(:checked) + .custom-box::before": clicked
           ? {
-              transform: "translate(0rem, 1rem) rotate(0deg)",
+              transform: "translate(0rem, 0.8rem) rotate(0deg)",
               animation: "animationBefore 0.5s ease",
               transition: "0.2s ease",
             }
-          : { transform: "translate(0rem, 1rem) rotate(0deg)" },
+          : { transform: "translate(0rem, 0.8rem) rotate(0deg)" },
 
         "input[type='checkbox']:not(:checked) + .custom-box::after": clicked
           ? {
-              transform: "translate(0rem, 2rem)",
+              transform: "translate(0rem, 1.6rem)",
               animation: "animationAfter 0.5s ease",
               transition: "0.2s ease",
             }
-          : { transform: "translate(0rem, 2rem)" },
+          : { transform: "translate(0rem, 1.6rem)" },
 
         //hovers for when checked
         ":hover input[type='checkbox']:checked + .custom-box": {
@@ -193,7 +193,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
         sx={{
           position: "absolute",
           width: "100%",
-          height: "0.3rem",
+          height: "0.25rem",
           borderRadius: "20px",
           left: "0.25rem",
           top: "0.45rem",
@@ -204,7 +204,7 @@ export default function HamburgerMenu({ callback }: { callback: () => void }) {
             content: '""',
             position: "absolute",
             width: "100%",
-            height: "0.3rem",
+            height: "0.25rem",
             backgroundColor: "info.contrastText",
             borderRadius: "20px",
             transition: "0.2s ease",

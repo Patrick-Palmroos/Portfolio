@@ -87,7 +87,7 @@ export default function ProjectTab({
               maxHeight: "100%",
               maxWidth: "100%",
               backgroundImage: `url(${project.backDrop})`,
-              backgroundSize: "100% 100%",
+              backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               borderRadius: "10px",
