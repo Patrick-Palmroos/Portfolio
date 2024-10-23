@@ -88,8 +88,8 @@ export default function ProjectBox({ project }: { project: Project }) {
             ? "22rem"
             : isVeryTiny
             ? "50vw"
-            : "70vw",
-          height: isMobile ? "14.4rem" : "18rem",
+            : "80vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
         }}
       />
       <Stack
@@ -102,8 +102,8 @@ export default function ProjectBox({ project }: { project: Project }) {
             ? "22rem"
             : isVeryTiny
             ? "50vw"
-            : "70vw",
-          height: isMobile ? "14.4rem" : "18rem",
+            : "80vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
           "&:hover": {
             backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.5)",
             transform: "translateY(-0.5rem)",
@@ -168,7 +168,7 @@ export default function ProjectBox({ project }: { project: Project }) {
                 ? { ...titleStyle }
                 : {
                     ...titleStyle,
-                    fontSize: "calc(5vw + 1rem)",
+                    fontSize: "calc(4vw + 1rem)",
                   }
             }
             className="child"
@@ -206,7 +206,7 @@ export default function ProjectBox({ project }: { project: Project }) {
               : {
                   ...subtitleStyle,
                   fontSize: "calc(0.3vw + 1rem)",
-                  width: "60vw",
+                  width: "70vw",
                   height: "14rem",
                 }
           }

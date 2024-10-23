@@ -164,11 +164,11 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
               : {
                   position: "absolute",
                   backgroundColor: "none",
-                  width: "5rem",
-                  height: "5rem",
-                  top: "0.1rem",
+                  width: "4.2rem",
+                  height: "4.2rem",
+                  top: "0.45rem",
                   borderRadius: "50%",
-                  left: "-1.3rem",
+                  left: "-1rem",
                   zIndex: 1,
                 }
           }

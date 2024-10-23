@@ -87,17 +87,19 @@ function App() {
                   >
                     <div id="aboutMe" />
                     <Box
-                      marginTop={isTabletOrMobile ? "0rem" : "8rem"}
+                      marginTop={
+                        isTabletOrMobile ? "0rem" : smallTitle ? "8rem" : "3rem"
+                      }
                       marginLeft={
                         isTabletOrMobile
                           ? "0rem"
                           : smallTitle
                           ? "5rem"
-                          : "-2.5rem"
+                          : "-1rem"
                       }
                       marginRight={smallTitle ? "9rem" : "1.5rem"}
                       sx={isTabletOrMobile ? null : { width: "40rem" }}
-                      marginBottom={isTabletOrMobile ? "0rem" : "2rem"}
+                      marginBottom={isTabletOrMobile ? "0rem" : "1rem"}
                     >
                       <ScrollAnimation
                         animateIn={"fadeInLeft"}
@@ -123,9 +125,9 @@ function App() {
                           ? "0rem"
                           : smallTitle
                           ? "11rem"
-                          : "0rem"
+                          : "1rem"
                       }
-                      marginTop={isTabletOrMobile ? "0rem" : "8rem"}
+                      marginTop={isTabletOrMobile ? "0rem" : "2rem"}
                       marginRight={smallTitle ? "9rem" : "1.5rem"}
                       sx={isTabletOrMobile ? null : { width: "45rem" }}
                       marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
@@ -145,9 +147,9 @@ function App() {
                 </Stack>
                 <div id="work">
                   <Box
-                    marginLeft={smallTitle ? "11rem" : "0rem"}
+                    marginLeft={smallTitle ? "11rem" : "1rem"}
                     marginRight={smallTitle ? "9rem" : "1.5rem"}
-                    marginTop={smallTitle ? "4rem" : "4rem"}
+                    marginTop={smallTitle ? "4rem" : "2rem"}
                   >
                     <ScrollAnimation
                       animateIn={"fadeInLeft"}
@@ -168,9 +170,9 @@ function App() {
                 </div>
                 <div id="education">
                   <Box
-                    marginLeft={smallTitle ? "11rem" : "0rem"}
+                    marginLeft={smallTitle ? "11rem" : "1rem"}
                     marginRight={smallTitle ? "9rem" : "1.5rem"}
-                    marginTop={smallTitle ? "4rem" : "4rem"}
+                    marginTop={smallTitle ? "4rem" : "2rem"}
                   >
                     <ScrollAnimation
                       animateIn={"fadeInRight"}
@@ -186,7 +188,7 @@ function App() {
                 <div
                   id="socials"
                   style={{
-                    marginTop: mobileFooter ? "30rem" : "20rem",
+                    marginTop: mobileFooter ? "30rem" : "15rem",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: mobileFooter ? "center" : "flex-end",

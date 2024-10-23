@@ -113,7 +113,7 @@ export default function Projects() {
               sx={
                 isVeryTiny
                   ? { position: "relative" }
-                  : { position: "absolute", left: "-5.1rem", bottom: "10.1rem" }
+                  : { position: "absolute", left: "-5.3rem", bottom: "7.2rem" }
               }
             >
               {isDesktop ? (
@@ -233,7 +233,7 @@ export default function Projects() {
                       }
                     : {
                         ...carouselContainer,
-                        gridTemplateColumns: "70vw",
+                        gridTemplateColumns: "80vw",
                         marginRight: "1.5rem",
                         marginLeft: "2rem",
                       }
@@ -277,14 +277,14 @@ export default function Projects() {
             sx={
               isVeryTiny
                 ? { position: "relative" }
-                : { position: "absolute", right: "0.6rem", bottom: "-6.25rem" }
+                : { position: "absolute", right: "0.8rem", bottom: "-3.25rem" }
             }
           >
             {isDesktop ? (
               <ScrollAnimation
                 animateIn="fadeInRight"
                 duration={0.5}
-                offset={isVeryTiny ? 150 : 0}
+                offset={150}
                 initiallyVisible={!isDesktop}
                 animateOnce={true}
               >
@@ -307,7 +307,7 @@ export default function Projects() {
             )}
           </Box>
         </Stack>
-        <Box paddingTop={isMobile ? 12 : 2}>
+        <Box paddingTop={isMobile ? 12 : isVeryTiny ? 2 : 0}>
           <PageBar page={page} pageCount={pageCount} />
         </Box>
       </Stack>

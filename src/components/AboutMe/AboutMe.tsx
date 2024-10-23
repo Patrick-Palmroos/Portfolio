@@ -21,9 +21,11 @@ export default function AboutMe() {
                 ? { ...boxStyle }
                 : {
                     ...boxStyle,
-                    width: "60vw",
-                    maxHeight: "25rem",
+                    width: "70vw",
+                    maxHeight: "29rem",
                     left: "-1rem",
+                    borderWidth: isVeryTiny ? "6px" : "3px",
+                    marginTop: isVeryTiny ? "2rem" : "1rem",
                   }
             }
           >
@@ -40,7 +42,7 @@ export default function AboutMe() {
                     ? { fontSize: "25px" }
                     : isVeryTiny
                     ? { fontSize: "calc(2vw + 2px)" }
-                    : { fontSize: "13px" }
+                    : { fontSize: "15px" }
                 }
               >
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem

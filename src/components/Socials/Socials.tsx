@@ -24,7 +24,8 @@ export default function Socials() {
           icon="images/Logos/gmail.png"
           color1="116, 0, 198"
           color2="255, 0, 55"
-          link="https://mail.google.com/mail/?view=cm&fs=1&to=palmroos.patrick@gmail.com"
+          //link="https://mail.google.com/mail/?view=cm&fs=1&to=palmroos.patrick@gmail.com"
+          link="mailto:palmroos.patrick@gmail.com"
         />
         <SocialBox
           icon="images/Logos/ig.webp"
