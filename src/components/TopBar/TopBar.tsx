@@ -50,7 +50,7 @@ export default function TopBar() {
             transition: "0.4s ease",
 
             ":hover": {
-              background: "rgba(0, 0, 0, 1)",
+              background: "rgba(0, 0, 0, 0.5)",
             },
 
             ":hover .img": {
@@ -66,10 +66,10 @@ export default function TopBar() {
             style={{
               position: "absolute",
               transition: "0.4s ease",
-              left: "0.5rem",
-              top: "0.5rem",
-              width: "4rem",
-              height: "4rem",
+              left: isDesktop ? "0.5rem" : "0.8rem",
+              top: isDesktop ? "0.5rem" : "0.8rem",
+              width: isDesktop ? "4rem" : "3.5rem",
+              height: isDesktop ? "4rem" : "3.5rem",
             }}
           ></img>
         </Box>

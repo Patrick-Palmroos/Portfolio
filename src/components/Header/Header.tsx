@@ -37,7 +37,13 @@ export default function Header() {
                 }
               : {
                   ...backgroundBox,
-                  width: "90%",
+                  margin: isMobile ? "0px 3rem 0px 2rem" : "0rem",
+                  borderRadius: isMobile ? "10px" : "0rem",
+                  boxShadow: isMobile
+                    ? "1rem -0.6rem 0px 0px #FF74D0"
+                    : "0rem 0.6rem 0px 0px #FF74D0",
+                  marginTop: isMobile ? "0rem" : "-2.5rem",
+                  width: isMobile ? "90%" : "100%",
                   height: "30rem",
                   "&::before": {
                     content: '""',
