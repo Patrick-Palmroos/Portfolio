@@ -12,7 +12,11 @@ export default function PageBar({
   const isMobile = useMediaQuery({ query: "(min-width: 550px)" });
   return (
     <div>
-      <Stack direction={"row"} alignItems={"center"}>
+      <Stack
+        direction={"row"}
+        alignItems={"center"}
+        marginTop={isMobile ? "0rem" : "-2rem"}
+      >
         <Box
           sx={
             isMobile

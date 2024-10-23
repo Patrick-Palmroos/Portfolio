@@ -38,7 +38,7 @@ export const imageStyle: CSS.Properties = {
 };
 
 export const titleStyle: CSS.Properties = {
-  fontSize: "50px",
+  fontSize: "40px",
   color: "primary.contrastText",
   zIndex: 1,
 };

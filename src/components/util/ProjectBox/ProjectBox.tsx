@@ -34,7 +34,7 @@ export default function ProjectBox({ project }: { project: Project }) {
 
       // Lock the scroll but keep the scrollbar
       document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = "1.05rem"; // Prevent layout shift from hiding scrollbar
+      document.body.style.paddingRight = isVeryTiny ? "1.05rem" : "0rem"; // Prevent layout shift from hiding scrollbar
 
       window.addEventListener("scroll", handleScroll);
     } else {
@@ -88,8 +88,8 @@ export default function ProjectBox({ project }: { project: Project }) {
             ? "22rem"
             : isVeryTiny
             ? "50vw"
-            : "70vw",
-          height: isMobile ? "14.4rem" : "18rem",
+            : "80vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
         }}
       />
       <Stack
@@ -102,8 +102,8 @@ export default function ProjectBox({ project }: { project: Project }) {
             ? "22rem"
             : isVeryTiny
             ? "50vw"
-            : "70vw",
-          height: isMobile ? "14.4rem" : "18rem",
+            : "80vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
           "&:hover": {
             backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.5)",
             transform: "translateY(-0.5rem)",
@@ -120,11 +120,10 @@ export default function ProjectBox({ project }: { project: Project }) {
           },
           "&::before": {
             backgroundImage: `url(${project.backDrop})`,
-            backgroundSize: "100% auto",
-            opacity: 0.5,
+            backgroundSize: "cover",
+            opacity: 0.35,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            // backgroundColor: "#8E5AB7",
             zIndex: 1,
             transition: "transform 0.4s ease, opacity 0.4s ease",
           },
@@ -169,7 +168,7 @@ export default function ProjectBox({ project }: { project: Project }) {
                 ? { ...titleStyle }
                 : {
                     ...titleStyle,
-                    fontSize: "calc(5vw + 1rem)",
+                    fontSize: "calc(4vw + 1rem)",
                   }
             }
             className="child"
@@ -207,7 +206,7 @@ export default function ProjectBox({ project }: { project: Project }) {
               : {
                   ...subtitleStyle,
                   fontSize: "calc(0.3vw + 1rem)",
-                  width: "60vw",
+                  width: "70vw",
                   height: "14rem",
                 }
           }

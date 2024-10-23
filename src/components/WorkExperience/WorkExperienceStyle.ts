@@ -9,7 +9,7 @@ export const container: CSS.Properties = {
 };
 
 export const detailBox: CSS.Properties = {
-  height: "30rem",
+  height: "31rem",
   width: "29rem",
   right: "12rem",
   borderRadius: "20px",

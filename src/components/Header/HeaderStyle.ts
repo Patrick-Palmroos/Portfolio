@@ -8,7 +8,7 @@ export const backgroundBox: CSS.Properties = {
   position: "relative",
   boxShadow: "1rem -0.6rem 0px 0px #FF74D0",
   overflow: "hidden",
-  borderRadius: "8px",
+  borderRadius: "10px",
   backgroundColor: "primary.main",
   zIndex: 0,
 };

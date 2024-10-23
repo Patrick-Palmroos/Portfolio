@@ -53,12 +53,12 @@ export default function Education() {
                       }
                     : {
                         ...educationBackdrop,
-                        width: "16rem",
-                        height: "6.5rem",
+                        width: "15rem",
+                        height: "5.5rem",
                         "&::before": {
                           ...educationBox,
-                          width: "16rem",
-                          height: "6.5rem",
+                          width: "15rem",
+                          height: "5.5rem",
                         },
                       }
                 }
@@ -72,7 +72,8 @@ export default function Education() {
                       ? { ...titleStyle, fontSize: "24px" }
                       : {
                           ...titleStyle,
-                          fontSize: "18px",
+                          top: "1.2rem",
+                          fontSize: "17px",
                           width: "11rem",
                         }
                   }
@@ -86,7 +87,7 @@ export default function Education() {
                       ? { ...subtitleStyle, top: "6.5rem" }
                       : isVeryTiny
                       ? { ...subtitleStyle, top: "6rem", fontSize: "20px" }
-                      : { ...subtitleStyle, top: "5rem", fontSize: "15px" }
+                      : { ...subtitleStyle, top: "4.2rem", fontSize: "15px" }
                   }
                 >
                   Software Development
@@ -98,7 +99,7 @@ export default function Education() {
                       ? { ...subtitleStyle, top: "9rem" }
                       : isVeryTiny
                       ? { ...subtitleStyle, top: "8rem", fontSize: "20px" }
-                      : { ...subtitleStyle, top: "7rem", fontSize: "15px" }
+                      : { ...subtitleStyle, top: "6rem", fontSize: "14px" }
                   }
                 >
                   2022-2025
@@ -123,9 +124,9 @@ export default function Education() {
                         }
                       : {
                           ...subtitleStyle,
-                          top: "7rem",
-                          left: "9rem",
-                          fontSize: "15px",
+                          top: "6rem",
+                          left: "7rem",
+                          fontSize: "14px",
                           color: "#E2FFA6",
                         }
                   }
@@ -140,7 +141,7 @@ export default function Education() {
                       ? { ...imageStyle }
                       : isVeryTiny
                       ? { ...imageStyle, height: "7rem" }
-                      : { ...imageStyle, height: "5.5rem" }
+                      : { ...imageStyle, height: "5rem" }
                   }
                 />
               </Box>
@@ -177,12 +178,12 @@ export default function Education() {
                       }
                     : {
                         ...educationBackdrop,
-                        width: "16rem",
-                        height: "6.5rem",
+                        width: "15rem",
+                        height: "5.5rem",
                         "&::before": {
                           ...educationBox,
-                          width: "16rem",
-                          height: "6.5rem",
+                          width: "15rem",
+                          height: "5.5rem",
                         },
                       }
                 }
@@ -196,7 +197,8 @@ export default function Education() {
                       ? { ...titleStyle, fontSize: "24px" }
                       : {
                           ...titleStyle,
-                          fontSize: "18px",
+                          top: "1.2rem",
+                          fontSize: "17px",
                           width: "11rem",
                         }
                   }
@@ -210,7 +212,11 @@ export default function Education() {
                       ? { ...subtitleStyle, top: "6.5rem" }
                       : isVeryTiny
                       ? { ...subtitleStyle, top: "6rem", fontSize: "20px" }
-                      : { ...subtitleStyle, top: "5rem", fontSize: "15px" }
+                      : {
+                          ...subtitleStyle,
+                          top: "4.2rem",
+                          fontSize: "15px",
+                        }
                   }
                 >
                   College Degree
@@ -222,7 +228,11 @@ export default function Education() {
                       ? { ...subtitleStyle, top: "9rem" }
                       : isVeryTiny
                       ? { ...subtitleStyle, top: "8rem", fontSize: "20px" }
-                      : { ...subtitleStyle, top: "7rem", fontSize: "15px" }
+                      : {
+                          ...subtitleStyle,
+                          top: "6rem",
+                          fontSize: "14px",
+                        }
                   }
                 >
                   2019-2022
@@ -245,9 +255,9 @@ export default function Education() {
                         }
                       : {
                           ...subtitleStyle,
-                          top: "7rem",
-                          left: "9rem",
-                          fontSize: "15px",
+                          top: "6rem",
+                          left: "7rem",
+                          fontSize: "14px",
                         }
                   }
                 >
@@ -261,7 +271,7 @@ export default function Education() {
                       ? { ...imageStyle }
                       : isVeryTiny
                       ? { ...imageStyle, height: "7rem" }
-                      : { ...imageStyle, height: "5.5rem", right: "-0.5rem" }
+                      : { ...imageStyle, height: "5rem", right: "-0.5rem" }
                   }
                 />
               </Box>

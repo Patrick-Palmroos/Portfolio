@@ -15,6 +15,7 @@ export default function Title({
       <Stack
         direction={isDesktop ? "row" : "column"}
         paddingTop={10}
+        marginBottom={isDesktop ? "0rem" : "-1rem"}
         alignItems={"center"}
       >
         <Typography
@@ -33,6 +34,7 @@ export default function Title({
                 : {
                     ...lineStyle,
                     width: "80vw",
+                    height: "0.2rem",
                     marginTop: "0.3rem",
                     backgroundImage:
                       "linear-gradient(to right, transparent 0%, #B985FC 50%, transparent 100%)",

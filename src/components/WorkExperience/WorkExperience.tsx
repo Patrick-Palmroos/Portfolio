@@ -35,7 +35,7 @@ export default function WorkExperience() {
                 ? {
                     position: "absolute",
                     display: "flex",
-                    flexDirection: "row-reverse",
+                    flexDirection: "row",
                     alignItems: "flex-end",
                     top: "-2rem",
                   }
@@ -255,12 +255,12 @@ export default function WorkExperience() {
               isDesktop
                 ? { ...detailBox }
                 : isMobile
-                ? { ...detailBox, width: "39rem", height: "23rem" }
+                ? { ...detailBox, width: "39rem", height: "auto" }
                 : isVeryTiny
                 ? {
                     ...detailBox,
                     width: "34rem",
-                    height: "21rem",
+                    height: "auto",
                     marginTop: "-7rem",
                   }
                 : {
