@@ -3,6 +3,7 @@ import SocialBox from "../util/SocialBox/SocialBox";
 import { useMediaQuery } from "react-responsive";
 
 export default function Socials() {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1200px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 480px)" });
   return (
     <div>
@@ -24,8 +25,11 @@ export default function Socials() {
           icon="images/Logos/gmail.png"
           color1="116, 0, 198"
           color2="255, 0, 55"
-          //link="https://mail.google.com/mail/?view=cm&fs=1&to=palmroos.patrick@gmail.com"
-          link="mailto:palmroos.patrick@gmail.com"
+          link={
+            isDesktop
+              ? "https://mail.google.com/mail/?view=cm&fs=1&to=palmroos.patrick@gmail.com"
+              : "mailto:palmroos.patrick@gmail.com"
+          }
         />
         <SocialBox
           icon="images/Logos/ig.webp"

@@ -15,6 +15,8 @@ export default function SkillBox({
     <Box
       component={"a"}
       href={skill.link}
+      target="_blank"
+      rel="noopener noreferrer"
       sx={{
         position: "relative",
         gridColumn: `span ${skill.width}`,
