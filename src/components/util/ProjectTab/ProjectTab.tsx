@@ -20,6 +20,7 @@ export default function ProjectTab({
 }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 1050px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
+  const isTiny = useMediaQuery({ query: "(min-width: 520px)" });
   return (
     <div>
       <Slide direction="up" in={true} mountOnEnter unmountOnExit>
@@ -35,10 +36,16 @@ export default function ProjectTab({
                   width: "70%",
                   left: "14%",
                 }
-              : {
+              : isTiny
+              ? {
                   ...projectTabStyle,
                   width: "80%",
                   left: "8%",
+                }
+              : {
+                  ...projectTabStyle,
+                  width: "94%",
+                  left: "0.8%",
                 }
           }
         >
@@ -47,15 +54,19 @@ export default function ProjectTab({
             onClick={callback}
             sx={{
               ...exitButtonStyle,
+              right: isTiny ? "-2rem" : "-0.6rem",
+              top: isTiny ? "-2rem" : "-1.2rem",
+              width: isTiny ? "5rem" : "4rem",
+              height: isTiny ? "5rem" : "4rem",
 
               "&::before, &::after": {
                 content: '""',
                 position: "absolute",
-                width: "0.5rem",
-                height: "3rem",
-                top: "1rem",
-                left: "2.25rem",
-                borderRadius: "20px",
+                width: isTiny ? "0.5rem" : "0.4rem",
+                height: isTiny ? "3rem" : "2.6rem",
+                top: isTiny ? "1rem" : "0.7rem",
+                left: isTiny ? "2.25rem" : "1.8rem",
+                borderRadius: "10px",
                 backgroundColor: "white",
                 zIndex: 2,
                 transition: "0.2s ease",
@@ -137,7 +148,7 @@ export default function ProjectTab({
                     }
               }
             >
-              <Stack>
+              <Stack alignItems={isMobile ? "flex-start" : "center"}>
                 <Stack
                   display={"flex"}
                   alignItems={"center"}
@@ -151,12 +162,12 @@ export default function ProjectTab({
                         : isMobile
                         ? {
                             ...titleStyle,
-                            paddingLeft: "1rem",
+                            paddingLeft: "0rem",
                             fontSize: "33px",
                           }
                         : {
                             ...titleStyle,
-                            paddingLeft: "0.7rem",
+                            paddingLeft: "0rem",
                             fontSize: "30px",
                           }
                     }
@@ -194,12 +205,12 @@ export default function ProjectTab({
                       ? {
                           ...dateTextStyle,
                           fontSize: "24px",
-                          paddingLeft: "1rem",
+                          paddingLeft: "0rem",
                         }
                       : {
                           ...dateTextStyle,
                           fontSize: "21px",
-                          paddingLeft: "1.5rem",
+                          paddingLeft: "0rem",
                         }
                   }
                 >
@@ -208,7 +219,7 @@ export default function ProjectTab({
               </Stack>
               <Stack
                 direction={"row"}
-                paddingLeft={isMobile ? "1rem" : "1.5rem"}
+                paddingLeft={isMobile ? "1rem" : "1rem"}
                 paddingBottom={"0.3rem"}
               >
                 {project.logos.map((value, index) => (
@@ -234,6 +245,7 @@ export default function ProjectTab({
               sx={{
                 position: "relative",
                 width: "100%",
+                paddingBottom: "2rem",
                 background: "#27242E",
                 zIndex: 3,
               }}

@@ -34,7 +34,7 @@ export default function ProjectBox({ project }: { project: Project }) {
 
       // Lock the scroll but keep the scrollbar
       document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = "1.05rem"; // Prevent layout shift from hiding scrollbar
+      document.body.style.paddingRight = isVeryTiny ? "1.05rem" : "0rem"; // Prevent layout shift from hiding scrollbar
 
       window.addEventListener("scroll", handleScroll);
     } else {

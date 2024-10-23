@@ -16,8 +16,8 @@
       "backDrop": "images/StaffApp/backDrop.png",
       "duration": "April 2024 - July 2024",
       "employer": "Entail",
-      "subtitle": "StaffApp is an application for posting and taking shifts for rental workers. This app was made so that managers can easily post and follow open shifts at units within their organisation",
-      "details": "I worked on StaffApp within a team of 5 developers. We we're tasked to develop an application to replace paper call lists. The project began as a school project for the company Entail. We also got the chance to work on the project through the summer.\nI worked in the backend and frontend as well as the person in charge of information security. This project was a great opportunity for me to learn about working in a team and on a larger project.\nAt the end we developed a functioning and visually pleasing prototype. The customer was pleased with our work and we we're happy with the result we arrived at. Overall this project was a great learning experience"
+      "subtitle": "StaffApp is an application for posting and taking shifts for rental workers. It allows managers to easily post and track open shifts within their organization.",
+      "details": "I worked on StaffApp from start to finish as part of a team of five developers. The project began as a school assignment for our client, Entail Oy, and we continued working on it throughout the summer.\nMy responsibilities included both backend and frontend development, as well as being in charge of information security. This project provided a valuable opportunity to learn about teamwork and managing a larger project.\nIn the end, we developed a functional and visually appealing prototype, and the client was pleased with the result. We were happy with the outcome, and the project was a great learning experience overall."
     },
     {
       "id": 1,
@@ -33,10 +33,10 @@
         "images/WeatherApp/weather3.png"
       ],
       "backDrop": "images/WeatherApp/backDrop.jpg",
-      "duration": "May 1st 2024 - 20th 2024",
+      "duration": "May 2024",
       "employer": "Tamk",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
+      "subtitle": "Check the weather for the next 7 days in your current area, based on your GPS location, with this quickly made school project application.",
+      "details": "This application was created using Kotlin and Jetpack Compose in Android Studio. It utilizes a free API to retrieve weather data and can be installed on Android devices.\nI developed this application as a part of a school course. This application was created in the span of two weeks and it taught me alot.\nIt was an excellent opportunity to build a backend using Kotlin, which helped me grow as a developer. This project also gave me the chance to create my first graph programmatically."
     },
     {
       "id": 2,
@@ -52,10 +52,10 @@
         "images/LanguageApp/language3.png"
       ],
       "backDrop": "images/LanguageApp/classroom.webp",
-      "duration": "April 2024 - July 2024",
+      "duration": "December 2023",
       "employer": "Tamk",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
+      "subtitle": "Teach and learn languages with your family or students! Add different words in various languages and start learning today!",
+      "details": "This application was my first full-stack project, and it posed many challenges, making it an excellent learning experience.\nI built the frontend using React and the backend with Node.js and MySQL. There were several new skills I had to acquire to complete the project.\nAs the first project where I combined all my skills to create a functioning application, this stands as an important milestone in my development journey."
     },
     {
       "id": 3,
@@ -71,10 +71,10 @@
         "images/WorkItOut/workitout3.png"
       ],
       "backDrop": "images/WorkItOut/workitout.png",
-      "duration": "April 2024 - July 2024",
-      "employer": "Entail",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
+      "duration": "April 2023 - June 2023",
+      "employer": "Tykky",
+      "subtitle": "Learn about workplace diversity through a fun, story-based, choices-matter game for mobile devices!",
+      "details": "This game was developed during my first year of studies for our client at Tykky. Our team of four members created it using Unity and C#, and I was the second programmer on the team.\nThe project’s biggest challenge was designing a game that focused on workplace diversity, but we succeeded by creating a fun and interactive game concept that we fully developed.\nThis was my first experience working on a team project, and I was introduced to the notorious merge conflicts! It taught me valuable lessons about communication and teamwork."
     },
     {
       "id": 4,
@@ -90,10 +90,10 @@
         "images/GameJams/escapethedungeon.png"
       ],
       "backDrop": "images/GameJams/itchio.webp",
-      "duration": "April 2024 - July 2024",
-      "employer": "Entail",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n bliimbjalnkbjakjdnkjasndkjasndskad ask dksjnsakjdas dkasj djas njsandkjas dask dkas jnk"
+      "duration": "August 2020 - September 2020",
+      "employer": "itch.io",
+      "subtitle": "My first-ever coding projects! I was a self-taught programmer who participated in a few game jams. These projects mark the beginning of my journey as a developer!",
+      "details": "When I was in college, I wanted to learn how to create games, which led me to teach myself programming. I chose C# and Unity as my tools and used VSCode as my code editor.\nAfter learning the basics, I participated in several game jams to practice game development. Through these projects, I discovered that my favorite aspect of game creation was writing code.\nThis realization prompted me to pursue programming as a career. Little did I know how these early adventures in game development would shape my future!"
     }
   ]
 }
