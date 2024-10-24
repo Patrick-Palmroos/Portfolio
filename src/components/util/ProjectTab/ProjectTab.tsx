@@ -279,17 +279,37 @@ export default function ProjectTab({
                       src={project.images[index]}
                       alt="picture of software"
                       style={
-                        isDesktop
-                          ? { ...imageStyle }
+                        project.mobileImages
+                          ? isDesktop
+                            ? { ...imageStyle }
+                            : isMobile
+                            ? {
+                                ...imageStyle,
+                                width: "13vw",
+                                margin: "0rem 0rem 0rem 0rem",
+                              }
+                            : {
+                                ...imageStyle,
+                                width: "15vw",
+                                margin: "0rem 0rem 0rem 0rem",
+                                padding: "2rem 0rem 1rem 0rem",
+                              }
+                          : isDesktop
+                          ? {
+                              ...imageStyle,
+                              width: "15vw",
+                              padding: "1rem 0rem 0rem 0rem",
+                            }
                           : isMobile
                           ? {
                               ...imageStyle,
-                              width: "13vw",
+                              width: "15vw",
+                              padding: "1rem 0rem 0rem 1rem",
                               margin: "0rem 0rem 0rem 0rem",
                             }
                           : {
                               ...imageStyle,
-                              width: "15vw",
+                              width: "22vw",
                               margin: "0rem 0rem 0rem 0rem",
                               padding: "2rem 0rem 1rem 0rem",
                             }
