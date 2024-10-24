@@ -3,6 +3,7 @@ export interface Project {
   name: string;
   logos: string[];
   subtitle: string;
+  mobileImages: boolean;
   images: string[];
   duration: string;
   details: string;
