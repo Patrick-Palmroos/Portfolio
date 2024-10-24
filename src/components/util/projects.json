@@ -8,6 +8,7 @@
         "images/Logos/node.png",
         "images/Logos/react.png"
       ],
+      "mobileImages": true,
       "images": [
         "images/StaffApp/phone1.png",
         "images/StaffApp/phone2.png",
@@ -27,6 +28,7 @@
         "images/Logos/jetpackcompose.png",
         "images/Logos/androidstudio.png"
       ],
+      "mobileImages": true,
       "images": [
         "images/WeatherApp/weather1.png",
         "images/WeatherApp/weather2.png",
@@ -46,6 +48,7 @@
         "images/Logos/mysql.png",
         "images/Logos/js.png"
       ],
+      "mobileImages": false,
       "images": [
         "images/LanguageApp/language1.png",
         "images/LanguageApp/language2.png",
@@ -65,6 +68,7 @@
         "images/Logos/csharp.png",
         "images/Logos/github.png"
       ],
+      "mobileImages": true,
       "images": [
         "images/WorkItOut/workitout1.png",
         "images/WorkItOut/workitout2.png",
@@ -84,6 +88,7 @@
         "images/Logos/csharp.png",
         "images/Logos/vscode.png"
       ],
+      "mobileImages": false,
       "images": [
         "images/GameJams/voidheart.png",
         "images/GameJams/sugarhigh.png",
