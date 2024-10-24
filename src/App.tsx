@@ -62,14 +62,9 @@ function App() {
                   marginRight={"9rem"}
                   marginTop={"4rem"}
                 >
-                  <ScrollAnimation
-                    initiallyVisible={!isTabletOrMobile}
-                    animateIn={"fadeInDown"}
-                    duration={0.5}
-                    animateOnce={true}
-                  >
+                  <Box>
                     <Title title="My Previous Projects" />
-                  </ScrollAnimation>
+                  </Box>
                 </Box>
                 <Projects />
                 <Stack
