@@ -20,6 +20,12 @@ export const useLanguage = (): LanguageContextProps => {
   return context;
 };
 
+// Function to get the user's preferred language
+const getPreferredLanguage = (): Language => {
+  const userLang = navigator.language.slice(0, 2); // Get the first two characters, e.g., "en" or "fi"
+  return userLang === "fi" ? "fi" : "en"; // Default to "en" if not "fi"
+};
+
 // Provider component
 interface LanguageProviderProps {
   children: ReactNode;
@@ -28,10 +34,18 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check localStorage first, then default to preferred language
+    const savedLanguage = localStorage.getItem("appLanguage") as Language;
+    return savedLanguage || getPreferredLanguage();
+  });
 
   const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "en" ? "fi" : "en"));
+    setLanguage((prevLanguage) => {
+      const newLanguage = prevLanguage === "en" ? "fi" : "en";
+      localStorage.setItem("appLanguage", newLanguage); // Save to localStorage
+      return newLanguage;
+    });
   };
 
   return (
