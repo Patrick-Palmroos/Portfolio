@@ -9,8 +9,10 @@ import { Stack, Typography, Box } from "@mui/material";
 import pfp from "../../assets/me.png";
 import logos from "../../assets/logos.png";
 import { useMediaQuery } from "react-responsive";
+import { useLanguage } from "../util/languageContext";
 
 export default function Header() {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1000px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 650px)" });
   return (
@@ -104,7 +106,7 @@ export default function Header() {
                 }
                 flexDirection={"row"}
               >
-                Hi! My name is
+                {language === "en" ? "Hi! My name is" : "Hei! Minun nimeni on"}
               </Typography>
               <Typography
                 variant={"h1"}
@@ -146,7 +148,7 @@ export default function Header() {
                       }
                 }
               >
-                Software Developer
+                {language === "en" ? "Software Developer" : "Ohjelmoija"}
               </Typography>
             </Box>
           </Stack>
