@@ -5,10 +5,16 @@ import { useState, useEffect } from "react";
 import HamburgerMenu from "../util/HamburgerMenu/HamburgerMenu";
 import { useLanguage } from "../util/languageContext";
 
-export default function TopBar() {
+export default function TopBar({
+  titleLang,
+}: {
+  titleLang: (arg0: string) => void;
+}) {
   const { language, toggleLanguage } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1080px)" });
   const [open, setOpen] = useState<boolean>(false);
+
+  titleLang(language);
 
   useEffect(() => {
     setOpen(false);

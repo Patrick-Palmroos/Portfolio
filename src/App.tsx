@@ -15,20 +15,18 @@ import { darkTheme } from "./themes.ts";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import {
-  LanguageProvider,
-  useLanguage,
-} from "./components/util/languageContext.tsx";
+import { LanguageProvider } from "./components/util/languageContext.tsx";
 
 const ThemeContext = createContext("dark");
 
 function App() {
-  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
   const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
   const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
   const [display, setDisplay] = useState<boolean>(false);
+  const [language, setCurrentLanguage] = useState("en");
+
   useEffect(() => {
     // Check if there's a hash in the URL
     setDisplay(false);
@@ -53,7 +51,11 @@ function App() {
                 backgroundColor: "background.default",
               }}
             >
-              <TopBar />
+              <TopBar
+                titleLang={(lang: string) => {
+                  setCurrentLanguage(lang);
+                }}
+              />
               <Header />
               {display ? (
                 <Box>
