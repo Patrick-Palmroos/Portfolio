@@ -18,7 +18,6 @@ import { useMediaQuery } from "react-responsive";
 import { LanguageProvider } from "./components/util/languageContext.tsx";
 
 const ThemeContext = createContext("dark");
-const langContext = createContext("english");
 
 function App() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
