@@ -3,8 +3,10 @@ import LayerButton from "../util/LayerButton/LayerButton";
 import { useMediaQuery } from "react-responsive";
 import { useState, useEffect } from "react";
 import HamburgerMenu from "../util/HamburgerMenu/HamburgerMenu";
+import { useLanguage } from "../util/languageContext";
 
 export default function TopBar() {
+  const { language, toggleLanguage } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1080px)" });
   const [open, setOpen] = useState<boolean>(false);
 
@@ -75,12 +77,26 @@ export default function TopBar() {
         </Box>
         {isDesktop ? (
           <Box flexDirection={"row"} display={"flex"}>
-            <LayerButton title="Projects" link="#projects" />
-            <LayerButton title="About me" link="#aboutMe" />
-            <LayerButton title="Skills" link="#skills" />
-            <LayerButton title="Work" link="#work" />
-            <LayerButton title="Education" link="#education" />
-            <LayerButton title="Socials" link="#socials" />
+            <LayerButton
+              title={language === "en" ? "Projects" : "Projektit"}
+              link="#projects"
+            />
+            <LayerButton
+              title={language === "en" ? "About Me" : "Minusta"}
+              link="#aboutMe"
+            />
+            <LayerButton
+              title={language === "en" ? "Skills" : "Taidot"}
+              link="#skills"
+            />
+            <LayerButton
+              title={language === "en" ? "Work" : "Työt"}
+              link="#work"
+            />
+            <LayerButton
+              title={language === "en" ? "Education" : "Koulutus"}
+              link="#education"
+            />
           </Box>
         ) : (
           <Box>
@@ -124,6 +140,20 @@ export default function TopBar() {
             <LayerButton title="Education" link="#education" />
             <LayerButton title="Socials" link="#socials" />
           </Stack>
+        </Box>
+        <Box
+          component={"button"}
+          onClick={toggleLanguage}
+          sx={{
+            background: "white",
+            position: "absolute",
+            right: "5rem",
+            top: "3rem",
+            //width: "1rem",
+            //height: "1rem",
+          }}
+        >
+          {language === "en" ? "Finnish" : "English"}
         </Box>
       </Stack>
     </div>
