@@ -15,11 +15,15 @@ import { darkTheme } from "./themes.ts";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { LanguageProvider } from "./components/util/languageContext.tsx";
+import {
+  LanguageProvider,
+  useLanguage,
+} from "./components/util/languageContext.tsx";
 
 const ThemeContext = createContext("dark");
 
 function App() {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
   const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
@@ -65,7 +69,13 @@ function App() {
                     marginTop={"4rem"}
                   >
                     <Box>
-                      <Title title="My Previous Projects" />
+                      <Title
+                        title={
+                          language === "en"
+                            ? "My Previous Projects"
+                            : "Aiemmat Projektini"
+                        }
+                      />
                     </Box>
                   </Box>
                   <Projects />
@@ -107,7 +117,12 @@ function App() {
                           duration={0.5}
                           animateOnce={true}
                         >
-                          <Title title="About Me" line={!isTabletOrMobile} />
+                          <Title
+                            title={
+                              language === "en" ? "About Me" : "Tietoja Minusta"
+                            }
+                            line={!isTabletOrMobile}
+                          />
                         </ScrollAnimation>
                       </Box>
                       <AboutMe />
@@ -139,7 +154,10 @@ function App() {
                           duration={0.5}
                           animateOnce={true}
                         >
-                          <Title title="Skills" line={!isTabletOrMobile} />
+                          <Title
+                            title={language === "en" ? "Skills" : "Taidot"}
+                            line={!isTabletOrMobile}
+                          />
                         </ScrollAnimation>
                       </Box>
 
@@ -157,7 +175,11 @@ function App() {
                         duration={0.5}
                         animateOnce={true}
                       >
-                        <Title title="Work Experience" />
+                        <Title
+                          title={
+                            language === "en" ? "Work Experience" : "Työkokemus"
+                          }
+                        />
                       </ScrollAnimation>
                     </Box>
                     <ScrollAnimation
@@ -181,7 +203,9 @@ function App() {
                         delay={0}
                         animateOnce={true}
                       >
-                        <Title title="Education" />
+                        <Title
+                          title={language === "en" ? "Education" : "Koulutus"}
+                        />
                       </ScrollAnimation>
                     </Box>
                     <Education />
@@ -204,7 +228,11 @@ function App() {
                       marginRight={"2rem"}
                       width={"30rem"}
                     >
-                      <Title title="Contact Me!" />
+                      <Title
+                        title={
+                          language === "en" ? "Contact Me!" : "Ota Yhteyttä!"
+                        }
+                      />
                     </Box>
                     <Box sx={mobileFooter ? null : { marginBottom: "2rem" }}>
                       <Socials />
