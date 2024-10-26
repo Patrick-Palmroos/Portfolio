@@ -30,8 +30,11 @@ export interface Work {
   id: number;
   logo: string;
   name: string;
-  title: string;
+  titleEn: string;
+  titleFi: string;
   startDate: string;
-  endDate: string;
-  description: string;
+  endDateEn: string;
+  endDateFi: string;
+  descriptionEn: string;
+  descriptionFi: string;
 }
