@@ -7,6 +7,7 @@ import {
   imageStyle,
 } from "./WorkButtonStyle";
 import { useMediaQuery } from "react-responsive";
+import { useLanguage } from "../languageContext";
 
 const calcMonths = (startDate: string, endDate: string) => {
   const parseDate = (date: string) => {
@@ -29,7 +30,7 @@ const calcMonths = (startDate: string, endDate: string) => {
   // Return the result as years and months
   //const years = Math.floor(totalMonths / 12);
   //const months = totalMonths % 12;
-  return `${totalMonths} months`;
+  return `${totalMonths}`;
 };
 
 export default function WorkButton({
@@ -45,6 +46,7 @@ export default function WorkButton({
   callback: () => void;
   active?: boolean;
 }) {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 950px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
   const isVeryTiny = useMediaQuery({ query: "(min-width: 650px)" });
@@ -174,7 +176,7 @@ export default function WorkButton({
                 }
           }
         >
-          {work.title}
+          {language === "en" ? work.titleEn : work.titleFi}
         </Typography>
         <Typography
           className={"child"}
@@ -198,7 +200,8 @@ export default function WorkButton({
                 }
           }
         >
-          {calcMonths(work.startDate, work.endDate)}
+          {calcMonths(work.startDate, work.endDateEn)}{" "}
+          {language === "en" ? "months" : "kuukautta"}
         </Typography>
         {isDesktop && (
           <img
