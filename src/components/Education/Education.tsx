@@ -71,7 +71,7 @@ export default function Education() {
                     isMobile
                       ? { ...titleStyle }
                       : isVeryTiny
-                      ? { ...titleStyle, fontSize: "24px" }
+                      ? { ...titleStyle, fontSize: "26px" }
                       : {
                           ...titleStyle,
                           top: "1.2rem",
@@ -200,7 +200,7 @@ export default function Education() {
                     isMobile
                       ? { ...titleStyle }
                       : isVeryTiny
-                      ? { ...titleStyle, fontSize: "24px" }
+                      ? { ...titleStyle, fontSize: "26px" }
                       : {
                           ...titleStyle,
                           top: "1.2rem",
