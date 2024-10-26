@@ -97,6 +97,7 @@ export default function TopBar() {
               title={language === "en" ? "Education" : "Koulutus"}
               link="#education"
             />
+            <LayerButton title="Socials" link="#socials" />
           </Box>
         ) : (
           <Box>
@@ -133,11 +134,26 @@ export default function TopBar() {
             marginTop={"1rem"}
             spacing={1}
           >
-            <LayerButton title="Projects" link="#projects" />
-            <LayerButton title="About me" link="#aboutMe" />
-            <LayerButton title="Skills" link="#skills" />
-            <LayerButton title="Work" link="#work" />
-            <LayerButton title="Education" link="#education" />
+            <LayerButton
+              title={language === "en" ? "Projects" : "Projektit"}
+              link="#projects"
+            />
+            <LayerButton
+              title={language === "en" ? "About Me" : "Minusta"}
+              link="#aboutMe"
+            />
+            <LayerButton
+              title={language === "en" ? "Skills" : "Taidot"}
+              link="#skills"
+            />
+            <LayerButton
+              title={language === "en" ? "Work" : "Työt"}
+              link="#work"
+            />
+            <LayerButton
+              title={language === "en" ? "Education" : "Koulutus"}
+              link="#education"
+            />
             <LayerButton title="Socials" link="#socials" />
           </Stack>
         </Box>
