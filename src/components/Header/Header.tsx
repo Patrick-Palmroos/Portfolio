@@ -153,7 +153,9 @@ export default function Header() {
               </Typography>
             </Box>
           </Stack>
-          <ContactButton title="Hello" link="#socials" />
+          <Box sx={{ position: "absolute", top: "5rem" }}>
+            <ContactButton title="Hello" link="#socials" />
+          </Box>
           {/*logos */}
           <img
             src={logos}
