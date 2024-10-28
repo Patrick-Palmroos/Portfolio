@@ -10,6 +10,7 @@ import pfp from "../../assets/me.png";
 import logos from "../../assets/logos.png";
 import { useMediaQuery } from "react-responsive";
 import { useLanguage } from "../util/languageContext";
+import ContactButton from "../util/ContactButton/ContactButton";
 
 export default function Header() {
   const { language } = useLanguage();
@@ -152,7 +153,7 @@ export default function Header() {
               </Typography>
             </Box>
           </Stack>
-
+          <ContactButton title="Hello" link="#socials" />
           {/*logos */}
           <img
             src={logos}
