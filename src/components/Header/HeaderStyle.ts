@@ -6,10 +6,10 @@ export const backgroundBox: CSS.Properties = {
   width: "95%",
   margin: "0px 3rem 0px 2rem",
   position: "relative",
-  boxShadow: "1rem -0.6rem 0px 0px #583662",
+  boxShadow: "1rem -0.6rem 0px 0px #FF74D0",
   overflow: "hidden",
   borderRadius: "10px",
-  backgroundColor: "#311b31",
+  backgroundColor: "primary.main",
   zIndex: 0,
 };
 
@@ -17,11 +17,11 @@ export const circle: CSS.Properties = {
   position: "absolute",
   width: "35.5rem",
   height: "35.5rem",
-  backgroundColor: "#311b31",
+  backgroundColor: "primary.main",
   borderRadius: "50%",
   right: "-18rem",
   bottom: "-22rem",
-  boxShadow: "-0.45rem 0.5rem 0.9rem rgb(0 0 0 / 14%)",
+  boxShadow: "-0.45rem 0.5rem 0.9rem rgb(0 0 0 / 7%)",
   overflow: "hidden",
   zIndex: 1,
 };

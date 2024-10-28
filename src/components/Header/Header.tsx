@@ -33,7 +33,7 @@ export default function Header() {
                     width: "100%",
                     height: "100%",
                     backgroundImage:
-                      "linear-gradient(-110deg, #e8cde500 16%, #ff0c64bf)",
+                      "linear-gradient(-110deg, #e8cde500 36%, #B985FC)",
                     zIndex: -1,
                   },
                 }
@@ -53,7 +53,7 @@ export default function Header() {
                     width: "100%",
                     height: "100%",
                     backgroundImage:
-                      "linear-gradient(-110deg, #e8cde500 16%, #ff0c64bf)",
+                      "linear-gradient(-110deg, #e8cde500 10%, #B985FC)",
                     zIndex: -1,
                   },
                 }
