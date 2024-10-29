@@ -16,6 +16,7 @@ export default function Header() {
   const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1000px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 650px)" });
+
   return (
     <div>
       <Stack component={"section"} paddingTop={"8rem"} alignItems={"center"}>
@@ -60,102 +61,118 @@ export default function Header() {
                 }
           }
         >
-          <Stack
-            spacing={"-1rem"}
-            sx={
-              isDesktop
-                ? { ...titleBox }
-                : isMobile
-                ? {
-                    ...titleBox,
-                    // left: "-2rem",
-                    //marginTop: "-15rem",
-                    //paddingRight: "0rem",
-                    width: "30vw",
-                    //height: "12rem",
-                  }
-                : {
-                    ...titleBox,
-                    left: "-1rem",
-                    width: "12rem",
-                    height: "13rem",
-                  }
-            }
-          >
-            <Box
-              display={"flex"}
-              flexDirection={"column"}
-              justifyContent={"space-evenly"}
+          <Stack alignItems={"center"}>
+            <Stack
+              spacing={"-1rem"}
+              sx={
+                isDesktop
+                  ? { ...titleBox }
+                  : isMobile
+                  ? {
+                      ...titleBox,
+                      // left: "-2rem",
+                      //marginTop: "-15rem",
+                      //paddingRight: "0rem",
+                      width: "30vw",
+                      //height: "12rem",
+                    }
+                  : {
+                      ...titleBox,
+                      left: "-1rem",
+                      width: "12rem",
+                      height: "13rem",
+                    }
+              }
             >
-              <Typography
-                variant={"h1"}
-                sx={
-                  isDesktop
-                    ? {
-                        fontSize: "3vw",
-                        color: "primary.main",
-                      }
-                    : isMobile
-                    ? {
-                        fontSize: "4.5vw",
-                        color: "primary.main",
-                      }
-                    : {
-                        fontSize: "1.5rem",
-                        color: "primary.main",
-                      }
-                }
-                flexDirection={"row"}
+              <Box
+                display={"flex"}
+                flexDirection={"column"}
+                justifyContent={"space-evenly"}
               >
-                {language === "en" ? "Hi! My name is" : "Hei! Minun nimeni on"}
-              </Typography>
-              <Typography
-                variant={"h1"}
-                sx={
-                  isDesktop
-                    ? {
-                        fontSize: "5vw",
-                        color: "primary.contrastText",
-                      }
-                    : isMobile
-                    ? {
-                        fontSize: "6.5vw",
-                        color: "primary.contrastText",
-                      }
-                    : {
-                        fontSize: "3rem",
-                        lineHeight: "2.8rem",
-                        color: "primary.contrastText",
-                      }
+                <Typography
+                  variant={"h1"}
+                  sx={
+                    isDesktop
+                      ? {
+                          fontSize: "3vw",
+                          color: "primary.main",
+                        }
+                      : isMobile
+                      ? {
+                          fontSize: "4vw",
+                          color: "primary.main",
+                        }
+                      : {
+                          fontSize: "1.5rem",
+                          color: "primary.main",
+                        }
+                  }
+                  flexDirection={"row"}
+                >
+                  {language === "en"
+                    ? "Hi! My name is"
+                    : "Hei! Minun nimeni on"}
+                </Typography>
+                <Typography
+                  variant={"h1"}
+                  sx={
+                    isDesktop
+                      ? {
+                          fontSize: "5vw",
+                          color: "primary.contrastText",
+                        }
+                      : isMobile
+                      ? {
+                          fontSize: "6vw",
+                          color: "primary.contrastText",
+                        }
+                      : {
+                          fontSize: "3rem",
+                          lineHeight: "2.8rem",
+                          color: "primary.contrastText",
+                        }
+                  }
+                >
+                  Patrick Palmroos
+                </Typography>
+                <Typography
+                  variant={"h1"}
+                  sx={
+                    isDesktop
+                      ? {
+                          fontSize: "4vw",
+                        }
+                      : isMobile
+                      ? {
+                          fontSize: "5vw",
+                        }
+                      : {
+                          paddingTop: "0.3rem",
+                          fontSize: "2rem",
+                          width: "13rem",
+                        }
+                  }
+                >
+                  {language === "en" ? "Software Developer" : "Ohjelmoija"}
+                </Typography>
+              </Box>
+            </Stack>
+            <Box
+              sx={{
+                position: "relative",
+                zIndex: 5,
+                top: "2rem",
+                left: "-3rem",
+              }}
+            >
+              <ContactButton
+                title={
+                  language === "en" ? "Work With Me!" : "Työskentele kanssani!"
                 }
-              >
-                Patrick Palmroos
-              </Typography>
-              <Typography
-                variant={"h1"}
-                sx={
-                  isDesktop
-                    ? {
-                        fontSize: "4vw",
-                      }
-                    : isMobile
-                    ? {
-                        fontSize: "5.5vw",
-                      }
-                    : {
-                        paddingTop: "0.3rem",
-                        fontSize: "2rem",
-                        width: "13rem",
-                      }
-                }
-              >
-                {language === "en" ? "Software Developer" : "Ohjelmoija"}
-              </Typography>
+                link="#socials"
+              />
             </Box>
           </Stack>
-          <Box sx={{ position: "absolute", top: "5rem" }}>
-            <ContactButton title="Hello" link="#socials" />
-          </Box>
           {/*logos */}
           <img
             src={logos}
