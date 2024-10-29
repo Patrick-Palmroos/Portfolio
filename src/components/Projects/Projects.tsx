@@ -105,42 +105,61 @@ export default function Projects() {
       <Stack alignItems={"center"} paddingTop={isMobile ? 16 : 5} spacing={3}>
         <Stack direction={"row"} alignItems={"center"} sx={container}>
           <Box
-            sx={{
-              rotate: "-180deg",
-            }}
+            sx={
+              isVeryTiny
+                ? { position: "relative" }
+                : {
+                    position: "absolute",
+                    left: "0.8rem",
+                    bottom: "8rem",
+                  }
+            }
           >
-            <Box
-              sx={
-                isVeryTiny
-                  ? { position: "relative" }
-                  : { position: "absolute", left: "-5.3rem", bottom: "7.2rem" }
-              }
-            >
-              {isDesktop ? (
-                <ScrollAnimation
-                  animateIn="slideInRight"
-                  duration={0.5}
-                  offset={150}
-                  animateOnce={true}
-                >
-                  {/*Scroll in animations */}
-                  <ArrowButton
-                    callback={() => {
-                      handlePageChange("back");
-                    }}
-                  />
-                </ScrollAnimation>
-              ) : (
-                <Box>
-                  {/*No scroll in animations */}
+            {isDesktop ? (
+              <ScrollAnimation
+                animateIn="fadeInRight"
+                duration={0.5}
+                offset={150}
+                initiallyVisible={!isDesktop}
+                animateOnce={true}
+              >
+                {/* Scroll in animations */}
+                <Box sx={{ rotate: "180deg" }}>
                   <ArrowButton
                     callback={() => {
                       handlePageChange("back");
                     }}
                   />
                 </Box>
-              )}
-            </Box>
+              </ScrollAnimation>
+            ) : (
+              <Box
+                sx={{
+                  position: "relative",
+                  zIndex: 5,
+                  rotate: "-180deg",
+                }}
+              >
+                <Box
+                  sx={{
+                    background:
+                      "linear-gradient(to top, transparent 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.5) 80%, transparent 100%)",
+                    position: "absolute",
+                    zIndex: 1,
+                    width: "5rem",
+                    height: "16.9rem",
+                    left: "0rem",
+                    top: "-5.2rem",
+                  }}
+                />
+                {/* No scroll in animations */}
+                <ArrowButton
+                  callback={() => {
+                    handlePageChange("back");
+                  }}
+                />
+              </Box>
+            )}
           </Box>
           {isDesktop ? (
             <ScrollAnimation
@@ -275,7 +294,7 @@ export default function Projects() {
             sx={
               isVeryTiny
                 ? { position: "relative" }
-                : { position: "absolute", right: "0.8rem", bottom: "-3.25rem" }
+                : { position: "absolute", right: "0.8rem", bottom: "7.8rem" }
             }
           >
             {isDesktop ? (
@@ -294,8 +313,20 @@ export default function Projects() {
                 />
               </ScrollAnimation>
             ) : (
-              <Box>
+              <Box sx={{ position: "relative", zIndex: 5 }}>
                 {/* No scroll in animations */}
+                <Box
+                  sx={{
+                    background:
+                      "linear-gradient(to top, transparent 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.5) 80%, transparent 100%)",
+                    position: "absolute",
+                    zIndex: 1,
+                    width: "5rem",
+                    height: "16.9rem",
+                    left: "0rem",
+                    top: "-6rem",
+                  }}
+                />
                 <ArrowButton
                   callback={() => {
                     handlePageChange("next");
@@ -309,7 +340,6 @@ export default function Projects() {
           <PageBar page={page} pageCount={pageCount} />
         </Box>
       </Stack>
-      ;
     </div>
   );
 }

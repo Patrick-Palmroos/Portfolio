@@ -84,6 +84,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           position: "absolute",
           pointerEvents: "none",
           backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.25)",
+          zIndex: 1,
           borderRadius: isMobile ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
@@ -99,7 +100,7 @@ export default function ProjectBox({ project }: { project: Project }) {
         direction={"column"}
         sx={{
           ...projectBoxStyle,
-
+          zIndex: 1,
           borderRadius: isMobile ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
@@ -126,7 +127,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           "&::before": {
             backgroundImage: `url(${project.backDrop})`,
             backgroundSize: "cover",
-            opacity: 0.35,
+            opacity: 0.4,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             zIndex: 1,

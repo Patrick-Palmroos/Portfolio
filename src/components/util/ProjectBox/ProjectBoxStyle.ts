@@ -2,7 +2,7 @@ import CSS from "csstype";
 
 export const projectBoxStyle: CSS.Properties = {
   position: "relative",
-  backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.5)",
+  backgroundColor: "color(srgb 0.73 0.53 0.99 / 0)",
   borderRadius: "20px",
   width: "30.25rem",
   height: "14.4rem",
@@ -28,7 +28,7 @@ export const titleStyle: CSS.Properties = {
   paddingTop: "0.7rem",
   textShadow: "0 2px 10px rgba(0, 0, 0, 0.25)",
   transition: "0.4s ease",
-  zIndex: 3,
+  zIndex: 5,
 };
 
 export const subtitleStyle: CSS.Properties = {
@@ -39,7 +39,7 @@ export const subtitleStyle: CSS.Properties = {
   textAlign: "start",
   textShadow: "0 1px 2px rgba(0, 0, 0, 0.25)",
   transition: "0.4s ease",
-  zIndex: 3,
+  zIndex: 5,
 };
 
 export const logoStyle: CSS.Properties = {
@@ -48,5 +48,5 @@ export const logoStyle: CSS.Properties = {
   paddingRight: "0.5rem",
   filter: "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5))",
   transition: "0.4s ease",
-  zIndex: 3,
+  zIndex: 5,
 };
