@@ -10,13 +10,19 @@ import {
   subLineStyle,
 } from "./WorkExperienceStyle";
 import { useMediaQuery } from "react-responsive";
+import { useLanguage } from "../util/languageContext";
 
 export default function WorkExperience() {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 950px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
   const isVeryTiny = useMediaQuery({ query: "(min-width: 650px)" });
   const [activeWork, setActiveWork] = useState<number>(0);
   const workList = workJson.work;
+  const workDescription =
+    language === "en"
+      ? workList[activeWork].descriptionEn
+      : workList[activeWork].descriptionFi;
 
   const HandleActiveWork = (workId: number) => {
     setActiveWork(workId);
@@ -296,7 +302,9 @@ export default function WorkExperience() {
                     fontSize: isMobile ? "25px" : isVeryTiny ? "23px" : "18px",
                   }}
                 >
-                  {workList[activeWork].title}
+                  {language === "en"
+                    ? workList[activeWork].titleEn
+                    : workList[activeWork].titleFi}
                 </Typography>
               </Stack>
               {/*work duration */}
@@ -308,11 +316,13 @@ export default function WorkExperience() {
                   }}
                 >
                   {workList[activeWork].startDate} -{" "}
-                  {workList[activeWork].endDate}
+                  {language === "en"
+                    ? workList[activeWork].endDateEn
+                    : workList[activeWork].endDateFi}
                 </Typography>
               </Stack>
             </Stack>
-            {workList[activeWork].description.split("\n").map((line, index) => (
+            {workDescription.split("\n").map((line, index) => (
               <Typography
                 key={index}
                 variant="h2"

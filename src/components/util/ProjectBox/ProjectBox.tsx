@@ -11,8 +11,10 @@ import ProjectTab from "../ProjectTab/ProjectTab";
 import { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useMediaQuery } from "react-responsive";
+import { useLanguage } from "../languageContext";
 
 export default function ProjectBox({ project }: { project: Project }) {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1215px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 940px)" });
   const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
@@ -212,7 +214,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           }
           className="child"
         >
-          {project.subtitle}
+          {language === "en" ? project.subtitleEn : project.subtitleFi}
         </Typography>
         <img
           src={project.images[0]}

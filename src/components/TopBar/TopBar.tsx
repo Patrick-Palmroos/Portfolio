@@ -1,12 +1,22 @@
-import { Stack, Box } from "@mui/material";
+import { Stack, Box, Typography } from "@mui/material";
 import LayerButton from "../util/LayerButton/LayerButton";
 import { useMediaQuery } from "react-responsive";
 import { useState, useEffect } from "react";
 import HamburgerMenu from "../util/HamburgerMenu/HamburgerMenu";
+import { useLanguage } from "../util/languageContext";
 
-export default function TopBar() {
+export default function TopBar({
+  titleLang,
+}: {
+  titleLang: (arg0: string) => void;
+}) {
+  const { language, toggleLanguage } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1080px)" });
   const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    titleLang(language);
+  }, [language, titleLang]);
 
   useEffect(() => {
     setOpen(false);
@@ -75,12 +85,88 @@ export default function TopBar() {
         </Box>
         {isDesktop ? (
           <Box flexDirection={"row"} display={"flex"}>
-            <LayerButton title="Projects" link="#projects" />
-            <LayerButton title="About me" link="#aboutMe" />
-            <LayerButton title="Skills" link="#skills" />
-            <LayerButton title="Work" link="#work" />
-            <LayerButton title="Education" link="#education" />
-            <LayerButton title="Socials" link="#socials" />
+            <LayerButton
+              title={language === "en" ? "Projects" : "Projektit"}
+              link="#projects"
+            />
+            <LayerButton
+              title={language === "en" ? "About Me" : "Minusta"}
+              link="#aboutMe"
+            />
+            <LayerButton
+              title={language === "en" ? "Skills" : "Taidot"}
+              link="#skills"
+            />
+            <LayerButton
+              title={language === "en" ? "Work" : "Työt"}
+              link="#work"
+            />
+            <LayerButton
+              title={language === "en" ? "Education" : "Koulutus"}
+              link="#education"
+            />
+            <Box
+              component={"button"}
+              onClick={toggleLanguage}
+              sx={{
+                border: "none",
+                background: "transparent",
+                opacity: 0.6,
+                position: "fixed",
+                right: "0.6rem",
+                top: "1.5rem",
+                width: "4rem",
+                height: "3rem",
+                cursor: "pointer",
+                transition: "0.3s ease",
+
+                ":hover": {
+                  opacity: 1,
+                  transition: "0.3s ease",
+                },
+
+                ":hover .image": {
+                  transform: "translateY(-0.2rem) scale(1.1)",
+                  transition: "0.3s ease",
+                },
+
+                ":hover .txt": {
+                  transform: "translateY(0.2rem) scale(1.1)",
+                  transition: "0.3s ease",
+                },
+              }}
+            >
+              <img
+                className="image"
+                src={
+                  language === "en"
+                    ? "images/lang/fi.png"
+                    : "images/lang/en.webp"
+                }
+                alt="flag"
+                style={{
+                  position: "absolute",
+                  top: "0.1rem",
+                  left: "0.8rem",
+                  width: "2.5rem",
+                  height: "auto",
+                  transition: "0.3s ease",
+                }}
+              ></img>
+              <Typography
+                className="txt"
+                variant="h2"
+                sx={{
+                  fontSize: "17px",
+                  position: "absolute",
+                  left: "0.4rem",
+                  top: "1.7rem",
+                  transition: "0.3s ease",
+                }}
+              >
+                {language === "en" ? "Finnish" : "English"}
+              </Typography>
+            </Box>
           </Box>
         ) : (
           <Box>
@@ -117,13 +203,88 @@ export default function TopBar() {
             marginTop={"1rem"}
             spacing={1}
           >
-            <LayerButton title="Projects" link="#projects" />
-            <LayerButton title="About me" link="#aboutMe" />
-            <LayerButton title="Skills" link="#skills" />
-            <LayerButton title="Work" link="#work" />
-            <LayerButton title="Education" link="#education" />
+            <LayerButton
+              title={language === "en" ? "Projects" : "Projektit"}
+              link="#projects"
+            />
+            <LayerButton
+              title={language === "en" ? "About Me" : "Minusta"}
+              link="#aboutMe"
+            />
+            <LayerButton
+              title={language === "en" ? "Skills" : "Taidot"}
+              link="#skills"
+            />
+            <LayerButton
+              title={language === "en" ? "Work" : "Työt"}
+              link="#work"
+            />
+            <LayerButton
+              title={language === "en" ? "Education" : "Koulutus"}
+              link="#education"
+            />
             <LayerButton title="Socials" link="#socials" />
           </Stack>
+          <Box
+            component={"button"}
+            onClick={toggleLanguage}
+            sx={{
+              border: "none",
+              background: "transparent",
+              opacity: 0.8,
+              position: "relative",
+              right: "-8.2rem",
+              top: "5rem",
+              width: "4rem",
+              height: "3rem",
+              cursor: "pointer",
+              transition: "0.3s ease",
+
+              ":hover": {
+                opacity: 1,
+                transition: "0.3s ease",
+              },
+
+              ":hover .image": {
+                transform: "translateY(-0.2rem) scale(1.1)",
+                transition: "0.3s ease",
+              },
+
+              ":hover .txt": {
+                transform: "translateY(0.2rem) scale(1.1)",
+                transition: "0.3s ease",
+              },
+            }}
+          >
+            <img
+              className="image"
+              src={
+                language === "en" ? "images/lang/fi.png" : "images/lang/en.webp"
+              }
+              alt="flag"
+              style={{
+                position: "absolute",
+                top: "0.1rem",
+                left: "0.8rem",
+                width: "2.5rem",
+                height: "auto",
+                transition: "0.3s ease",
+              }}
+            ></img>
+            <Typography
+              className="txt"
+              variant="h2"
+              sx={{
+                fontSize: "17px",
+                position: "absolute",
+                left: "0.4rem",
+                top: "1.7rem",
+                transition: "0.3s ease",
+              }}
+            >
+              {language === "en" ? "Finnish" : "English"}
+            </Typography>
+          </Box>
         </Box>
       </Stack>
     </div>

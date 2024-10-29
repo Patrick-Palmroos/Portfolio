@@ -9,8 +9,10 @@ import {
 } from "./EducationStyle";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useMediaQuery } from "react-responsive";
+import { useLanguage } from "../util/languageContext";
 
 export default function Education() {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1020px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
   const isVeryTiny = useMediaQuery({ query: "(min-width: 450px)" });
@@ -69,7 +71,7 @@ export default function Education() {
                     isMobile
                       ? { ...titleStyle }
                       : isVeryTiny
-                      ? { ...titleStyle, fontSize: "24px" }
+                      ? { ...titleStyle, fontSize: "26px" }
                       : {
                           ...titleStyle,
                           top: "1.2rem",
@@ -78,7 +80,9 @@ export default function Education() {
                         }
                   }
                 >
-                  Tampere University of Applied Sciences
+                  {language === "en"
+                    ? `Tampere University of Applied Sciences`
+                    : `Tampereen Ammattikorkeakoulu`}
                 </Typography>
                 <Typography
                   variant={"h1"}
@@ -90,7 +94,9 @@ export default function Education() {
                       : { ...subtitleStyle, top: "4.2rem", fontSize: "15px" }
                   }
                 >
-                  Software Development
+                  {language === "en"
+                    ? `Software Development`
+                    : "Ohjelmistotuotanto"}
                 </Typography>
                 <Typography
                   variant={"h1"}
@@ -131,7 +137,7 @@ export default function Education() {
                         }
                   }
                 >
-                  Ongoing
+                  {language === "en" ? `Ongoing` : `Meneillään`}
                 </Typography>
                 <img
                   src="images/Logos/tamk.png"
@@ -194,7 +200,7 @@ export default function Education() {
                     isMobile
                       ? { ...titleStyle }
                       : isVeryTiny
-                      ? { ...titleStyle, fontSize: "24px" }
+                      ? { ...titleStyle, fontSize: "26px" }
                       : {
                           ...titleStyle,
                           top: "1.2rem",
@@ -203,7 +209,9 @@ export default function Education() {
                         }
                   }
                 >
-                  Finnish Matriculation Examination
+                  {language === "en"
+                    ? `Finnish Matriculation Examination`
+                    : `Suomen Ylioppilastutkinto`}
                 </Typography>
                 <Typography
                   variant={"h1"}
@@ -219,7 +227,7 @@ export default function Education() {
                         }
                   }
                 >
-                  College Degree
+                  {language === "en" ? `College Degree` : `Lukio`}
                 </Typography>
                 <Typography
                   variant={"h1"}
@@ -261,7 +269,7 @@ export default function Education() {
                         }
                   }
                 >
-                  Completed
+                  {language === "en" ? `Completed` : `Suoritettu`}
                 </Typography>
                 <img
                   src="images/Logos/ylioppilas.png"

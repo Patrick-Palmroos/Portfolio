@@ -15,6 +15,7 @@ import { darkTheme } from "./themes.ts";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { LanguageProvider } from "./components/util/languageContext.tsx";
 
 const ThemeContext = createContext("dark");
 
@@ -24,6 +25,8 @@ function App() {
   const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
   const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
   const [display, setDisplay] = useState<boolean>(false);
+  const [language, setCurrentLanguage] = useState("en");
+
   useEffect(() => {
     // Check if there's a hash in the URL
     setDisplay(false);
@@ -37,181 +40,215 @@ function App() {
     }, 100);
   }, []);
   return (
-    <ThemeProvider theme={darkTheme}>
-      <ThemeContext.Provider value="dark">
-        <div id="#">
-          <Box
-            sx={{
-              minHeight: "100%",
-              overflowX: "hidden",
-              backgroundColor: "background.default",
-            }}
-          >
-            <TopBar />
-            <Header />
-            {display ? (
-              <Box>
-                <div id="projects" />
-                <Box
-                  sx={
-                    isDesktop
-                      ? { marginLeft: "11rem", marginRight: "9rem" }
-                      : { marginLeft: "3rem", marginRight: "3rem" }
-                  }
-                  marginLeft={"11rem"}
-                  marginRight={"9rem"}
-                  marginTop={"4rem"}
-                >
-                  <Box>
-                    <Title title="My Previous Projects" />
-                  </Box>
-                </Box>
-                <Projects />
-                <Stack
-                  direction={isTabletOrMobile ? "row" : "column"}
-                  paddingTop={isTabletOrMobile ? "8rem" : "2rem"}
-                  spacing={2}
-                  alignItems={isTabletOrMobile ? "flex-start" : "center"}
-                  justifyContent={"center"}
-                >
-                  <Stack
-                    paddingRight={"1rem"}
-                    paddingLeft={"3rem"}
-                    alignItems={isTabletOrMobile ? "flex-start" : "center"}
-                    height={isTabletOrMobile ? "40rem" : "40rem"}
+    <LanguageProvider>
+      <ThemeProvider theme={darkTheme}>
+        <ThemeContext.Provider value="dark">
+          <div id="#">
+            <Box
+              sx={{
+                minHeight: "100%",
+                overflowX: "hidden",
+                backgroundColor: "background.default",
+              }}
+            >
+              <TopBar
+                titleLang={(lang: string) => {
+                  setCurrentLanguage(lang);
+                }}
+              />
+              <Header />
+              {display ? (
+                <Box>
+                  <div id="projects" />
+                  <Box
+                    sx={
+                      isDesktop
+                        ? { marginLeft: "11rem", marginRight: "9rem" }
+                        : { marginLeft: "3rem", marginRight: "3rem" }
+                    }
+                    marginLeft={"11rem"}
+                    marginRight={"9rem"}
+                    marginTop={"4rem"}
                   >
-                    <div id="aboutMe" />
+                    <Box>
+                      <Title
+                        title={
+                          language === "en"
+                            ? "My Previous Projects"
+                            : "Aiemmat Projektini"
+                        }
+                      />
+                    </Box>
+                  </Box>
+                  <Projects />
+                  <Stack
+                    direction={isTabletOrMobile ? "row" : "column"}
+                    paddingTop={isTabletOrMobile ? "8rem" : "2rem"}
+                    spacing={2}
+                    alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                    justifyContent={"center"}
+                  >
+                    <Stack
+                      paddingRight={"1rem"}
+                      paddingLeft={"3rem"}
+                      alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                      height={isTabletOrMobile ? "40rem" : "40rem"}
+                    >
+                      <div id="aboutMe" />
+                      <Box
+                        marginTop={
+                          isTabletOrMobile
+                            ? "0rem"
+                            : smallTitle
+                            ? "8rem"
+                            : "3rem"
+                        }
+                        marginLeft={
+                          isTabletOrMobile
+                            ? "0rem"
+                            : smallTitle
+                            ? "5rem"
+                            : "-1rem"
+                        }
+                        marginRight={smallTitle ? "9rem" : "1.5rem"}
+                        sx={isTabletOrMobile ? null : { width: "40rem" }}
+                        marginBottom={isTabletOrMobile ? "0rem" : "1rem"}
+                      >
+                        <ScrollAnimation
+                          animateIn={"fadeInLeft"}
+                          duration={0.5}
+                          animateOnce={true}
+                        >
+                          <Title
+                            title={
+                              language === "en" ? "About Me" : "Tietoja Minusta"
+                            }
+                            line={!isTabletOrMobile}
+                          />
+                        </ScrollAnimation>
+                      </Box>
+                      <AboutMe />
+                    </Stack>
+                    <Box paddingTop={isTabletOrMobile ? "6rem" : "0rem"}>
+                      {isTabletOrMobile ? <Line /> : null}
+                    </Box>
+                    <Stack
+                      paddingLeft={isTabletOrMobile ? "1rem" : "0rem"}
+                      alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                    >
+                      <div id="skills" />
+                      <Box
+                        marginLeft={
+                          isTabletOrMobile
+                            ? "0rem"
+                            : smallTitle
+                            ? "11rem"
+                            : "1rem"
+                        }
+                        marginTop={isTabletOrMobile ? "0rem" : "2rem"}
+                        marginRight={smallTitle ? "9rem" : "1.5rem"}
+                        sx={isTabletOrMobile ? null : { width: "45rem" }}
+                        marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
+                      >
+                        <ScrollAnimation
+                          animateIn={"fadeInRight"}
+                          delay={200}
+                          duration={0.5}
+                          animateOnce={true}
+                        >
+                          <Title
+                            title={language === "en" ? "Skills" : "Taidot"}
+                            line={!isTabletOrMobile}
+                          />
+                        </ScrollAnimation>
+                      </Box>
+
+                      <Skills />
+                    </Stack>
+                  </Stack>
+                  <div id="work">
                     <Box
-                      marginTop={
-                        isTabletOrMobile ? "0rem" : smallTitle ? "8rem" : "3rem"
-                      }
-                      marginLeft={
-                        isTabletOrMobile
-                          ? "0rem"
-                          : smallTitle
-                          ? "5rem"
-                          : "-1rem"
-                      }
+                      marginLeft={smallTitle ? "11rem" : "1rem"}
                       marginRight={smallTitle ? "9rem" : "1.5rem"}
-                      sx={isTabletOrMobile ? null : { width: "40rem" }}
-                      marginBottom={isTabletOrMobile ? "0rem" : "1rem"}
+                      marginTop={smallTitle ? "4rem" : "2rem"}
                     >
                       <ScrollAnimation
                         animateIn={"fadeInLeft"}
                         duration={0.5}
                         animateOnce={true}
                       >
-                        <Title title="About Me" line={!isTabletOrMobile} />
+                        <Title
+                          title={
+                            language === "en" ? "Work Experience" : "Työkokemus"
+                          }
+                        />
                       </ScrollAnimation>
                     </Box>
-                    <AboutMe />
-                  </Stack>
-                  <Box paddingTop={isTabletOrMobile ? "6rem" : "0rem"}>
-                    {isTabletOrMobile ? <Line /> : null}
-                  </Box>
-                  <Stack
-                    paddingLeft={isTabletOrMobile ? "1rem" : "0rem"}
-                    alignItems={isTabletOrMobile ? "flex-start" : "center"}
-                  >
-                    <div id="skills" />
-                    <Box
-                      marginLeft={
-                        isTabletOrMobile
-                          ? "0rem"
-                          : smallTitle
-                          ? "11rem"
-                          : "1rem"
-                      }
-                      marginTop={isTabletOrMobile ? "0rem" : "2rem"}
-                      marginRight={smallTitle ? "9rem" : "1.5rem"}
-                      sx={isTabletOrMobile ? null : { width: "45rem" }}
-                      marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
-                    >
-                      <ScrollAnimation
-                        animateIn={"fadeInRight"}
-                        delay={200}
-                        duration={0.5}
-                        animateOnce={true}
-                      >
-                        <Title title="Skills" line={!isTabletOrMobile} />
-                      </ScrollAnimation>
-                    </Box>
-
-                    <Skills />
-                  </Stack>
-                </Stack>
-                <div id="work">
-                  <Box
-                    marginLeft={smallTitle ? "11rem" : "1rem"}
-                    marginRight={smallTitle ? "9rem" : "1.5rem"}
-                    marginTop={smallTitle ? "4rem" : "2rem"}
-                  >
-                    <ScrollAnimation
-                      animateIn={"fadeInLeft"}
-                      duration={0.5}
-                      animateOnce={true}
-                    >
-                      <Title title="Work Experience" />
-                    </ScrollAnimation>
-                  </Box>
-                  <ScrollAnimation
-                    animateIn={"fadeInRight"}
-                    duration={0.5}
-                    delay={100}
-                    animateOnce={true}
-                  >
-                    <WorkExperience />
-                  </ScrollAnimation>
-                </div>
-                <div id="education">
-                  <Box
-                    marginLeft={smallTitle ? "11rem" : "1rem"}
-                    marginRight={smallTitle ? "9rem" : "1.5rem"}
-                    marginTop={smallTitle ? "4rem" : "2rem"}
-                  >
                     <ScrollAnimation
                       animateIn={"fadeInRight"}
                       duration={0.5}
-                      delay={0}
+                      delay={100}
                       animateOnce={true}
                     >
-                      <Title title="Education" />
+                      <WorkExperience />
                     </ScrollAnimation>
-                  </Box>
-                  <Education />
-                </div>
-                <div
-                  id="socials"
-                  style={{
-                    marginTop: mobileFooter ? "30rem" : "15rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: mobileFooter ? "center" : "flex-end",
-                    flexDirection: mobileFooter ? "row" : "column",
-                    height: "20rem",
-                    backgroundColor: "#19121c",
-                  }}
-                >
-                  <Box
-                    marginLeft={"1rem"}
-                    marginBottom={mobileFooter ? "5rem" : "0.5rem"}
-                    marginRight={"2rem"}
-                    width={"30rem"}
+                  </div>
+                  <div id="education">
+                    <Box
+                      marginLeft={smallTitle ? "11rem" : "1rem"}
+                      marginRight={smallTitle ? "9rem" : "1.5rem"}
+                      marginTop={smallTitle ? "4rem" : "2rem"}
+                    >
+                      <ScrollAnimation
+                        animateIn={"fadeInRight"}
+                        duration={0.5}
+                        delay={0}
+                        animateOnce={true}
+                      >
+                        <Title
+                          title={language === "en" ? "Education" : "Koulutus"}
+                        />
+                      </ScrollAnimation>
+                    </Box>
+                    <Education />
+                  </div>
+                  <div
+                    id="socials"
+                    style={{
+                      marginTop: mobileFooter ? "30rem" : "15rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: mobileFooter ? "center" : "flex-end",
+                      flexDirection: mobileFooter ? "row" : "column",
+                      height: "20rem",
+                      backgroundColor: "#19121c",
+                    }}
                   >
-                    <Title title="Contact Me!" />
-                  </Box>
-                  <Box sx={mobileFooter ? null : { marginBottom: "2rem" }}>
-                    <Socials />
-                  </Box>
-                </div>
-              </Box>
-            ) : (
-              <Box sx={{ height: "300rem" }} />
-            )}
-          </Box>
-        </div>
-      </ThemeContext.Provider>
-    </ThemeProvider>
+                    <Box
+                      marginLeft={"1rem"}
+                      marginBottom={mobileFooter ? "5rem" : "0.5rem"}
+                      marginRight={"2rem"}
+                      width={"30rem"}
+                    >
+                      <Title
+                        title={
+                          language === "en" ? "Contact Me!" : "Ota Yhteyttä!"
+                        }
+                      />
+                    </Box>
+                    <Box sx={mobileFooter ? null : { marginBottom: "2rem" }}>
+                      <Socials />
+                    </Box>
+                  </div>
+                </Box>
+              ) : (
+                <Box sx={{ height: "300rem" }} />
+              )}
+            </Box>
+          </div>
+        </ThemeContext.Provider>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

@@ -2,11 +2,14 @@ export interface Project {
   id: number;
   name: string;
   logos: string[];
-  subtitle: string;
+  subtitleEn: string;
+  subtitleFi: string;
   mobileImages: boolean;
   images: string[];
-  duration: string;
-  details: string;
+  durationEn: string;
+  detailsEn: string;
+  durationFi: string;
+  detailsFi: string;
   employer: string;
   backDrop: string;
 }
@@ -27,8 +30,11 @@ export interface Work {
   id: number;
   logo: string;
   name: string;
-  title: string;
+  titleEn: string;
+  titleFi: string;
   startDate: string;
-  endDate: string;
-  description: string;
+  endDateEn: string;
+  endDateFi: string;
+  descriptionEn: string;
+  descriptionFi: string;
 }

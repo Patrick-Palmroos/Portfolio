@@ -4,28 +4,37 @@
       "id": 0,
       "logo": "images/Logos/securitas.png",
       "name": "Securitas Oy",
-      "title": "Security Guard",
+      "titleEn": "Security Guard",
+      "titleFi": "Vartija",
       "startDate": "06.2023",
-      "endDate": "Current",
-      "description": "I have been working at Securitas Oy as a security guard, gaining experience in various locations. This role has allowed me to do important work and significantly boosted my confidence.\nAs a security guard, I've had to manage stressful and challenging situations, often making critical decisions on the spot. I've dealt with difficult scenarios, collaborating with colleagues and the police to resolve them, as well as working independently where my decisions were crucial to the outcome of the situation.\nOverall, I am very grateful for these experiences, which have helped me grow personally. I've learned to take responsibility and lead situations outside of my comfort zone, improving both my decision-making skills and my sense of accountability."
+      "endDateEn": "Current",
+      "endDateFi": "Nykyinen",
+      "descriptionEn": "I have been working for Securitas Oy as a security guard, gaining experience in various locations. This role has allowed me to do important work and significantly boosted my confidence.\nAs a security guard, I've had to manage stressful and challenging situations, often making critical decisions on the spot. I've dealt with difficult scenarios, collaborating with colleagues and the police to resolve them, as well as working independently where my decisions were crucial to the outcome of the situation.\nOverall, I am very grateful for these experiences, which have helped me grow personally. I've learned to take responsibility and lead situations outside of my comfort zone, improving both my decision-making skills and my sense of accountability.",
+      "descriptionFi": "Olen työskennellyt Securitas Oy:llä vartijana saaden kokemusta erilaisista vaihtelevista työympäristöistä. Vartijan rooli on mahdollistanut tärkeän ja merkitsevän työn tekemistä ja vahvistanut luottamustani.\nVartijana olen joutunut stressaaviin ja haastaviin tilanteisiin usein tehden kriittisiä päätöksiä hetkessä. Olen kohdannut haastavia tilanteita ja työskennellyt kollegoideni ja poliisin kanssa niiden ratkaisemiseksi, sekä toiminut tilanteissa itsenäisesti jolloin päätöksilläni on ollut suuri merkitys.\nOlen erittäin kiitollinen näistä kokemuksista, jotka ovat auttaneet minua kasvamaan henkilönä. Olen oppinut ottamaan vastuuta ja johtamaan tilanteita mukavuusalueeni ulkopuolella parantaen päätöksentekokykyäni ja vastuuntuntoani."
     },
     {
       "id": 1,
       "logo": "images/Logos/kesko.png",
       "name": "K-Citymarket",
-      "title": "Cashier",
+      "titleEn": "Cashier",
+      "titleFi": "Kassa työntekijä",
       "startDate": "10.2022",
-      "endDate": "06.2023",
-      "description": "As a cashier at K-Citymarket, I served hundreds of customers and handled various problem situations, delivering excellent customer service even during rush hours and holidays.\nI also managed the information desk and took responsibility for the entire cashier line, including planning the next day's break schedules and ensuring everyone had their breaks and left on time.\nI had the opportunity to work with great people, and I learned that what matters most in the workplace is the team atmosphere and collaboration."
+      "endDateEn": "06.2023",
+      "endDateFi": "06.2023",
+      "descriptionEn": "As a cashier at K-Citymarket, I served hundreds of customers and handled various problem situations, delivering excellent customer service even during rush hours, holidays and simply during everyday situations.\nI also managed the information desk and took responsibility for the entire cashier line, including planning the next day's break schedules and ensuring everyone had their breaks and left on time.\nI had the opportunity to work with great people, and I learned that what matters most in the workplace is the team atmosphere and collaboration.",
+      "descriptionFi": "Työskennellessäni kassa työntekijänä K-Citymarketissa palvelin satoja asiakkaita ja hoidin erilaisia ongelmatilanteita tarjoten erinomaista asiakaspalvelua ruuhka-aikoina, juhlapyhinä sekä aivan perus arkenakin.\nVastasin myös infopisteestä ja huolehdin samalla koko kassalinjastosta mukaan lukien seuraavan päivän taukojen suunnittelua. Varmistin, että kaikki saivat taukonsa ja pääsivät ajoissa kotiin. Vastaan otin palautuksia, hoidin pakettejen noutoja ja veikkausta.\nMinulla oli tilaisuus työskennellä hienojen ihmisten kanssa, ja opin, että työpaikalla tärkeintä on tiimihenki ja yhteistyö!"
     },
     {
       "id": 2,
       "logo": "images/Logos/prisma.png",
       "name": "Prisma",
-      "title": "Cashier",
+      "titleEn": "Cashier",
+      "titleFi": "Kassa työntekijä",
       "startDate": "11.2021",
-      "endDate": "06.2022",
-      "description": "My role as a cashier at Prisma in Lahti was my first job, and it taught me valuable lessons in confidence and professionalism. I learned how to work with customers professionally and ensure their satisfaction. This job pushed me out of my comfort zone and helped me develop teamwork and responsibility skills.\nWorking during peak rush hours taught me not to stress over things beyond my control. Serving hundreds of customers daily was a huge learning experience for my younger self and was a key step in understanding professionalism and handling stressful environments."
+      "endDateEn": "06.2022",
+      "endDateFi": "06.2022",
+      "descriptionEn": "My role as a cashier at Prisma in Lahti was my first job, and it taught me valuable lessons in confidence and professionalism. I learned how to work with customers professionally and ensure their satisfaction. This job pushed me out of my comfort zone and helped me develop teamwork and responsibility skills.\nWorking during peak rush hours taught me not to stress over things beyond my control. Serving hundreds of customers daily was a huge learning experience for my younger self and was a key step in understanding professionalism and handling stressful environments.",
+      "descriptionFi": "Ensimmäinen työpaikkani oli Lahden Prisma Sykkeen kassalla ja se opetti minulle arvokkaita itseluottamus ja ammattimaisuus taitoja. Opin toimimaan ammattimaisesti asiakkaiden kanssa ja pitäen asiakas tyytyväisyydestä huolen. Tämä työ vei minut pois mukavuusalueeltani ja auttoi kehittämään yhteistyö- ja vastuunottotaitojani.\nTyöskentely ruuhka-aikoina opetti minulle ettei kannata stressata asioista joihin en voi vaikuttaa. Satojen asiakkaiden palveleminen päivittäin oli suuri oppimiskokemus nuorelle minälleni ja tärkeä askel ammattimaisuuden ymmärtämisessä ja stressaavien tilanteiden hallinnassa urallani."
     }
   ]
 }

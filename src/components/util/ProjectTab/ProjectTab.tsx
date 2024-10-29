@@ -10,6 +10,7 @@ import {
 } from "./ProjectTabStyle";
 import { Project } from "../Interfaces";
 import { useMediaQuery } from "react-responsive";
+import { useLanguage } from "../languageContext";
 
 export default function ProjectTab({
   callback,
@@ -18,9 +19,11 @@ export default function ProjectTab({
   callback: () => void;
   project: Project;
 }) {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1050px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
   const isTiny = useMediaQuery({ query: "(min-width: 520px)" });
+  const details = language === "en" ? project.detailsEn : project.detailsFi;
   return (
     <div>
       <Slide direction="up" in={true} mountOnEnter unmountOnExit>
@@ -214,7 +217,7 @@ export default function ProjectTab({
                         }
                   }
                 >
-                  {project.duration}
+                  {language === "en" ? project.durationEn : project.durationFi}
                 </Typography>
               </Stack>
               <Stack
@@ -255,7 +258,7 @@ export default function ProjectTab({
                 marginTop={"1rem"}
                 alignItems={"center"}
               >
-                {project.details.split("\n").map((line, index) => (
+                {details.split("\n").map((line, index) => (
                   <Stack
                     direction={index % 2 === 0 ? "row" : "row-reverse"}
                     sx={

@@ -15,10 +15,13 @@
         "images/StaffApp/phone3.png"
       ],
       "backDrop": "images/StaffApp/backDrop.png",
-      "duration": "April 2024 - July 2024",
+      "durationEn": "April 2024 - July 2024",
+      "durationFi": "Huhti 2024 - Heinä 2024",
       "employer": "Entail",
-      "subtitle": "StaffApp is an application for posting and taking shifts for rental workers. It allows managers to easily post and track open shifts within their organization.",
-      "details": "I worked on StaffApp from start to finish as part of a team of five developers. The project began as a school assignment for our client, Entail Oy, and we continued working on it throughout the summer.\nMy responsibilities included both backend and frontend development, as well as being in charge of information security. This project provided a valuable opportunity to learn about teamwork and managing a larger project.\nIn the end, we developed a functional and visually appealing prototype, and the client was pleased with the result. We were happy with the outcome, and the project was a great learning experience overall."
+      "subtitleEn": "StaffApp is an application for posting and taking shifts for rental workers. It allows managers to easily post and track open shifts within their organization.",
+      "subtitleFi": "StaffApp on sovellus vuokratyöntekijöille vuorojen varaamiseen. Sen avulla päälliköt voivat helposti julkaista ja seurata avoimia vuoroja organisaatiossaan.",
+      "detailsEn": "I worked on StaffApp from start to finish as part of a team of five developers. The project began as a school assignment for our client, Entail Oy, and we continued working on it throughout the summer.\nMy responsibilities included both backend and frontend development, as well as being in charge of information security. This project provided a valuable opportunity to learn about teamwork and managing a larger project.\nIn the end, we developed a functional and visually appealing prototype, and the client was pleased with the result. We were happy with the outcome, and the project was a great learning experience overall.",
+      "detailsFi": "Työskentelin StaffApp-sovelluksen parissa alusta loppuun osana viiden kehittäjän tiimiä. Projekti alkoi koulutehtävänä asiakkaallemme, Entail Oy:lle ja jatkoimme sen parissa kesän läpi.\nVastasin sekä backend- että frontend-kehityksestä, ja olin vastuussa tietoturvasta. Tämä projekti antoi arvokasta kokemusta tiimityöskentelystä ja suuremman projektin hallinnasta.\nLopulta kehitimme toimivan ja visuaalisesti miellyttävän prototyypin, johon asiakkaamme oli tyytyväinen. Olimme tyytyväisiä tulokseen, ja projekti oli kokonaisuudessaan loistava oppimiskokemus."
     },
     {
       "id": 1,
@@ -35,10 +38,13 @@
         "images/WeatherApp/weather3.png"
       ],
       "backDrop": "images/WeatherApp/backDrop.jpg",
-      "duration": "May 2024",
+      "durationEn": "May 2024",
+      "durationFi": "Toukokuu 2024",
       "employer": "Tamk",
-      "subtitle": "Check the weather for the next 7 days in your current area, based on your GPS location, with this quickly made school project application.",
-      "details": "This application was created using Kotlin and Jetpack Compose in Android Studio. It utilizes a free API to retrieve weather data and can be installed on Android devices.\nI developed this application as a part of a school course. This application was created in the span of two weeks and it taught me alot.\nIt was an excellent opportunity to build a backend using Kotlin, which helped me grow as a developer. This project also gave me the chance to create my first graph programmatically."
+      "subtitleEn": "Check the weather for the next 7 days in your current area, based on your GPS location, with this quickly made school project application.",
+      "subtitleFi": "Katso seuraavan 7 päivän sää omalla alueellasi GPS-sijaintisi perusteella tämän nopeasti tehdyn kouluprojektin avulla.",
+      "detailsEn": "This application was created using Kotlin and Jetpack Compose in Android Studio. It utilizes a free API to retrieve weather data and can be installed on Android devices.\nI developed this application as a part of a school course. This application was created in the span of two weeks and it taught me alot.\nIt was an excellent opportunity to build a backend using Kotlin, which helped me grow as a developer. This project also gave me the chance to create my first graph programmatically.",
+      "detailsFi": "Tämä sovellus luotiin käyttäen Kotliniä ja Jetpack Composea Android Studiossa. Se käyttää ilmaista API:ta sää datan hakemiseen ja voidaan asentaa Android-laitteisiin.\nKehitin tämän sovelluksen osana koulukurssia. Sovellus valmistui kahdessa viikossa ja opetti minulle paljon.\nSe oli erinomainen tilaisuus rakentaa Kotlinilla backendiä, mikä auttoi minua kasvamaan kehittäjänä. Tämä projekti antoi myös mahdollisuuden tehdä ensimmäisen kaavioni ohjelmallisesti."
     },
     {
       "id": 2,
@@ -55,10 +61,13 @@
         "images/LanguageApp/language3.png"
       ],
       "backDrop": "images/LanguageApp/classroom.webp",
-      "duration": "December 2023",
+      "durationEn": "December 2023",
+      "durationFi": "Joulukuu 2023",
       "employer": "Tamk",
-      "subtitle": "Teach and learn languages with your family or students! Add different words in various languages and start learning today!",
-      "details": "This application was my first full-stack project, and it posed many challenges, making it an excellent learning experience.\nI built the frontend using React and the backend with Node.js and MySQL. There were several new skills I had to acquire to complete the project.\nAs the first project where I combined all my skills to create a functioning application, this stands as an important milestone in my development journey."
+      "subtitleEn": "Teach and learn languages with your family or students! Add different words in various languages and start learning today!",
+      "subtitleFi": "Opeta ja opi kieliä perheen tai oppilaidesi kanssa! Lisää sanoja eri kielillä ja aloita oppiminen tänään!",
+      "detailsEn": "This application was my first full stack project, and it posed many challenges, making it an excellent learning experience.\nI built the frontend using React and the backend with Node.js and MySQL. There were several new skills I had to acquire to complete the project.\nAs the first project where I combined all my skills to create a functioning application, this stands as an important milestone in my development journey.",
+      "detailsFi": "Tämä sovellus oli ensimmäinen full stack projektini, ja se toi mukanaan monia haasteita, tarjoten loistavan oppimiskokemuksen.\nRakensin frontendin Reactilla ja backendin Node.js:llä ja MySQL:llä. Projekti vaati monien uusien taitojen opettelua.\nKoska tämä oli ensimmäinen projekti, jossa yhdistin kaikki taitoni toimivaksi sovellukseksi, se merkitsi tärkeää pistettä kehityksessäni ohjelmoijana."
     },
     {
       "id": 3,
@@ -75,10 +84,13 @@
         "images/WorkItOut/workitout3.png"
       ],
       "backDrop": "images/WorkItOut/workitout.png",
-      "duration": "April 2023 - June 2023",
+      "durationEn": "April 2023 - June 2023",
+      "durationFi": "Huhti 2023 - Kesä 2023",
       "employer": "Tykky",
-      "subtitle": "Learn about workplace diversity through a fun, story-based, choices-matter game for mobile devices!",
-      "details": "This game was developed during my first year of studies for our client at Tykky. Our team of four members created it using Unity and C#, and I was the second programmer on the team.\nThe project’s biggest challenge was designing a game that focused on workplace diversity, but we succeeded by creating a fun and interactive game concept that we fully developed.\nThis was my first experience working on a team project, and I was introduced to the notorious merge conflicts! It taught me valuable lessons about communication and teamwork."
+      "subtitleEn": "Learn about workplace diversity through a fun, story-based, choices matter game for mobile devices!",
+      "subtitleFi": "Opi työpaikan monimuotoisuudesta hauskan, tarinapohjaisen choices matter mobiilipelin avulla!",
+      "detailsEn": "This game was developed during my first year of studies for our client at Tykky. Our team of four members created it using Unity and C#, and I was the second programmer on the team.\nThe project’s biggest challenge was designing a game that focused on workplace diversity, but we succeeded by creating a fun and interactive game concept that we fully developed.\nThis was my first experience working on a team project, and I was introduced to the notorious merge conflicts! It taught me valuable lessons about communication and teamwork.",
+      "detailsFi": "Tämä peli kehitettiin ensimmäisen opiskeluvuoteni aikana asiakkaallemme Tykky:lle. Neljän hengen tiimimme tuotti tämän pelin Unityllä ja C#:lla. Roolini oli tiimin toinen ohjelmoija.\nProjektin suurin haaste oli suunnitella peli, joka keskittyisi työpaikan monimuotoisuuteen, mutta onnistuimme luomalla hauskan ja interaktiivisen pelikonseptin, jonka toteutimme loppuun.\nTämä oli ensimmäinen kokemukseni tiimityöstä ja pääsin tutustumaan kuuluisaan merge conflictiin! Tämä projekti opetti minulle arvokkaita asioita tiimiviestinnästä ja tiimityöstä."
     },
     {
       "id": 4,
@@ -95,10 +107,13 @@
         "images/GameJams/escapethedungeon.png"
       ],
       "backDrop": "images/GameJams/itchio.webp",
-      "duration": "August 2020 - September 2020",
+      "durationEn": "August 2020 - September 2020",
+      "durationFi": "Elo 2020 - Syys 2020",
       "employer": "itch.io",
-      "subtitle": "My first-ever coding projects! I was a self-taught programmer who participated in a few game jams. These projects mark the beginning of my journey as a developer!",
-      "details": "When I was in college, I wanted to learn how to create games, which led me to teach myself programming. I chose C# and Unity as my tools and used VSCode as my code editor.\nAfter learning the basics, I participated in several game jams to practice game development. Through these projects, I discovered that my favorite aspect of game creation was writing code.\nThis realization prompted me to pursue programming as a career. Little did I know how these early adventures in game development would shape my future!"
+      "subtitleEn": "My first-ever coding projects! I was a self-taught programmer who participated in a few game jams. These projects mark the beginning of my journey as a developer!",
+      "subtitleFi": "Ensimmäiset koodaus projektini! Itseoppineen ohjelmoijana osallistuin muutamiin pelikehitystapahtumiin. Nämä projektit merkitsevät kehittäjäpolkuni alkua!",
+      "detailsEn": "When I was in college, I wanted to learn how to create games, which led me to teach myself programming. I chose C# and Unity as my tools and used VSCode as my code editor.\nAfter learning the basics, I participated in several game jams to practice game development. Through these projects, I discovered that my favorite aspect of game creation was writing code.\nThis realization prompted me to pursue programming as a career. Little did I know how these early adventures in game development would shape my future!",
+      "detailsFi": "Lukio aikoinani halusin oppia luomaan pelejä, mikä johti siihen, että päätin opettaa itseni ohjelmoimaan. Valitsin työkalukseni C#:n ja Unityn ja käytin VSCodea koodieditorina.\nPerusteiden oppimisen jälkeen osallistuin useisiin pelikehitystapahtumiin harjoitellakseni pelinkehitystä. Näiden projektien kautta huomasin, että koodin kirjoittaminen oli minun lempiosa pelin luomisessa.\nTämä oivallus sai minut tavoittelemaan uraa ohjelmoinnissa. En tuolloin tiennyt, miten paljon nämä varhaiset pelinkehityskokemukset muokkaisivat tulevaisuuttani!"
     }
   ]
 }
