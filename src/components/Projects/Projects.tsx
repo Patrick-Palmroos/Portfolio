@@ -165,13 +165,13 @@ export default function Projects() {
                     : isVeryTiny
                     ? {
                         ...carouselContainer,
-                        gridTemplateColumns: "50vw",
+                        gridTemplateColumns: "100vw",
                         marginRight: "1.5rem",
                         marginLeft: "2rem",
                       }
                     : {
                         ...carouselContainer,
-                        gridTemplateColumns: "70vw",
+                        gridTemplateColumns: "100vw",
                         marginRight: "1.5rem",
                         marginLeft: "2rem",
                       }
@@ -227,15 +227,13 @@ export default function Projects() {
                     : isVeryTiny
                     ? {
                         ...carouselContainer,
-                        gridTemplateColumns: "50vw",
-                        marginRight: "1.5rem",
-                        marginLeft: "2rem",
+                        gridTemplateColumns: "100vw",
+                        marginTop: "6rem",
                       }
                     : {
                         ...carouselContainer,
-                        gridTemplateColumns: "80vw",
-                        marginRight: "1.5rem",
-                        marginLeft: "2rem",
+                        gridTemplateColumns: "100vw",
+                        marginTop: "0rem",
                       }
                 }
               >

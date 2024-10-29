@@ -84,31 +84,34 @@ export default function ProjectBox({ project }: { project: Project }) {
           position: "absolute",
           pointerEvents: "none",
           backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.25)",
+          borderRadius: isMobile ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
             : isMobile
             ? "22rem"
             : isVeryTiny
-            ? "50vw"
-            : "80vw",
-          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
+            ? "100vw"
+            : "100vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "22rem" : "17rem",
         }}
       />
       <Stack
         direction={"column"}
         sx={{
           ...projectBoxStyle,
+
+          borderRadius: isMobile ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
             : isMobile
             ? "22rem"
             : isVeryTiny
-            ? "50vw"
-            : "80vw",
-          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
+            ? "100vw"
+            : "100vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "22rem" : "17rem",
           "&:hover": {
             backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.5)",
-            transform: "translateY(-0.5rem)",
+            transform: isMobile ? "translateY(-0.5rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease",
           },
           "&::before, &::after": {
@@ -118,7 +121,7 @@ export default function ProjectBox({ project }: { project: Project }) {
             top: "0rem",
             width: "100%",
             height: "100%",
-            borderRadius: "20px",
+            borderRadius: isMobile ? "20px" : "0px",
           },
           "&::before": {
             backgroundImage: `url(${project.backDrop})`,
@@ -138,20 +141,20 @@ export default function ProjectBox({ project }: { project: Project }) {
           },
           "&:hover::after": {
             opacity: 1,
-            transform: "translateY(-0.7rem)",
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "opacity 0.4s ease, transform 0.4s ease",
           },
           ":hover::before": {
             opacity: 1,
-            transform: "translateY(-0.7rem)",
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease, opacity 0.4s ease",
           },
           ":hover .child": {
-            transform: "translateY(-0.7rem)",
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease",
           },
           ":hover .image": {
-            transform: "translateY(-0.7rem)",
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
           },
         }}
         component={"button"}
