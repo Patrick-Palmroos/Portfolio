@@ -162,7 +162,7 @@ export default function Header() {
                 position: "relative",
                 zIndex: 5,
                 top: "2rem",
-                left: "-3rem",
+                left: isMobile ? "-3rem" : "-1.2rem",
               }}
             >
               <ContactButton

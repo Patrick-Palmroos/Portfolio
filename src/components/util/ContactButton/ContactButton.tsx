@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { useMediaQuery } from "react-responsive";
 
 export default function ContactButton({
   title,
@@ -7,6 +8,7 @@ export default function ContactButton({
   title: string;
   link: string;
 }) {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1000px)" });
   return (
     <div>
       <Box
@@ -22,8 +24,8 @@ export default function ContactButton({
             position: "relative",
             alignContent: "center",
             textAlign: "center",
-            width: "15rem",
-            height: "3.8rem",
+            width: isDesktop ? "15rem" : "12rem",
+            height: isDesktop ? "3.8rem" : "3rem",
             borderRadius: "15px",
             boxShadow: "0px 2px 6px 3px #00000080",
             zIndex: 3,
@@ -69,7 +71,7 @@ export default function ContactButton({
             zIndex={3}
             sx={{
               top: "-1rem",
-              fontSize: "1.5rem",
+              fontSize: isDesktop ? "1.5rem" : "1.15rem",
               color: "white",
               textShadow: "0px 1px 10px rgba(0, 0, 0, 0.5)",
               transition: "0.4s ease",
