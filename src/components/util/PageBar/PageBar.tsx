@@ -10,12 +10,25 @@ export default function PageBar({
   pageCount: number;
 }) {
   const isMobile = useMediaQuery({ query: "(min-width: 550px)" });
+  const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
+
   return (
     <div>
       <Stack
         direction={"row"}
         alignItems={"center"}
-        marginTop={isMobile ? "0rem" : "-2rem"}
+        justifyContent={"center"}
+        marginTop={isMobile ? "0rem" : isVeryTiny ? "-2rem" : "-5rem"}
+        sx={
+          isVeryTiny
+            ? null
+            : {
+                background: "rgba(0,0,0,0.3)",
+                padding: "0.2rem 0.2rem 0.2rem 0.2rem",
+                width: "10rem",
+                borderRadius: "20px",
+              }
+        }
       >
         <Box
           sx={
@@ -29,15 +42,31 @@ export default function PageBar({
         />
         {Array.from({ length: pageCount }).map((_, index) => (
           <Box
+            zIndex={5}
             key={index}
             sx={
               index === page - 1
                 ? isMobile
                   ? { ...selectedDisplayBox }
-                  : { ...selectedDisplayBox, width: "1.5rem" }
+                  : isVeryTiny
+                  ? { ...selectedDisplayBox, width: "1.5rem" }
+                  : {
+                      ...selectedDisplayBox,
+                      width: "1rem",
+                      height: "0.65rem",
+                      margin: "0.3rem 0.2rem 0.3rem 0.2rem",
+                    }
                 : isMobile
                 ? { ...pageDisplayBox }
-                : { ...pageDisplayBox, width: "1rem" }
+                : isVeryTiny
+                ? { ...pageDisplayBox, width: "1rem" }
+                : {
+                    ...pageDisplayBox,
+                    width: "0.7rem",
+                    height: "0.7rem",
+                    margin: "0.3rem 0.2rem 0.3rem 0.2rem",
+                    backgroundColor: "#868686",
+                  }
             }
           />
         ))}

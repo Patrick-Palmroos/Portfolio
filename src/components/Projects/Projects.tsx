@@ -124,9 +124,15 @@ export default function Projects() {
             sx={
               isMobile
                 ? { position: "relative" }
+                : isVeryTiny
+                ? {
+                    position: "absolute",
+                    left: "-0.5rem",
+                    bottom: "7rem",
+                  }
                 : {
                     position: "absolute",
-                    left: "-1rem",
+                    left: "0rem",
                     bottom: "7rem",
                   }
             }
@@ -285,7 +291,7 @@ export default function Projects() {
               </Stack>
             </Box>
           ) : (
-            <Box sx={{ width: "100vw" }}>
+            <Box sx={isVeryTiny ? { width: "80vw" } : { width: "100vw" }}>
               <Carousel
                 ref={carouselRef}
                 showArrows={false}
@@ -308,7 +314,9 @@ export default function Projects() {
             sx={
               isMobile
                 ? { position: "relative" }
-                : { position: "absolute", right: "-1rem", bottom: "7rem" }
+                : isVeryTiny
+                ? { position: "absolute", right: "0rem", bottom: "7rem" }
+                : { position: "absolute", right: "-0.5rem", bottom: "7rem" }
             }
           >
             {isDesktop ? (
@@ -339,7 +347,7 @@ export default function Projects() {
             )}
           </Box>
         </Stack>
-        <Box paddingTop={isMobile ? 12 : isVeryTiny ? 2 : 0}>
+        <Box zIndex={5} paddingTop={isMobile ? 12 : isVeryTiny ? 2 : 0}>
           <PageBar page={pageId} pageCount={pageCount} />
         </Box>
       </Stack>

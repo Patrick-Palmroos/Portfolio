@@ -85,15 +85,15 @@ export default function ProjectBox({ project }: { project: Project }) {
           pointerEvents: "none",
           backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.25)",
           zIndex: 1,
-          borderRadius: isMobile ? "20px" : "0px",
+          borderRadius: isVeryTiny ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
             : isMobile
             ? "22rem"
             : isVeryTiny
-            ? "100vw"
+            ? "80vw"
             : "100vw",
-          height: isMobile ? "14.4rem" : isVeryTiny ? "22rem" : "17rem",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "20rem" : "17rem",
         }}
       />
       <Stack
@@ -101,17 +101,19 @@ export default function ProjectBox({ project }: { project: Project }) {
         sx={{
           ...projectBoxStyle,
           zIndex: 1,
-          borderRadius: isMobile ? "20px" : "0px",
+          borderRadius: isVeryTiny ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
             : isMobile
             ? "22rem"
             : isVeryTiny
-            ? "100vw"
+            ? "80vw"
             : "100vw",
-          height: isMobile ? "14.4rem" : isVeryTiny ? "22rem" : "17rem",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "20rem" : "17rem",
           "&:hover": {
-            backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.5)",
+            backgroundColor: isVeryTiny
+              ? "color(srgb 0.73 0.53 0.99 / 0.5)"
+              : "color(srgb 0.73 0.53 0.99 / 0)",
             transform: isMobile ? "translateY(-0.5rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease",
           },
@@ -122,7 +124,7 @@ export default function ProjectBox({ project }: { project: Project }) {
             top: "0rem",
             width: "100%",
             height: "100%",
-            borderRadius: isMobile ? "20px" : "0px",
+            borderRadius: isVeryTiny ? "20px" : "0px",
           },
           "&::before": {
             backgroundImage: `url(${project.backDrop})`,
@@ -141,12 +143,12 @@ export default function ProjectBox({ project }: { project: Project }) {
             transition: "opacity 1s ease, transform 0.4s ease",
           },
           "&:hover::after": {
-            opacity: 1,
+            opacity: isMobile ? 1 : 0.4,
             transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "opacity 0.4s ease, transform 0.4s ease",
           },
           ":hover::before": {
-            opacity: 1,
+            opacity: isMobile ? 1 : 0.4,
             transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease, opacity 0.4s ease",
           },
@@ -172,9 +174,17 @@ export default function ProjectBox({ project }: { project: Project }) {
             sx={
               isMobile
                 ? { ...titleStyle }
+                : isVeryTiny
+                ? {
+                    ...titleStyle,
+                    marginTop: "1rem",
+                    fontSize: "calc(4vw + 1rem)",
+                    marginLeft: "5rem",
+                  }
                 : {
                     ...titleStyle,
                     fontSize: "calc(4vw + 1rem)",
+                    marginLeft: "3rem",
                   }
             }
             className="child"
@@ -184,6 +194,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           <Stack
             direction={"row"}
             paddingLeft={"1rem"}
+            marginLeft={isMobile ? "0rem" : isVeryTiny ? "5rem" : "3rem"}
             paddingBottom={"0.3rem"}
           >
             {project.logos.map((value, index) => (
@@ -206,14 +217,17 @@ export default function ProjectBox({ project }: { project: Project }) {
               ? {
                   ...subtitleStyle,
                   fontSize: "calc(0.2vw + 1.1rem)",
+                  marginTop: "1rem",
                   width: "45vw",
                   height: "14rem",
+                  marginLeft: "5rem",
                 }
               : {
                   ...subtitleStyle,
                   fontSize: "calc(0.3vw + 1rem)",
                   width: "70vw",
                   height: "14rem",
+                  marginLeft: "3rem",
                 }
           }
           className="child"

@@ -79,7 +79,8 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                     transition: "0.2s ease",
                   },
                 }
-              : {
+              : isVeryTiny
+              ? {
                   //mobile view
                   width: "100%",
                   height: "100%",
@@ -137,6 +138,63 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                     transition: "0.2s ease",
                   },
                 }
+              : {
+                  //mobile view
+                  width: "100%",
+                  height: "100%",
+                  position: "relative",
+                  border: "none",
+                  background: "none",
+                  cursor: "pointer",
+                  WebkitTapHighlightColor: "transparent",
+
+                  "&::before, &::after": {
+                    content: '""',
+                    position: "absolute",
+                    borderRadius: "20px",
+                    left: "0.6rem",
+                    height: "0.35rem",
+                    width: "3.5rem",
+                    top: "2.7rem",
+                  },
+
+                  "&::before": {
+                    background: "linear-gradient(90deg, #FECBFF 0%, #e4e4e4)",
+                    transition: "0.2s ease",
+                    transform: "rotate(70deg) translate(-0.95rem, -1.8rem)",
+                    zIndex: 2,
+                  },
+
+                  "&::after": {
+                    background: "linear-gradient(90deg, #FECBFF 0%, #e4e4e4)",
+                    transform: "rotate(-70deg) translate(-0.95rem, 1.8rem)",
+                    transition: "0.2s ease",
+                    zIndex: 3,
+                  },
+
+                  "&:hover::before": {
+                    transform:
+                      "rotate(60deg) translate(-0.6rem, -1.7rem) scaleX(1)",
+                    transition: "0.2s ease",
+                  },
+
+                  "&:hover::after": {
+                    transform:
+                      "rotate(-60deg) translate(-0.6rem, 1.7rem) scaleX(1)",
+                    transition: "0.2s ease",
+                  },
+
+                  "&:hover .anim": {
+                    width: "1.5rem",
+                    transform: "translate(-1.2rem, 0rem)",
+                    background: "#FECBFF",
+                    transition: "0.2s ease",
+                  },
+                  "&:hover .circle": {
+                    opacity: 1,
+                    transition: "0.2s ease",
+                  },
+                }
           }
         >
           <Box
@@ -153,7 +211,8 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                     borderRadius: "50%",
                     zIndex: 1,
                   }
-                : {
+                : isVeryTiny
+                ? {
                     position: "absolute",
                     background:
                       "linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.3) 90%, transparent 100%)",
@@ -162,7 +221,17 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                     height: "16rem",
                     right: "0rem",
                     bottom: "-5rem",
-                    //borderRadius: "50%",
+                    zIndex: 1,
+                  }
+                : {
+                    position: "absolute",
+                    background:
+                      "linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.3) 90%, transparent 100%)",
+                    opacity: 0,
+                    width: "4rem",
+                    height: "16rem",
+                    right: "0rem",
+                    bottom: "-5rem",
                     zIndex: 1,
                   }
             }
@@ -182,7 +251,8 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                     transition: "0.2s ease",
                     zIndex: 2,
                   }
-                : {
+                : isVeryTiny
+                ? {
                     position: "absolute",
                     background: "#e4e4e4",
                     height: "0.5rem",
@@ -193,6 +263,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                     transition: "0.2s ease",
                     zIndex: 2,
                   }
+                : null
             }
           />
         </Box>
