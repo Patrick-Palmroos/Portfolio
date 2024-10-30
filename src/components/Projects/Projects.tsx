@@ -8,6 +8,7 @@ import ArrowButton from "../util/ArrowButton/ArrowButton";
 import PageBar from "../util/PageBar/PageBar";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useMediaQuery } from "react-responsive";
+import ReactSwipe from "react-swipe";
 
 export default function Projects() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1215px)" });
@@ -19,6 +20,7 @@ export default function Projects() {
   const [direction, setDirection] = useState<"left" | "right">("left");
   const [animating, setAnimating] = useState<boolean>(false);
   const [projectAmount, setProjectAmount] = useState<number>(4);
+  let reactSwipeEl;
 
   useEffect(() => {
     setProjectAmount(isMobile ? 4 : 1);
@@ -184,27 +186,37 @@ export default function Projects() {
                       }
                 }
               >
-                {visibleList.map((project: Project, index) => (
-                  <Slide
-                    in={slide}
-                    key={project.id}
-                    direction={direction}
-                    timeout={
-                      isMobile
-                        ? direction === "left"
-                          ? baseAnimSpeed +
-                            (visibleList.length - 1 - index) * 150
-                          : baseAnimSpeed + index * 150
-                        : 470 / 2
-                    }
-                  >
-                    <Zoom in={grow} timeout={300 + index * 100}>
-                      <Box>
-                        <ProjectBox project={project} />
-                      </Box>
-                    </Zoom>
-                  </Slide>
-                ))}
+                {visibleList.map((project: Project, index) =>
+                  isMobile ? (
+                    <Slide
+                      in={slide}
+                      key={project.id}
+                      direction={direction}
+                      timeout={
+                        isMobile
+                          ? direction === "left"
+                            ? baseAnimSpeed +
+                              (visibleList.length - 1 - index) * 150
+                            : baseAnimSpeed + index * 150
+                          : 470 / 2
+                      }
+                    >
+                      <Zoom
+                        in={grow}
+                        timeout={isVeryTiny ? 300 + index * 100 : 500}
+                      >
+                        <Box>
+                          <ProjectBox project={project} />
+                        </Box>
+                      </Zoom>
+                    </Slide>
+                  ) : (
+                    //mobile
+                    <Box>
+                      <ProjectBox project={project} />
+                    </Box>
+                  )
+                )}
                 {Array.from({ length: emptySlots }).map((_, index) => (
                   <Box
                     key={`empty-${index}`}
@@ -244,27 +256,39 @@ export default function Projects() {
                       }
                 }
               >
-                {visibleList.map((project: Project, index) => (
-                  <Slide
-                    in={slide}
-                    key={project.id}
-                    direction={direction}
-                    timeout={
-                      isMobile
-                        ? direction === "left"
-                          ? baseAnimSpeed +
-                            (visibleList.length - 1 - index) * 150
-                          : baseAnimSpeed + index * 150
-                        : 470 / 2
-                    }
-                  >
-                    <Zoom in={grow} timeout={300 + index * 100}>
+                {visibleList.map((project: Project, index) =>
+                  isMobile ? (
+                    <Slide
+                      in={slide}
+                      key={project.id}
+                      direction={direction}
+                      timeout={
+                        isMobile
+                          ? direction === "left"
+                            ? baseAnimSpeed +
+                              (visibleList.length - 1 - index) * 150
+                            : baseAnimSpeed + index * 150
+                          : 470 / 2
+                      }
+                    >
+                      <Zoom in={grow} timeout={300 + index * 100}>
+                        <Box>
+                          <ProjectBox project={project} />
+                        </Box>
+                      </Zoom>
+                    </Slide>
+                  ) : (
+                    <ReactSwipe
+                      className="carousel"
+                      swipeOptions={{ continuous: false }}
+                      ref={(el) => (reactSwipeEl = el)}
+                    >
                       <Box>
                         <ProjectBox project={project} />
                       </Box>
-                    </Zoom>
-                  </Slide>
-                ))}
+                    </ReactSwipe>
+                  )
+                )}
                 {Array.from({ length: emptySlots }).map((_, index) => (
                   <Box
                     key={`empty-${index}`}
