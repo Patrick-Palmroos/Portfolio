@@ -224,7 +224,6 @@ export default function TopBar({
               title={language === "en" ? "Education" : "Koulutus"}
               link="#education"
             />
-            <LayerButton title="Socials" link="#socials" />
           </Stack>
           <Box
             component={"button"}
