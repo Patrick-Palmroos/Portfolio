@@ -375,7 +375,6 @@ export default function ProjectTab({
                         height: "4rem",
                         width: "4rem",
                         overflow: "hidden",
-                        border: "none",
                         background: "#a049c04d",
                         border: "2px solid #7c3773",
                         borderRadius: "10px",
