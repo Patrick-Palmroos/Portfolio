@@ -117,7 +117,7 @@ export default function Projects() {
           >
             {isDesktop ? (
               <ScrollAnimation
-                animateIn="fadeInRight"
+                animateIn="fadeInLeft"
                 duration={0.5}
                 offset={150}
                 initiallyVisible={!isDesktop}
@@ -140,18 +140,6 @@ export default function Projects() {
                   rotate: "-180deg",
                 }}
               >
-                <Box
-                  sx={{
-                    background:
-                      "linear-gradient(to top, transparent 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.5) 80%, transparent 100%)",
-                    position: "absolute",
-                    zIndex: 1,
-                    width: "5rem",
-                    height: "16.9rem",
-                    left: "0rem",
-                    top: "-5.2rem",
-                  }}
-                />
                 {/* No scroll in animations */}
                 <ArrowButton
                   callback={() => {
@@ -294,7 +282,7 @@ export default function Projects() {
             sx={
               isVeryTiny
                 ? { position: "relative" }
-                : { position: "absolute", right: "0.8rem", bottom: "7.8rem" }
+                : { position: "absolute", right: "0.8rem", bottom: "8rem" }
             }
           >
             {isDesktop ? (
@@ -315,18 +303,7 @@ export default function Projects() {
             ) : (
               <Box sx={{ position: "relative", zIndex: 5 }}>
                 {/* No scroll in animations */}
-                <Box
-                  sx={{
-                    background:
-                      "linear-gradient(to top, transparent 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.5) 80%, transparent 100%)",
-                    position: "absolute",
-                    zIndex: 1,
-                    width: "5rem",
-                    height: "16.9rem",
-                    left: "0rem",
-                    top: "-6rem",
-                  }}
-                />
+
                 <ArrowButton
                   callback={() => {
                     handlePageChange("next");

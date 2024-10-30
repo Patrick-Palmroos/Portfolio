@@ -79,9 +79,9 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                   },
                 }
               : {
-                  width: "4.5rem",
-                  height: "5.5rem",
-                  boxSizing: "inline-block",
+                  //mobile view
+                  width: "100%",
+                  height: "100%",
                   position: "relative",
                   border: "none",
                   background: "none",
@@ -91,57 +91,48 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                   "&::before, &::after": {
                     content: '""',
                     position: "absolute",
-                    borderRadius: "0.6rem",
-                    left: "-5%",
-                    display: "block",
+                    borderRadius: "20px",
+                    left: "0.3rem",
+                    height: "0.5rem",
+                    width: "3.5rem",
+                    top: "2.7rem",
                   },
 
                   "&::before": {
-                    background: "linear-gradient(90deg, #998CFC 10%, #BB85FA)",
-                    top: "1.8rem",
-                    left: "0.25rem",
-                    height: "0.5rem",
-                    width: "3rem",
-                    rotate: "55deg",
-                    transform: "translateX(-0.35rem) translateY(-0.25rem)",
+                    background: "linear-gradient(90deg, #FECBFF 0%, #e4e4e4)",
                     transition: "0.2s ease",
+                    transform: "rotate(60deg) translate(-0.5rem, -1.8rem)",
                     zIndex: 2,
                   },
 
                   "&::after": {
-                    background: "linear-gradient(0deg, #998CFC 10%, #BB85FA)",
-                    top: "2.2rem",
-                    left: "1.5rem",
-                    height: "3rem",
-                    width: "0.5rem",
-                    rotate: "35deg",
-                    transform: "translateX(-0rem)",
+                    background: "linear-gradient(90deg, #FECBFF 0%, #e4e4e4)",
+                    transform: "rotate(-60deg) translate(-0.5rem, 1.8rem)",
                     transition: "0.2s ease",
                     zIndex: 3,
                   },
 
-                  "&:hover::after": {
-                    rotate: "45deg",
-                    height: "2.5rem",
-                    transform: "translateX(-0.1rem) translateY(-0.1rem)",
+                  "&:hover::before": {
+                    transform:
+                      "rotate(40deg) translate(0.58rem, -1.3rem) scaleX(0.7)",
                     transition: "0.2s ease",
                   },
-                  "&:hover::before": {
-                    rotate: "45deg",
-                    width: "2.5rem",
-                    transform: "translateX(0.05rem) translateY(-0.29rem)",
+
+                  "&:hover::after": {
+                    //width: "3rem",
+                    transform:
+                      "rotate(-40deg) translate(0.58rem, 1.3rem) scaleX(0.7)",
                     transition: "0.2s ease",
                   },
 
                   "&:hover .anim": {
-                    width: "1.75rem",
-                    right: "3.25rem",
-                    top: "2.35rem",
-                    background: "#BB85FA",
+                    width: "1.5rem",
+                    transform: "translate(-1.2rem, 0rem)",
+                    background: "#FECBFF",
                     transition: "0.2s ease",
                   },
                   "&:hover .circle": {
-                    backgroundColor: "color(srgb 0 0 0 / 0.20)",
+                    opacity: 1,
                     transition: "0.2s ease",
                   },
                 }
@@ -163,12 +154,14 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                   }
                 : {
                     position: "absolute",
-                    backgroundColor: "none",
-                    width: "4.2rem",
-                    height: "4.2rem",
-                    top: "0.45rem",
-                    borderRadius: "50%",
-                    left: "-1rem",
+                    background:
+                      "linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.3) 90%, transparent 100%)",
+                    opacity: 0,
+                    width: "5rem",
+                    height: "16rem",
+                    right: "0rem",
+                    bottom: "-5rem",
+                    //borderRadius: "50%",
                     zIndex: 1,
                   }
             }
@@ -190,11 +183,11 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
                   }
                 : {
                     position: "absolute",
-                    background: "#BB85FA",
+                    background: "#e4e4e4",
                     height: "0.5rem",
                     width: "0.1rem",
-                    right: "2rem",
-                    top: "2.35rem",
+                    right: "1.9rem",
+                    top: "2.7rem",
                     borderRadius: "0.6rem",
                     transition: "0.2s ease",
                     zIndex: 2,
