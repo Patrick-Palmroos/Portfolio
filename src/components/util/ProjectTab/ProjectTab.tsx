@@ -11,6 +11,8 @@ import {
 import { Project } from "../Interfaces";
 import { useMediaQuery } from "react-responsive";
 import { useLanguage } from "../languageContext";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function ProjectTab({
   callback,
@@ -146,8 +148,12 @@ export default function ProjectTab({
                   ? {
                       padding: "2rem 0rem 3rem 0rem",
                     }
-                  : {
+                  : isTiny
+                  ? {
                       padding: "3rem 0rem 1rem 0rem",
+                    }
+                  : {
+                      padding: "1rem 0rem 1rem 0rem",
                     }
               }
             >
@@ -253,99 +259,255 @@ export default function ProjectTab({
                 zIndex: 3,
               }}
             >
-              <Stack
-                direction={"column"}
-                marginTop={"1rem"}
-                alignItems={"center"}
-              >
-                {details.split("\n").map((line, index) => (
-                  <Stack
-                    direction={index % 2 === 0 ? "row" : "row-reverse"}
-                    sx={
-                      isDesktop
-                        ? { width: "85%" }
-                        : isMobile
-                        ? {
-                            width: "64vw",
-                            marginLeft: "1rem",
-                          }
-                        : {
-                            width: "90%",
-                            marginLeft: "0rem",
-                          }
-                    }
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    key={index}
-                  >
-                    <img
-                      src={project.images[index]}
-                      alt="picture of software"
-                      style={
-                        project.mobileImages
-                          ? isDesktop
-                            ? { ...imageStyle }
+              {isTiny ? (
+                <Stack
+                  direction={"column"}
+                  marginTop={"1rem"}
+                  alignItems={"center"}
+                >
+                  {details.split("\n").map((line, index) => (
+                    <Stack
+                      direction={index % 2 === 0 ? "row" : "row-reverse"}
+                      sx={
+                        isDesktop
+                          ? { width: "85%" }
+                          : isMobile
+                          ? {
+                              width: "64vw",
+                              marginLeft: "1rem",
+                            }
+                          : {
+                              width: "90%",
+                              marginLeft: "0rem",
+                            }
+                      }
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      key={index}
+                    >
+                      <img
+                        src={project.images[index]}
+                        alt="picture of software"
+                        style={
+                          project.mobileImages
+                            ? isDesktop
+                              ? { ...imageStyle }
+                              : isMobile
+                              ? {
+                                  ...imageStyle,
+                                  width: "13vw",
+                                  margin: "0rem 0rem 0rem 0rem",
+                                }
+                              : {
+                                  ...imageStyle,
+                                  width: "15vw",
+                                  margin: "0rem 0rem 0rem 0rem",
+                                  padding: "2rem 0rem 1rem 0rem",
+                                }
+                            : isDesktop
+                            ? {
+                                ...imageStyle,
+                                width: "15vw",
+                                padding: "1rem 0rem 0rem 0rem",
+                              }
                             : isMobile
                             ? {
                                 ...imageStyle,
-                                width: "13vw",
+                                width: "15vw",
+                                padding: "1rem 0rem 0rem 1rem",
                                 margin: "0rem 0rem 0rem 0rem",
                               }
                             : {
                                 ...imageStyle,
-                                width: "15vw",
+                                width: "22vw",
                                 margin: "0rem 0rem 0rem 0rem",
                                 padding: "2rem 0rem 1rem 0rem",
                               }
-                          : isDesktop
-                          ? {
-                              ...imageStyle,
-                              width: "15vw",
-                              padding: "1rem 0rem 0rem 0rem",
-                            }
-                          : isMobile
-                          ? {
-                              ...imageStyle,
-                              width: "15vw",
-                              padding: "1rem 0rem 0rem 1rem",
-                              margin: "0rem 0rem 0rem 0rem",
-                            }
-                          : {
-                              ...imageStyle,
-                              width: "22vw",
-                              margin: "0rem 0rem 0rem 0rem",
-                              padding: "2rem 0rem 1rem 0rem",
-                            }
-                      }
-                      className="image"
-                    />
+                        }
+                        className="image"
+                      />
 
-                    <Typography
-                      key={index}
-                      variant="h2"
-                      sx={
-                        isDesktop
-                          ? {
-                              ...textStyle,
-                            }
-                          : isMobile
-                          ? {
-                              ...textStyle,
-                              fontSize: "2.4vw",
-                            }
-                          : {
-                              ...textStyle,
-                              margin: "0rem 0.5rem 0rem 0.5rem",
-                              width: "110%",
-                              fontSize: "3vw",
-                            }
-                      }
+                      <Typography
+                        key={index}
+                        variant="h2"
+                        sx={
+                          isDesktop
+                            ? {
+                                ...textStyle,
+                              }
+                            : isMobile
+                            ? {
+                                ...textStyle,
+                                fontSize: "2.4vw",
+                              }
+                            : {
+                                ...textStyle,
+                                margin: "0rem 0.5rem 0rem 0.5rem",
+                                width: "110%",
+                                fontSize: "3vw",
+                              }
+                        }
+                      >
+                        {line}
+                      </Typography>
+                    </Stack>
+                  ))}
+                </Stack>
+              ) : (
+                //mobile tiny
+                <Stack
+                  direction={"column"}
+                  marginTop={"1rem"}
+                  alignItems={"center"}
+                >
+                  <Box
+                    sx={{
+                      ".carousel": {
+                        height: "15rem",
+                        marginBottom: "-4rem",
+                        marginLeft: "0rem",
+                        alignContent: "center",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        justifyItems: "center",
+                      },
+                      ".carousel .thumb": {
+                        height: "4rem",
+                        width: "4rem",
+                        overflow: "hidden",
+                        border: "none",
+                        background: "#a049c04d",
+                        border: "2px solid #7c3773",
+                        borderRadius: "10px",
+                      },
+                      ".carousel .thumb.selected": {
+                        border: "2px solid white",
+                        background: "#792c83",
+                      },
+
+                      ".carousel .thumb:hover": {
+                        border: "2px solid white",
+                        opacity: 0.8,
+                      },
+
+                      ".carousel .thumbs": {
+                        marginLeft: "-2rem",
+                      },
+
+                      ".carousel .thumb img": {
+                        top: project.mobileImages ? "0rem" : "4.1rem",
+                        left: project.mobileImages ? "0.4rem" : "-0.25rem",
+                        transform: project.mobileImages
+                          ? "scale(1.7)"
+                          : "scale(1.3)",
+                        height: "5rem !important",
+                        width: "auto !important",
+                        objectFit: "cover",
+                      },
+                    }}
+                  >
+                    <Carousel
+                      width={"90vw"}
+                      thumbWidth={70}
+                      className="carousel"
+                      infiniteLoop={true}
+                      showStatus={false}
                     >
-                      {line}
-                    </Typography>
-                  </Stack>
-                ))}
-              </Stack>
+                      <div>
+                        <img
+                          src={project.images[0]}
+                          alt="picture of software"
+                          style={{
+                            ...imageStyle,
+                            width: project.mobileImages ? "8rem" : "16rem",
+                            height: "auto",
+                            marginLeft: "1rem",
+                            margin: project.mobileImages
+                              ? "-1.5rem 0rem 0rem 1.5rem"
+                              : "-4rem -1rem 0rem 0rem",
+                            padding: project.mobileImages
+                              ? "2rem 0rem 1rem 0rem"
+                              : "0rem 0rem 1rem 0rem",
+                          }}
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src={project.images[1]}
+                          alt="picture of software"
+                          style={{
+                            ...imageStyle,
+                            width: project.mobileImages ? "8rem" : "16rem",
+                            height: "auto",
+                            marginLeft: "1rem",
+                            margin: project.mobileImages
+                              ? "-1.5rem 0rem 0rem 1.5rem"
+                              : "-4rem -1rem 0rem 0rem",
+                            padding: project.mobileImages
+                              ? "2rem 0rem 1rem 0rem"
+                              : "0rem 0rem 1rem 0rem",
+                          }}
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src={project.images[2]}
+                          alt="picture of software"
+                          style={{
+                            ...imageStyle,
+                            width: project.mobileImages ? "8rem" : "16rem",
+                            height: "auto",
+                            marginLeft: "1rem",
+                            margin: project.mobileImages
+                              ? "-1.5rem 0rem 0rem 1.5rem"
+                              : "-4rem -1rem 0rem 0rem",
+                            padding: project.mobileImages
+                              ? "2rem 0rem 1rem 0rem"
+                              : "0rem 0rem 1rem 0rem",
+                          }}
+                        />
+                      </div>
+                    </Carousel>
+                  </Box>
+                  <Box paddingTop={"12rem"}>
+                    {details.split("\n").map((line, index) => (
+                      <Stack
+                        direction={index % 2 === 0 ? "row" : "row-reverse"}
+                        sx={{
+                          padding: "0.2rem",
+                        }}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        key={index}
+                      >
+                        <Typography
+                          key={index}
+                          variant="h2"
+                          sx={
+                            isDesktop
+                              ? {
+                                  ...textStyle,
+                                }
+                              : isMobile
+                              ? {
+                                  ...textStyle,
+                                  fontSize: "2.4vw",
+                                }
+                              : {
+                                  ...textStyle,
+                                  margin: "0.7rem 0.5rem 0rem 0.5rem",
+                                  width: "110%",
+                                  fontSize: "4.5vw",
+                                }
+                          }
+                        >
+                          {line}
+                        </Typography>
+                      </Stack>
+                    ))}
+                  </Box>
+                </Stack>
+              )}
             </Stack>
           </Box>
         </Box>

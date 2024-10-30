@@ -70,11 +70,7 @@ export default function Header() {
                   : isMobile
                   ? {
                       ...titleBox,
-                      // left: "-2rem",
-                      //marginTop: "-15rem",
-                      //paddingRight: "0rem",
                       width: "30vw",
-                      //height: "12rem",
                     }
                   : {
                       ...titleBox,
