@@ -16,6 +16,7 @@ export default function ContactButton({
         href={link}
         sx={{
           textDecoration: "none",
+          WebkitTapHighlightColor: "transparent",
         }}
       >
         <Box

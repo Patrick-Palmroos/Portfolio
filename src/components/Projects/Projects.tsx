@@ -3,11 +3,13 @@ import ProjectJson from "../util/projects.json";
 import { Project } from "../util/Interfaces.ts";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
 import { carouselContainer, container, emptyBoxStyle } from "./ProjectsStyle";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ArrowButton from "../util/ArrowButton/ArrowButton";
 import PageBar from "../util/PageBar/PageBar";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useMediaQuery } from "react-responsive";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Projects() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1215px)" });
@@ -19,11 +21,18 @@ export default function Projects() {
   const [direction, setDirection] = useState<"left" | "right">("left");
   const [animating, setAnimating] = useState<boolean>(false);
   const [projectAmount, setProjectAmount] = useState<number>(4);
+  const [pageId, setPageId] = useState<number>(1);
+
+  const carouselRef = useRef<Carousel>(null);
 
   useEffect(() => {
     setProjectAmount(isMobile ? 4 : 1);
     setPage(1);
   }, [isMobile]);
+
+  useEffect(() => {
+    setPageId(page);
+  }, [page]);
 
   const projectCount: number = ProjectJson.projects.length;
   const pageCount: number = Math.ceil(projectCount / projectAmount);
@@ -55,6 +64,10 @@ export default function Projects() {
     }
   };
 
+  const handleCarouselChange = (index: number) => {
+    setPage(index + 1);
+  };
+
   const baseAnimSpeed: number = 200;
 
   const calcAnimLength = (number: number): number => {
@@ -84,18 +97,21 @@ export default function Projects() {
         setDirection(direction === "next" ? "right" : "left");
         //sets the slide animaiton.
         setSlide(false);
-        setTimeout(() => {
-          // After slide-out animation completes, change the page
-          if (direction === "next") {
-            handleNextClick();
-          } else {
-            handleBackClick();
-          }
-          // Reset slide and grow animations after transition
-          setGrow(true);
-          setSlide(true);
-          setAnimating(false);
-        }, calcAnimLength(visibleList.length));
+        setTimeout(
+          () => {
+            // After slide-out animation completes, change the page
+            if (direction === "next") {
+              handleNextClick();
+            } else {
+              handleBackClick();
+            }
+            // Reset slide and grow animations after transition
+            setGrow(true);
+            setSlide(true);
+            setAnimating(false);
+          },
+          isMobile ? calcAnimLength(visibleList.length) : 0
+        );
       }
     }
   };
@@ -105,42 +121,55 @@ export default function Projects() {
       <Stack alignItems={"center"} paddingTop={isMobile ? 16 : 5} spacing={3}>
         <Stack direction={"row"} alignItems={"center"} sx={container}>
           <Box
-            sx={{
-              rotate: "-180deg",
-            }}
+            sx={
+              isMobile
+                ? { position: "relative" }
+                : isVeryTiny
+                ? {
+                    position: "absolute",
+                    left: "-0.5rem",
+                    bottom: "7rem",
+                  }
+                : {
+                    position: "absolute",
+                    left: "0rem",
+                    bottom: "7rem",
+                  }
+            }
           >
-            <Box
-              sx={
-                isVeryTiny
-                  ? { position: "relative" }
-                  : { position: "absolute", left: "-5.3rem", bottom: "7.2rem" }
-              }
-            >
-              {isDesktop ? (
-                <ScrollAnimation
-                  animateIn="slideInRight"
-                  duration={0.5}
-                  offset={150}
-                  animateOnce={true}
-                >
-                  {/*Scroll in animations */}
-                  <ArrowButton
-                    callback={() => {
-                      handlePageChange("back");
-                    }}
-                  />
-                </ScrollAnimation>
-              ) : (
-                <Box>
-                  {/*No scroll in animations */}
+            {isDesktop ? (
+              <ScrollAnimation
+                animateIn="fadeInLeft"
+                duration={0.5}
+                offset={150}
+                initiallyVisible={!isDesktop}
+                animateOnce={true}
+              >
+                {/* Scroll in animations */}
+                <Box sx={{ rotate: "180deg" }}>
                   <ArrowButton
                     callback={() => {
                       handlePageChange("back");
                     }}
                   />
                 </Box>
-              )}
-            </Box>
+              </ScrollAnimation>
+            ) : (
+              <Box
+                sx={{
+                  position: "relative",
+                  zIndex: 5,
+                  rotate: "-180deg",
+                }}
+              >
+                {/* No scroll in animations */}
+                <ArrowButton
+                  callback={() => {
+                    handlePageChange("back");
+                  }}
+                />
+              </Box>
+            )}
           </Box>
           {isDesktop ? (
             <ScrollAnimation
@@ -165,13 +194,13 @@ export default function Projects() {
                     : isVeryTiny
                     ? {
                         ...carouselContainer,
-                        gridTemplateColumns: "50vw",
+                        gridTemplateColumns: "100vw",
                         marginRight: "1.5rem",
                         marginLeft: "2rem",
                       }
                     : {
                         ...carouselContainer,
-                        gridTemplateColumns: "70vw",
+                        gridTemplateColumns: "100vw",
                         marginRight: "1.5rem",
                         marginLeft: "2rem",
                       }
@@ -191,7 +220,10 @@ export default function Projects() {
                         : 470 / 2
                     }
                   >
-                    <Zoom in={grow} timeout={300 + index * 100}>
+                    <Zoom
+                      in={grow}
+                      timeout={isVeryTiny ? 300 + index * 100 : 500}
+                    >
                       <Box>
                         <ProjectBox project={project} />
                       </Box>
@@ -210,32 +242,18 @@ export default function Projects() {
                 ))}
               </Stack>
             </ScrollAnimation>
-          ) : (
+          ) : isMobile ? (
             <Box>
               {/*No scroll in animations */}
               <Stack
                 sx={
                   isDesktop
                     ? { ...carouselContainer }
-                    : isMobile
-                    ? {
+                    : {
                         ...carouselContainer,
                         gridTemplateColumns: "22rem 22rem",
                         rowGap: "1.5rem",
                         columnGap: "1.5rem",
-                      }
-                    : isVeryTiny
-                    ? {
-                        ...carouselContainer,
-                        gridTemplateColumns: "50vw",
-                        marginRight: "1.5rem",
-                        marginLeft: "2rem",
-                      }
-                    : {
-                        ...carouselContainer,
-                        gridTemplateColumns: "80vw",
-                        marginRight: "1.5rem",
-                        marginLeft: "2rem",
                       }
                 }
               >
@@ -272,12 +290,33 @@ export default function Projects() {
                 ))}
               </Stack>
             </Box>
+          ) : (
+            <Box sx={isVeryTiny ? { width: "80vw" } : { width: "100vw" }}>
+              <Carousel
+                ref={carouselRef}
+                showArrows={false}
+                showThumbs={false}
+                infiniteLoop={true}
+                showIndicators={false}
+                showStatus={false}
+                onChange={handleCarouselChange}
+                selectedItem={page - 1}
+              >
+                {ProjectJson.projects.map((project) => (
+                  <div key={project.id}>
+                    <ProjectBox project={project} />
+                  </div>
+                ))}
+              </Carousel>
+            </Box>
           )}
           <Box
             sx={
-              isVeryTiny
+              isMobile
                 ? { position: "relative" }
-                : { position: "absolute", right: "0.8rem", bottom: "-3.25rem" }
+                : isVeryTiny
+                ? { position: "absolute", right: "0rem", bottom: "7rem" }
+                : { position: "absolute", right: "-0.5rem", bottom: "7rem" }
             }
           >
             {isDesktop ? (
@@ -296,8 +335,9 @@ export default function Projects() {
                 />
               </ScrollAnimation>
             ) : (
-              <Box>
+              <Box sx={{ position: "relative", zIndex: 5 }}>
                 {/* No scroll in animations */}
+
                 <ArrowButton
                   callback={() => {
                     handlePageChange("next");
@@ -307,11 +347,10 @@ export default function Projects() {
             )}
           </Box>
         </Stack>
-        <Box paddingTop={isMobile ? 12 : isVeryTiny ? 2 : 0}>
-          <PageBar page={page} pageCount={pageCount} />
+        <Box zIndex={5} paddingTop={isMobile ? 12 : isVeryTiny ? 2 : 0}>
+          <PageBar page={pageId} pageCount={pageCount} />
         </Box>
       </Stack>
-      ;
     </div>
   );
 }

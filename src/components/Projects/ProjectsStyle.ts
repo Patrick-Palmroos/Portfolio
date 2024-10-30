@@ -7,6 +7,8 @@ export const container: CSS.Properties = {
 
 export const carouselContainer: CSS.Properties = {
   display: "grid",
+  position: "relative",
+  zIndex: 1,
   gridTemplateColumns: "30rem 30rem",
   gridTemplateRows: "auto auto",
   rowGap: "2.5rem",

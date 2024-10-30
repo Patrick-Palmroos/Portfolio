@@ -84,31 +84,37 @@ export default function ProjectBox({ project }: { project: Project }) {
           position: "absolute",
           pointerEvents: "none",
           backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.25)",
+          zIndex: 1,
+          borderRadius: isVeryTiny ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
             : isMobile
             ? "22rem"
             : isVeryTiny
-            ? "50vw"
-            : "80vw",
-          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
+            ? "80vw"
+            : "100vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "20rem" : "17rem",
         }}
       />
       <Stack
         direction={"column"}
         sx={{
           ...projectBoxStyle,
+          zIndex: 1,
+          borderRadius: isVeryTiny ? "20px" : "0px",
           width: isDesktop
             ? "30.25rem"
             : isMobile
             ? "22rem"
             : isVeryTiny
-            ? "50vw"
-            : "80vw",
-          height: isMobile ? "14.4rem" : isVeryTiny ? "18rem" : "15rem",
+            ? "80vw"
+            : "100vw",
+          height: isMobile ? "14.4rem" : isVeryTiny ? "20rem" : "17rem",
           "&:hover": {
-            backgroundColor: "color(srgb 0.73 0.53 0.99 / 0.5)",
-            transform: "translateY(-0.5rem)",
+            backgroundColor: isVeryTiny
+              ? "color(srgb 0.73 0.53 0.99 / 0.5)"
+              : "color(srgb 0.73 0.53 0.99 / 0)",
+            transform: isMobile ? "translateY(-0.5rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease",
           },
           "&::before, &::after": {
@@ -118,12 +124,12 @@ export default function ProjectBox({ project }: { project: Project }) {
             top: "0rem",
             width: "100%",
             height: "100%",
-            borderRadius: "20px",
+            borderRadius: isVeryTiny ? "20px" : "0px",
           },
           "&::before": {
             backgroundImage: `url(${project.backDrop})`,
             backgroundSize: "cover",
-            opacity: 0.35,
+            opacity: 0.4,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             zIndex: 1,
@@ -137,21 +143,21 @@ export default function ProjectBox({ project }: { project: Project }) {
             transition: "opacity 1s ease, transform 0.4s ease",
           },
           "&:hover::after": {
-            opacity: 1,
-            transform: "translateY(-0.7rem)",
+            opacity: isMobile ? 1 : 0.4,
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "opacity 0.4s ease, transform 0.4s ease",
           },
           ":hover::before": {
-            opacity: 1,
-            transform: "translateY(-0.7rem)",
+            opacity: isMobile ? 1 : 0.4,
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease, opacity 0.4s ease",
           },
           ":hover .child": {
-            transform: "translateY(-0.7rem)",
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
             transition: "transform 0.4s ease",
           },
           ":hover .image": {
-            transform: "translateY(-0.7rem)",
+            transform: isMobile ? "translateY(-0.7rem)" : "translateY(0rem)",
           },
         }}
         component={"button"}
@@ -168,9 +174,17 @@ export default function ProjectBox({ project }: { project: Project }) {
             sx={
               isMobile
                 ? { ...titleStyle }
+                : isVeryTiny
+                ? {
+                    ...titleStyle,
+                    marginTop: "1rem",
+                    fontSize: "calc(4vw + 1rem)",
+                    marginLeft: "5rem",
+                  }
                 : {
                     ...titleStyle,
                     fontSize: "calc(4vw + 1rem)",
+                    marginLeft: "3rem",
                   }
             }
             className="child"
@@ -180,6 +194,7 @@ export default function ProjectBox({ project }: { project: Project }) {
           <Stack
             direction={"row"}
             paddingLeft={"1rem"}
+            marginLeft={isMobile ? "0rem" : isVeryTiny ? "5rem" : "3rem"}
             paddingBottom={"0.3rem"}
           >
             {project.logos.map((value, index) => (
@@ -202,14 +217,17 @@ export default function ProjectBox({ project }: { project: Project }) {
               ? {
                   ...subtitleStyle,
                   fontSize: "calc(0.2vw + 1.1rem)",
+                  marginTop: "1rem",
                   width: "45vw",
                   height: "14rem",
+                  marginLeft: "5rem",
                 }
               : {
                   ...subtitleStyle,
                   fontSize: "calc(0.3vw + 1rem)",
                   width: "70vw",
                   height: "14rem",
+                  marginLeft: "3rem",
                 }
           }
           className="child"

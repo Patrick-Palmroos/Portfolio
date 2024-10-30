@@ -119,6 +119,7 @@ export default function TopBar({
                 height: "3rem",
                 cursor: "pointer",
                 transition: "0.3s ease",
+                WebkitTapHighlightColor: "transparent",
 
                 ":hover": {
                   opacity: 1,
@@ -239,6 +240,7 @@ export default function TopBar({
               height: "3rem",
               cursor: "pointer",
               transition: "0.3s ease",
+              WebkitTapHighlightColor: "transparent",
 
               ":hover": {
                 opacity: 1,

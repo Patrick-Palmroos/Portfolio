@@ -1,7 +1,7 @@
 import CSS from "csstype";
 
 export const pageDisplayBox: CSS.Properties = {
-  width: "2.1rem",
+  width: "1.9rem",
   height: "0.8rem",
   borderRadius: "1rem",
   backgroundColor: "gray",
@@ -10,7 +10,7 @@ export const pageDisplayBox: CSS.Properties = {
 };
 
 export const selectedDisplayBox: CSS.Properties = {
-  width: "2.1rem",
+  width: "1.9rem",
   height: "0.8rem",
   borderRadius: "1rem",
   backgroundColor: "white",
