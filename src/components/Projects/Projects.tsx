@@ -132,7 +132,7 @@ export default function Projects() {
                   }
                 : {
                     position: "absolute",
-                    left: "0rem",
+                    left: "-1rem",
                     bottom: "7rem",
                   }
             }
@@ -316,7 +316,7 @@ export default function Projects() {
                 ? { position: "relative" }
                 : isVeryTiny
                 ? { position: "absolute", right: "0rem", bottom: "7rem" }
-                : { position: "absolute", right: "-0.5rem", bottom: "7rem" }
+                : { position: "absolute", right: "-1rem", bottom: "7rem" }
             }
           >
             {isDesktop ? (
