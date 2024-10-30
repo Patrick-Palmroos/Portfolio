@@ -3,12 +3,13 @@ import ProjectJson from "../util/projects.json";
 import { Project } from "../util/Interfaces.ts";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
 import { carouselContainer, container, emptyBoxStyle } from "./ProjectsStyle";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ArrowButton from "../util/ArrowButton/ArrowButton";
 import PageBar from "../util/PageBar/PageBar";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useMediaQuery } from "react-responsive";
-import ReactSwipe from "react-swipe";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Projects() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1215px)" });
@@ -20,12 +21,18 @@ export default function Projects() {
   const [direction, setDirection] = useState<"left" | "right">("left");
   const [animating, setAnimating] = useState<boolean>(false);
   const [projectAmount, setProjectAmount] = useState<number>(4);
-  let reactSwipeEl;
+  const [pageId, setPageId] = useState<number>(1);
+
+  const carouselRef = useRef<Carousel>(null);
 
   useEffect(() => {
     setProjectAmount(isMobile ? 4 : 1);
     setPage(1);
   }, [isMobile]);
+
+  useEffect(() => {
+    setPageId(page);
+  }, [page]);
 
   const projectCount: number = ProjectJson.projects.length;
   const pageCount: number = Math.ceil(projectCount / projectAmount);
@@ -57,6 +64,10 @@ export default function Projects() {
     }
   };
 
+  const handleCarouselChange = (index: number) => {
+    setPage(index + 1);
+  };
+
   const baseAnimSpeed: number = 200;
 
   const calcAnimLength = (number: number): number => {
@@ -86,18 +97,21 @@ export default function Projects() {
         setDirection(direction === "next" ? "right" : "left");
         //sets the slide animaiton.
         setSlide(false);
-        setTimeout(() => {
-          // After slide-out animation completes, change the page
-          if (direction === "next") {
-            handleNextClick();
-          } else {
-            handleBackClick();
-          }
-          // Reset slide and grow animations after transition
-          setGrow(true);
-          setSlide(true);
-          setAnimating(false);
-        }, calcAnimLength(visibleList.length));
+        setTimeout(
+          () => {
+            // After slide-out animation completes, change the page
+            if (direction === "next") {
+              handleNextClick();
+            } else {
+              handleBackClick();
+            }
+            // Reset slide and grow animations after transition
+            setGrow(true);
+            setSlide(true);
+            setAnimating(false);
+          },
+          isMobile ? calcAnimLength(visibleList.length) : 0
+        );
       }
     }
   };
@@ -112,8 +126,8 @@ export default function Projects() {
                 ? { position: "relative" }
                 : {
                     position: "absolute",
-                    left: "0.8rem",
-                    bottom: "8rem",
+                    left: "-1rem",
+                    bottom: "7rem",
                   }
             }
           >
@@ -186,37 +200,30 @@ export default function Projects() {
                       }
                 }
               >
-                {visibleList.map((project: Project, index) =>
-                  isMobile ? (
-                    <Slide
-                      in={slide}
-                      key={project.id}
-                      direction={direction}
-                      timeout={
-                        isMobile
-                          ? direction === "left"
-                            ? baseAnimSpeed +
-                              (visibleList.length - 1 - index) * 150
-                            : baseAnimSpeed + index * 150
-                          : 470 / 2
-                      }
+                {visibleList.map((project: Project, index) => (
+                  <Slide
+                    in={slide}
+                    key={project.id}
+                    direction={direction}
+                    timeout={
+                      isMobile
+                        ? direction === "left"
+                          ? baseAnimSpeed +
+                            (visibleList.length - 1 - index) * 150
+                          : baseAnimSpeed + index * 150
+                        : 470 / 2
+                    }
+                  >
+                    <Zoom
+                      in={grow}
+                      timeout={isVeryTiny ? 300 + index * 100 : 500}
                     >
-                      <Zoom
-                        in={grow}
-                        timeout={isVeryTiny ? 300 + index * 100 : 500}
-                      >
-                        <Box>
-                          <ProjectBox project={project} />
-                        </Box>
-                      </Zoom>
-                    </Slide>
-                  ) : (
-                    //mobile
-                    <Box>
-                      <ProjectBox project={project} />
-                    </Box>
-                  )
-                )}
+                      <Box>
+                        <ProjectBox project={project} />
+                      </Box>
+                    </Zoom>
+                  </Slide>
+                ))}
                 {Array.from({ length: emptySlots }).map((_, index) => (
                   <Box
                     key={`empty-${index}`}
@@ -229,66 +236,42 @@ export default function Projects() {
                 ))}
               </Stack>
             </ScrollAnimation>
-          ) : (
+          ) : isMobile ? (
             <Box>
               {/*No scroll in animations */}
               <Stack
                 sx={
                   isDesktop
                     ? { ...carouselContainer }
-                    : isMobile
-                    ? {
+                    : {
                         ...carouselContainer,
                         gridTemplateColumns: "22rem 22rem",
                         rowGap: "1.5rem",
                         columnGap: "1.5rem",
                       }
-                    : isVeryTiny
-                    ? {
-                        ...carouselContainer,
-                        gridTemplateColumns: "100vw",
-                        marginTop: "6rem",
-                      }
-                    : {
-                        ...carouselContainer,
-                        gridTemplateColumns: "100vw",
-                        marginTop: "0rem",
-                      }
                 }
               >
-                {visibleList.map((project: Project, index) =>
-                  isMobile ? (
-                    <Slide
-                      in={slide}
-                      key={project.id}
-                      direction={direction}
-                      timeout={
-                        isMobile
-                          ? direction === "left"
-                            ? baseAnimSpeed +
-                              (visibleList.length - 1 - index) * 150
-                            : baseAnimSpeed + index * 150
-                          : 470 / 2
-                      }
-                    >
-                      <Zoom in={grow} timeout={300 + index * 100}>
-                        <Box>
-                          <ProjectBox project={project} />
-                        </Box>
-                      </Zoom>
-                    </Slide>
-                  ) : (
-                    <ReactSwipe
-                      className="carousel"
-                      swipeOptions={{ continuous: false }}
-                      ref={(el) => (reactSwipeEl = el)}
-                    >
+                {visibleList.map((project: Project, index) => (
+                  <Slide
+                    in={slide}
+                    key={project.id}
+                    direction={direction}
+                    timeout={
+                      isMobile
+                        ? direction === "left"
+                          ? baseAnimSpeed +
+                            (visibleList.length - 1 - index) * 150
+                          : baseAnimSpeed + index * 150
+                        : 470 / 2
+                    }
+                  >
+                    <Zoom in={grow} timeout={300 + index * 100}>
                       <Box>
                         <ProjectBox project={project} />
                       </Box>
-                    </ReactSwipe>
-                  )
-                )}
+                    </Zoom>
+                  </Slide>
+                ))}
                 {Array.from({ length: emptySlots }).map((_, index) => (
                   <Box
                     key={`empty-${index}`}
@@ -301,12 +284,31 @@ export default function Projects() {
                 ))}
               </Stack>
             </Box>
+          ) : (
+            <Box sx={{ width: "100vw" }}>
+              <Carousel
+                ref={carouselRef}
+                showArrows={false}
+                showThumbs={false}
+                infiniteLoop={true}
+                showIndicators={false}
+                showStatus={false}
+                onChange={handleCarouselChange}
+                selectedItem={page - 1}
+              >
+                {ProjectJson.projects.map((project) => (
+                  <div key={project.id}>
+                    <ProjectBox project={project} />
+                  </div>
+                ))}
+              </Carousel>
+            </Box>
           )}
           <Box
             sx={
               isMobile
                 ? { position: "relative" }
-                : { position: "absolute", right: "0.8rem", bottom: "8rem" }
+                : { position: "absolute", right: "-1rem", bottom: "7rem" }
             }
           >
             {isDesktop ? (
@@ -338,7 +340,7 @@ export default function Projects() {
           </Box>
         </Stack>
         <Box paddingTop={isMobile ? 12 : isVeryTiny ? 2 : 0}>
-          <PageBar page={page} pageCount={pageCount} />
+          <PageBar page={pageId} pageCount={pageCount} />
         </Box>
       </Stack>
     </div>
