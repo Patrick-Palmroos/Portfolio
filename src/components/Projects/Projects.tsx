@@ -106,7 +106,7 @@ export default function Projects() {
         <Stack direction={"row"} alignItems={"center"} sx={container}>
           <Box
             sx={
-              isVeryTiny
+              isMobile
                 ? { position: "relative" }
                 : {
                     position: "absolute",
@@ -280,7 +280,7 @@ export default function Projects() {
           )}
           <Box
             sx={
-              isVeryTiny
+              isMobile
                 ? { position: "relative" }
                 : { position: "absolute", right: "0.8rem", bottom: "8rem" }
             }

@@ -3,6 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 export default function ArrowButton({ callback }: { callback: () => void }) {
   const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
+  const isMobile = useMediaQuery({ query: "(min-width: 940px)" });
 
   return (
     <div>
@@ -18,7 +19,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           component={"button"}
           onClick={callback}
           sx={
-            isVeryTiny
+            isMobile
               ? {
                   width: "100%",
                   height: "100%",
@@ -141,7 +142,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           <Box
             className={"circle"}
             sx={
-              isVeryTiny
+              isMobile
                 ? {
                     position: "absolute",
                     backgroundColor: "none",
@@ -169,7 +170,7 @@ export default function ArrowButton({ callback }: { callback: () => void }) {
           <Box
             className={"anim"}
             sx={
-              isVeryTiny
+              isMobile
                 ? {
                     position: "absolute",
                     background: "#BB85FA",
