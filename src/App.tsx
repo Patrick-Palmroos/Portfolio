@@ -20,7 +20,6 @@ import { LanguageProvider } from "./components/util/languageContext.tsx";
 const ThemeContext = createContext("dark");
 
 function App() {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
   const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
   const smallerSkills = useMediaQuery({ query: "(min-width: 730px)" });
@@ -269,7 +268,7 @@ function App() {
                   >
                     <Box
                       marginLeft={"1rem"}
-                      marginBottom={mobileFooter ? "5rem" : "0.5rem"}
+                      marginBottom={mobileFooter ? "2rem" : "0.5rem"}
                       marginRight={"2rem"}
                       width={"30rem"}
                     >
