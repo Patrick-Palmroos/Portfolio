@@ -25,6 +25,7 @@ function App() {
   const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
   const smallerSkills = useMediaQuery({ query: "(min-width: 730px)" });
   const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
+  const smallProjects = useMediaQuery({ query: "(min-width: 550px)" });
   const [display, setDisplay] = useState<boolean>(false);
   const [language, setCurrentLanguage] = useState("en");
 
@@ -64,21 +65,22 @@ function App() {
                   <Box
                     sx={{
                       backgroundColor: "#251725",
-                      paddingBottom: "4rem",
+                      paddingBottom: smallProjects ? "4rem" : "8rem",
+                      paddingTop: smallProjects ? "0rem" : "0.2rem",
                       marginTop: "6rem",
                     }}
                   >
-                    <Box
-                      sx={
-                        isDesktop
-                          ? { marginLeft: "11rem", marginRight: "9rem" }
-                          : { marginLeft: "3rem", marginRight: "3rem" }
-                      }
-                      marginLeft={"11rem"}
-                      marginRight={"9rem"}
-                      marginTop={"4rem"}
-                    >
-                      <Box>
+                    <Box marginTop={"4rem"}>
+                      <Box
+                        sx={
+                          isTabletOrMobile
+                            ? {
+                                marginLeft: "11rem",
+                                marginRight: "9rem",
+                              }
+                            : { marginLeft: "4rem", marginRight: "4rem" }
+                        }
+                      >
                         <Title
                           title={
                             language === "en"
