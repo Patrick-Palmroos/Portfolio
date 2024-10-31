@@ -135,7 +135,7 @@
     {
       "id": 12,
       "image": "images/Logos/java.png",
-      "width": 2,
+      "width": 1,
       "height": 1,
       "color1": "94, 172, 255",
       "color2": "255, 83, 83",
@@ -167,6 +167,17 @@
     },
     {
       "id": 15,
+      "image": "images/Logos/ts.png",
+      "width": 1,
+      "height": 1,
+      "color1": "95, 224, 255",
+      "color2": "232, 165, 255",
+      "glow": "255, 194, 235, 1",
+      "link": "https://www.typescriptlang.org/",
+      "tag": "frontend"
+    },
+    {
+      "id": 16,
       "image": "images/Logos/androidstudio.png",
       "width": 1,
       "height": 1,
@@ -177,7 +188,7 @@
       "tag": "platform"
     },
     {
-      "id": 16,
+      "id": 17,
       "image": "images/Logos/jetpackcompose.png",
       "width": 1,
       "height": 1,
@@ -188,7 +199,7 @@
       "tag": "frontend"
     },
     {
-      "id": 17,
+      "id": 18,
       "image": "images/Logos/sass.png",
       "width": 1,
       "height": 1,
