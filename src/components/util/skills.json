@@ -134,9 +134,20 @@
     },
     {
       "id": 12,
-      "image": "images/Logos/java.png",
-      "width": 1,
+      "image": "images/Logos/agile.png",
+      "width": 2,
       "height": 1,
+      "color1": "180, 0, 121",
+      "color2": "47, 206, 202",
+      "glow": "87, 25, 69, 0.2",
+      "link": "https://www.atlassian.com/agile",
+      "tag": "platform"
+    },
+    {
+      "id": 13,
+      "image": "images/Logos/java.png",
+      "width": 2,
+      "height": 2,
       "color1": "94, 172, 255",
       "color2": "255, 83, 83",
       "glow": "254, 94, 255, 1",
@@ -144,7 +155,7 @@
       "tag": "backend"
     },
     {
-      "id": 13,
+      "id": 14,
       "image": "images/Logos/unity.png",
       "width": 1,
       "height": 1,
@@ -155,7 +166,7 @@
       "tag": "platform"
     },
     {
-      "id": 14,
+      "id": 15,
       "image": "images/Logos/kotlin.png",
       "width": 1,
       "height": 1,
@@ -166,7 +177,7 @@
       "tag": "backend"
     },
     {
-      "id": 15,
+      "id": 16,
       "image": "images/Logos/ts.png",
       "width": 1,
       "height": 1,
@@ -177,7 +188,7 @@
       "tag": "frontend"
     },
     {
-      "id": 16,
+      "id": 17,
       "image": "images/Logos/androidstudio.png",
       "width": 1,
       "height": 1,
@@ -188,7 +199,7 @@
       "tag": "platform"
     },
     {
-      "id": 17,
+      "id": 18,
       "image": "images/Logos/jetpackcompose.png",
       "width": 1,
       "height": 1,
@@ -199,7 +210,7 @@
       "tag": "frontend"
     },
     {
-      "id": 18,
+      "id": 19,
       "image": "images/Logos/sass.png",
       "width": 1,
       "height": 1,
