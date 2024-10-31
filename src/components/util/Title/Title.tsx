@@ -14,7 +14,7 @@ export default function Title({
     <div>
       <Stack
         direction={isDesktop ? "row" : "column"}
-        paddingTop={10}
+        paddingTop={5}
         marginBottom={isDesktop ? "0rem" : "-1rem"}
         alignItems={"center"}
       >
