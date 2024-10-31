@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.21.2",
   "type": "module",
   "homepage": "https://www.patrickpalmroos.com",
   "scripts": {
