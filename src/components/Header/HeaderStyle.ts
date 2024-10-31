@@ -28,7 +28,7 @@ export const circle: CSS.Properties = {
 
 export const pfpStyle: CSS.Properties = {
   position: "absolute",
-  right: "2rem",
+  right: "4rem",
   bottom: "1rem",
   width: "32rem",
   height: "auto",

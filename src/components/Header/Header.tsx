@@ -209,8 +209,8 @@ export default function Header() {
                     : {
                         ...pfpStyle,
                         width: "28rem",
-                        top: "0rem",
-                        right: "2.4rem",
+                        top: "-2rem",
+                        right: "4.4rem",
                       }
                 }
               />
