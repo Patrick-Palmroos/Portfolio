@@ -18,7 +18,7 @@ export default function Skills() {
   const theMiddle = skillsList.slice(2, skillsList.length - 3);
   const bottomRow = skillsList.slice(skillsList.length - 3, skillsList.length);
 
-  const boxSize = isDesktop ? "6rem" : isVeryTiny ? "5rem" : "4rem";
+  const boxSize = isDesktop ? "5rem" : isVeryTiny ? "5rem" : "4rem";
 
   useEffect(() => {
     if (isDesktop) {
@@ -99,7 +99,7 @@ export default function Skills() {
               />
             </Box>
           )}
-          <Box marginLeft={isDesktop ? "1rem" : "0rem"}>
+          <Box marginLeft={isDesktop ? "3rem" : "0rem"}>
             {/*TopRow*/}
             <Box
               sx={{
@@ -132,7 +132,7 @@ export default function Skills() {
             <Box
               sx={{
                 ...gridStyle,
-                gridTemplateColumns: `repeat(4, ${boxSize})`,
+                gridTemplateColumns: `repeat(5, ${boxSize})`,
                 gridAutoRows: `${boxSize}`,
               }}
             >
