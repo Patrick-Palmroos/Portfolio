@@ -14,6 +14,7 @@ import { useLanguage } from "../util/languageContext";
 
 export default function WorkExperience() {
   const { language } = useLanguage();
+  const backgroundChange = useMediaQuery({ query: "(min-width: 1224px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 950px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
   const isVeryTiny = useMediaQuery({ query: "(min-width: 650px)" });
@@ -259,7 +260,12 @@ export default function WorkExperience() {
           <Box
             sx={
               isDesktop
-                ? { ...detailBox }
+                ? {
+                    ...detailBox,
+                    background: backgroundChange
+                      ? "linear-gradient(#1e1d28, #1e1d28) padding-box, linear-gradient(to right, #FF74D0, #B985FC) border-box"
+                      : "linear-gradient(#27242E, #27242E) padding-box, linear-gradient(to right, #FF74D0, #B985FC) border-box",
+                  }
                 : isMobile
                 ? { ...detailBox, width: "39rem", height: "auto" }
                 : isVeryTiny

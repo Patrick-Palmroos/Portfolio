@@ -29,7 +29,6 @@ export default function Education() {
           <ScrollAnimation
             animateIn={"fadeInLeft"}
             duration={0.5}
-            delay={100}
             animateOnce={true}
           >
             <Box position={"relative"}>
@@ -158,7 +157,6 @@ export default function Education() {
           <ScrollAnimation
             animateIn={"fadeInRight"}
             duration={0.5}
-            delay={200}
             animateOnce={true}
           >
             <Box position={"relative"} top={isDesktop ? 0 : -45}>
