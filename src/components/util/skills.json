@@ -20,7 +20,7 @@
       "color2": "100, 198, 255",
       "glow": "139, 246, 255, 0.8",
       "link": "https://code.visualstudio.com/",
-      "tag": "platform"
+      "tag": "tools"
     },
     {
       "id": 2,
@@ -97,7 +97,7 @@
       "color2": "217, 42, 0",
       "glow": "88, 26, 86, 0.8",
       "link": "https://git-scm.com/",
-      "tag": "platform"
+      "tag": "tools"
     },
     {
       "id": 9,
@@ -141,7 +141,7 @@
       "color2": "47, 206, 202",
       "glow": "87, 25, 69, 0.2",
       "link": "https://www.atlassian.com/agile",
-      "tag": "platform"
+      "tag": "tools"
     },
     {
       "id": 13,
@@ -163,7 +163,7 @@
       "color2": "255, 225, 253",
       "glow": "255, 217, 253, 0.7",
       "link": "https://unity.com/",
-      "tag": "platform"
+      "tag": "tools"
     },
     {
       "id": 15,
@@ -196,7 +196,7 @@
       "color2": "105, 255, 55",
       "glow": "173, 255, 255, 0.5",
       "link": "https://developer.android.com/studio",
-      "tag": "platform"
+      "tag": "tools"
     },
     {
       "id": 18,

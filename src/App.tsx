@@ -23,6 +23,7 @@ function App() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
   const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
+  const smallerSkills = useMediaQuery({ query: "(min-width: 730px)" });
   const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
   const [display, setDisplay] = useState<boolean>(false);
   const [language, setCurrentLanguage] = useState("en");
@@ -174,7 +175,13 @@ function App() {
                         marginTop={"0rem"}
                         marginRight={smallTitle ? "9rem" : "1.5rem"}
                         sx={isTabletOrMobile ? null : { width: "45rem" }}
-                        marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
+                        marginBottom={
+                          isTabletOrMobile
+                            ? "0rem"
+                            : smallerSkills
+                            ? "0rem"
+                            : "4rem"
+                        }
                       >
                         <ScrollAnimation
                           animateIn={"fadeInRight"}
