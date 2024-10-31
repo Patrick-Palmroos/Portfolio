@@ -18,7 +18,7 @@ export default function Skills() {
   const theMiddle = skillsList.slice(2, skillsList.length - 3);
   const bottomRow = skillsList.slice(skillsList.length - 3, skillsList.length);
 
-  const boxSize = isDesktop ? "6rem" : isVeryTiny ? "5rem" : "4rem";
+  const boxSize = isDesktop ? "5rem" : isVeryTiny ? "4.2rem" : "3.8rem";
 
   useEffect(() => {
     if (isDesktop) {
@@ -44,7 +44,7 @@ export default function Skills() {
       >
         <Box
           sx={{
-            height: isDesktop ? "40.5rem" : isVeryTiny ? "30rem" : "32rem",
+            height: isDesktop ? "40.5rem" : isVeryTiny ? "38rem" : "34rem",
             width: isDesktop ? "38rem" : "100%",
             marginBottom: "5rem",
             display: "flex",
@@ -65,7 +65,7 @@ export default function Skills() {
                     }
                   : {
                       gridTemplateColumns: "auto auto",
-                      columnGap: "0.5rem",
+                      columnGap: "0.2rem",
                     }
               }
             >
@@ -84,22 +84,22 @@ export default function Skills() {
                 }}
               />
               <FilterButton
-                title="Platform"
-                active={activeTag === "platform"}
-                callback={() => {
-                  handleClick("platform");
-                }}
-              />
-              <FilterButton
                 title="Api"
                 active={activeTag === "api"}
                 callback={() => {
                   handleClick("api");
                 }}
               />
+              <FilterButton
+                title="Tools"
+                active={activeTag === "tools"}
+                callback={() => {
+                  handleClick("tools");
+                }}
+              />
             </Box>
           )}
-          <Box marginLeft={isDesktop ? "1rem" : "0rem"}>
+          <Box marginLeft={isDesktop ? "3rem" : "0rem"}>
             {/*TopRow*/}
             <Box
               sx={{
@@ -132,7 +132,7 @@ export default function Skills() {
             <Box
               sx={{
                 ...gridStyle,
-                gridTemplateColumns: `repeat(4, ${boxSize})`,
+                gridTemplateColumns: `repeat(5, ${boxSize})`,
                 gridAutoRows: `${boxSize}`,
               }}
             >

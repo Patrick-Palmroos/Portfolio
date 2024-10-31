@@ -20,10 +20,11 @@ import { LanguageProvider } from "./components/util/languageContext.tsx";
 const ThemeContext = createContext("dark");
 
 function App() {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1224px)" });
   const mobileFooter = useMediaQuery({ query: "(min-width: 960px)" });
+  const smallerSkills = useMediaQuery({ query: "(min-width: 730px)" });
   const smallTitle = useMediaQuery({ query: "(min-width: 780px)" });
+  const smallProjects = useMediaQuery({ query: "(min-width: 550px)" });
   const [display, setDisplay] = useState<boolean>(false);
   const [language, setCurrentLanguage] = useState("en");
 
@@ -61,26 +62,35 @@ function App() {
                 <Box>
                   <div id="projects" />
                   <Box
-                    sx={
-                      isDesktop
-                        ? { marginLeft: "11rem", marginRight: "9rem" }
-                        : { marginLeft: "3rem", marginRight: "3rem" }
-                    }
-                    marginLeft={"11rem"}
-                    marginRight={"9rem"}
-                    marginTop={"4rem"}
+                    sx={{
+                      backgroundColor: "#251725",
+                      paddingBottom: smallProjects ? "4rem" : "8rem",
+                      paddingTop: smallProjects ? "0rem" : "0.2rem",
+                      marginTop: "6rem",
+                    }}
                   >
-                    <Box>
-                      <Title
-                        title={
-                          language === "en"
-                            ? "My Previous Projects"
-                            : "Aiemmat Projektini"
+                    <Box marginTop={"4rem"}>
+                      <Box
+                        sx={
+                          isTabletOrMobile
+                            ? {
+                                marginLeft: "11rem",
+                                marginRight: "9rem",
+                              }
+                            : { marginLeft: "4rem", marginRight: "4rem" }
                         }
-                      />
+                      >
+                        <Title
+                          title={
+                            language === "en"
+                              ? "My Previous Projects"
+                              : "Aiemmat Projektini"
+                          }
+                        />
+                      </Box>
                     </Box>
+                    <Projects />
                   </Box>
-                  <Projects />
                   <Stack
                     direction={isTabletOrMobile ? "row" : "column"}
                     paddingTop={isTabletOrMobile ? "8rem" : "2rem"}
@@ -91,6 +101,15 @@ function App() {
                     <Stack
                       paddingRight={"1rem"}
                       paddingLeft={"3rem"}
+                      paddingBottom={
+                        isTabletOrMobile
+                          ? "0rem"
+                          : mobileFooter
+                          ? "12rem"
+                          : smallTitle
+                          ? "6rem"
+                          : "2rem"
+                      }
                       alignItems={isTabletOrMobile ? "flex-start" : "center"}
                       height={isTabletOrMobile ? "40rem" : "40rem"}
                     >
@@ -135,8 +154,17 @@ function App() {
                     <Stack
                       paddingLeft={isTabletOrMobile ? "1rem" : "0rem"}
                       alignItems={isTabletOrMobile ? "flex-start" : "center"}
+                      sx={
+                        isTabletOrMobile
+                          ? null
+                          : {
+                              backgroundColor: "#1e1d28",
+                              width: "100%",
+                            }
+                      }
                     >
                       <div id="skills" />
+
                       <Box
                         marginLeft={
                           isTabletOrMobile
@@ -145,10 +173,16 @@ function App() {
                             ? "11rem"
                             : "1rem"
                         }
-                        marginTop={isTabletOrMobile ? "0rem" : "2rem"}
+                        marginTop={"0rem"}
                         marginRight={smallTitle ? "9rem" : "1.5rem"}
                         sx={isTabletOrMobile ? null : { width: "45rem" }}
-                        marginBottom={isTabletOrMobile ? "0rem" : "4rem"}
+                        marginBottom={
+                          isTabletOrMobile
+                            ? "0rem"
+                            : smallerSkills
+                            ? "0rem"
+                            : "4rem"
+                        }
                       >
                         <ScrollAnimation
                           animateIn={"fadeInRight"}
@@ -168,30 +202,38 @@ function App() {
                   </Stack>
                   <div id="work">
                     <Box
-                      marginLeft={smallTitle ? "11rem" : "1rem"}
-                      marginRight={smallTitle ? "9rem" : "1.5rem"}
-                      marginTop={smallTitle ? "4rem" : "2rem"}
+                      sx={
+                        isTabletOrMobile ? { backgroundColor: "#1e1d28" } : null
+                      }
                     >
+                      <Box
+                        marginLeft={smallTitle ? "11rem" : "1rem"}
+                        marginRight={smallTitle ? "9rem" : "1.5rem"}
+                        marginTop={smallTitle ? "4rem" : "2rem"}
+                      >
+                        <ScrollAnimation
+                          animateIn={"fadeInLeft"}
+                          duration={0.5}
+                          animateOnce={true}
+                        >
+                          <Title
+                            title={
+                              language === "en"
+                                ? "Work Experience"
+                                : "Työkokemus"
+                            }
+                          />
+                        </ScrollAnimation>
+                      </Box>
                       <ScrollAnimation
-                        animateIn={"fadeInLeft"}
+                        animateIn={"fadeInRight"}
                         duration={0.5}
+                        delay={100}
                         animateOnce={true}
                       >
-                        <Title
-                          title={
-                            language === "en" ? "Work Experience" : "Työkokemus"
-                          }
-                        />
+                        <WorkExperience />
                       </ScrollAnimation>
                     </Box>
-                    <ScrollAnimation
-                      animateIn={"fadeInRight"}
-                      duration={0.5}
-                      delay={100}
-                      animateOnce={true}
-                    >
-                      <WorkExperience />
-                    </ScrollAnimation>
                   </div>
                   <div id="education">
                     <Box
@@ -226,7 +268,7 @@ function App() {
                   >
                     <Box
                       marginLeft={"1rem"}
-                      marginBottom={mobileFooter ? "5rem" : "0.5rem"}
+                      marginBottom={mobileFooter ? "2rem" : "0.5rem"}
                       marginRight={"2rem"}
                       width={"30rem"}
                     >

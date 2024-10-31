@@ -20,12 +20,12 @@ export default function FilterButton({
         onClick={callback}
         sx={{
           position: "relative",
-          width: isMobile ? "11rem" : isVeryTiny ? "9rem" : "7rem",
-          height: isMobile ? "5rem" : isVeryTiny ? "4rem" : "3rem",
-          marginBottom: "1rem",
+          width: isMobile ? "10rem" : isVeryTiny ? "9rem" : "7rem",
+          height: isMobile ? "4rem" : isVeryTiny ? "4rem" : "3rem",
+          marginBottom: "1.4rem",
           border: "none",
-          borderRadius: "20px",
-          backgroundColor: "#914180",
+          borderRadius: "10px",
+          backgroundColor: "#733976",
           zIndex: 1,
           transition: "0.2s ease",
 
@@ -34,10 +34,14 @@ export default function FilterButton({
             position: "absolute",
             left: "0rem",
             top: active ? "0rem" : "-0.5rem",
-            height: "100%",
-            width: "100%",
-            borderRadius: "20px",
-            backgroundColor: active ? "#914180" : "info.contrastText",
+            height: "89.5%",
+            width: isMobile ? "96%" : isVeryTiny ? "96%" : "94.5%",
+            borderRadius: "10px",
+            border: "solid transparent",
+            borderWidth: "0.2rem",
+            background:
+              "linear-gradient(#1e1d28, #1e1d28) padding-box, linear-gradient(to right, #FF74D0, #B985FC) border-box",
+            //backgroundColor: active ? "#914180" : "info.contrastText",
             zIndex: 2,
             transition: "0.2s ease",
           },
@@ -48,9 +52,10 @@ export default function FilterButton({
           zIndex={3}
           position={"relative"}
           sx={{
+            color: active ? "#9effb0" : "white",
             top: active ? "0rem" : "-0.5rem",
             transition: "0.2s ease",
-            fontSize: isMobile ? "2rem" : isVeryTiny ? "1.8rem" : "1.4rem",
+            fontSize: isMobile ? "1.8rem" : isVeryTiny ? "1.8rem" : "1.4rem",
           }}
         >
           {title}

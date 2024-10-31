@@ -55,7 +55,7 @@ export default function WorkExperience() {
                     top: "-3rem",
                     rowGap: "0.5rem",
 
-                    ".grid-item:nth-child(3)": {
+                    ".grid-item:nth-of-type(3)": {
                       gridColumn: "1 / 3",
                       justifySelf: "center",
                     },
