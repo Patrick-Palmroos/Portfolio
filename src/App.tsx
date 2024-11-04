@@ -64,9 +64,9 @@ function App() {
                   <Box
                     sx={{
                       backgroundColor: "#251725",
-                      paddingBottom: smallProjects ? "4rem" : "8rem",
-                      paddingTop: smallProjects ? "0rem" : "0.2rem",
-                      marginTop: "6rem",
+                      paddingBottom: smallProjects ? "4rem" : "3rem",
+                      paddingTop: smallProjects ? "0rem" : "0rem",
+                      marginTop: smallProjects ? "6rem" : "8rem",
                     }}
                   >
                     <Box marginTop={"4rem"}>

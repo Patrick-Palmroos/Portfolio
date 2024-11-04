@@ -1,4 +1,4 @@
-import { Stack, Box, Zoom, Slide } from "@mui/material";
+import { Stack, Box, Zoom, Slide, Typography } from "@mui/material";
 import ProjectJson from "../util/projects.json";
 import { Project } from "../util/Interfaces.ts";
 import ProjectBox from "../util/ProjectBox/ProjectBox";
@@ -10,8 +10,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useMediaQuery } from "react-responsive";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useLanguage } from "../util/languageContext.tsx";
 
 export default function Projects() {
+  const { language } = useLanguage();
   const isDesktop = useMediaQuery({ query: "(min-width: 1215px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 940px)" });
   const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
@@ -350,6 +352,23 @@ export default function Projects() {
         <Box zIndex={5} paddingTop={isMobile ? 12 : isVeryTiny ? 2 : 0}>
           <PageBar page={pageId} pageCount={pageCount} />
         </Box>
+        {isVeryTiny ? null : (
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: "center",
+              fontSize: "1rem",
+              width: "80%",
+              marginTop: "-1rem !important",
+              color: "#9b8f9b",
+            }}
+          >
+            {language === "en"
+              ? "All of these projects are my original work. If you wish to read more, please click on the project you want to inspect"
+              : `Kaikki nämä projektit ovat alkuperäisiä töitäni. Voit painaa projektista
+            lukeaksesi lisää.`}
+          </Typography>
+        )}
       </Stack>
     </div>
   );
