@@ -41,7 +41,7 @@ export default function TopBar({
           paddingRight: "0.1rem",
           paddingBottom: "0.5rem",
           paddingTop: "1rem",
-          height: "4rem",
+          height: isDesktop ? "4rem" : "2.8rem",
           zIndex: 10,
         }}
       >
@@ -49,10 +49,10 @@ export default function TopBar({
           component={"a"}
           href="#"
           sx={{
-            width: "5rem",
-            height: "5rem",
+            width: "3.9rem",
+            height: "3.9rem",
             position: "absolute",
-            left: "0.2rem",
+            left: "0.1rem",
             top: "0.2rem",
             WebkitTapHighlightColor: "transparent",
             borderRadius: "50%",
@@ -76,10 +76,10 @@ export default function TopBar({
             style={{
               position: "absolute",
               transition: "0.4s ease",
-              left: isDesktop ? "0.5rem" : "0.8rem",
-              top: isDesktop ? "0.5rem" : "0.8rem",
-              width: isDesktop ? "4rem" : "3.5rem",
-              height: isDesktop ? "4rem" : "3.5rem",
+              left: isDesktop ? "0.5rem" : "0.3rem",
+              top: isDesktop ? "0.5rem" : "0.3rem",
+              width: isDesktop ? "4rem" : "3.4rem",
+              height: isDesktop ? "4rem" : "3.4rem",
             }}
           ></img>
         </Box>
@@ -105,6 +105,7 @@ export default function TopBar({
               title={language === "en" ? "Education" : "Koulutus"}
               link="#education"
             />
+            {/*Language Option */}
             <Box
               component={"button"}
               onClick={toggleLanguage}
@@ -171,7 +172,7 @@ export default function TopBar({
           </Box>
         ) : (
           <Box>
-            <Box sx={{ position: "absolute", right: "2rem", top: "1.2rem" }}>
+            <Box sx={{ position: "absolute", right: "1.8rem", top: "0.8rem" }}>
               <HamburgerMenu callback={handleClick} />
             </Box>
           </Box>
@@ -225,6 +226,7 @@ export default function TopBar({
               link="#education"
             />
           </Stack>
+          {/*Language Option*/}
           <Box
             component={"button"}
             onClick={toggleLanguage}
