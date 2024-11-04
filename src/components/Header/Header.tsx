@@ -14,12 +14,17 @@ import ContactButton from "../util/ContactButton/ContactButton";
 
 export default function Header() {
   const { language } = useLanguage();
+  const smallTopBar = useMediaQuery({ query: "(min-width: 1080px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 1000px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 650px)" });
 
   return (
     <div>
-      <Stack component={"section"} paddingTop={"8rem"} alignItems={"center"}>
+      <Stack
+        component={"section"}
+        paddingTop={smallTopBar ? "8rem" : "6.7rem"}
+        alignItems={"center"}
+      >
         {/*The box component. */}
         <Box
           display={"flex"}

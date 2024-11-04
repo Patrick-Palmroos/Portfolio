@@ -172,7 +172,7 @@ export default function TopBar({
           </Box>
         ) : (
           <Box>
-            <Box sx={{ position: "absolute", right: "1.8rem", top: "0.8rem" }}>
+            <Box sx={{ position: "absolute", right: "1.8rem", top: "0.65rem" }}>
               <HamburgerMenu callback={handleClick} />
             </Box>
           </Box>
@@ -180,10 +180,10 @@ export default function TopBar({
         <Box
           sx={{
             zIndex: 11,
-            top: "5.5rem",
+            top: "4.3rem",
             right: open ? "0rem" : "-20rem",
             height: "100%",
-            width: "20rem",
+            width: "14rem",
             position: "fixed",
             backgroundColor: "#19121c",
             transition: "0.5s ease",
@@ -235,7 +235,7 @@ export default function TopBar({
               background: "transparent",
               opacity: 0.8,
               position: "relative",
-              right: "-8.2rem",
+              right: "-5.1rem",
               top: "5rem",
               width: "4rem",
               height: "3rem",
