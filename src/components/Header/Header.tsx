@@ -45,7 +45,7 @@ export default function Header() {
                   borderRadius: isMobile ? "10px" : "0rem",
                   boxShadow: isMobile
                     ? "1rem -0.6rem 0px 0px #FF74D0"
-                    : "0rem 0.6rem 0px 0px #FF74D0",
+                    : "0rem 0.1rem 10px 0px rgba(20,0,23,1)",
                   marginTop: isMobile ? "0rem" : "-2.5rem",
                   width: isMobile ? "90%" : "100%",
                   height: "30rem",
@@ -74,9 +74,9 @@ export default function Header() {
                     }
                   : {
                       ...titleBox,
-                      left: "-1rem",
-                      width: "12rem",
-                      height: "13rem",
+                      left: "-2rem",
+                      width: "8.5rem",
+                      height: "10rem",
                     }
               }
             >
@@ -99,7 +99,7 @@ export default function Header() {
                           color: "primary.main",
                         }
                       : {
-                          fontSize: "1.5rem",
+                          fontSize: "1.2rem",
                           color: "primary.main",
                         }
                   }
@@ -123,8 +123,8 @@ export default function Header() {
                           color: "primary.contrastText",
                         }
                       : {
-                          fontSize: "3rem",
-                          lineHeight: "2.8rem",
+                          fontSize: "2.4rem",
+                          lineHeight: "2.3rem",
                           color: "primary.contrastText",
                         }
                   }
@@ -144,7 +144,8 @@ export default function Header() {
                         }
                       : {
                           paddingTop: "0.3rem",
-                          fontSize: "2rem",
+                          fontSize: "1.7rem",
+                          lineHeight: "1.6rem",
                           width: "13rem",
                         }
                   }
@@ -153,12 +154,13 @@ export default function Header() {
                 </Typography>
               </Box>
             </Stack>
+            {/*Contact button*/}
             <Box
               sx={{
                 position: "relative",
                 zIndex: 5,
                 top: "2rem",
-                left: isMobile ? "-3rem" : "-1.2rem",
+                left: isMobile ? "-3rem" : "-2rem",
               }}
             >
               <ContactButton
@@ -210,7 +212,7 @@ export default function Header() {
                         ...pfpStyle,
                         width: "28rem",
                         top: "-2rem",
-                        right: "4.4rem",
+                        right: "2.4rem",
                       }
                 }
               />
