@@ -83,7 +83,7 @@ Tämä oivallus sai minut tavoittelemaan uraa ohjelmoinnissa. En tuolloin tienny
                 of Business Administration degree, specializing in Software
                 Development. I love learning new things and continuously strive
                 to develop my skills and grow as a person. I enjoy working with
-                people, taking on new challenges, and learning from them!`:"Hei! Nimeni on Patrick Palmroos, ja olen kolmannen vuoden opiskelija Tampereen ammattikorkeakoulussa. Opiskelen tradenomiksi ja erikoistun ohjelmistotuotantoon. Rakastan oppia uusia asioita ja pyrin jatkuvasti kehittämään taitojani sekä kasvamaan ihmisenä. Nautin työskentelystä ihmisten kanssa, uusien haasteiden kohtaamisesta!",m.jsx("br",{}),m.jsx("br",{})," ",n==="en"?`I've always considered myself a quick learner, and
+                people, taking on new challenges, and learning from them!`:"Hei! Nimeni on Patrick Palmroos, ja olen kolmannen vuoden opiskelija Tampereen ammattikorkeakoulussa. Opiskelen tradenomi tietojenkäsittelyä ja erikoistun ohjelmistotuotantoon. Rakastan oppia uusia asioita ja pyrin jatkuvasti kehittämään taitojani sekä kasvamaan ihmisenä. Olen monissa eri asiakaspalvelu tilanteissa töitä tehneenä oppinut monia merkitseviä taitoja. Olen oma-aloitteinen ja nappaan kiinni haasteesta kuin haasteesta terävin hampain!",m.jsx("br",{}),m.jsx("br",{})," ",n==="en"?`I've always considered myself a quick learner, and
                 seeking knowledge has always been something I aspire toward. I
                 strive to improve my skills and knowledge every day! My goal is
                 to be able to look back at myself a year ago and say, 'Wow! I
