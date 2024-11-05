@@ -54,7 +54,7 @@ export default function AboutMe() {
                 Development. I love learning new things and continuously strive
                 to develop my skills and grow as a person. I enjoy working with
                 people, taking on new challenges, and learning from them!`
-                  : `Hei! Nimeni on Patrick Palmroos, ja olen kolmannen vuoden opiskelija Tampereen ammattikorkeakoulussa. Opiskelen tradenomiksi ja erikoistun ohjelmistotuotantoon. Rakastan oppia uusia asioita ja pyrin jatkuvasti kehittämään taitojani sekä kasvamaan ihmisenä. Nautin työskentelystä ihmisten kanssa, uusien haasteiden kohtaamisesta!`}
+                  : `Hei! Nimeni on Patrick Palmroos, ja olen kolmannen vuoden opiskelija Tampereen ammattikorkeakoulussa. Opiskelen tradenomi tietojenkäsittelyä ja erikoistun ohjelmistotuotantoon. Rakastan oppia uusia asioita ja pyrin jatkuvasti kehittämään taitojani sekä kasvamaan ihmisenä. Olen monissa eri asiakaspalvelu tilanteissa töitä tehneenä oppinut monia merkitseviä taitoja. Olen oma-aloitteinen ja nappaan kiinni haasteesta kuin haasteesta terävin hampain!`}
                 <br />
                 <br />{" "}
                 {language === "en"
