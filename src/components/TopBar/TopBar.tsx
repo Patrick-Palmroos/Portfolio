@@ -49,11 +49,11 @@ export default function TopBar({
           component={"a"}
           href="#"
           sx={{
-            width: "3.9rem",
-            height: "3.9rem",
+            width: isDesktop ? "4.7rem" : "3.9rem",
+            height: isDesktop ? "4.7rem" : "3.9rem",
             position: "absolute",
-            left: "0.1rem",
-            top: "0.2rem",
+            left: isDesktop ? "0.4rem" : "0.1rem",
+            top: isDesktop ? "0.4rem" : "0.2rem",
             WebkitTapHighlightColor: "transparent",
             borderRadius: "50%",
             background: "rgba(0, 0, 0, 0)",
@@ -76,8 +76,8 @@ export default function TopBar({
             style={{
               position: "absolute",
               transition: "0.4s ease",
-              left: isDesktop ? "0.5rem" : "0.3rem",
-              top: isDesktop ? "0.5rem" : "0.3rem",
+              left: isDesktop ? "0.4rem" : "0.3rem",
+              top: isDesktop ? "0.3rem" : "0.3rem",
               width: isDesktop ? "4rem" : "3.4rem",
               height: isDesktop ? "4rem" : "3.4rem",
             }}
