@@ -8,6 +8,8 @@
         "images/Logos/node.png",
         "images/Logos/react.png"
       ],
+      "linkTitle": "",
+      "link": "",
       "mobileImages": true,
       "images": [
         "images/StaffApp/phone1.png",
@@ -26,6 +28,8 @@
     {
       "id": 1,
       "name": "Weather App",
+      "linkTitle": "Video presentation",
+      "link": "https://www.youtube.com/watch?v=5GzSdmgynQE",
       "logos": [
         "images/Logos/kotlin.png",
         "images/Logos/jetpackcompose.png",
@@ -49,6 +53,8 @@
     {
       "id": 2,
       "name": "Language App",
+      "linkTitle": "Github",
+      "link": "https://github.com/Patrick-Palmroos/language-learning-app",
       "logos": [
         "images/Logos/react.png",
         "images/Logos/mysql.png",
@@ -72,6 +78,8 @@
     {
       "id": 3,
       "name": "WorkItOut!",
+      "linkTitle": "Google Play",
+      "link": "https://play.google.com/store/apps/details?id=com.placbo.workitout&pli=1",
       "logos": [
         "images/Logos/unity.png",
         "images/Logos/csharp.png",
@@ -95,6 +103,8 @@
     {
       "id": 4,
       "name": "Game Jams",
+      "linkTitle": "itch.io profile",
+      "link": "https://rostpa.itch.io/",
       "logos": [
         "images/Logos/unity.png",
         "images/Logos/csharp.png",

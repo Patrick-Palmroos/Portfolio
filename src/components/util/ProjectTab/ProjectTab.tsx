@@ -13,6 +13,7 @@ import { useMediaQuery } from "react-responsive";
 import { useLanguage } from "../languageContext";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import LinkIcon from "@mui/icons-material/Link";
 
 export default function ProjectTab({
   callback,
@@ -225,7 +226,37 @@ export default function ProjectTab({
                 >
                   {language === "en" ? project.durationEn : project.durationFi}
                 </Typography>
+                {project.link === "" ? null : (
+                  <Box
+                    component={"a"}
+                    href={project.link}
+                    style={{
+                      zIndex: 2,
+                      color: "white",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography
+                      variant="h2"
+                      style={{
+                        fontSize: "1rem",
+                      }}
+                    >
+                      {project.linkTitle}
+                    </Typography>
+
+                    <LinkIcon
+                      style={{
+                        color: "white",
+                        zIndex: 2,
+                        paddingLeft: "0.3rem",
+                        marginTop: "-0.1rem",
+                      }}
+                    />
+                  </Box>
+                )}
               </Stack>
+
               <Stack
                 direction={"row"}
                 paddingLeft={isMobile ? "1rem" : "1rem"}
