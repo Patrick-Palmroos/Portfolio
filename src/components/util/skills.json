@@ -146,7 +146,7 @@
     {
       "id": 13,
       "image": "images/Logos/java.png",
-      "width": 2,
+      "width": 3,
       "height": 2,
       "color1": "94, 172, 255",
       "color2": "255, 83, 83",
@@ -210,8 +210,19 @@
       "tag": "frontend"
     },
     {
-      "id": 1,
+      "id": 19,
       "image": "images/Logos/sass.png",
+      "width": 2,
+      "height": 1,
+      "color1": "203, 140, 255",
+      "color2": "255, 194, 235",
+      "glow": "255, 194, 235, 1",
+      "link": "https://sass-lang.com/",
+      "tag": "frontend"
+    },
+    {
+      "id": 20,
+      "image": "images/Logos/gitlab.png",
       "width": 1,
       "height": 1,
       "color1": "203, 140, 255",
