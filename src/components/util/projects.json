@@ -27,6 +27,31 @@
     },
     {
       "id": 1,
+      "name": "StaffApp",
+      "logos": [
+        "images/Logos/js.png",
+        "images/Logos/node.png",
+        "images/Logos/react.png"
+      ],
+      "linkTitle": "",
+      "link": "",
+      "mobileImages": true,
+      "images": [
+        "images/StaffApp/phone1.png",
+        "images/StaffApp/phone2.png",
+        "images/StaffApp/phone3.png"
+      ],
+      "backDrop": "images/StaffApp/backDrop.png",
+      "durationEn": "April 2024 - July 2024",
+      "durationFi": "Huhti 2024 - Heinä 2024",
+      "employer": "Entail",
+      "subtitleEn": "StaffApp is an application for posting and taking shifts for rental workers. It allows managers to easily post and track open shifts within their organization.",
+      "subtitleFi": "StaffApp on sovellus vuokratyöntekijöille vuorojen varaamiseen. Sen avulla päälliköt voivat helposti julkaista ja seurata avoimia vuoroja organisaatiossaan.",
+      "detailsEn": "I worked on StaffApp from start to finish as part of a team of five developers. The project began as a school assignment for our client, Entail Oy, and we continued working on it throughout the summer.\nMy responsibilities included both backend and frontend development, as well as being in charge of information security. This project provided a valuable opportunity to learn about teamwork and managing a larger project.\nIn the end, we developed a functional and visually appealing prototype, and the client was pleased with the result. We were happy with the outcome, and the project was a great learning experience overall.",
+      "detailsFi": "Työskentelin StaffApp-sovelluksen parissa alusta loppuun osana viiden kehittäjän tiimiä. Projekti alkoi koulutehtävänä asiakkaallemme, Entail Oy:lle ja jatkoimme sen parissa kesän läpi.\nVastasin sekä backend- että frontend-kehityksestä, ja olin vastuussa tietoturvasta. Tämä projekti antoi arvokasta kokemusta tiimityöskentelystä ja suuremman projektin hallinnasta.\nLopulta kehitimme toimivan ja visuaalisesti miellyttävän prototyypin, johon asiakkaamme oli tyytyväinen. Olimme tyytyväisiä tulokseen, ja projekti oli kokonaisuudessaan loistava oppimiskokemus."
+    },
+    {
+      "id": 2,
       "name": "Weather App",
       "linkTitle": "Video presentation",
       "link": "https://www.youtube.com/watch?v=5GzSdmgynQE",
@@ -51,7 +76,7 @@
       "detailsFi": "Tämä sovellus luotiin käyttäen Kotliniä ja Jetpack Composea Android Studiossa. Se käyttää ilmaista API:ta sää datan hakemiseen ja voidaan asentaa Android-laitteisiin.\nKehitin tämän sovelluksen osana koulukurssia. Sovellus valmistui kahdessa viikossa ja opetti minulle paljon.\nSe oli erinomainen tilaisuus rakentaa Kotlinilla backendiä, mikä auttoi minua kasvamaan kehittäjänä. Tämä projekti antoi myös mahdollisuuden tehdä ensimmäisen kaavioni ohjelmallisesti."
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Language App",
       "linkTitle": "Github",
       "link": "https://github.com/Patrick-Palmroos/language-learning-app",
@@ -76,7 +101,7 @@
       "detailsFi": "Tämä sovellus oli ensimmäinen full stack projektini, ja se toi mukanaan monia haasteita, tarjoten loistavan oppimiskokemuksen.\nRakensin frontendin Reactilla ja backendin Node.js:llä ja MySQL:llä. Projekti vaati monien uusien taitojen opettelua.\nKoska tämä oli ensimmäinen projekti, jossa yhdistin kaikki taitoni toimivaksi sovellukseksi, se merkitsi tärkeää pistettä kehityksessäni ohjelmoijana."
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "WorkItOut!",
       "linkTitle": "Google Play",
       "link": "https://play.google.com/store/apps/details?id=com.placbo.workitout&pli=1",
@@ -101,7 +126,7 @@
       "detailsFi": "Tämä peli kehitettiin ensimmäisen opiskeluvuoteni aikana asiakkaallemme Tykky:lle. Neljän hengen tiimimme tuotti tämän pelin Unityllä ja C#:lla. Roolini oli tiimin toinen ohjelmoija.\nProjektin suurin haaste oli suunnitella peli, joka keskittyisi työpaikan monimuotoisuuteen, mutta onnistuimme luomalla hauskan ja interaktiivisen pelikonseptin, jonka toteutimme loppuun.\nTämä oli ensimmäinen kokemukseni tiimityöstä ja pääsin tutustumaan kuuluisaan merge conflictiin! Tämä projekti opetti minulle arvokkaita asioita tiimiviestinnästä ja tiimityöstä."
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Game Jams",
       "linkTitle": "itch.io profile",
       "link": "https://rostpa.itch.io/",
