@@ -225,11 +225,11 @@
       "image": "images/Logos/gitlab.png",
       "width": 1,
       "height": 1,
-      "color1": "203, 140, 255",
-      "color2": "255, 194, 235",
-      "glow": "255, 194, 235, 1",
-      "link": "https://sass-lang.com/",
-      "tag": "frontend"
+      "color1": "251, 231, 200",
+      "color2": "255, 140, 90",
+      "glow": "62, 0, 0, 0.5",
+      "link": "https://about.gitlab.com/",
+      "tag": "tools"
     }
   ]
 }
