@@ -35,11 +35,11 @@
       ],
       "linkTitle": "Website",
       "link": "http://bay-calc.de/",
-      "mobileImages": true,
+      "mobileImages": false,
       "images": [
-        "images/BayCalc/logo.png",
-        "images/BayCalc/bayzen_logo.png",
-        "images/BayCalc/logo.png"
+        "images/BayCalc/baycalc_1.png",
+        "images/BayCalc/baycalc_2.png",
+        "images/BayCalc/baycalc_3.png"
       ],
       "backDrop": "images/BayCalc/german-uni.jpg",
       "durationEn": "October 2024 - December 2024",
