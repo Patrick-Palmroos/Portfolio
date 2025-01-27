@@ -160,6 +160,7 @@ export default function Projects() {
               <Box
                 sx={{
                   position: "relative",
+                  left: "0.5rem",
                   zIndex: 5,
                   rotate: "-180deg",
                 }}
