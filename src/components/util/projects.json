@@ -128,8 +128,8 @@
         {
             "id": 5,
             "name": "WorkItOut!",
-            "linkTitle": "Google Play",
-            "link": "https://play.google.com/store/apps/details?id=com.placbo.workitout&pli=1",
+            "linkTitle": "Check it out!",
+            "link": "https://webpages.tuni.fi/22tiko2c/",
             "logos": [
                 "images/Logos/unity.png",
                 "images/Logos/csharp.png",
