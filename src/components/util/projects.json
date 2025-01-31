@@ -77,6 +77,31 @@
         },
         {
             "id": 3,
+            "name": "GGJ Project",
+            "logos": [
+                "images/Logos/react.png",
+                "images/Logos/sass.png",
+                "images/Logos/github.png"
+            ],
+            "linkTitle": "Play online!",
+            "link": "https://globalgamejam.org/games/2025/aamunsarastuksen-mokkiseura-7",
+            "mobileImages": true,
+            "images": [
+                "images/WeatherApp/weather1.png",
+                "images/WeatherApp/weather1.png",
+                "images/WeatherApp/weather1.png"
+            ],
+            "backDrop": "images/ggj/ggj.png",
+            "durationEn": "January 24th - 26th 2025",
+            "durationFi": "Tammikuun 24 - 26 2025",
+            "employer": "FGJ",
+            "subtitleEn": "Aamunsarastuksen Mökkiseura is a web-based ARG mystery game, created during the 2025 Global Game Jam.",
+            "subtitleFi": "Aamunsarastuksen Mökkiseura on web-pohjainen ARG mysteeripeli, joka tuotettiin 2025 Global Game Jamiin. ",
+            "detailsEn": "This is our Global Game Jam project, 'Aamunsarastuksen Mökkiseura.' It is an ARG-style web-based mystery game. I worked as a programmer in a team consisting of two developers, a writer, and two artists. In just 48 hours, we created three separate websites where the mystery can be unraveled!\nI mainly developed the forum page and assisted with other parts of the project. I also worked on video material. GGJ was a fun experience where I got to contribute to game development and bring in a software development perspective.\nFor this project, we used React and JavaScript, along with basic CSS and some SCSS. I had the opportunity to practice project scope management and enjoy a small challenge!",
+            "detailsFi": "Tämä on meidän Global Game Jam tuotos 'Aamunsarastuksen Mökkiseura'. Aamunsarastuksen Mökkiseura on ARG tyylinen nettisivu mysteeri peli. Olin koodarina kahden ohjelmoijan, kirjoittajan ja kahden artistin tiimissä. Tuotimme 48 tunnissa kolme erillistä nettisivua, josta mysteerin voi selvittää!\nTuotin pääasiassa foorumi sivun ja avustin muissa osapuolissa. Työstin myös video materiaalin. GGJ oli hauska kokemus, jossa pääsin tuottamaan peliä ja tuomaan ohjelmistotuotannon puolta siihen.\nKäytimme projektissa Reactia ja JavaScriptiä. Käytössä oli myös perus css ja osittain scss. Pääsin harjoittamaan projektin laajuuden hallintaa ja nauttimaan pienestä haasteesta!"
+        },
+        {
+            "id": 4,
             "name": "Language App",
             "linkTitle": "Github",
             "link": "https://github.com/Patrick-Palmroos/language-learning-app",
@@ -101,7 +126,7 @@
             "detailsFi": "Tämä sovellus oli ensimmäinen full stack projektini, ja se toi mukanaan monia haasteita, tarjoten loistavan oppimiskokemuksen.\nRakensin frontendin Reactilla ja backendin Node.js:llä ja MySQL:llä. Projekti vaati monien uusien taitojen opettelua.\nKoska tämä oli ensimmäinen projekti, jossa yhdistin kaikki taitoni toimivaksi sovellukseksi, se merkitsi tärkeää pistettä kehityksessäni ohjelmoijana."
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "WorkItOut!",
             "linkTitle": "Google Play",
             "link": "https://play.google.com/store/apps/details?id=com.placbo.workitout&pli=1",
@@ -126,7 +151,7 @@
             "detailsFi": "Tämä peli kehitettiin ensimmäisen opiskeluvuoteni aikana asiakkaallemme Tykky:lle. Neljän hengen tiimimme tuotti tämän pelin Unityllä ja C#:lla. Roolini oli tiimin toinen ohjelmoija.\nProjektin suurin haaste oli suunnitella peli, joka keskittyisi työpaikan monimuotoisuuteen, mutta onnistuimme luomalla hauskan ja interaktiivisen pelikonseptin, jonka toteutimme loppuun.\nTämä oli ensimmäinen kokemukseni tiimityöstä ja pääsin tutustumaan kuuluisaan merge conflictiin! Tämä projekti opetti minulle arvokkaita asioita tiimiviestinnästä ja tiimityöstä."
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "Game Jams",
             "linkTitle": "itch.io profile",
             "link": "https://rostpa.itch.io/",
