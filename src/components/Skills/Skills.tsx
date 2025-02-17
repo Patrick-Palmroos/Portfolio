@@ -90,18 +90,19 @@ export default function Skills() {
                                     handleClick("backend");
                                 }}
                             />
-                            <FilterButton
-                                title="Other"
-                                active={activeTag === "api"}
-                                callback={() => {
-                                    handleClick("api");
-                                }}
-                            />
+
                             <FilterButton
                                 title="Tools"
                                 active={activeTag === "tools"}
                                 callback={() => {
                                     handleClick("tools");
+                                }}
+                            />
+                            <FilterButton
+                                title="Other"
+                                active={activeTag === "api"}
+                                callback={() => {
+                                    handleClick("api");
                                 }}
                             />
                         </Box>
