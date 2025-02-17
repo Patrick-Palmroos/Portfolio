@@ -85,13 +85,13 @@
             ],
             "linkTitle": "Play online!",
             "link": "https://globalgamejam.org/games/2025/aamunsarastuksen-mokkiseura-7",
-            "mobileImages": true,
+            "mobileImages": false,
             "images": [
-                "images/WeatherApp/weather1.png",
-                "images/WeatherApp/weather1.png",
-                "images/WeatherApp/weather1.png"
+                "images/ggj/ggj_1.png",
+                "images/ggj/ggj_2.png",
+                "images/ggj/ggj_3.png"
             ],
-            "backDrop": "images/ggj/ggj.png",
+            "backDrop": "images/ggj/fgj.png",
             "durationEn": "January 24th - 26th 2025",
             "durationFi": "Tammikuun 24 - 26 2025",
             "employer": "FGJ",
@@ -128,8 +128,8 @@
         {
             "id": 5,
             "name": "WorkItOut!",
-            "linkTitle": "Google Play",
-            "link": "https://play.google.com/store/apps/details?id=com.placbo.workitout&pli=1",
+            "linkTitle": "Check it out!",
+            "link": "https://webpages.tuni.fi/22tiko2c/",
             "logos": [
                 "images/Logos/unity.png",
                 "images/Logos/csharp.png",
