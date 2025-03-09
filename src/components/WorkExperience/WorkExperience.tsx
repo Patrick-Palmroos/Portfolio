@@ -296,7 +296,7 @@ export default function WorkExperience() {
                 <Typography
                   variant="h1"
                   sx={{
-                    fontSize: isMobile ? "35px" : isVeryTiny ? "30px" : "22px",
+                    fontSize: isMobile ? "34px" : isVeryTiny ? "30px" : "22px",
                     color: "primary.contrastText",
                   }}
                 >

@@ -141,12 +141,12 @@ export default function WorkButton({
               : isVeryTiny
               ? {
                   ...childStyle,
-                  fontSize: "3.6vw",
+                  fontSize: "3.3vw",
                   left: "0.5rem",
                 }
               : {
                   ...childStyle,
-                  fontSize: "19px",
+                  fontSize: "17px",
                   width: "8rem",
                   left: "0.5rem",
                 }
@@ -171,7 +171,7 @@ export default function WorkButton({
                   ...childStyle,
                   top: "1.5rem",
                   width: "8rem",
-                  fontSize: "17px",
+                  fontSize: "14px",
                   left: "0.5rem",
                 }
           }
