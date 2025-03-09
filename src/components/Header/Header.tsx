@@ -40,7 +40,7 @@ export default function Header() {
                     width: "100%",
                     height: "100%",
                     backgroundImage:
-                      "linear-gradient(-110deg, #e8cde500 36%, #B985FC)",
+                      "linear-gradient(-110deg, #e8cde500 36%, #27242E)",
                     zIndex: -1,
                   },
                 }
@@ -48,9 +48,6 @@ export default function Header() {
                   ...backgroundBox,
                   margin: isMobile ? "0px 3rem 0px 2rem" : "0rem",
                   borderRadius: isMobile ? "10px" : "0rem",
-                  boxShadow: isMobile
-                    ? "1rem -0.6rem 0px 0px #FF74D0"
-                    : "0rem 0.1rem 10px 0px rgba(20,0,23,1)",
                   marginTop: isMobile ? "0rem" : "-2.5rem",
                   width: isMobile ? "90%" : "100%",
                   height: "30rem",
@@ -60,7 +57,7 @@ export default function Header() {
                     width: "100%",
                     height: "100%",
                     backgroundImage:
-                      "linear-gradient(-110deg, #e8cde500 10%, #B985FC)",
+                      "linear-gradient(-110deg, #e8cde500 36%, #27242E)",
                     zIndex: -1,
                   },
                 }
@@ -195,7 +192,6 @@ export default function Header() {
                   ? { ...circle }
                   : {
                       ...circle,
-                      background: "rgba(232, 205, 229, 0.5)",
                       bottom: "-22rem",
                       left: "-17rem",
                       width: "33rem",
