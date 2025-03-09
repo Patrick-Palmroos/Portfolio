@@ -96,16 +96,13 @@ export default function Header() {
                     isDesktop
                       ? {
                           fontSize: "3vw",
-                          color: "primary.main",
                         }
                       : isMobile
                       ? {
                           fontSize: "4vw",
-                          color: "primary.main",
                         }
                       : {
                           fontSize: "1.2rem",
-                          color: "primary.main",
                         }
                   }
                   flexDirection={"row"}

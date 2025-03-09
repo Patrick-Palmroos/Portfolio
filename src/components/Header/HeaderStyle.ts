@@ -45,11 +45,12 @@ export const logoStyle: CSS.Properties = {
 
 export const titleBox: CSS.Properties = {
   position: "relative",
-  backgroundColor: "color(srgb 0 0 0 / 0.6)",
+  backgroundColor: "color(srgb 0 0 0 / 0.7)",
   padding: "1rem",
   paddingRight: "2rem",
   width: "40vw",
   left: "-3rem",
+  borderRadius: "1rem",
   top: "0",
   zIndex: 4,
 };
