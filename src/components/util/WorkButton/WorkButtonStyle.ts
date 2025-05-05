@@ -27,7 +27,7 @@ export const childStyle: CSS.Properties = {
   width: "11rem",
   top: "0.3rem",
   left: "1rem",
-  fontSize: "24px",
+  fontSize: "1.4rem",
   color: "white",
   transition: "0.3s ease",
 };

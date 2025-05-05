@@ -289,14 +289,19 @@ export default function WorkExperience() {
               display={"flex"}
               flexDirection={"row"}
               justifyContent={"space-between"}
+              flexWrap={"wrap"}
               alignItems={"center"}
             >
               {/*title and name */}
-              <Stack>
+              <Stack paddingBottom={"0.2rem"}>
                 <Typography
                   variant="h1"
                   sx={{
-                    fontSize: isMobile ? "34px" : isVeryTiny ? "30px" : "22px",
+                    fontSize: isMobile
+                      ? "2.3rem"
+                      : isVeryTiny
+                      ? "2rem"
+                      : "1.5rem",
                     color: "primary.contrastText",
                   }}
                 >
@@ -305,7 +310,11 @@ export default function WorkExperience() {
                 <Typography
                   variant="h1"
                   sx={{
-                    fontSize: isMobile ? "25px" : isVeryTiny ? "23px" : "18px",
+                    fontSize: isMobile
+                      ? "1.9rem"
+                      : isVeryTiny
+                      ? "1.5rem"
+                      : "1.2rem",
                   }}
                 >
                   {language === "en"
@@ -318,6 +327,7 @@ export default function WorkExperience() {
                 <Typography
                   variant="h1"
                   sx={{
+                    color: "#d5a9db",
                     fontSize: isMobile ? "25px" : isVeryTiny ? "20px" : "15px",
                   }}
                 >
@@ -334,7 +344,7 @@ export default function WorkExperience() {
                 variant="h2"
                 sx={{
                   fontSize: isDesktop
-                    ? "20px"
+                    ? "1.2rem"
                     : isMobile
                     ? "19px"
                     : isVeryTiny

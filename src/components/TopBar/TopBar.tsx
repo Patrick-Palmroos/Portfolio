@@ -159,7 +159,7 @@ export default function TopBar({
                 className="txt"
                 variant="h2"
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "1.1rem",
                   position: "absolute",
                   left: "0.4rem",
                   top: "1.7rem",
@@ -278,7 +278,7 @@ export default function TopBar({
               className="txt"
               variant="h2"
               sx={{
-                fontSize: "17px",
+                fontSize: "1.1rem",
                 position: "absolute",
                 left: "0.4rem",
                 top: "1.7rem",

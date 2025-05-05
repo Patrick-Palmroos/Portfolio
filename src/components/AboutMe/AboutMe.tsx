@@ -40,10 +40,10 @@ export default function AboutMe() {
                 variant="h2"
                 sx={
                   isTabletOrMobile
-                    ? { fontSize: "25px" }
+                    ? { fontSize: "1.6rem" }
                     : isVeryTiny
                     ? { fontSize: "calc(2vw + 2px)" }
-                    : { fontSize: "15px" }
+                    : { fontSize: "0.9rem" }
                 }
               >
                 {" "}

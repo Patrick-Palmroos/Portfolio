@@ -40,7 +40,7 @@ export const imageStyle: CSS.Properties = {
 
 export const titleStyle: CSS.Properties = {
   position: "absolute",
-  fontSize: "27px",
+  fontSize: "1.8rem",
   color: "#E2FFA6",
   width: "18rem",
   top: "1.7rem",
