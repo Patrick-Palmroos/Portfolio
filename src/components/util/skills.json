@@ -9,7 +9,7 @@
       "color2": "0, 246, 255",
       "glow": "143, 231, 255, 0.5",
       "link": "https://www.ibm.com/topics/rest-apis",
-      "tag": "api"
+      "tag": "libraries"
     },
     {
       "id": 1,
@@ -31,7 +31,7 @@
       "color2": "217, 170, 0",
       "glow": "246, 255, 45, 0.8",
       "link": "https://www.swift.org/",
-      "tag": "frontend"
+      "tag": "languages"
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "color2": "183, 117, 255",
       "glow": "0, 133, 133, 0.5",
       "link": "https://react.dev/",
-      "tag": "frontend"
+      "tag": "libraries"
     },
 
     {
@@ -54,7 +54,7 @@
       "color2": "255, 83, 83",
       "glow": "254, 94, 255, 1",
       "link": "https://fi.wikipedia.org/wiki/Java",
-      "tag": "backend"
+      "tag": "languages"
     },
     {
       "id": 5,
@@ -65,7 +65,7 @@
       "color2": "140, 186, 33",
       "glow": "50, 85, 38, 1",
       "link": "https://nodejs.org/en",
-      "tag": "api"
+      "tag": "libraries"
     },
     {
       "id": 6,
@@ -76,7 +76,7 @@
       "color2": "217, 0, 98",
       "glow": "234, 77, 255, 1",
       "link": "https://en.wikipedia.org/wiki/HTML5",
-      "tag": "frontend"
+      "tag": "languages"
     },
     {
       "id": 7,
@@ -87,7 +87,7 @@
       "color2": "45, 131, 255",
       "glow": "82, 255, 198, 0.7",
       "link": "https://fi.wikipedia.org/wiki/CSS",
-      "tag": "frontend"
+      "tag": "languages"
     },
     {
       "id": 8,
@@ -101,6 +101,17 @@
       "tag": "tools"
     },
     {
+      "id": 27,
+      "image": "images/Logos/github.png",
+      "width": 1,
+      "height": 1,
+      "color1": "175, 0, 105",
+      "color2": "217, 42, 0",
+      "glow": "88, 26, 86, 0.8",
+      "link": "https://github.com/",
+      "tag": "tools"
+    },
+    {
       "id": 9,
       "image": "images/Logos/csharp.png",
       "width": 1,
@@ -109,7 +120,7 @@
       "color2": "189, 0, 113",
       "glow": "255, 186, 245, 1",
       "link": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
-      "tag": "backend"
+      "tag": "languages"
     },
     {
       "id": 10,
@@ -120,7 +131,7 @@
       "color2": "70, 216, 255",
       "glow": "253, 245, 128, 0.5",
       "link": "https://www.mysql.com/",
-      "tag": "backend"
+      "tag": "libraries"
     },
     {
       "id": 11,
@@ -131,7 +142,7 @@
       "color2": "225, 225, 87",
       "glow": "255, 255, 157, 0.5",
       "link": "https://expressjs.com/",
-      "tag": "api"
+      "tag": "frameworks"
     },
     {
       "id": 12,
@@ -142,7 +153,7 @@
       "color2": "47, 206, 202",
       "glow": "87, 25, 69, 0.2",
       "link": "https://tailwindcss.com/",
-      "tag": "frontend"
+      "tag": "libraries"
     },
     {
       "id": 13,
@@ -153,7 +164,7 @@
       "color2": "223, 194, 0",
       "glow": "153, 217, 123, 1",
       "link": "https://fi.wikipedia.org/wiki/JavaScript",
-      "tag": "frontend"
+      "tag": "languages"
     },
     {
       "id": 14,
@@ -164,7 +175,7 @@
       "color2": "255, 225, 253",
       "glow": "255, 217, 253, 0.7",
       "link": "https://unity.com/",
-      "tag": "tools"
+      "tag": "frameworks"
     },
     {
       "id": 15,
@@ -175,7 +186,7 @@
       "color2": "255, 196, 52",
       "glow": "181, 252, 255, 0.5",
       "link": "https://kotlinlang.org/",
-      "tag": "backend"
+      "tag": "languages"
     },
     {
       "id": 16,
@@ -186,7 +197,7 @@
       "color2": "232, 165, 255",
       "glow": "255, 194, 235, 1",
       "link": "https://www.typescriptlang.org/",
-      "tag": "frontend"
+      "tag": "languages"
     },
     {
       "id": 17,
@@ -208,7 +219,7 @@
       "color2": "175, 172, 255",
       "glow": "173, 255, 255, 0.7",
       "link": "https://developer.android.com/compose",
-      "tag": "frontend"
+      "tag": "frameworks"
     },
     {
       "id": 19,
@@ -219,7 +230,7 @@
       "color2": "255, 194, 235",
       "glow": "255, 194, 235, 1",
       "link": "https://sass-lang.com/",
-      "tag": "frontend"
+      "tag": "languages"
     },
     {
       "id": 20,
@@ -241,18 +252,75 @@
       "color2": "255, 228, 118",
       "glow": "255, 255, 255, 0.8",
       "link": "https://firebase.google.com/",
-      "tag": "backend"
+      "tag": "libraries"
     },
+
+    {
+      "id": 23,
+      "image": "images/Logos/C.png",
+      "width": 1,
+      "height": 1,
+      "color1": "113, 125, 185",
+      "color2": "64, 31, 89",
+      "glow": "62, 0, 0, 0.5",
+      "link": "https://en.wikipedia.org/wiki/C_(programming_language)",
+      "tag": "languages"
+    },
+    {
+      "id": 24,
+      "image": "images/Logos/C++.png",
+      "width": 1,
+      "height": 1,
+      "color1": "113, 125, 185",
+      "color2": "64, 31, 89",
+      "glow": "62, 0, 0, 0.5",
+      "link": "https://en.wikipedia.org/wiki/C%2B%2B",
+      "tag": "languages"
+    },
+    {
+      "id": 28,
+      "image": "images/Logos/docker.png",
+      "width": 1,
+      "height": 1,
+      "color1": "20, 92, 181",
+      "color2": "145, 0, 255",
+      "glow": "62, 0, 0, 0.5",
+      "link": "https://www.docker.com/",
+      "tag": "tools"
+    },
+    {
+      "id": 26,
+      "image": "images/Logos/postgre.png",
+      "width": 1,
+      "height": 1,
+      "color1": "173, 209, 255",
+      "color2": "0, 137, 255",
+      "glow": "62, 0, 0, 0.5",
+      "link": "https://www.postgresql.org/",
+      "tag": "libraries"
+    },
+
     {
       "id": 22,
       "image": "images/Logos/nextjs.webp",
-      "width": 1,
-      "height": 1,
+      "width": 2,
+      "height": 2,
       "color1": "72, 59, 97",
       "color2": "50, 31, 89",
       "glow": "62, 0, 0, 0.5",
       "link": "https://nextjs.org/",
-      "tag": "frontend"
+      "tag": "frameworks"
+    },
+    {
+      "id": 29,
+      "image": "images/Logos/php.png",
+      "width": 2,
+      "height": 1,
+      "color1": "50, 31, 89",
+      "color2": "72, 59, 97",
+      "glow": "62, 0, 0, 0.5",
+      "link": "https://www.php.net/",
+      "tag": "languages"
     }
   ]
 }
