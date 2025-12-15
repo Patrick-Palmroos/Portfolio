@@ -141,12 +141,12 @@ export default function WorkButton({
               : isVeryTiny
               ? {
                   ...childStyle,
-                  fontSize: "3.6vw",
+                  fontSize: "1.4rem",
                   left: "0.5rem",
                 }
               : {
                   ...childStyle,
-                  fontSize: "19px",
+                  fontSize: "1rem",
                   width: "8rem",
                   left: "0.5rem",
                 }
@@ -159,19 +159,19 @@ export default function WorkButton({
           variant={"h1"}
           sx={
             isMobile
-              ? { ...childStyle, top: "2.4rem", fontSize: "20px" }
+              ? { ...childStyle, top: "2.4rem", fontSize: "1.2rem" }
               : isVeryTiny
               ? {
                   ...childStyle,
                   top: "calc(1vw + 1.7rem)",
-                  fontSize: "2.5vw",
+                  fontSize: "1.2rem",
                   left: "0.5rem",
                 }
               : {
                   ...childStyle,
                   top: "1.5rem",
                   width: "8rem",
-                  fontSize: "17px",
+                  fontSize: "0.9rem",
                   left: "0.5rem",
                 }
           }
@@ -188,14 +188,14 @@ export default function WorkButton({
               ? {
                   ...childStyle,
                   top: "calc(1vw + 3.2rem)",
-                  fontSize: "2.5vw",
+                  fontSize: "2.4vw",
                   left: "0.5rem",
                 }
               : {
                   ...childStyle,
                   top: "2.7rem",
                   width: "8rem",
-                  fontSize: "17px",
+                  fontSize: "1rem",
                   left: "0.5rem",
                 }
           }

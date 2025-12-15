@@ -13,6 +13,7 @@ import { useMediaQuery } from "react-responsive";
 import { useLanguage } from "../languageContext";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import LinkIcon from "@mui/icons-material/Link";
 
 export default function ProjectTab({
   callback,
@@ -225,11 +226,48 @@ export default function ProjectTab({
                 >
                   {language === "en" ? project.durationEn : project.durationFi}
                 </Typography>
+                {project.link === "" ? null : (
+                  <Box
+                    component={"a"}
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      zIndex: 2,
+                      color: "white",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography
+                      variant="h2"
+                      style={{
+                        fontSize: "1rem",
+                      }}
+                    >
+                      {project.linkTitle}
+                    </Typography>
+
+                    <LinkIcon
+                      style={{
+                        color: "white",
+                        zIndex: 2,
+                        paddingLeft: "0.3rem",
+                        marginTop: "-0.1rem",
+                      }}
+                    />
+                  </Box>
+                )}
               </Stack>
+
               <Stack
                 direction={"row"}
                 paddingLeft={isMobile ? "1rem" : "1rem"}
                 paddingBottom={"0.3rem"}
+                sx={{
+                  background: "#15002194",
+                  borderRadius: "1rem",
+                  paddingBottom: "1rem",
+                }}
               >
                 {project.logos.map((value, index) => (
                   <img
@@ -240,8 +278,14 @@ export default function ProjectTab({
                       isDesktop
                         ? { ...iconStyle }
                         : isMobile
-                        ? { ...iconStyle, height: "3.5rem" }
-                        : { ...iconStyle, height: "3rem" }
+                        ? {
+                            ...iconStyle,
+                            height: "3.5rem",
+                          }
+                        : {
+                            ...iconStyle,
+                            height: "3rem",
+                          }
                     }
                     className="image"
                   />

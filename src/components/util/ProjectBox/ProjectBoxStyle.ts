@@ -23,7 +23,7 @@ export const imageStyle: CSS.Properties = {
 
 export const titleStyle: CSS.Properties = {
   color: "#E2FFA6",
-  fontSize: "40px",
+  fontSize: "2.7rem",
   paddingLeft: "1rem",
   paddingTop: "0.7rem",
   textShadow: "0 2px 10px rgba(0, 0, 0, 0.25)",
@@ -33,8 +33,8 @@ export const titleStyle: CSS.Properties = {
 
 export const subtitleStyle: CSS.Properties = {
   color: "common.white",
-  fontSize: "18px",
-  width: "310px",
+  fontSize: "1.1rem",
+  width: "20rem",
   paddingLeft: "1rem",
   textAlign: "start",
   textShadow: "0 1px 2px rgba(0, 0, 0, 0.25)",
@@ -46,7 +46,7 @@ export const logoStyle: CSS.Properties = {
   marginTop: "-0.4rem",
   height: "2.2rem",
   paddingRight: "0.5rem",
-  filter: "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5))",
+  filter: "drop-shadow(1px 2px 1px rgb(0, 0, 0, 0.8))",
   transition: "0.4s ease",
   zIndex: 5,
 };

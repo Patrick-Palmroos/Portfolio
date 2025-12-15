@@ -63,7 +63,7 @@ export default function LayerButton({
           <Typography
             className="text"
             sx={{
-              fontSize: "30px",
+              fontSize: "1.8rem",
               zIndex: 3,
               position: "relative",
               transform: "translateY(0)",

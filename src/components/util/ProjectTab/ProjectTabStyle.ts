@@ -47,6 +47,7 @@ export const dateTextStyle: CSS.Properties = {
   fontSize: "30px",
   paddingTop: "0.5rem",
   paddingBottom: "0.5rem",
+  filter: "drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8))",
   color: "#b5afb4",
   zIndex: 1,
 };
@@ -54,7 +55,7 @@ export const dateTextStyle: CSS.Properties = {
 export const iconStyle: CSS.Properties = {
   paddingTop: "1rem",
   paddingRight: "0.5rem",
-  filter: "drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5))",
+  filter: "drop-shadow(0px 1px 1px rgba(255, 0, 225, 0.8))",
   height: "4rem",
   width: "auto",
   zIndex: 1,
@@ -63,7 +64,7 @@ export const iconStyle: CSS.Properties = {
 export const textStyle: CSS.Properties = {
   display: "flex",
   alignItems: "center",
-  fontSize: "22px",
+  fontSize: "1.4rem",
   margin: "1rem 3rem 0rem 3rem",
   width: "70%",
   zIndex: 3,

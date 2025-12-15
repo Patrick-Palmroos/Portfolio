@@ -30,7 +30,7 @@ export default function ContactButton({
             borderRadius: "15px",
             boxShadow: "0px 2px 6px 3px #00000080",
             zIndex: 3,
-            background: "#2CD8A4",
+            background: "#35653d",
 
             "&::before": {
               content: '""',
@@ -41,7 +41,7 @@ export default function ContactButton({
               borderRadius: "15px",
               top: "-1rem",
               left: "0rem",
-              background: "#95ff85",
+              background: "#4cb795",
               boxShadow: "0px -2px 0px white",
               transition: "0.4s ease",
             },

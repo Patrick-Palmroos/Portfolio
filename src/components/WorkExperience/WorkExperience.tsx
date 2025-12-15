@@ -14,6 +14,7 @@ import { useLanguage } from "../util/languageContext";
 
 export default function WorkExperience() {
   const { language } = useLanguage();
+  const backgroundChange = useMediaQuery({ query: "(min-width: 1224px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 950px)" });
   const isMobile = useMediaQuery({ query: "(min-width: 750px)" });
   const isVeryTiny = useMediaQuery({ query: "(min-width: 650px)" });
@@ -259,7 +260,12 @@ export default function WorkExperience() {
           <Box
             sx={
               isDesktop
-                ? { ...detailBox }
+                ? {
+                    ...detailBox,
+                    background: backgroundChange
+                      ? "linear-gradient(#1e1d28, #1e1d28) padding-box, linear-gradient(to right, #FF74D0, #B985FC) border-box"
+                      : "linear-gradient(#27242E, #27242E) padding-box, linear-gradient(to right, #FF74D0, #B985FC) border-box",
+                  }
                 : isMobile
                 ? { ...detailBox, width: "39rem", height: "auto" }
                 : isVeryTiny
@@ -283,14 +289,19 @@ export default function WorkExperience() {
               display={"flex"}
               flexDirection={"row"}
               justifyContent={"space-between"}
+              flexWrap={"wrap"}
               alignItems={"center"}
             >
               {/*title and name */}
-              <Stack>
+              <Stack paddingBottom={"0.2rem"}>
                 <Typography
                   variant="h1"
                   sx={{
-                    fontSize: isMobile ? "35px" : isVeryTiny ? "30px" : "22px",
+                    fontSize: isMobile
+                      ? "2.3rem"
+                      : isVeryTiny
+                      ? "2rem"
+                      : "1.5rem",
                     color: "primary.contrastText",
                   }}
                 >
@@ -299,7 +310,11 @@ export default function WorkExperience() {
                 <Typography
                   variant="h1"
                   sx={{
-                    fontSize: isMobile ? "25px" : isVeryTiny ? "23px" : "18px",
+                    fontSize: isMobile
+                      ? "1.9rem"
+                      : isVeryTiny
+                      ? "1.5rem"
+                      : "1.2rem",
                   }}
                 >
                   {language === "en"
@@ -312,6 +327,7 @@ export default function WorkExperience() {
                 <Typography
                   variant="h1"
                   sx={{
+                    color: "#d5a9db",
                     fontSize: isMobile ? "25px" : isVeryTiny ? "20px" : "15px",
                   }}
                 >
@@ -328,7 +344,7 @@ export default function WorkExperience() {
                 variant="h2"
                 sx={{
                   fontSize: isDesktop
-                    ? "20px"
+                    ? "1.2rem"
                     : isMobile
                     ? "19px"
                     : isVeryTiny

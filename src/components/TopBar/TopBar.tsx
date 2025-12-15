@@ -41,7 +41,7 @@ export default function TopBar({
           paddingRight: "0.1rem",
           paddingBottom: "0.5rem",
           paddingTop: "1rem",
-          height: "4rem",
+          height: isDesktop ? "4rem" : "2.8rem",
           zIndex: 10,
         }}
       >
@@ -49,11 +49,11 @@ export default function TopBar({
           component={"a"}
           href="#"
           sx={{
-            width: "5rem",
-            height: "5rem",
+            width: isDesktop ? "4.7rem" : "3.9rem",
+            height: isDesktop ? "4.7rem" : "3.9rem",
             position: "absolute",
-            left: "0.2rem",
-            top: "0.2rem",
+            left: isDesktop ? "0.4rem" : "0.1rem",
+            top: isDesktop ? "0.4rem" : "0.2rem",
             WebkitTapHighlightColor: "transparent",
             borderRadius: "50%",
             background: "rgba(0, 0, 0, 0)",
@@ -76,10 +76,10 @@ export default function TopBar({
             style={{
               position: "absolute",
               transition: "0.4s ease",
-              left: isDesktop ? "0.5rem" : "0.8rem",
-              top: isDesktop ? "0.5rem" : "0.8rem",
-              width: isDesktop ? "4rem" : "3.5rem",
-              height: isDesktop ? "4rem" : "3.5rem",
+              left: isDesktop ? "0.4rem" : "0.3rem",
+              top: isDesktop ? "0.3rem" : "0.3rem",
+              width: isDesktop ? "4rem" : "3.4rem",
+              height: isDesktop ? "4rem" : "3.4rem",
             }}
           ></img>
         </Box>
@@ -105,6 +105,7 @@ export default function TopBar({
               title={language === "en" ? "Education" : "Koulutus"}
               link="#education"
             />
+            {/*Language Option */}
             <Box
               component={"button"}
               onClick={toggleLanguage}
@@ -158,7 +159,7 @@ export default function TopBar({
                 className="txt"
                 variant="h2"
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "1.1rem",
                   position: "absolute",
                   left: "0.4rem",
                   top: "1.7rem",
@@ -171,7 +172,7 @@ export default function TopBar({
           </Box>
         ) : (
           <Box>
-            <Box sx={{ position: "absolute", right: "2rem", top: "1.2rem" }}>
+            <Box sx={{ position: "absolute", right: "1.8rem", top: "0.65rem" }}>
               <HamburgerMenu callback={handleClick} />
             </Box>
           </Box>
@@ -179,10 +180,10 @@ export default function TopBar({
         <Box
           sx={{
             zIndex: 11,
-            top: "5.5rem",
+            top: "4.3rem",
             right: open ? "0rem" : "-20rem",
             height: "100%",
-            width: "20rem",
+            width: "14rem",
             position: "fixed",
             backgroundColor: "#19121c",
             transition: "0.5s ease",
@@ -225,6 +226,7 @@ export default function TopBar({
               link="#education"
             />
           </Stack>
+          {/*Language Option*/}
           <Box
             component={"button"}
             onClick={toggleLanguage}
@@ -233,7 +235,7 @@ export default function TopBar({
               background: "transparent",
               opacity: 0.8,
               position: "relative",
-              right: "-8.2rem",
+              right: "-5.1rem",
               top: "5rem",
               width: "4rem",
               height: "3rem",
@@ -276,7 +278,7 @@ export default function TopBar({
               className="txt"
               variant="h2"
               sx={{
-                fontSize: "17px",
+                fontSize: "1.1rem",
                 position: "absolute",
                 left: "0.4rem",
                 top: "1.7rem",

@@ -1,7 +1,7 @@
 import CSS from "csstype";
 
 export const titleStyle: CSS.Properties = {
-  fontSize: "60px",
+  fontSize: "4rem",
   marginLeft: "0rem",
   whiteSpace: "nowrap",
   backgroundImage:

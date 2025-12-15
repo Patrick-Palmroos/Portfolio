@@ -1,34 +1,34 @@
-import { Box } from "@mui/material";
-import SkillsJson from "../util/skills.json";
-import { gridStyle } from "./SkillsStyle";
-import { Skill } from "../util/Interfaces";
-import SkillBox from "../util/SkillBox/SkillBox";
-import ScrollAnimation from "react-animate-on-scroll";
-import { useMediaQuery } from "react-responsive";
-import FilterButton from "../util/FilterButton/FilterButton";
-import { useState, useEffect } from "react";
+import { Box } from '@mui/material';
+import SkillsJson from '../util/skills.json';
+import { gridStyle } from './SkillsStyle';
+import { Skill } from '../util/Interfaces';
+import SkillBox from '../util/SkillBox/SkillBox';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { useMediaQuery } from 'react-responsive';
+import FilterButton from '../util/FilterButton/FilterButton';
+import { useState, useEffect } from 'react';
 
 export default function Skills() {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" });
-  const isMobile = useMediaQuery({ query: "(min-width: 730px)" });
-  const isVeryTiny = useMediaQuery({ query: "(min-width: 550px)" });
-  const [activeTag, setActiveTag] = useState<string>("");
+  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
+  const isMobile = useMediaQuery({ query: '(min-width: 730px)' });
+  const isVeryTiny = useMediaQuery({ query: '(min-width: 550px)' });
+  const [activeTag, setActiveTag] = useState<string>('');
   const skillsList = SkillsJson.skills;
   const topRow = skillsList.slice(0, 2);
   const theMiddle = skillsList.slice(2, skillsList.length - 3);
   const bottomRow = skillsList.slice(skillsList.length - 3, skillsList.length);
 
-  const boxSize = isDesktop ? "5rem" : isVeryTiny ? "4.2rem" : "3.8rem";
+  const boxSize = isDesktop ? '5rem' : isVeryTiny ? '4.2rem' : '3.3rem';
 
   useEffect(() => {
     if (isDesktop) {
-      setActiveTag("");
+      setActiveTag('');
     }
   }, [isDesktop]);
 
   const handleClick = (tag: string) => {
     if (activeTag === tag) {
-      setActiveTag("");
+      setActiveTag('');
     } else {
       setActiveTag(tag);
     }
@@ -36,76 +36,72 @@ export default function Skills() {
 
   return (
     <div>
-      <ScrollAnimation
-        animateIn={"fadeIn"}
-        duration={0.5}
-        animateOnce={true}
-        delay={200}
-      >
+      <ScrollAnimation animateIn={'fadeIn'} duration={0.5} animateOnce={true} delay={200}>
         <Box
           sx={{
-            height: isDesktop ? "40.5rem" : isVeryTiny ? "38rem" : "34rem",
-            width: isDesktop ? "38rem" : "100%",
-            marginBottom: "5rem",
-            display: "flex",
-            flexDirection: isMobile ? "row" : "column",
-            alignItems: "center",
-            justifyContent: "space-between",
+            height: isDesktop ? '45.5rem' : isVeryTiny ? '46rem' : '38rem',
+            width: isDesktop ? '38rem' : '100%',
+            marginBottom: '5rem',
+            display: 'flex',
+            flexDirection: isMobile ? 'row' : 'column',
+            alignItems: 'center',
+            justifyContent: 'space-between'
           }}
-          alignContent={"center"}
+          alignContent={'center'}
         >
           {!isDesktop && (
             <Box
-              display={isMobile ? "flex" : "grid"}
+              display={isMobile ? 'flex' : 'grid'}
               sx={
                 isMobile
                   ? {
-                      paddingRight: "5rem",
-                      flexDirection: "column",
+                      paddingRight: '5rem',
+                      flexDirection: 'column'
                     }
                   : {
-                      gridTemplateColumns: "auto auto",
-                      columnGap: "0.2rem",
+                      gridTemplateColumns: 'auto auto',
+                      columnGap: '0.2rem'
                     }
               }
             >
               <FilterButton
-                title="Frontend"
-                active={activeTag === "frontend"}
+                title='Languages'
+                active={activeTag === 'languages'}
                 callback={() => {
-                  handleClick("frontend");
+                  handleClick('languages');
                 }}
               />
               <FilterButton
-                title="Backend"
-                active={activeTag === "backend"}
+                title='Frameworks'
+                active={activeTag === 'frameworks'}
                 callback={() => {
-                  handleClick("backend");
+                  handleClick('frameworks');
+                }}
+              />
+
+              <FilterButton
+                title='Tools'
+                active={activeTag === 'tools'}
+                callback={() => {
+                  handleClick('tools');
                 }}
               />
               <FilterButton
-                title="Api"
-                active={activeTag === "api"}
+                title='Libraries'
+                active={activeTag === 'libraries'}
                 callback={() => {
-                  handleClick("api");
-                }}
-              />
-              <FilterButton
-                title="Tools"
-                active={activeTag === "tools"}
-                callback={() => {
-                  handleClick("tools");
+                  handleClick('libraries');
                 }}
               />
             </Box>
           )}
-          <Box marginLeft={isDesktop ? "3rem" : "0rem"}>
+          <Box marginLeft={isDesktop ? '3rem' : '0rem'}>
             {/*TopRow*/}
             <Box
               sx={{
                 ...gridStyle,
                 gridTemplateColumns: `repeat(5, ${boxSize})`,
-                gridAutoRows: `${boxSize}`,
+                gridAutoRows: `${boxSize}`
               }}
             >
               <Box />
@@ -119,8 +115,8 @@ export default function Skills() {
             <Box
               sx={{
                 ...gridStyle,
-                gridTemplateColumns: `repeat(5, ${boxSize})`,
-                gridAutoRows: `${boxSize}`,
+                gridTemplateColumns: `repeat(6, ${boxSize})`,
+                gridAutoRows: `${boxSize}`
               }}
             >
               <Box />
@@ -133,7 +129,7 @@ export default function Skills() {
               sx={{
                 ...gridStyle,
                 gridTemplateColumns: `repeat(5, ${boxSize})`,
-                gridAutoRows: `${boxSize}`,
+                gridAutoRows: `${boxSize}`
               }}
             >
               <Box />

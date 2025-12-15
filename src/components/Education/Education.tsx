@@ -29,7 +29,6 @@ export default function Education() {
           <ScrollAnimation
             animateIn={"fadeInLeft"}
             duration={0.5}
-            delay={100}
             animateOnce={true}
           >
             <Box position={"relative"}>
@@ -71,11 +70,11 @@ export default function Education() {
                     isMobile
                       ? { ...titleStyle }
                       : isVeryTiny
-                      ? { ...titleStyle, fontSize: "26px" }
+                      ? { ...titleStyle, fontSize: "1.5rem" }
                       : {
                           ...titleStyle,
                           top: "1.2rem",
-                          fontSize: "17px",
+                          fontSize: "1.2rem",
                           width: "11rem",
                         }
                   }
@@ -91,7 +90,7 @@ export default function Education() {
                       ? { ...subtitleStyle, top: "6.5rem" }
                       : isVeryTiny
                       ? { ...subtitleStyle, top: "6rem", fontSize: "20px" }
-                      : { ...subtitleStyle, top: "4.2rem", fontSize: "15px" }
+                      : { ...subtitleStyle, top: "4.2rem", fontSize: "1rem" }
                   }
                 >
                   {language === "en"
@@ -105,7 +104,7 @@ export default function Education() {
                       ? { ...subtitleStyle, top: "9rem" }
                       : isVeryTiny
                       ? { ...subtitleStyle, top: "8rem", fontSize: "20px" }
-                      : { ...subtitleStyle, top: "6rem", fontSize: "14px" }
+                      : { ...subtitleStyle, top: "6rem", fontSize: "0.9rem" }
                   }
                 >
                   2022-2025
@@ -132,7 +131,7 @@ export default function Education() {
                           ...subtitleStyle,
                           top: "6rem",
                           left: "7rem",
-                          fontSize: "14px",
+                          fontSize: "1rem",
                           color: "#E2FFA6",
                         }
                   }
@@ -158,7 +157,6 @@ export default function Education() {
           <ScrollAnimation
             animateIn={"fadeInRight"}
             duration={0.5}
-            delay={200}
             animateOnce={true}
           >
             <Box position={"relative"} top={isDesktop ? 0 : -45}>
@@ -200,11 +198,11 @@ export default function Education() {
                     isMobile
                       ? { ...titleStyle }
                       : isVeryTiny
-                      ? { ...titleStyle, fontSize: "26px" }
+                      ? { ...titleStyle, fontSize: "1.6rem" }
                       : {
                           ...titleStyle,
                           top: "1.2rem",
-                          fontSize: "17px",
+                          fontSize: "1.1rem",
                           width: "11rem",
                         }
                   }
@@ -239,7 +237,7 @@ export default function Education() {
                       : {
                           ...subtitleStyle,
                           top: "6rem",
-                          fontSize: "14px",
+                          fontSize: "0.9rem",
                         }
                   }
                 >
@@ -265,7 +263,7 @@ export default function Education() {
                           ...subtitleStyle,
                           top: "6rem",
                           left: "7rem",
-                          fontSize: "14px",
+                          fontSize: "1rem",
                         }
                   }
                 >

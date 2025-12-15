@@ -12,6 +12,8 @@ export interface Project {
   detailsFi: string;
   employer: string;
   backDrop: string;
+  link: string;
+  linkTitle: string;
 }
 
 export interface Skill {
