@@ -1,14 +1,39 @@
 import Colors from '../../colors';
+import DotGrid from '../util/DotGrid';
+import { DotPatternSVG } from '../util/Patterns';
+import './styles.css';
 
 export default function Header() {
   return (
-    <div style={{ width: '100%', height: '30rem', backgroundColor: 'grey' }}>
+    <div
+      style={{
+        width: '100%',
+        height: '55rem',
+        backgroundColor: '',
+        overflow: 'hidden'
+      }}
+    >
+      <div
+        className='grid-container'
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          //overflow: 'hidden',
+          width: '100%'
+        }}
+      >
+        <DotGrid />
+      </div>
       {/* Profile pic etc */}
       <div
         style={{
+          width: '100%',
+          pointerEvents: 'none',
           display: 'flex',
           justifyContent: 'center',
-          position: 'relative'
+          position: 'relative',
+          marginBottom: '50rem'
         }}
       >
         {/* Name styling */}
@@ -71,15 +96,16 @@ const ProfilePicture = () => {
         {/* Dots bottom right */}
         <div
           style={{
-            width: '23%',
-            height: '23%',
-            borderRadius: '20px',
+            width: '24%',
+            height: '24%',
+            overflow: 'hidden',
             position: 'absolute',
-            bottom: '-9%',
-            right: '-4%'
+            bottom: '-12%',
+            right: '-7%'
           }}
-          className='dot-pattern'
-        />
+        >
+          <DotPatternSVG />
+        </div>
         {/* Dots top left */}
         <div
           style={{
@@ -89,8 +115,9 @@ const ProfilePicture = () => {
             top: '2%',
             left: '-35%'
           }}
-          className='dot-pattern'
-        />
+        >
+          <DotPatternSVG />
+        </div>
         <div
           style={{
             position: 'absolute',
@@ -185,6 +212,20 @@ const ContactMe = () => {
             />
           </div>
         </div>
+        {/* Software developer */}
+        <h2
+          style={{
+            color: Colors.white,
+            position: 'absolute',
+            bottom: '35%',
+            left: '23%',
+            width: 'clamp(10rem, 35vw, 40rem)',
+            fontSize: 'clamp(2rem, 6vw, 7rem)',
+            fontWeight: 900
+          }}
+        >
+          Software Developer
+        </h2>
       </div>
     </div>
   );

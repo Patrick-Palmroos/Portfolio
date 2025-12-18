@@ -1,0 +1,16 @@
+.grid-container {
+  height: 30rem;
+  overflow: hidden;
+}
+
+@media (max-width: 1250px) {
+  .grid-container {
+    height: 24rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .grid-container {
+    height: 16rem;
+  }
+}
