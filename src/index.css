@@ -18,6 +18,10 @@ h1 {
   font-weight: 400;
 }
 
+h2 {
+  font-family: 'karla', sans-serif;
+}
+
 .dot-pattern {
   --dot-size: clamp(0.75px, 0.3vw, 1.7px);
   --dot-gap: clamp(6px, 0.9vw, 13px);
