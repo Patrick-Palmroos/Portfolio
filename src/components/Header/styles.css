@@ -3,6 +3,17 @@
   overflow: hidden;
 }
 
+img {
+  cursor: pointer;
+  pointer-events: all;
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
 @media (max-width: 1250px) {
   .grid-container {
     height: 24rem;

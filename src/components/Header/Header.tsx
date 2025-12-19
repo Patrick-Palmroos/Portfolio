@@ -195,21 +195,40 @@ const ContactMe = () => {
               paddingTop: 'clamp(1rem, 3vw, 3rem)'
             }}
           >
-            <img
-              src='/images/Logos/gmail.png'
-              alt='Gmail logo'
-              style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
-            />
-            <img
-              src='/images/Logos/linkedin.png'
-              alt='LinkedIn logo'
-              style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
-            />
-            <img
-              src='/images/Logos/github.png'
-              alt='Github Logo'
-              style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
-            />
+            <a
+              href='https://mail.google.com/mail/?view=cm&fs=1&to=palmroos.patrick@gmail.com&su=Hello&body=Hi%20there'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <img
+                className='img'
+                src='/images/Logos/gmail.png'
+                alt='Gmail logo'
+                style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
+              />
+            </a>
+            <a
+              href='https://www.linkedin.com/in/patrick-palmroos-2394b3224/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <img
+                src='/images/Logos/linkedin.png'
+                alt='LinkedIn logo'
+                style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
+              />
+            </a>
+            <a
+              href='https://github.com/Patrick-Palmroos'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <img
+                src='/images/Logos/github.png'
+                alt='Github Logo'
+                style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
+              />
+            </a>
           </div>
         </div>
         {/* Software developer */}
