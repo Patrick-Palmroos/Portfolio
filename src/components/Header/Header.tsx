@@ -245,6 +245,19 @@ const ContactMe = () => {
         >
           Software Developer
         </h2>
+        <h3
+          style={{
+            position: 'absolute',
+            bottom: '29%',
+            left: '23%',
+            backgroundColor: Colors.background,
+            color: 'white',
+            fontSize: 'clamp(1rem, 2vw, 1.8rem)',
+            width: 'clamp(25rem, 55vw, 50rem)'
+          }}
+        >
+          Recently graduated and ready for new challenges!
+        </h3>
       </div>
     </div>
   );
