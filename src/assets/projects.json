@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "priority": 0,
+      "start-date": "12.2025",
+      "end-date": "12.2025",
+      "title": "My project",
+      "created-for": "Tamk",
+      "card-bg": "/url-here",
+      "card-description-en": "description here",
+      "technologies": ["url", "irl"],
+      "github": "",
+      "youtube": "",
+      "web-link": "",
+      "images": ["", ""],
+      "description": ""
+    }
+  ]
+}

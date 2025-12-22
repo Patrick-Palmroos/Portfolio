@@ -8,7 +8,7 @@ export default function Header() {
     <div
       style={{
         width: '100%',
-        height: '55rem',
+        height: 'clamp(18rem, 55vw, 55rem)',
         backgroundColor: '',
         overflow: 'hidden'
       }}

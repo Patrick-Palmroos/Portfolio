@@ -1,0 +1,62 @@
+.projects-desc-container {
+  position: relative;
+  width: 29rem;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-right: 15rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.projects-desc {
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 1.7rem);
+  position: absolute;
+  margin-top: 2rem;
+}
+
+.gradient-border-card {
+  position: absolute;
+}
+
+.gradient-border-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px; /* Same as border width */
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ff0000, #0000ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    margin-right: 0rem;
+    margin-left: 0rem;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projects-desc-container {
+    width: 70%;
+  }
+
+  .projects-desc {
+    margin-top: 0;
+  }
+}
