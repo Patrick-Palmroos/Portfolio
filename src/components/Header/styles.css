@@ -3,20 +3,28 @@
   overflow: hidden;
 }
 
-img {
+.img-socials {
   cursor: pointer;
   pointer-events: all;
   transition: transform 0.4s ease;
 }
 
-img:hover {
+.img-socials:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
+}
+
+.desc {
+  bottom: 29%;
 }
 
 @media (max-width: 1250px) {
   .grid-container {
     height: 24rem;
+  }
+
+  .desc {
+    bottom: 20%;
   }
 }
 

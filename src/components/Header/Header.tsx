@@ -201,7 +201,7 @@ const ContactMe = () => {
               rel='noopener noreferrer'
             >
               <img
-                className='img'
+                className='img-socials'
                 src='/images/Logos/gmail.png'
                 alt='Gmail logo'
                 style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
@@ -213,6 +213,7 @@ const ContactMe = () => {
               rel='noopener noreferrer'
             >
               <img
+                className='img-socials'
                 src='/images/Logos/linkedin.png'
                 alt='LinkedIn logo'
                 style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
@@ -224,6 +225,7 @@ const ContactMe = () => {
               rel='noopener noreferrer'
             >
               <img
+                className='img-socials'
                 src='/images/Logos/github.png'
                 alt='Github Logo'
                 style={{ width: 'clamp(2.2rem, 6vw, 7rem)', height: 'auto' }}
@@ -246,9 +248,9 @@ const ContactMe = () => {
           Software Developer
         </h2>
         <h3
+          className='desc'
           style={{
             position: 'absolute',
-            bottom: '29%',
             left: '23%',
             backgroundColor: Colors.background,
             color: 'white',
@@ -256,7 +258,7 @@ const ContactMe = () => {
             width: 'clamp(25rem, 55vw, 50rem)'
           }}
         >
-          Recently graduated and ready for new challenges!
+          Recently graduated full-stack dev, ready for new challenges!
         </h3>
       </div>
     </div>

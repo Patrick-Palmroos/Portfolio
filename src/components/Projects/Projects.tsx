@@ -8,7 +8,12 @@ export default function Projects() {
   const [selected, setSelected] = useState<number>(0);
 
   return (
-    <div>
+    <div
+    // style={{
+    //   width: '100%',
+    //   backgroundColor: '#050505ff'
+    // }}
+    >
       {/* Title and desc */}
       <div className='container'>
         <ProjectsTitle />
@@ -25,12 +30,39 @@ export default function Projects() {
         </div>
       </div>
       {/* Cards */}
-      <div style={{ display: 'flex', gap: '2rem' }}>
-        <ProjectBox disabled={selected !== 0} />
-        <ProjectBox disabled={selected !== 1} />
-        <ProjectBox disabled={selected !== 2} />
+      <div className='cards-container'>
+        <div>
+          <ProjectBox
+            disabled={selected !== 0}
+            onClick={
+              selected === 0
+                ? () => console.log('open 0')
+                : () => setSelected(0)
+            }
+          />
+        </div>
+        <div>
+          <ProjectBox
+            disabled={selected !== 1}
+            onClick={
+              selected === 1
+                ? () => console.log('open 1')
+                : () => setSelected(1)
+            }
+          />
+        </div>
+        <div>
+          <ProjectBox
+            disabled={selected !== 2}
+            onClick={
+              selected === 2
+                ? () => console.log('open 2')
+                : () => setSelected(2)
+            }
+          />
+        </div>
       </div>
-      <div
+      {/* <div
         style={{ width: '3rem', height: '3rem', backgroundColor: 'red' }}
         title='back'
         onClick={() => setSelected((prev) => (prev -= 1))}
@@ -39,7 +71,7 @@ export default function Projects() {
         style={{ width: '3rem', height: '3rem', backgroundColor: 'green' }}
         title='next'
         onClick={() => setSelected((prev) => (prev += 1))}
-      />
+      /> */}
     </div>
   );
 }

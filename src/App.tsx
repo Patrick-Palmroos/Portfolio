@@ -3,7 +3,7 @@ import Projects from './components/Projects/Projects';
 
 function App() {
   return (
-    <div style={{ marginBottom: '5rem' }}>
+    <div style={{ marginBottom: '5rem', width: '100%', overflow: 'hidden' }}>
       <Header />
       <Projects />
     </div>
