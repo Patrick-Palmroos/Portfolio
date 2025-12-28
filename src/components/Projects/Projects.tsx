@@ -1,11 +1,14 @@
 import Colors from '../../colors';
 import { DotPatternSVG } from '../util/Patterns';
 import ProjectBox from './ProjectBox';
+import MobileProjectBox from './MobileProjectBox';
 import './styles.css';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ProjectsJson from '../../assets/projects.json';
 import { Project } from '../util/Types';
 import Checkbox from '../util/Checkbox';
+import Modal from '../Modal/Modal';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Projects() {
   const [relevant, setRelevant] = useState<boolean>(true);
@@ -15,28 +18,65 @@ export default function Projects() {
       .map((p) => p as Project);
   }, [relevant]);
   const [selected, setSelected] = useState<number>(0);
-  const INCREMENT_INTERVAL = 10000; // 5 seconds
+  const INCREMENT_INTERVAL = 8000; // 5 seconds
   const PAUSE_DURATION = 25000; // 10 seconds
   const intervalRef = useRef<number | null>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
+  const isDesktop = useMediaQuery({ query: '(min-width: 650px)' });
+  const [animate, setAnimate] = useState<boolean>(false);
 
   useEffect(() => {
     //if (isPaused) return;
 
-    intervalRef.current = window.setInterval(() => {
-      setSelected((prev) => {
-        if (prev === projects.length - 1) return 0;
-        else return (prev += 1);
-      });
-    }, INCREMENT_INTERVAL);
+    if (!isDesktop) {
+      intervalRef.current = window.setInterval(() => {
+        setAnimate(true);
+        setTimeout(() => {
+          setSelected((prev) => {
+            if (prev === projects.length - 1) return 0;
+            else return (prev += 1);
+          });
+        }, 450);
+      }, INCREMENT_INTERVAL);
 
-    return () => {
-      if (intervalRef.current !== null) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-    };
+      return () => {
+        if (intervalRef.current !== null) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+      };
+    } else {
+      intervalRef.current = window.setInterval(() => {
+        setSelected((prev) => {
+          if (prev === projects.length - 1) return 0;
+          else return (prev += 1);
+        });
+      }, INCREMENT_INTERVAL);
+
+      return () => {
+        if (intervalRef.current !== null) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+      };
+    }
   }, []);
+
+  const handleBrowse = (value: number) => {
+    // Clear and restart auto-scroll to reset timer
+    if (intervalRef.current) clearInterval(intervalRef.current);
+
+    setTimeout(() => {
+      setSelected((prev) => {
+        const next = prev + value;
+        if (next < 0) return projects.length - 1;
+        if (next >= projects.length) return 0;
+        return next;
+      });
+
+      handlePause();
+    }, 450);
+  };
 
   const handlePause = () => {
     // Prevent double pause
@@ -156,24 +196,51 @@ export default function Projects() {
         </div>
       </div>
       {/* Cards */}
-      <div className='cards-container'>
-        {projects.map((project, i) => (
-          <div key={i}>
-            <ProjectBox
-              project={project}
-              disabled={selected !== i}
-              onClick={
-                selected === i
-                  ? () => console.log('open 0')
-                  : () => {
-                      handlePause();
-                      setSelected(i);
-                    }
-              }
-            />
-          </div>
-        ))}
-      </div>
+      {isDesktop ? (
+        <div className='cards-container'>
+          {projects.map((project, i) => (
+            <div key={i}>
+              <ProjectBox
+                project={project}
+                disabled={selected !== i}
+                onClick={
+                  selected === i
+                    ? () => console.log('open 0')
+                    : () => {
+                        handlePause();
+                        setSelected(i);
+                      }
+                }
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div>
+          <MobileProjectBox
+            project={projects[selected]}
+            disabled={false}
+            animate={animate}
+            resetAnim={() => setAnimate(false)}
+          />
+          <div
+            onClick={() => {
+              handlePause();
+              handleBrowse(1);
+              setAnimate(true);
+            }}
+            style={{ backgroundColor: 'green', width: '4rem', height: '4rem' }}
+          />
+          <div
+            onClick={() => {
+              handlePause();
+              handleBrowse(-1);
+              setAnimate(true);
+            }}
+            style={{ backgroundColor: 'red', width: '4rem', height: '4rem' }}
+          />
+        </div>
+      )}
     </div>
   );
 }
