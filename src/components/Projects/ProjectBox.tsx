@@ -3,14 +3,17 @@ import Colors from '../../colors';
 import { Pointer } from '../util/Patterns';
 import './styles.css';
 import gsap from 'gsap';
+import { Project } from '../util/Types';
 
 // TODO: Move styling into the css file.
 export default function ProjectBox({
   disabled = true,
-  onClick = () => null
+  onClick = () => null,
+  project
 }: {
   disabled?: boolean;
   onClick?: () => void;
+  project: Project;
 }) {
   const [enabled, setDisabled] = useState<boolean>(!false);
   const pathRef = useRef<SVGPathElement>(null);
@@ -77,7 +80,6 @@ export default function ProjectBox({
           top: 0,
           width: 'clamp(18rem, 30vw, 32rem)',
           height: '100%',
-          //backgroundColor: Colors.light,
           clipPath: `url(#${clipId})`
         }}
       >
@@ -88,7 +90,7 @@ export default function ProjectBox({
             top: 0,
             width: '100%',
             height: '100%',
-            backgroundImage: "url('/lights.jpg')",
+            backgroundImage: `url('${project.card_bg}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -129,7 +131,7 @@ export default function ProjectBox({
               fontWeight: 600
             }}
           >
-            Language App
+            {project.title}
           </h2>
           <p
             style={{
@@ -138,7 +140,7 @@ export default function ProjectBox({
               fontWeight: 600
             }}
           >
-            - Aikido Unl.
+            - {project.created_for}
           </p>
         </div>
         {/* Disabled project name */}
@@ -157,7 +159,7 @@ export default function ProjectBox({
               fontWeight: 600
             }}
           >
-            Language App
+            {project.title}
           </h2>
           <p
             style={{
@@ -167,7 +169,7 @@ export default function ProjectBox({
               top: '3rem'
             }}
           >
-            - Aikido Unl.
+            - {project.created_for}
           </p>
         </div>
 
@@ -185,31 +187,14 @@ export default function ProjectBox({
             gap: '4px'
           }}
         >
-          <img
-            src='/images/Logos/linkedin.png'
-            alt='LinkedIn logo'
-            style={{ width: 'clamp(2.6rem, 4.5vw, 5rem)', height: 'auto' }}
-          />
-          <img
-            src='/images/Logos/linkedin.png'
-            alt='LinkedIn logo'
-            style={{ width: 'clamp(2.6rem, 4.5vw, 5rem)', height: 'auto' }}
-          />
-          <img
-            src='/images/Logos/linkedin.png'
-            alt='LinkedIn logo'
-            style={{ width: 'clamp(2.6rem, 4.5vw, 5rem)', height: 'auto' }}
-          />
-          <img
-            src='/images/Logos/linkedin.png'
-            alt='LinkedIn logo'
-            style={{ width: 'clamp(2.6rem, 4.5vw, 5rem)', height: 'auto' }}
-          />
-          <img
-            src='/images/Logos/linkedin.png'
-            alt='LinkedIn logo'
-            style={{ width: 'clamp(2.6rem, 4.5vw, 5rem)', height: 'auto' }}
-          />
+          {project.technologies.map((tool, i) => (
+            <img
+              key={i}
+              src={tool}
+              alt='tool logo'
+              style={{ width: 'clamp(2.6rem, 4.5vw, 5rem)', height: 'auto' }}
+            />
+          ))}
         </div>
       </div>
 
@@ -227,7 +212,7 @@ export default function ProjectBox({
           height: '78%',
           borderRadius: '5%',
           padding: '3px', // Border width
-          background: 'linear-gradient(135deg, #7f5cff, #00e0ff)'
+          background: `linear-gradient(135deg, ${project.color_main}, ${project.color_off})`
         }}
       >
         {/* Slightly smaller image with grayscale and blur */}
@@ -236,7 +221,7 @@ export default function ProjectBox({
             width: '100%',
             height: '100%',
             borderRadius: '4%', // Slightly smaller than parent
-            backgroundImage: "url('/lights.jpg')",
+            backgroundImage: `url('${project.card_bg}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'grayscale(100%)'
@@ -266,8 +251,7 @@ export default function ProjectBox({
             maxWidth: '100%',
             height: '100%',
             backgroundColor: '',
-            overflow: 'hidden',
-            margin: '0rem 1rem 0rem 1rem'
+            overflow: 'hidden'
           }}
         >
           <p
@@ -276,14 +260,17 @@ export default function ProjectBox({
               opacity: disabled ? 0 : 1,
               fontSize: 'clamp(1rem, 1.6vw, 1.7rem)',
               transition: 'opacity 0.2s ease',
+              margin: '0.6rem 0.4rem 0rem 0.4rem',
+              padding: '0.6rem',
+              borderRadius: '1rem',
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
               transitionDelay: disabled ? '0ms' : '400ms'
             }}
           >
-            Project A is project about projects. Developed as project to be a
-            project that functions as a project. I like to think of this project
-            in the perspective of a project.
+            {project.card_description_en}
           </p>
         </div>
+
         {/* Dates */}
         <div
           style={{
@@ -301,11 +288,23 @@ export default function ProjectBox({
               color: 'white',
               opacity: disabled ? 0 : 1,
               fontSize: 'clamp(1rem, 1.6vw, 1.7rem)',
+              transition: 'opacity 0.2s ease',
+              fontWeight: 600,
+              transitionDelay: disabled ? '0ms' : '400ms'
+            }}
+          >
+            {project.role}
+          </p>
+          <p
+            style={{
+              color: 'white',
+              opacity: disabled ? 0 : 1,
+              fontSize: 'clamp(1rem, 1.6vw, 1.7rem)',
               transition: 'opacity 0.1s ease',
               transitionDelay: disabled ? '0ms' : '400ms'
             }}
           >
-            11.2023 - 11.2024
+            {project.start_date} - {project.end_date}
           </p>
         </div>
         {/* Pointer container */}
@@ -318,7 +317,10 @@ export default function ProjectBox({
             padding: '1rem'
           }}
         >
-          <Pointer />
+          <Pointer
+            mainColor={project.color_main}
+            offColor={project.color_off}
+          />
         </div>
       </div>
     </div>

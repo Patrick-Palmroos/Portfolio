@@ -1,0 +1,19 @@
+export interface Project {
+  id: number;
+  priority: number;
+  start_date: string;
+  end_date: string;
+  title: string;
+  created_for: string;
+  role: string;
+  card_bg: string;
+  color_main: string;
+  color_off: string;
+  card_description_en: string;
+  technologies: string[];
+  github: string | null;
+  youtube: string | null;
+  web_link: string | null;
+  images: string[];
+  description: string;
+}

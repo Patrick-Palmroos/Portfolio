@@ -1,4 +1,5 @@
 import Colors from '../../colors';
+import useId from '@mui/material/utils/useId';
 
 export function DotPatternSVG() {
   return (
@@ -25,20 +26,27 @@ export function DotPatternSVG() {
   );
 }
 
-export function Pointer() {
+export function Pointer({
+  mainColor = Colors.cyan,
+  offColor = '#2D82D7'
+}: {
+  mainColor?: string;
+  offColor?: string;
+}) {
+  const clipId = useId();
   return (
     <svg width='100%' height='100%' viewBox='0 0 110 110'>
       <defs>
-        <linearGradient id='pointerGradient'>
-          <stop offset='0%' stopColor={Colors.cyan} />
-          <stop offset='100%' stopColor={'#2D82D7'} />
+        <linearGradient id={clipId}>
+          <stop offset='0%' stopColor={mainColor} />
+          <stop offset='100%' stopColor={offColor} />
         </linearGradient>
       </defs>
 
       <path
         d='M 35 35 L 100 35 L 70 60 L 100 90 L 90 100 L 60 70 L 35 100 Z'
         fill='none'
-        stroke='url(#pointerGradient)'
+        stroke={`url(#${clipId})`}
         strokeWidth='7'
         strokeLinejoin='round'
         strokeLinecap='round'
@@ -49,7 +57,7 @@ export function Pointer() {
         y1='25'
         x2='70'
         y2='5'
-        stroke={Colors.cyan}
+        stroke={mainColor}
         strokeWidth='6'
         strokeLinejoin='round'
         strokeLinecap='round'
@@ -60,7 +68,7 @@ export function Pointer() {
         y1='25'
         x2='38'
         y2='5'
-        stroke={Colors.cyan}
+        stroke={mainColor}
         strokeWidth='6'
         strokeLinejoin='round'
         strokeLinecap='round'
@@ -71,7 +79,7 @@ export function Pointer() {
         y1='28'
         x2='7'
         y2='7'
-        stroke={Colors.cyan}
+        stroke={mainColor}
         strokeWidth='6'
         strokeLinejoin='round'
         strokeLinecap='round'
@@ -82,7 +90,7 @@ export function Pointer() {
         y1='38'
         x2='5'
         y2='38'
-        stroke={Colors.cyan}
+        stroke={mainColor}
         strokeWidth='6'
         strokeLinejoin='round'
         strokeLinecap='round'
@@ -93,7 +101,7 @@ export function Pointer() {
         y1='50'
         x2='5'
         y2='70'
-        stroke={Colors.cyan}
+        stroke={mainColor}
         strokeWidth='6'
         strokeLinejoin='round'
         strokeLinecap='round'
