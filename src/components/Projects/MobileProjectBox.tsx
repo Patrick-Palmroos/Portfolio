@@ -10,12 +10,14 @@ export default function MobileProjectBox({
   disabled = true,
   animate = false,
   project,
-  resetAnim
+  resetAnim,
+  onClick
 }: {
   disabled?: boolean;
   resetAnim: () => void;
   animate: boolean;
   project: Project;
+  onClick: () => void;
 }) {
   const [active, setActive] = useState(true);
   const pathRef = useRef<SVGPathElement>(null);
@@ -64,7 +66,7 @@ export default function MobileProjectBox({
 
   return (
     <div
-      onClick={() => null}
+      onClick={onClick}
       className='L-container'
       style={{
         cursor: 'pointer',

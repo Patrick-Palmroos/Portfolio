@@ -10,6 +10,7 @@ import Checkbox from '../util/Checkbox';
 import Modal from '../Modal/Modal';
 import { useMediaQuery } from 'react-responsive';
 
+// TODO: make a handleclick function to prevent auto scroll from causing issues
 export default function Projects() {
   const [relevant, setRelevant] = useState<boolean>(true);
   const projects: Project[] = useMemo(() => {
@@ -18,17 +19,31 @@ export default function Projects() {
       .map((p) => p as Project);
   }, [relevant]);
   const [selected, setSelected] = useState<number>(0);
-  const INCREMENT_INTERVAL = 8000;
+  const INCREMENT_INTERVAL = 2000;
   const PAUSE_DURATION = 25000;
   const intervalRef = useRef<number | null>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
   const isDesktop = useMediaQuery({ query: '(min-width: 650px)' });
   const [animate, setAnimate] = useState<boolean>(false);
+  const [modal, setModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (modal) {
+      if (intervalRef.current !== null) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+
+      if (pauseTimeoutRef.current !== null) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
+    }
+  }, [modal]);
 
   useEffect(() => {
     //if (isPaused) return;
 
-    if (!isDesktop) {
+    if (!isDesktop && !modal) {
       intervalRef.current = window.setInterval(() => {
         setAnimate(true);
         setTimeout(() => {
@@ -45,7 +60,7 @@ export default function Projects() {
           intervalRef.current = null;
         }
       };
-    } else {
+    } else if (!modal) {
       intervalRef.current = window.setInterval(() => {
         setSelected((prev) => {
           if (prev === projects.length - 1) return 0;
@@ -60,7 +75,7 @@ export default function Projects() {
         }
       };
     }
-  }, []);
+  }, [modal]);
 
   const handleBrowse = (value: number) => {
     // Clear and restart auto-scroll to reset timer
@@ -205,7 +220,9 @@ export default function Projects() {
                 disabled={selected !== i}
                 onClick={
                   selected === i
-                    ? () => console.log('open 0')
+                    ? () => {
+                        setModal(true);
+                      }
                     : () => {
                         handlePause();
                         setSelected(i);
@@ -246,6 +263,7 @@ export default function Projects() {
             </div>
             {/* Mobile project box */}
             <MobileProjectBox
+              onClick={() => setModal(true)}
               project={projects[selected]}
               disabled={false}
               animate={animate}
@@ -293,6 +311,12 @@ export default function Projects() {
           </div>
         </div>
       )}
+      {/* Modal */}
+      <Modal
+        open={modal}
+        onClose={() => setModal(false)}
+        content={<ModalContent project={projects[selected]} />}
+      />
     </div>
   );
 }
@@ -329,6 +353,14 @@ function ProjectsTitle() {
       >
         Projects
       </p>
+    </div>
+  );
+}
+
+function ModalContent({ project }: { project: Project }) {
+  return (
+    <div>
+      <p>{project.title}</p>
     </div>
   );
 }
