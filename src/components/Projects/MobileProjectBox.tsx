@@ -45,15 +45,15 @@ export default function MobileProjectBox({
 
     setActive(false);
 
-    const tl = gsap.timeline({
-      onComplete: () => setActive(true)
-    });
+    const tl = gsap.timeline();
 
     tl.to(pathRef.current, {
       attr: { d: disabledPath },
       duration: 0.3,
       ease: 'power2.inOut'
     });
+
+    tl.call(() => setActive(true), [], 0.3);
 
     tl.to(pathRef.current, {
       attr: { d: enabledPath },

@@ -1,5 +1,5 @@
 import Colors from '../../colors';
-import { DotPatternSVG } from '../util/Patterns';
+import { Arrow, DotPatternSVG } from '../util/Patterns';
 import ProjectBox from './ProjectBox';
 import MobileProjectBox from './MobileProjectBox';
 import './styles.css';
@@ -18,8 +18,8 @@ export default function Projects() {
       .map((p) => p as Project);
   }, [relevant]);
   const [selected, setSelected] = useState<number>(0);
-  const INCREMENT_INTERVAL = 8000; // 5 seconds
-  const PAUSE_DURATION = 25000; // 10 seconds
+  const INCREMENT_INTERVAL = 8000;
+  const PAUSE_DURATION = 25000;
   const intervalRef = useRef<number | null>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
   const isDesktop = useMediaQuery({ query: '(min-width: 650px)' });
@@ -36,7 +36,7 @@ export default function Projects() {
             if (prev === projects.length - 1) return 0;
             else return (prev += 1);
           });
-        }, 450);
+        }, 350);
       }, INCREMENT_INTERVAL);
 
       return () => {
@@ -75,7 +75,7 @@ export default function Projects() {
       });
 
       handlePause();
-    }, 450);
+    }, 350);
   };
 
   const handlePause = () => {
@@ -216,29 +216,81 @@ export default function Projects() {
           ))}
         </div>
       ) : (
+        // Mobile project cards + buttons
         <div>
-          <MobileProjectBox
-            project={projects[selected]}
-            disabled={false}
-            animate={animate}
-            resetAnim={() => setAnimate(false)}
-          />
+          {/* Buttons and card container */}
           <div
-            onClick={() => {
-              handlePause();
-              handleBrowse(1);
-              setAnimate(true);
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              marginRight: '2px',
+              marginLeft: '2px'
             }}
-            style={{ backgroundColor: 'green', width: '4rem', height: '4rem' }}
-          />
+          >
+            {/* Left button */}
+            <div
+              onClick={() => {
+                handlePause();
+                handleBrowse(-1);
+                setAnimate(true);
+              }}
+              style={{
+                cursor: 'pointer',
+                width: '4rem',
+                height: '4rem',
+                rotate: '180deg'
+              }}
+            >
+              <Arrow />
+            </div>
+            {/* Mobile project box */}
+            <MobileProjectBox
+              project={projects[selected]}
+              disabled={false}
+              animate={animate}
+              resetAnim={() => setAnimate(false)}
+            />
+            {/* Right button */}
+            <div
+              style={{
+                cursor: 'pointer',
+                width: '4rem',
+                height: '4rem'
+              }}
+              onClick={() => {
+                handlePause();
+                handleBrowse(1);
+                setAnimate(true);
+              }}
+            >
+              <Arrow />
+            </div>
+          </div>
+          {/* Carousel card dot number display */}
           <div
-            onClick={() => {
-              handlePause();
-              handleBrowse(-1);
-              setAnimate(true);
+            style={{
+              display: 'flex',
+              gap: '1rem',
+              width: '100%',
+              justifyContent: 'center',
+              marginTop: '1rem',
+              height: '2rem',
+              alignItems: 'center'
             }}
-            style={{ backgroundColor: 'red', width: '4rem', height: '4rem' }}
-          />
+          >
+            {projects.map((_, i) => (
+              <div
+                className='dot'
+                key={i}
+                style={{
+                  backgroundColor: selected !== i ? 'grey' : 'white',
+                  scale: selected !== i ? '1' : '1.15',
+                  transition: 'scale 0.2s ease'
+                }}
+              />
+            ))}
+          </div>
         </div>
       )}
     </div>
