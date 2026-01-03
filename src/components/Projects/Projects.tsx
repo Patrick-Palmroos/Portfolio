@@ -19,7 +19,7 @@ export default function Projects() {
       .map((p) => p as Project);
   }, [relevant]);
   const [selected, setSelected] = useState<number>(0);
-  const INCREMENT_INTERVAL = 2000;
+  const INCREMENT_INTERVAL = 8000;
   const PAUSE_DURATION = 25000;
   const intervalRef = useRef<number | null>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
@@ -316,6 +316,21 @@ export default function Projects() {
         open={modal}
         onClose={() => setModal(false)}
         content={<ModalContent project={projects[selected]} />}
+        title={
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              marginLeft: '1rem'
+            }}
+          >
+            <h2 className='modal-title'>{projects[selected].title}</h2>
+            <h2 className='modal-title' style={{ color: '#FEFFB9' }}>
+              - {projects[selected].created_for}
+            </h2>
+          </div>
+        }
       />
     </div>
   );
