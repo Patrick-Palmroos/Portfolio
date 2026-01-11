@@ -1,4 +1,4 @@
-import { useRef, useEffect, useId, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Pointer } from '../util/Patterns';
 import './styles.css';
 import gsap from 'gsap';
@@ -15,8 +15,7 @@ export default function ProjectBox({
   project: Project;
 }) {
   const pathRef = useRef<SVGPathElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [currentPath, setCurrentPath] = useState<string>('');
+  const [currentPath] = useState<string>('');
   const clipId = `clip-${project.id}`;
 
   const disabledPath = //----------------v new topR ------------------------v flatten---------------------------------------------v flatten

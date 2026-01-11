@@ -149,7 +149,7 @@ export default function Modal({
             display: 'flex',
             gap: '1rem',
             flexDirection: 'column',
-            height: '45rem',
+            height: '80%',
             zIndex: 60
           }}
         >

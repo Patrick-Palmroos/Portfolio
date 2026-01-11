@@ -70,7 +70,7 @@ export default function MobileProjectBox({
       className='L-container'
       style={{
         cursor: 'pointer',
-        width: !active ? '3rem' : 'clamp(18rem, 30vw, 32rem)',
+        width: !active ? '3.5rem' : 'clamp(18rem, 30vw, 32rem)',
         height: 'clamp(18rem, 30vw, 32rem)',
         transition: 'width 0.2s ease',
         aspectRatio: '17 / 18',

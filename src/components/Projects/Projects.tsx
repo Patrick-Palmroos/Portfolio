@@ -34,7 +34,6 @@ export default function Projects() {
   const intervalRef = useRef<number | null>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
   const isDesktop = useMediaQuery({ query: '(min-width: 650px)' });
-  const isDesktopModal = useMediaQuery({ query: '(min-width: 700px)' });
   const [animate, setAnimate] = useState<boolean>(false);
   const [modal, setModal] = useState<boolean>(false);
 

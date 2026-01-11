@@ -73,12 +73,12 @@ export default function DotGrid() {
     if (prefersReducedMotion) return;
     const repulsionRadius = 70;
     const maxPush = 10;
-    const waveDuration = 12000;
+    // const waveDuration = 12000;
 
     const animate = (timestamp: number) => {
       waveTimeRef.current ||= timestamp;
-      const elapsed = timestamp - waveTimeRef.current;
-      const progress = (elapsed % waveDuration) / waveDuration;
+      // const elapsed = timestamp - waveTimeRef.current;
+      // const progress = (elapsed % waveDuration) / waveDuration;
 
       const newActiveDots = new Set<number>();
 
