@@ -154,8 +154,8 @@ export default function MobileProjectBox({
           </h2>
           <p
             style={{
-              fontSize: 'clamp(1.1rem, 1.9vw, 2.1rem)',
-              color: 'white',
+              fontSize: 'clamp(1.2rem, 1.9vw, 2.1rem)',
+              color: '#FEFFB9',
               fontWeight: 600
             }}
           >

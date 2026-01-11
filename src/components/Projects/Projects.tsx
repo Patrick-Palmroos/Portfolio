@@ -9,6 +9,16 @@ import { Project } from '../util/Types';
 import Checkbox from '../util/Checkbox';
 import Modal from '../Modal/Modal';
 import { useMediaQuery } from 'react-responsive';
+import {
+  CalendarToday,
+  Link,
+  GitHub,
+  YouTube,
+  Android,
+  Apple,
+  OpenInFullRounded,
+  CloseFullscreenRounded
+} from '@mui/icons-material';
 
 // TODO: make a handleclick function to prevent auto scroll from causing issues
 export default function Projects() {
@@ -24,6 +34,7 @@ export default function Projects() {
   const intervalRef = useRef<number | null>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
   const isDesktop = useMediaQuery({ query: '(min-width: 650px)' });
+  const isDesktopModal = useMediaQuery({ query: '(min-width: 700px)' });
   const [animate, setAnimate] = useState<boolean>(false);
   const [modal, setModal] = useState<boolean>(false);
 
@@ -178,7 +189,7 @@ export default function Projects() {
               fontSize: 'clamp(1rem, 3vw, 1.5rem)'
             }}
           >
-            Relevant
+            Important
           </p>
         </div>
         {/* newest button */}
@@ -373,9 +384,309 @@ function ProjectsTitle() {
 }
 
 function ModalContent({ project }: { project: Project }) {
+  const imageArray: string[] = useMemo(() => {
+    const images = project.images ?? [];
+
+    return images.length >= 8
+      ? images.slice(0, 8)
+      : [...images, ...Array(8 - images.length).fill(null)];
+  }, [project.images]);
+  const [chosenImage, setChosenImage] = useState<string>(imageArray[0]);
+  const [displayImg, setDisplayImg] = useState<boolean>(false);
+
   return (
-    <div>
-      <p>{project.title}</p>
+    // Container
+    <div style={{ height: '100%', width: '100%' }}>
+      <FullScreenImage
+        open={displayImg}
+        onClose={() => setDisplayImg(false)}
+        imgUrl={chosenImage}
+      />
+      {/* Date and technologies titles */}
+      <div
+        className='date-tech-container'
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between'
+        }}
+      >
+        {/* Icon and date container */}
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          <CalendarToday style={{ width: '2rem', height: '2rem' }} />
+          <h2>
+            {project.start_date} - {project.end_date}
+          </h2>
+        </div>
+        {/* Tech title */}
+        <h2>Technologies</h2>
+      </div>
+
+      {/* container */}
+      <div
+        className='info-tech-container'
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          margin: '0rem 1rem 0rem 1rem'
+        }}
+      >
+        {/* Information */}
+        <div>
+          {/* Links */}
+          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {/* Github link */}
+            {project.github && (
+              <a
+                className='link-style'
+                href={project.github}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <GitHub />
+                <p>Github</p>
+              </a>
+            )}
+            {/* Website */}
+            {project.web_link && (
+              <a
+                className='link-style'
+                href={project.web_link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Link />
+                <p>Website</p>
+              </a>
+            )}
+            {/* YouTube */}
+            {project.youtube && (
+              <a
+                className='link-style'
+                href={project.youtube}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <YouTube />
+                <p>YouTube</p>
+              </a>
+            )}
+
+            {/* Google play */}
+            {project.google_play && (
+              <a
+                className='link-style'
+                href={project.google_play}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Android />
+                <p>Google Play</p>
+              </a>
+            )}
+            {/* App store */}
+            {project.app_store && (
+              <a
+                className='link-style'
+                href={project.app_store}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Apple />
+                <p>App Store</p>
+              </a>
+            )}
+          </div>
+
+          <div>
+            {/* Images */}
+            <div className='images-container'>
+              {/* Displayed image */}
+              <div
+                onClick={() => setDisplayImg(true)}
+                className='displayed-image'
+                style={{
+                  backgroundImage: `url('${chosenImage}')`
+                }}
+              >
+                {/* Dark overlay */}
+                <div className='displayed-image-overlay' />
+                <OpenInFullRounded
+                  style={{
+                    position: 'absolute',
+                    right: 8,
+                    top: 8,
+                    fontSize: '2rem',
+                    filter: `
+                   drop-shadow(1px 0 0 black)
+                   drop-shadow(-1px 0 0 black)
+                   drop-shadow(0 1px 0 black)
+                   drop-shadow(0 -1px 0 black)
+                 `
+                  }}
+                />
+              </div>
+              {/* Container for choosable images */}
+              <div className='image-choice'>
+                {/* Choosable images */}
+                {imageArray.map((image, i) => (
+                  // Container with onclick event
+                  <div
+                    key={i}
+                    onClick={image ? () => setChosenImage(image) : () => null}
+                    style={{
+                      height: '3.5rem',
+                      width: '3.5rem',
+                      position: 'relative',
+                      cursor: image ? 'pointer' : 'default'
+                    }}
+                  >
+                    {/* Image styling */}
+                    <div
+                      style={{
+                        position: 'relative',
+                        width: '100%',
+                        height: '100%',
+                        borderRadius: '0.5rem',
+                        border: image
+                          ? chosenImage !== image
+                            ? '1px solid white'
+                            : `1px solid ${Colors.blue}`
+                          : 'none',
+                        backgroundImage: image ? `url('${image}')` : 'none',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        overflow: 'hidden',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    >
+                      {/* Overlay */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          width: '100%',
+                          height: '100%',
+                          opacity: '0.4',
+                          backgroundColor:
+                            chosenImage === image ? Colors.blue : 'transparent'
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Texts */}
+            <div className='description-text'>
+              {project.description.split('\n').map((t, i) => (
+                <p key={i}>{t}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* techs */}
+        <div
+          className='tech-container'
+          style={{
+            backgroundColor: '',
+            position: 'relative',
+            display: 'flex',
+            gap: '1rem'
+          }}
+        >
+          {/* Dot pattern svg */}
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              position: 'absolute',
+              left: 0,
+              top: 0
+            }}
+          >
+            <DotPatternSVG color='rgba(255, 255, 255, 0.4)' />
+          </div>
+          {/* tools used */}
+          {project.technologies.map((tool, i) => (
+            <img
+              className='tool-logo'
+              key={i}
+              src={tool}
+              alt='tool logo'
+              // style={{
+              //   filter: `
+              //     drop-shadow(1px 0 0 ${Colors.blue})
+              //     drop-shadow(-1px 0 0 ${Colors.blue})
+              //     drop-shadow(0 1px 0 ${Colors.blue})
+              //     drop-shadow(0 -1px 0 ${Colors.blue})
+              //   `
+              // }}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FullScreenImage({
+  imgUrl,
+  open,
+  onClose
+}: {
+  imgUrl: string;
+  open: boolean;
+  onClose: () => void;
+}) {
+  if (!open) return null;
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 80,
+        cursor: 'pointer'
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          height: '100%',
+          width: '100%',
+          inset: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          backdropFilter: 'blur(4px)'
+        }}
+      />
+      <img
+        src={imgUrl}
+        style={{
+          position: 'absolute',
+          width: 'auto',
+          height: 'auto',
+          maxWidth: '39rem',
+          maxHeight: '35rem',
+          left: '50%',
+          top: '54%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      />
+      <CloseFullscreenRounded
+        className='close-fullscreen'
+        style={{
+          fontSize: '3rem',
+          filter: `
+                   drop-shadow(1px 0 0 black)
+                   drop-shadow(-1px 0 0 black)
+                   drop-shadow(0 1px 0 black)
+                   drop-shadow(0 -1px 0 black)
+                 `
+        }}
+      />
     </div>
   );
 }

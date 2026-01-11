@@ -1,5 +1,4 @@
-import { useRef, useEffect, useState, useId } from 'react';
-import Colors from '../../colors';
+import { useRef, useEffect, useId } from 'react';
 import { Pointer } from '../util/Patterns';
 import './styles.css';
 import gsap from 'gsap';
@@ -15,7 +14,6 @@ export default function ProjectBox({
   onClick?: () => void;
   project: Project;
 }) {
-  const [enabled, setDisabled] = useState<boolean>(!false);
   const pathRef = useRef<SVGPathElement>(null);
   const clipId = useId();
 
@@ -136,7 +134,7 @@ export default function ProjectBox({
           <p
             style={{
               fontSize: 'clamp(1.1rem, 1.9vw, 2.1rem)',
-              color: 'white',
+              color: '#FEFFB9',
               fontWeight: 600
             }}
           >
@@ -164,7 +162,7 @@ export default function ProjectBox({
           <p
             style={{
               fontSize: 'clamp(0.8rem, 2vw, 2.1rem)',
-              color: 'white',
+              color: '#ebebebff',
               fontWeight: 600,
               top: '3rem'
             }}
@@ -192,7 +190,10 @@ export default function ProjectBox({
               key={i}
               src={tool}
               alt='tool logo'
-              style={{ width: 'clamp(2.6rem, 4.5vw, 5rem)', height: 'auto' }}
+              style={{
+                width: 'clamp(2.6rem, 4.5vw, 5rem)',
+                height: 'auto'
+              }}
             />
           ))}
         </div>

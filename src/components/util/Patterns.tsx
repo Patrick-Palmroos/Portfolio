@@ -1,12 +1,14 @@
 import Colors from '../../colors';
 import useId from '@mui/material/utils/useId';
 
-export function DotPatternSVG() {
+export function DotPatternSVG({ color = 'white' }: { color?: string }) {
+  const id = useId();
+
   return (
     <svg width='100%' height='100%'>
       <defs>
         <pattern
-          id='dots'
+          id={id}
           x='0'
           y='0'
           width='clamp(0.8rem, 2vw, 1.2rem)'
@@ -17,11 +19,11 @@ export function DotPatternSVG() {
             cx='clamp(0.1rem, 0.3vw, 0.2rem)'
             cy='clamp(0.1rem, 0.3vw, 0.2rem)'
             r='clamp(0.08rem, 0.2vw, 0.1rem)'
-            fill='#ffffffff'
+            fill={color}
           />
         </pattern>
       </defs>
-      <rect width='100%' height='100%' fill='url(#dots)' />
+      <rect width='100%' height='100%' fill={`url(#${id})`} />
     </svg>
   );
 }

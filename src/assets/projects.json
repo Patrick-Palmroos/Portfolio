@@ -18,11 +18,17 @@
         "/images/Logos/postgre.png",
         "/images/Logos/github.png"
       ],
-      "github": "",
-      "youtube": "",
-      "web_link": "",
-      "images": ["", ""],
-      "description": ""
+      "github": "dd",
+      "youtube": "dd",
+      "web_link": "dd",
+      "google_play": "dd",
+      "app_store": "",
+      "images": [
+        "/images/ManiFul/1.jpg",
+        "/images/ManiFul/2.jpg",
+        "/images/ManiFul/3.jpg"
+      ],
+      "description": "Maniful is an application developed as part of my thesis project. It has been tested to work on Android devices. The first functional version was completed within three months alongside full-time work.\nManiful was built using React Native with TypeScript. PostgreSQL is used as the database. The app utilizes Google Vision API for receipt scanning and Deepseek API for processing receipt data.\nThe application visualizes AI-categorized purchase data, allowing users to precisely track where their money goes each month."
     },
     {
       "id": 7,
@@ -45,6 +51,8 @@
       "github": "",
       "youtube": "",
       "web_link": "",
+      "google_play": "",
+      "app_store": "",
       "images": ["", ""],
       "description": ""
     },
@@ -69,6 +77,8 @@
       "github": "",
       "youtube": "",
       "web_link": "",
+      "google_play": "",
+      "app_store": "",
       "images": ["", ""],
       "description": ""
     },
@@ -94,6 +104,8 @@
       "github": "",
       "youtube": "",
       "web_link": "",
+      "google_play": "",
+      "app_store": "",
       "images": ["", ""],
       "description": ""
     },
@@ -118,6 +130,8 @@
       "github": "",
       "youtube": "",
       "web_link": "",
+      "google_play": "",
+      "app_store": "",
       "images": ["", ""],
       "description": ""
     },
@@ -142,6 +156,8 @@
       "github": "",
       "youtube": "",
       "web_link": "",
+      "google_play": "",
+      "app_store": "",
       "images": ["", ""],
       "description": ""
     },
@@ -165,6 +181,8 @@
       "github": "",
       "youtube": "",
       "web_link": "",
+      "google_play": "",
+      "app_store": "",
       "images": ["", ""],
       "description": ""
     },
@@ -184,6 +202,8 @@
       "github": "",
       "youtube": "",
       "web_link": "",
+      "google_play": "",
+      "app_store": "",
       "images": ["", ""],
       "description": ""
     }

@@ -12,6 +12,83 @@
   margin-top: 2rem;
 }
 
+.link-style {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  align-items: center;
+  text-decoration: underline;
+  color: white;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.link-image {
+  width: 3rem;
+  height: auto;
+}
+
+.link-style:hover {
+  color: #8fbaff;
+}
+
+.displayed-image {
+  position: relative;
+  width: 22rem;
+  height: 18rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.displayed-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: black;
+  transition: opacity 0.2s ease;
+}
+
+.displayed-image:hover {
+  .displayed-image-overlay {
+    opacity: 0.2;
+  }
+}
+
+.close-fullscreen {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(22rem, -14rem);
+}
+
+.images-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.image-choice {
+  display: flex;
+  width: 8rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.description-text {
+  margin-bottom: 10rem;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
 .projects-desc {
   width: 100%;
   font-size: clamp(1rem, 2vw, 1.7rem);
@@ -98,6 +175,30 @@
   border-radius: 50%;
 }
 
+.info-tech-container {
+  flex-direction: row;
+}
+
+.date-tech-container {
+  flex-direction: row;
+  font-size: 1.1rem;
+  margin: 0rem 1rem 0rem 1.5rem;
+}
+
+.tech-container {
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 7rem;
+  padding: 0.3rem 0.2rem 1rem 0.2rem;
+}
+
+.tool-logo {
+  width: 5rem;
+  height: auto;
+  position: relative;
+}
+
 .pointer-container {
   width: 18%;
   height: 18%;
@@ -157,6 +258,48 @@
   .modal-title {
     font-size: 1.3rem;
   }
+
+  .info-tech-container {
+    flex-direction: column-reverse;
+  }
+
+  .date-tech-container {
+    flex-direction: column;
+    font-size: 0.8rem;
+    line-height: 0.5rem;
+    margin: 1rem 1rem 0rem 1.5rem;
+  }
+
+  .tech-container {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0rem 1rem 0rem;
+  }
+
+  .tool-logo {
+    width: 3rem;
+  }
+
+  .close-fullscreen {
+    top: 2rem;
+    right: 2rem;
+    transform: translate(0, 0);
+  }
+
+  .info-tech-container {
+    align-items: center;
+  }
+
+  .images-container {
+    margin-top: 1rem;
+  }
+
+  .description-text {
+    margin-top: 0rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -191,5 +334,38 @@
 
   .project-tool {
     top: -1rem;
+  }
+
+  .images-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .image-choice {
+    width: 18rem;
+  }
+
+  .displayed-image {
+    width: 80%;
+  }
+
+  /* .description-text {
+    margin-top: -2rem;
+  } */
+}
+
+@media (max-width: 450px) {
+  .link-style {
+    font-size: 1.1rem;
+  }
+
+  .link-image {
+    width: 2rem;
+  }
+
+  .description-text {
+    font-size: 1.2rem;
   }
 }

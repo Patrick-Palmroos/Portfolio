@@ -14,6 +14,8 @@ export interface Project {
   github: string | null;
   youtube: string | null;
   web_link: string | null;
+  google_play: string | null;
+  app_store: string | null;
   images: string[];
   description: string;
 }
