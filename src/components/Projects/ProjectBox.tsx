@@ -1,4 +1,4 @@
-import { useRef, useEffect, useId } from 'react';
+import { useRef, useEffect, useId, useState } from 'react';
 import { Pointer } from '../util/Patterns';
 import './styles.css';
 import gsap from 'gsap';
@@ -15,7 +15,9 @@ export default function ProjectBox({
   project: Project;
 }) {
   const pathRef = useRef<SVGPathElement>(null);
-  const clipId = useId();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentPath, setCurrentPath] = useState<string>('');
+  const clipId = `clip-${project.id}`;
 
   const disabledPath = //----------------v new topR ------------------------v flatten---------------------------------------------v flatten
     'M 0 0.05 A 0.05 0.05 0 0 1 0.05 0 L 0.15 0 A 0.05 0.05 0 0 1 0.2 0.05 L 0.2 0.1 A 1 1 0 0 1 0.2 0.15 L 0.2 0.15 A 1 1 0 0 0 0.2 0.2 L 0.2 0.95 A 0.05 0.05 0 0 1 0.15 1 L 0.05 1 A 0.05 0.05 0 0 1 0 0.95 Z';
@@ -47,29 +49,32 @@ export default function ProjectBox({
       className='L-container'
       style={{
         cursor: 'pointer',
-        width: disabled ? '3rem' : 'clamp(18rem, 30vw, 32rem)',
+        width: disabled
+          ? 'clamp(3.7rem, 6vw, 8rem)'
+          : 'clamp(18rem, 30vw, 32rem)',
         height: 'clamp(18rem, 30vw, 32rem)',
         transition: 'width 0.2s ease',
         transitionDelay: '200ms',
         aspectRatio: '17 / 18',
         backgroundColor: '',
-        position: 'relative'
+        position: 'relative',
+        overflow: 'hidden'
       }}
     >
       <svg
         style={{
           position: 'absolute',
-          pointerEvents: 'none'
+          width: 0,
+          height: 0,
+          overflow: 'hidden'
         }}
       >
         <defs>
-          {/* L clip path */}
           <clipPath id={clipId} clipPathUnits='objectBoundingBox'>
-            <path ref={pathRef} />
+            <path ref={pathRef} d={currentPath} />
           </clipPath>
         </defs>
       </svg>
-
       {/* L clipped div */}
       <div
         style={{
@@ -78,7 +83,8 @@ export default function ProjectBox({
           top: 0,
           width: 'clamp(18rem, 30vw, 32rem)',
           height: '100%',
-          clipPath: `url(#${clipId})`
+          clipPath: `url(#${clipId})`,
+          overflow: 'hidden'
         }}
       >
         <div
@@ -170,7 +176,6 @@ export default function ProjectBox({
             - {project.created_for}
           </p>
         </div>
-
         {/* Tools used */}
         <div
           className='project-tool'

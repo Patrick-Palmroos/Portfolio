@@ -75,7 +75,8 @@ export default function MobileProjectBox({
         transition: 'width 0.2s ease',
         aspectRatio: '17 / 18',
         backgroundColor: '',
-        position: 'relative'
+        position: 'relative',
+        overflow: 'hidden'
       }}
     >
       <svg
@@ -100,7 +101,8 @@ export default function MobileProjectBox({
           top: 0,
           width: 'clamp(18rem, 30vw, 32rem)',
           height: '100%',
-          clipPath: `url(#${clipId})`
+          clipPath: `url(#${clipId})`,
+          overflow: 'hidden'
         }}
       >
         <div
