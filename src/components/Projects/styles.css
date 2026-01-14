@@ -104,6 +104,10 @@
   margin-left: -30rem;
 }
 
+.dot-arrow {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .cards-container {
   margin-top: 1rem;
   display: flex;

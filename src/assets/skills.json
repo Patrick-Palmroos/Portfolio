@@ -1,0 +1,146 @@
+{
+  "skills": [
+    {
+      "name": "TypeScript",
+      "category": "language",
+      "image": "images/Logos/ts.png"
+    },
+    {
+      "name": "rest api",
+      "category": "tools",
+      "image": "images/Logos/rest-api.png"
+    },
+    {
+      "name": "Visual Studio Code",
+      "category": "tools",
+      "image": "images/Logos/vscode.png"
+    },
+    {
+      "name": "Swift",
+      "category": "language",
+      "image": "images/Logos/swift.png"
+    },
+    {
+      "name": "React/React Native",
+      "category": "libraries",
+      "image": "images/Logos/react.png"
+    },
+    {
+      "name": "Java",
+      "category": "language",
+      "image": "images/Logos/java.png"
+    },
+    {
+      "name": "NodeJs",
+      "category": "libraries",
+      "image": "images/Logos/node.png"
+    },
+    {
+      "name": "HTML",
+      "category": "language",
+      "image": "images/Logos/html.png"
+    },
+    {
+      "name": "CSS",
+      "category": "language",
+      "image": "images/Logos/css.png"
+    },
+    {
+      "name": "GIT",
+      "category": "tools",
+      "image": "images/Logos/git.png"
+    },
+    {
+      "name": "GitHub",
+      "category": "tools",
+      "image": "images/Logos/github.png"
+    },
+    {
+      "name": "MySQL",
+      "category": "backend",
+      "image": "images/Logos/mysql.png"
+    },
+    {
+      "name": "Tailwind",
+      "category": "libraries",
+      "image": "images/Logos/tailwind.png"
+    },
+    {
+      "name": "Javascript",
+      "category": "language",
+      "image": "images/Logos/js.png"
+    },
+    {
+      "name": "Unity",
+      "category": "libraries",
+      "image": "images/Logos/unity.png"
+    },
+    {
+      "name": "Kotlin",
+      "category": "language",
+      "image": "images/Logos/kotlin.png"
+    },
+    {
+      "name": "Jetpack compose",
+      "category": "libraries",
+      "image": "images/Logos/jetpackcompose.png"
+    },
+    {
+      "name": "Sass",
+      "category": "language",
+      "image": "images/Logos/sass.png"
+    },
+    {
+      "name": "Firebase",
+      "category": "backend",
+      "image": "images/Logos/firebase.png"
+    },
+    {
+      "name": "Docker",
+      "category": "tools",
+      "image": "images/Logos/docker.png"
+    },
+    {
+      "name": "Postgre",
+      "category": "backend",
+      "image": "images/Logos/postgre.png"
+    },
+    {
+      "name": "NextJs",
+      "category": "libraries",
+      "image": "images/Logos/nextjs.webp"
+    },
+    {
+      "name": "C#",
+      "category": "language",
+      "image": "images/Logos/csharp.png"
+    }
+  ],
+  "removed": [
+    {
+      "name": "PHP",
+      "category": "",
+      "image": "images/Logos/php.png"
+    },
+    {
+      "name": "C",
+      "category": "",
+      "image": "images/Logos/C.png"
+    },
+    {
+      "name": "C++",
+      "category": "",
+      "image": "images/Logos/C++.png"
+    },
+    {
+      "name": "Gitlab",
+      "category": "",
+      "image": "images/Logos/gitlab.png"
+    },
+    {
+      "name": "Android studio",
+      "category": "",
+      "image": "images/Logos/androidstudio.png"
+    }
+  ]
+}

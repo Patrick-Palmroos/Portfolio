@@ -257,6 +257,7 @@ export default function Projects() {
           >
             {/* Left button */}
             <div
+              className='dot-arrow'
               onClick={() => {
                 handlePause();
                 handleBrowse(-1);
@@ -281,6 +282,7 @@ export default function Projects() {
             />
             {/* Right button */}
             <div
+              className='dot-arrow'
               style={{
                 cursor: 'pointer',
                 width: '4rem',
@@ -365,14 +367,14 @@ function ProjectsTitle() {
           right: '0%'
         }}
       >
-        <DotPatternSVG />
+        <DotPatternSVG color='grey' />
       </div>
       <p
         style={{
           position: 'relative',
           color: Colors.purple,
           margin: 0,
-          fontSize: 'clamp(3rem, 10vw, 8rem)',
+          fontSize: 'clamp(4rem, 10vw, 8rem)',
           fontWeight: 800
         }}
       >

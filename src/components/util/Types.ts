@@ -19,3 +19,9 @@ export interface Project {
   images: string[];
   description: string;
 }
+
+export interface SkillType {
+  name: string;
+  category: string;
+  image: string;
+}
