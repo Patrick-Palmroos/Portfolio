@@ -21,10 +21,10 @@ export default function Skills() {
 
   return (
     <div
+      className='skills-container'
       style={{
         display: 'flex',
         justifyContent: 'center',
-        marginTop: '5rem',
         position: 'relative'
       }}
     >
@@ -39,7 +39,7 @@ export default function Skills() {
             color: Colors.purple
           }}
         >
-          My Tech
+          My Skills
         </p>
         {/* Skill buttons */}
         <div className='tech-button-container'>

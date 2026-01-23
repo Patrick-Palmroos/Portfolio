@@ -128,13 +128,14 @@ export default function Modal({
           </div>
           {/* Title */}
           <div
+            className='title-box'
             style={{
               position: 'absolute',
               left: 0,
               top: 0,
               width: '100%',
               height: '100%',
-              backgroundColor: '#3B2DD7',
+              // backgroundColor: '#3B2DD7',
               clipPath: `url(#titleBox)`
             }}
           >
@@ -149,17 +150,18 @@ export default function Modal({
             display: 'flex',
             gap: '1rem',
             flexDirection: 'column',
-            height: '80%',
+            height: '70%',
             zIndex: 60
           }}
         >
           {/* Title */}
           <div
+            className='title-box'
             style={{
               width: '100%',
               height: '6rem',
               border: `solid 0.3rem ${Colors.blue}`,
-              backgroundColor: Colors.blue,
+              //backgroundColor: Colors.blue,
               borderRadius: '2rem',
               display: 'flex'
             }}

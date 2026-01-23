@@ -1,5 +1,5 @@
 .grid-container {
-  height: 30rem;
+  height: 34rem;
   overflow: hidden;
 }
 
@@ -18,9 +18,18 @@
   bottom: 29%;
 }
 
+.pfp {
+  background: rgba(70, 71, 71, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.212);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(85, 81, 81, 0.185);
+}
+
 @media (max-width: 1250px) {
   .grid-container {
-    height: 24rem;
+    height: 26rem;
   }
 
   .desc {
@@ -30,6 +39,6 @@
 
 @media (max-width: 860px) {
   .grid-container {
-    height: 16rem;
+    height: 20rem;
   }
 }

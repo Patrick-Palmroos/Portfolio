@@ -25,3 +25,12 @@ export interface SkillType {
   category: string;
   image: string;
 }
+
+export interface WorkType {
+  id: number;
+  name: string;
+  title: string;
+  startDate: string;
+  endDate: string | null;
+  description: string;
+}

@@ -9,7 +9,7 @@
   justify-content: center;
   margin-right: 15rem;
   margin-left: 1rem;
-  margin-top: 2rem;
+  margin-top: 10rem;
 }
 
 .link-style {
@@ -211,7 +211,7 @@
 
 @media (max-width: 1500px) {
   .container {
-    margin-top: 0rem;
+    margin-top: 6rem;
   }
 }
 

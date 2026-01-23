@@ -216,7 +216,7 @@ export default function Projects() {
               fontSize: 'clamp(1rem, 3vw, 1.5rem)'
             }}
           >
-            Newest
+            Date
           </p>
         </div>
       </div>
@@ -550,8 +550,8 @@ function ModalContent({ project }: { project: Project }) {
                         borderRadius: '0.5rem',
                         border: image
                           ? chosenImage !== image
-                            ? '1px solid white'
-                            : `1px solid ${Colors.blue}`
+                            ? `1px solid ${Colors.blue}`
+                            : `1px solid ${Colors.cyan}`
                           : 'none',
                         backgroundImage: image ? `url('${image}')` : 'none',
                         backgroundSize: 'cover',
@@ -570,7 +570,7 @@ function ModalContent({ project }: { project: Project }) {
                           height: '100%',
                           opacity: '0.4',
                           backgroundColor:
-                            chosenImage === image ? Colors.blue : 'transparent'
+                            chosenImage === image ? Colors.cyan : 'transparent'
                         }}
                       />
                     </div>

@@ -108,12 +108,12 @@ export default function DotGrid() {
           dot.style.transition =
             'transform 0.4s cubic-bezier(0.34,0.56,0.64,1), background-color 0.8s ease';
           dot.style.transform = `translate(${finalX}px, ${finalY}px)`;
-          dot.style.backgroundColor = '#4a3252ff';
+          dot.style.backgroundColor = 'rgb(70, 29, 83)';
         } else if (activeDotsRef.current.has(i)) {
           dot.style.transition =
             'transform 0.5s ease, background-color 1.8s ease';
           dot.style.transform = `translate(0px,0px)`;
-          dot.style.backgroundColor = '#231827ff';
+          dot.style.backgroundColor = 'rgb(22, 35, 53)';
         }
       });
 
@@ -145,7 +145,7 @@ export default function DotGrid() {
             width: gridConfig.dotSize,
             height: gridConfig.dotSize,
             borderRadius: '50%',
-            background: '#231827ff',
+            background: 'rgb(22, 35, 53)',
             margin: gridConfig.gap
           }}
         />

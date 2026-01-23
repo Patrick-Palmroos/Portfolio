@@ -82,10 +82,11 @@ const ProfilePicture = () => {
         </svg>
         {/* Clip path style */}
         <div
+          className='pfp'
           style={{
             width: '100%',
             height: '100%',
-            backgroundColor: Colors.light,
+            //backgroundColor: Colors.light,
             backgroundImage: "url('/me.png')",
             backgroundSize: '110%',
             backgroundPosition: '-100% -40%',
@@ -236,7 +237,7 @@ const ContactMe = () => {
         {/* Software developer */}
         <h2
           style={{
-            color: Colors.white,
+            color: Colors.cyan,
             position: 'absolute',
             bottom: '35%',
             left: '23%',
