@@ -16,24 +16,16 @@ export const useMousePosition = () => {
 
 export const calcMonths = (startDate: string, endDate: string | null) => {
   const parseDate = (date: string) => {
-    const [month, year] = date.split('.');
-    return month + '.1.' + year;
+    const [month, year] = date.split('.').map(Number);
+    return new Date(year, month - 1, 1); // 👈 safe everywhere
   };
-  const start: Date = new Date(parseDate(startDate));
-  const end: Date =
-    endDate === null ? new Date() : new Date(parseDate(endDate));
 
-  const startYear = start.getFullYear();
-  const startMonth = start.getMonth();
+  const start = parseDate(startDate);
+  const end = endDate === null ? new Date() : parseDate(endDate);
 
-  const endYear = end.getFullYear();
-  const endMonth = end.getMonth();
+  const totalMonths =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth());
 
-  // Calculate total months difference
-  const totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
-
-  // Return the result as years and months
-  //const years = Math.floor(totalMonths / 12);
-  //const months = totalMonths % 12;
   return `${totalMonths} Month${totalMonths !== 1 ? 's' : ''}`;
 };

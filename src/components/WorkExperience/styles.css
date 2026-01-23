@@ -1,3 +1,7 @@
+.workexperience-container {
+  margin-top: 10rem;
+}
+
 .work-title {
   margin: 0;
   font-size: clamp(4rem, 10vw, 8rem);
@@ -168,6 +172,12 @@
     height: 2.3rem;
     font-size: 1.2rem;
     line-height: 0rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .workexperience-container {
+    margin-top: 0rem;
   }
 }
 

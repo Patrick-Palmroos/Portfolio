@@ -1,6 +1,8 @@
 .skill-icon {
   filter: grayscale(100%);
-  transition: scale 0.2s ease-out;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
 }
 
 .skills-container {
@@ -9,12 +11,43 @@
 
 .skill-icon:hover {
   filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 .active-skill-icon {
   filter: grayscale(0%);
-  scale: 1.1;
-  transition: scale 0.2s ease;
+  transform: scale(1.1);
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
+}
+
+@supports (-webkit-text-size-adjust: none) and (font: -apple-system-body) {
+  .skill-icon {
+    filter: url(#grayscale);
+  }
+
+  .skill-icon:hover {
+    filter: none;
+  }
+
+  .active-skill-icon {
+    filter: none;
+  }
+}
+
+@supports (not (-webkit-text-size-adjust: none)) and (font: -apple-system-body) {
+  .skill-icon {
+    filter: url(#grayscale);
+  }
+
+  .skill-icon:hover {
+    filter: none;
+  }
+
+  .active-skill-icon {
+    filter: none;
+  }
 }
 
 .title {

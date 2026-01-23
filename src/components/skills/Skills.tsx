@@ -156,6 +156,18 @@ function PathAnimation({
   return (
     <div className='tech-circle'>
       <svg ref={svgRef} width={size} height={size} viewBox='0 0 300 300'>
+        <defs>
+          <filter
+            id='grayscale'
+            x='-20%'
+            y='-20%'
+            width='140%'
+            height='140%'
+            filterUnits='objectBoundingBox'
+          >
+            <feColorMatrix type='saturate' values='0' />
+          </filter>
+        </defs>
         {orbits.map((orbit, orbitIndex) => {
           const count = orbit.skills.length;
 
@@ -212,19 +224,24 @@ function PathAnimation({
                               repeatCount='indefinite'
                             />
 
-                            <image
+                            <g
                               className={
                                 category === skill.category
                                   ? 'active-skill-icon'
                                   : 'skill-icon'
                               }
-                              href={skill.image}
-                              x={-18}
-                              y={-18}
-                              width={36}
-                              height={36}
-                              preserveAspectRatio='xMidYMid meet'
-                            />
+                            >
+                              {' '}
+                              {/* visual effects */}
+                              <image
+                                href={skill.image}
+                                x={-18}
+                                y={-18}
+                                width={36}
+                                height={36}
+                                preserveAspectRatio='xMidYMid meet'
+                              />
+                            </g>
                           </g>
                         </g>
                       </g>

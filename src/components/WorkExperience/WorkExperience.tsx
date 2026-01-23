@@ -16,7 +16,7 @@ export default function WorkExperience() {
   };
 
   return (
-    <div>
+    <div className='workexperience-container'>
       <h2 className='work-title' style={{ color: Colors.purple }}>
         Work Experience
       </h2>
