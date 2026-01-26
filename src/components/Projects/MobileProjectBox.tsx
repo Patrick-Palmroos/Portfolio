@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState, useId } from 'react';
-import Colors from '../../colors';
 import { Pointer } from '../util/Patterns';
 import './styles.css';
 import gsap from 'gsap';
@@ -21,7 +20,7 @@ export default function MobileProjectBox({
 }) {
   const [active, setActive] = useState(true);
   const pathRef = useRef<SVGPathElement>(null);
-  const [animating, setAnimating] = useState(false);
+  const [animating] = useState(false);
   const clipId = useId();
 
   const disabledPath = //----------------v new topR ------------------------v flatten---------------------------------------------v flatten

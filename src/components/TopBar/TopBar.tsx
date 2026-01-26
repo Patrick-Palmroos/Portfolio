@@ -1,7 +1,6 @@
 import Colors from '../../colors';
 import {
   AccessibilityNew,
-  Language,
   LocationOn,
   Person,
   RecordVoiceOver
