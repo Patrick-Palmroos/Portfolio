@@ -12,12 +12,17 @@ export interface Project {
   card_description_en: string;
   technologies: string[];
   github: string | null;
-  youtube: string | null;
-  web_link: string | null;
+  youtube: Link | null;
+  web_link: Link | null;
   google_play: string | null;
   app_store: string | null;
   images: string[];
   description: string;
+}
+
+interface Link {
+  title: string;
+  link: string;
 }
 
 export interface SkillType {

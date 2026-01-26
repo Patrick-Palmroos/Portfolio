@@ -375,7 +375,7 @@ function ProjectsTitle() {
           color: Colors.purple,
           margin: 0,
           fontSize: 'clamp(4rem, 10vw, 8rem)',
-          fontWeight: 800
+          fontVariationSettings: '"wght" 800'
         }}
       >
         Projects
@@ -448,27 +448,31 @@ function ModalContent({ project }: { project: Project }) {
               </a>
             )}
             {/* Website */}
-            {project.web_link && (
+            {project.web_link?.link && (
               <a
                 className='link-style'
-                href={project.web_link}
+                href={project.web_link.link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <Link />
-                <p>Website</p>
+                <p>
+                  {project.web_link.title ? project.web_link.title : 'Website'}
+                </p>
               </a>
             )}
             {/* YouTube */}
-            {project.youtube && (
+            {project.youtube?.link && (
               <a
                 className='link-style'
-                href={project.youtube}
+                href={project.youtube.link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <YouTube />
-                <p>YouTube</p>
+                <p>
+                  {project.youtube.title ? project.youtube.title : 'YouTube'}
+                </p>
               </a>
             )}
 

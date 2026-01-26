@@ -130,13 +130,11 @@ export default function Modal({
           <div
             className='title-box'
             style={{
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              width: '100%',
-              height: '100%',
-              // backgroundColor: '#3B2DD7',
-              clipPath: `url(#titleBox)`
+              width: '83%',
+              height: '6rem',
+              //backgroundColor: Colors.blue,
+              borderRadius: '2rem',
+              display: 'flex'
             }}
           >
             {title}
