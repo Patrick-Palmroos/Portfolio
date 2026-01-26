@@ -1,0 +1,239 @@
+{
+  "projects": [
+    {
+      "id": 8,
+      "priority": 70,
+      "start_date": "07.2025",
+      "end_date": "08.2025",
+      "title": "Maniful",
+      "created_for": "Thesis",
+      "role": "Full-stack",
+      "card_bg": "images/ManiFul/header.jpg",
+      "color_main": "#FF5CC2",
+      "color_off": "#d6f2ff",
+      "card_description_en": "Maniful is a mobile application built with React Native for personal finance tracking. It visualizes purchase data by scanning receipts.",
+      "technologies": [
+        "/images/Logos/react.png",
+        "/images/Logos/ts.png",
+        "/images/Logos/postgre.png",
+        "/images/Logos/github.png"
+      ],
+      "github": "dd",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "dd",
+      "app_store": "",
+      "images": [
+        "/images/ManiFul/1.jpg",
+        "/images/ManiFul/2.jpg",
+        "/images/ManiFul/3.jpg"
+      ],
+      "description": "Maniful is an application developed as part of my thesis project. It has been tested to work on Android devices. The first functional version was completed within three months alongside full-time work.\nManiful was built using React Native with TypeScript. PostgreSQL is used as the database. The app utilizes Google Vision API for receipt scanning and Deepseek API for processing receipt data.\nThe application visualizes AI-categorized purchase data, allowing users to precisely track where their money goes each month."
+    },
+    {
+      "id": 7,
+      "priority": 30,
+      "start_date": "24.01",
+      "end_date": "26.01",
+      "title": "GGJ 2025",
+      "created_for": "FGJ",
+      "role": "Game programmer",
+      "card_bg": "images/ggj/fgj.png",
+      "color_main": "#ff7171",
+      "color_off": "#d0ff9c",
+      "card_description_en": "Aamunsarastuksen Mökkiseura is a web-based ARG mystery game, created during the 2025 Global Game Jam.",
+      "technologies": [
+        "/images/Logos/react.png",
+        "/images/Logos/sass.png",
+        "/images/Logos/js.png",
+        "/images/Logos/github.png"
+      ],
+      "github": "",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "images/ggj/ggj_1.png",
+        "images/ggj/ggj_2.png",
+        "images/ggj/ggj_3.png"
+      ],
+      "description": "This is our Global Game Jam project, 'Aamunsarastuksen Mökkiseura.' It is an ARG-style web-based mystery game. I worked as a programmer in a team consisting of two developers, a writer, and two artists. In just 48 hours, we created three separate websites where the mystery can be unraveled!\nI mainly developed the forum page and assisted with other parts of the project. I also worked on video material. GGJ was a fun experience where I got to contribute to game development and bring in a software development perspective.\nFor this project, we used React and JavaScript, along with basic CSS and some SCSS. I had the opportunity to practice project scope management and enjoy a small challenge!"
+    },
+    {
+      "id": 6,
+      "priority": 50,
+      "start_date": "10.2024",
+      "end_date": "12.2024",
+      "title": "BayCalc",
+      "created_for": "BayZen",
+      "role": "Frontend",
+      "card_bg": "images/BayCalc/german-uni.jpg",
+      "color_main": "#3c95d5",
+      "color_off": "#bbeef5",
+      "card_description_en": "BayCalc provides universities with GHG accounting and transparent reporting tools, enabling them to monitor emissions and plan reduction pathways.",
+      "technologies": [
+        "/images/Logos/react.png",
+        "/images/Logos/sass.png",
+        "/images/Logos/js.png",
+        "/images/Logos/gitlab.png"
+      ],
+      "github": "",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "images/BayCalc/baycalc_1.png",
+        "images/BayCalc/baycalc_2.png",
+        "images/BayCalc/baycalc_3.png"
+      ],
+      "description": "I collaborated on this project with four IT developers and German business students from abroad. Our client tasked us with developing a platform for Bavarian universities to publish their greenhouse gas (GHG) reports.\nThe platform was required to align with the design of the client’s existing website and integrate seamlessly into their system. My responsibilities included frontend development, integrating Metabase, and connecting the frontend to the backend.\nThis project presented several challenges, including coordinating with team members who lacked IT expertise. Through these experiences, I gained valuable skills and insights."
+    },
+    {
+      "id": 5,
+      "priority": 60,
+      "start_date": "04.2024",
+      "end_date": "08.2024",
+      "title": "StaffApp",
+      "created_for": "Entail",
+      "role": "Full-stack",
+      "card_bg": "images/StaffApp/backDrop.png",
+      "color_main": "#7d3aff",
+      "color_off": "#f17bff",
+      "card_description_en": "StaffApp is an application for posting and taking shifts for rental workers. It allows managers to easily post and track open shifts within their organization.",
+      "technologies": [
+        "/images/Logos/react.png",
+        "/images/Logos/node.png",
+        "/images/Logos/rest-api.png",
+        "/images/Logos/js.png",
+        "/images/Logos/github.png"
+      ],
+      "github": "",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "images/StaffApp/phone1.png",
+        "images/StaffApp/phone2.png",
+        "images/StaffApp/phone3.png"
+      ],
+      "description": "I worked on StaffApp from start to finish as part of a team of five developers. The project began as a school assignment for our client, Entail Oy, and we continued working on it throughout the summer.\nMy responsibilities included both backend and frontend development, as well as being in charge of information security. This project provided a valuable opportunity to learn about teamwork and managing a larger project.\nIn the end, we developed a functional and visually appealing prototype, and the client was pleased with the result. We were happy with the outcome, and the project was a great learning experience overall."
+    },
+    {
+      "id": 4,
+      "priority": 40,
+      "start_date": "03.2024",
+      "end_date": "03.2024",
+      "title": "Weather App",
+      "created_for": "Tamk",
+      "role": "Full-stack",
+      "card_bg": "images/WeatherApp/backDrop.jpg",
+      "color_main": "#f8ff86",
+      "color_off": "#8cbeff",
+      "card_description_en": "Check the weather for the next 7 days in your current area, based on your GPS location, with this quickly made school project application.",
+      "technologies": [
+        "/images/Logos/kotlin.png",
+        "/images/Logos/androidstudio.png",
+        "/images/Logos/jetpackcompose.png",
+        "/images/Logos/github.png"
+      ],
+      "github": "",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "images/WeatherApp/weather1.png",
+        "images/WeatherApp/weather2.png",
+        "images/WeatherApp/weather3.png"
+      ],
+      "description": "This application was created using Kotlin and Jetpack Compose in Android Studio. It utilizes a free API to retrieve weather data and can be installed on Android devices.\nI developed this application as a part of a school course. This application was created in the span of two weeks and it taught me alot.\nIt was an excellent opportunity to build a backend using Kotlin, which helped me grow as a developer. This project also gave me the chance to create my first graph programmatically."
+    },
+    {
+      "id": 3,
+      "priority": 10,
+      "start_date": "12.2023",
+      "end_date": "12.2023",
+      "title": "Language App",
+      "created_for": "Tamk",
+      "role": "Full-stack",
+      "card_bg": "images/LanguageApp/classroom.webp",
+      "color_main": "#ca82e7",
+      "color_off": "#7781ff",
+      "card_description_en": "Teach and learn languages with your family or students! Add different words in various languages and start learning today!",
+      "technologies": [
+        "/images/Logos/react.png",
+        "/images/Logos/js.png",
+        "/images/Logos/mysql.png",
+        "/images/Logos/github.png"
+      ],
+      "github": "",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "images/LanguageApp/language1.png",
+        "images/LanguageApp/language2.png",
+        "images/LanguageApp/language3.png"
+      ],
+      "description": "This application was my first full stack project, and it posed many challenges, making it an excellent learning experience.\nI built the frontend using React and the backend with Node.js and MySQL. There were several new skills I had to acquire to complete the project.\nAs the first project where I combined all my skills to create a functioning application, this stands as an important milestone in my development journey."
+    },
+    {
+      "id": 2,
+      "priority": 20,
+      "start_date": "01.2023",
+      "end_date": "05.2023",
+      "title": "WorkItOut!",
+      "created_for": "Tykky",
+      "role": "Game programmer",
+      "card_bg": "images/WorkItOut/workitout.png",
+      "color_main": "#ffaf77",
+      "color_off": "#f1baba",
+      "card_description_en": "Learn about workplace diversity through a fun, story-based, choices matter game for mobile devices!",
+      "technologies": [
+        "/images/Logos/unity.png",
+        "/images/Logos/csharp.png",
+        "/images/Logos/github.png"
+      ],
+      "github": "",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "images/WorkItOut/workitout1.png",
+        "images/WorkItOut/workitout2.png",
+        "images/WorkItOut/workitout3.png"
+      ],
+      "description": "This game was developed during my first year of studies for our client at Tykky. Our team of four members created it using Unity and C#, and I was the second programmer on the team.\nThe project’s biggest challenge was designing a game that focused on workplace diversity, but we succeeded by creating a fun and interactive game concept that we fully developed.\nThis was my first experience working on a team project, and I was introduced to the notorious merge conflicts! It taught me valuable lessons about communication and teamwork."
+    },
+    {
+      "id": 1,
+      "priority": 0,
+      "start_date": "08.2020",
+      "end_date": "09.2020",
+      "title": "Game Jams",
+      "created_for": "itch.io",
+      "role": "Solo game dev",
+      "card_bg": "images/GameJams/itchio.webp",
+      "color_main": "#ff4545",
+      "color_off": "#ffefef",
+      "card_description_en": "My first-ever coding projects! I was a self-taught programmer who participated in a few game jams. These projects mark the beginning of my journey as a developer!",
+      "technologies": ["/images/Logos/unity.png", "/images/Logos/csharp.png"],
+      "github": "",
+      "youtube": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "" },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "images/GameJams/voidheart.png",
+        "images/GameJams/sugarhigh.png",
+        "images/GameJams/escapethedungeon.png"
+      ],
+      "description": "When I was in college, I wanted to learn how to create games, which led me to teach myself programming. I chose C# and Unity as my tools and used VSCode as my code editor.\nAfter learning the basics, I participated in several game jams to practice game development. Through these projects, I discovered that my favorite aspect of game creation was writing code.\nThis realization prompted me to pursue programming as a career. Little did I know how these early adventures in game development would shape my future!"
+    }
+  ]
+}

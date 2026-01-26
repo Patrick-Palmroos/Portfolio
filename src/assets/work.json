@@ -1,0 +1,31 @@
+{
+  "work": [
+    {
+      "id": 0,
+      "name": "Aikido Unlimited",
+      "title": "Full Stack developer",
+      "startDate": "09.2025",
+      "endDate": "11.2025",
+      "description": "I worked on a client project called Infobox for Aikido Unlimited Oy as part of my internship. Infobox is a system that allows customers to turn any display into an information screen by connecting a Raspberry Pi–based device. The screens can show various slides containing images, videos, and other links.\nI was involved in updating the system. Based on a Figma design, we rebuilt the application with a new visual look and added new functionalities. I implemented the frontend using Next.js with Tailwind CSS and developed parts of the backend using Python FastAPI and Firebase."
+    },
+    {
+      "id": 1,
+      "name": "Aikido Unlimited",
+      "title": "Full Stack developer",
+      "startDate": "02.2025",
+      "endDate": "05.2025",
+      "description": "I worked as a Full Stack Developer Intern at Aikido Unlimited Oy, where I developed membership management systems and led the integration of Google tools.\nDuring my internship, I gained hands-on experience with technologies such as Google Firebase, Tailwind CSS, and Next.js. Additionally, I strengthened my existing skills and expanded my expertise through a practical project. This experience has been invaluable in enhancing my professional growth."
+    },
+    {
+      "id": 2,
+      "name": "Securitas Oy",
+      "title": "Security Guard",
+      "startDate": "06.2023",
+      "endDate": "01.2025",
+      "description": "I have worked for Securitas Oy as a security guard, gaining experience in various locations. This role has allowed me to do important work and significantly boosted my confidence.\nAs a security guard, I've had to manage stressful and challenging situations, often making critical decisions on the spot. I've dealt with difficult scenarios, collaborating with colleagues and the police to resolve them, as well as working independently where my decisions were crucial to the outcome of the situation.\nOverall, I am very grateful for these experiences, which have helped me grow personally. I've learned to take responsibility and lead situations outside of my comfort zone, improving both my decision-making skills and my sense of accountability."
+    }
+  ],
+  "desc": {
+    "guide": "make the date track current by setting end date as null"
+  }
+}

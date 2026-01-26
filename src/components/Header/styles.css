@@ -1,0 +1,44 @@
+.grid-container {
+  height: 34rem;
+  overflow: hidden;
+}
+
+.img-socials {
+  cursor: pointer;
+  pointer-events: all;
+  transition: transform 0.4s ease;
+}
+
+.img-socials:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.desc {
+  bottom: 29%;
+}
+
+.pfp {
+  background: rgba(70, 71, 71, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.212);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(85, 81, 81, 0.185);
+}
+
+@media (max-width: 1250px) {
+  .grid-container {
+    height: 26rem;
+  }
+
+  .desc {
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 860px) {
+  .grid-container {
+    height: 20rem;
+  }
+}

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -6,7 +7,30 @@ html {
 }
 
 body {
+  font-family: 'karla', sans-serif;
   margin: 0;
   overflow-x: hidden;
-  background-color: #27242e;
+  color: white;
+  background-color: #0d0e0eff;
+}
+
+h1 {
+  font-family: 'monoton', sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'karla', sans-serif;
+}
+
+.dot-pattern {
+  --dot-size: clamp(0.75px, 0.3vw, 1.7px);
+  --dot-gap: clamp(6px, 0.9vw, 13px);
+
+  background-image: radial-gradient(
+    circle,
+    #fff 0 var(--dot-size),
+    transparent var(--dot-size)
+  );
+  background-size: var(--dot-gap) var(--dot-gap);
 }
