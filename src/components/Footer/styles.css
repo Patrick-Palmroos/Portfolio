@@ -1,0 +1,11 @@
+.copyright-text {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  color: grey;
+}
+
+@media (max-width: 580px) {
+  .copyright-text {
+    font-size: 1rem;
+  }
+}

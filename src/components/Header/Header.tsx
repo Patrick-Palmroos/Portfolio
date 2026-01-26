@@ -88,8 +88,8 @@ const ProfilePicture = () => {
             height: '100%',
             //backgroundColor: Colors.light,
             backgroundImage: "url('/me.png')",
-            backgroundSize: '110%',
-            backgroundPosition: '-100% -40%',
+            backgroundSize: '130%',
+            backgroundPosition: '10% -0%',
             backgroundRepeat: 'no-repeat',
             clipPath: 'url(#photo-bg)'
           }}

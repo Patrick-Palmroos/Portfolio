@@ -189,18 +189,18 @@
   }
 
   .job-title-description-container {
-    width: 26rem;
+    width: 24rem;
     height: 39rem;
   }
 
   .job-description-container {
-    width: 26rem;
+    width: 24rem;
     height: 35rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .job-title-container {
-    width: 25rem;
+    width: 23rem;
     height: 5.5rem;
     font-size: 1.3rem;
     line-height: 0.8rem;
