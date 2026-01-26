@@ -18,10 +18,13 @@
         "/images/Logos/postgre.png",
         "/images/Logos/github.png"
       ],
-      "github": "dd",
+      "github": "https://github.com/Patrick-Palmroos/ManiFul",
       "youtube": { "title": "", "link": "" },
-      "web_link": { "title": "", "link": "" },
-      "google_play": "dd",
+      "web_link": {
+        "title": "Read the thesis",
+        "link": "https://www.theseus.fi/handle/10024/899129"
+      },
+      "google_play": "",
       "app_store": "",
       "images": [
         "/images/ManiFul/1.jpg",
@@ -50,7 +53,10 @@
       ],
       "github": "",
       "youtube": { "title": "", "link": "" },
-      "web_link": { "title": "", "link": "" },
+      "web_link": {
+        "title": "Link to the release",
+        "link": "https://globalgamejam.org/games/2025/aamunsarastuksen-mokkiseura-7"
+      },
       "google_play": "",
       "app_store": "",
       "images": [
@@ -80,7 +86,7 @@
       ],
       "github": "",
       "youtube": { "title": "", "link": "" },
-      "web_link": { "title": "", "link": "" },
+      "web_link": { "title": "", "link": "http://bay-calc.de/login" },
       "google_play": "",
       "app_store": "",
       "images": [
@@ -140,7 +146,10 @@
         "/images/Logos/github.png"
       ],
       "github": "",
-      "youtube": { "title": "", "link": "" },
+      "youtube": {
+        "title": "",
+        "link": "https://www.youtube.com/watch?v=5GzSdmgynQE"
+      },
       "web_link": { "title": "", "link": "" },
       "google_play": "",
       "app_store": "",
@@ -169,7 +178,7 @@
         "/images/Logos/mysql.png",
         "/images/Logos/github.png"
       ],
-      "github": "",
+      "github": "https://github.com/Patrick-Palmroos/language-learning-app",
       "youtube": { "title": "", "link": "" },
       "web_link": { "title": "", "link": "" },
       "google_play": "",
@@ -199,8 +208,11 @@
         "/images/Logos/github.png"
       ],
       "github": "",
-      "youtube": { "title": "", "link": "" },
-      "web_link": { "title": "", "link": "" },
+      "youtube": {
+        "title": "Trailer",
+        "link": "https://www.youtube.com/watch?v=oU8t4Yq8zuk"
+      },
+      "web_link": { "title": "", "link": "https://webpages.tuni.fi/22tiko2c/" },
       "google_play": "",
       "app_store": "",
       "images": [
@@ -225,7 +237,10 @@
       "technologies": ["/images/Logos/unity.png", "/images/Logos/csharp.png"],
       "github": "",
       "youtube": { "title": "", "link": "" },
-      "web_link": { "title": "", "link": "" },
+      "web_link": {
+        "title": "Itch.io profile",
+        "link": "https://rostpa.itch.io/"
+      },
       "google_play": "",
       "app_store": "",
       "images": [
