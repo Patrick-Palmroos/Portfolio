@@ -1,6 +1,41 @@
 {
   "projects": [
     {
+      "id": 9,
+      "priority": 55,
+      "start_date": "30.01",
+      "end_date": "01.02",
+      "title": "FGJ 2026",
+      "created_for": "GGJ",
+      "role": "Full-stack",
+      "card_bg": "images/ggj2026/header.png",
+      "color_main": "#fffa5f",
+      "color_off": "#513019",
+      "card_description_en": "Mask the World is 2D grid based puzzle game made Finnish Game Jam in 48 hours. The game is entirely created by using React with some CSS",
+      "technologies": [
+        "/images/Logos/react.png",
+        "/images/Logos/ts.png",
+        "/images/Logos/css.png",
+        "/images/Logos/github.png"
+      ],
+      "github": "https://github.com/vuorisumu/masktheworld",
+      "youtube": { "title": "", "link": "" },
+      "web_link": {
+        "title": "Play the game!",
+        "link": "https://globalgamejam.org/games/2026/mask-world-1"
+      },
+      "google_play": "",
+      "app_store": "",
+      "images": [
+        "/images/ggj2026/1.png",
+        "/images/ggj2026/2.png",
+        "/images/ggj2026/3.png",
+        "/images/ggj2026/4.png",
+        "/images/ggj2026/5.png"
+      ],
+      "description": "Mask the World was created for the 2026 Finnish Game Jam, where the theme was “Mask.” In 48 hours, our team developed a complete 2D grid-based puzzle game from scratch using React.\nI was one of the two programmers on the team and was responsible for core gameplay systems, including grid-based world rendering, player movement, collision handling, fail states, audio (music and sound effects), and the implementation of various other game mechanics.\nThe game world is defined using text files, where each character represents a specific block type with its own properties. These files are parsed into a 2D array containing the block types which then gets rendered into the world you see! Then we handle player movement, collision detection, and item interactions on-top of this system. Player animations are handled in a separate DOM element that follows the player’s grid position via CSS transforms, allowing for smooth and responsive animations.\nAdditional mechanics such as retractable spikes, buttons, keys, and other interactive elements were built on top of this system.\nOur team consisted of two programmers, one artist and one composer. The jam was a fun and rewarding challenge, and I’m very happy with what we managed to create together in such a short time!"
+    },
+    {
       "id": 8,
       "priority": 70,
       "start_date": "07.2025",
@@ -38,8 +73,8 @@
       "priority": 30,
       "start_date": "24.01",
       "end_date": "26.01",
-      "title": "GGJ 2025",
-      "created_for": "FGJ",
+      "title": "FGJ 2025",
+      "created_for": "GGJ",
       "role": "Game programmer",
       "card_bg": "images/ggj/fgj.png",
       "color_main": "#ff7171",
@@ -175,6 +210,7 @@
       "technologies": [
         "/images/Logos/react.png",
         "/images/Logos/js.png",
+        "/images/Logos/node.png",
         "/images/Logos/mysql.png",
         "/images/Logos/github.png"
       ],
@@ -221,7 +257,9 @@
         "images/WorkItOut/workitout3.png"
       ],
       "description": "This game was developed during my first year of studies for our client at Tykky. Our team of four members created it using Unity and C#, and I was the second programmer on the team.\nThe project’s biggest challenge was designing a game that focused on workplace diversity, but we succeeded by creating a fun and interactive game concept that we fully developed.\nThis was my first experience working on a team project, and I was introduced to the notorious merge conflicts! It taught me valuable lessons about communication and teamwork."
-    },
+    }
+  ],
+  "unutilized": [
     {
       "id": 1,
       "priority": 0,

@@ -259,7 +259,7 @@ const ContactMe = () => {
             width: 'clamp(25rem, 55vw, 50rem)'
           }}
         >
-          Recently graduated full-stack dev, ready for new challenges!
+          Recently graduated full-stack dev, ready to solve new problems!
         </h3>
       </div>
     </div>
