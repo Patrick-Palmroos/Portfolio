@@ -11,7 +11,7 @@
       "card_bg": "images/ggj2026/header.png",
       "color_main": "#fffa5f",
       "color_off": "#513019",
-      "card_description_en": "Mask the World is 2D grid based puzzle game made Finnish Game Jam in 48 hours. The game is entirely created by using React with some CSS",
+      "card_description_en": "Mask the World is a 2D puzzle game made for the Finnish Game Jam in 48 hours. The game is entirely created by using React with some CSS",
       "technologies": [
         "/images/Logos/react.png",
         "/images/Logos/ts.png",
